@@ -3,6 +3,28 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import sitemap from '@astrojs/sitemap';
 
+/** Remark plugin: convert ```mermaid fences to <pre class="mermaid"> so Mermaid.js renders them */
+function remarkMermaid() {
+	return (tree) => {
+		function walk(node) {
+			if (node.children) {
+				for (let i = 0; i < node.children.length; i++) {
+					const child = node.children[i];
+					if (child.type === 'code' && child.lang === 'mermaid') {
+						node.children[i] = {
+							type: 'html',
+							value: `<pre class="mermaid">\n${child.value}\n</pre>`,
+						};
+					} else {
+						walk(child);
+					}
+				}
+			}
+		}
+		walk(tree);
+	};
+}
+
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://doc.go-zero.dev',
@@ -29,6 +51,12 @@ export default defineConfig({
 				'./src/styles/custom.css',
 			],
 			head: [
+				{
+					tag: 'script',
+					attrs: { type: 'module' },
+					content: `import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'loose' });`,
+				},
 				{
 					tag: 'script',
 					content: `
@@ -85,4 +113,7 @@ export default defineConfig({
 		}),
 		sitemap(),
 	],
+	markdown: {
+		remarkPlugins: [remarkMermaid],
+	},
 });
