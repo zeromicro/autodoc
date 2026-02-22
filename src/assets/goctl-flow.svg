@@ -1,10 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 220">
-  <rect width="860" height="220" rx="12" fill="#f8fafc"/>
-  <g font-family="PingFang SC, Microsoft YaHei, system-ui" font-size="14" fill="#0f172a">
-    <rect x="35" y="80" width="150" height="62" rx="8" fill="#fde68a" /><text x="63" y="116">DSL 定义</text>
-    <rect x="230" y="80" width="170" height="62" rx="8" fill="#bfdbfe" /><text x="258" y="116">goctl 代码生成</text>
-    <rect x="445" y="80" width="160" height="62" rx="8" fill="#bbf7d0" /><text x="471" y="116">业务开发</text>
-    <rect x="650" y="80" width="170" height="62" rx="8" fill="#ddd6fe" /><text x="686" y="116">部署上线</text>
-  </g>
-  <path d="M185 111h45M400 111h45M605 111h45" stroke="#64748b" stroke-width="3"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 115" width="800">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="800" height="115" rx="12" fill="#f8fafc"/>
+  <!-- Title: y=32 -->
+  <text x="400" y="32" font-size="16" font-weight="600" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif"
+        fill="#0f172a">goctl 工作流</text>
+  <!--
+    4 boxes w=168, margin=25 each side, gap=25
+    x: 25, 218, 411, 604   y=52, h=36, center_y=70
+    text_y = 52+18+4 = 74
+  -->
+  <!-- Box 1: DSL 定义 (amber) -->
+  <rect x="25" y="52" width="168" height="36" rx="6"
+        fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="109" y="74" font-size="12" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif"
+        fill="#b45309">DSL 定义</text>
+  <!-- Arrow: 193+5=198 → 218-7=211 -->
+  <path d="M198,70 Q204,70 211,70" stroke="#64748b" stroke-width="2"
+        fill="none" marker-end="url(#arrow)"/>
+  <!-- Box 2: goctl 代码生成 (blue) -->
+  <rect x="218" y="52" width="168" height="36" rx="6"
+        fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="302" y="74" font-size="12" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif"
+        fill="#1e40af">goctl 代码生成</text>
+  <!-- Arrow: 386+5=391 → 411-7=404 -->
+  <path d="M391,70 Q397,70 404,70" stroke="#64748b" stroke-width="2"
+        fill="none" marker-end="url(#arrow)"/>
+  <!-- Box 3: 业务开发 (green) -->
+  <rect x="411" y="52" width="168" height="36" rx="6"
+        fill="#d1fae5" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="495" y="74" font-size="12" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif"
+        fill="#166534">业务开发</text>
+  <!-- Arrow: 579+5=584 → 604-7=597 -->
+  <path d="M584,70 Q590,70 597,70" stroke="#64748b" stroke-width="2"
+        fill="none" marker-end="url(#arrow)"/>
+  <!-- Box 4: 部署上线 (purple) -->
+  <rect x="604" y="52" width="168" height="36" rx="6"
+        fill="#f3e8ff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="688" y="74" font-size="12" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif"
+        fill="#6b21a8">部署上线</text>
 </svg>

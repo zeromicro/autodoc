@@ -1,14 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340">
-  <rect width="800" height="340" rx="12" fill="#f8fafc" />
-  <text x="24" y="36" font-size="22" font-family="PingFang SC, Microsoft YaHei, system-ui" fill="#0f172a">弹性设计</text>
-  <rect x="30" y="70" width="170" height="80" rx="10" fill="#bfdbfe" />
-  <rect x="230" y="70" width="170" height="80" rx="10" fill="#fde68a" />
-  <rect x="430" y="70" width="170" height="80" rx="10" fill="#fecdd3" />
-  <rect x="630" y="70" width="140" height="80" rx="10" fill="#bbf7d0" />
-  <text x="82" y="116" font-size="16" font-family="PingFang SC, Microsoft YaHei, system-ui">限流</text>
-  <text x="282" y="116" font-size="16" font-family="PingFang SC, Microsoft YaHei, system-ui">熔断</text>
-  <text x="468" y="116" font-size="16" font-family="PingFang SC, Microsoft YaHei, system-ui">降载</text>
-  <text x="673" y="116" font-size="16" font-family="PingFang SC, Microsoft YaHei, system-ui">超时</text>
-  <path d="M200 110h30M400 110h30M600 110h30" stroke="#64748b" stroke-width="3" />
-  <text x="32" y="220" font-size="15" font-family="PingFang SC, Microsoft YaHei, system-ui" fill="#334155">在高并发场景下，go-zero 通过多重保护机制保持系统稳定。</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 150" width="800">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="800" height="150" rx="12" fill="#f8fafc"/>
+  <!-- Title: margin=20, y=20+16*0.75=32 -->
+  <text x="400" y="32" font-size="16" font-weight="600" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif"
+        fill="#0f172a">弹性设计</text>
+  <!-- 4 boxes: y=52, h=36 (12px*3), center_y=70; w=170, gap=20, margin=30 -->
+  <!-- Box 1: 限流 (blue) x=30 -->
+  <rect x="30" y="52" width="170" height="36" rx="6"
+        fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="115" y="74" font-size="12" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif"
+        fill="#1e40af">限流</text>
+  <!-- Arrow: 200+5=205 → 220-7=213, y=70 -->
+  <path d="M205,70 Q209,70 213,70" stroke="#64748b" stroke-width="2"
+        fill="none" marker-end="url(#arrow)"/>
+  <!-- Box 2: 熔断 (amber) x=220 -->
+  <rect x="220" y="52" width="170" height="36" rx="6"
+        fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="305" y="74" font-size="12" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif"
+        fill="#b45309">熔断</text>
+  <!-- Arrow: 390+5=395 → 410-7=403, y=70 -->
+  <path d="M395,70 Q399,70 403,70" stroke="#64748b" stroke-width="2"
+        fill="none" marker-end="url(#arrow)"/>
+  <!-- Box 3: 降载 (pink) x=410 -->
+  <rect x="410" y="52" width="170" height="36" rx="6"
+        fill="#fce7f3" stroke="#ec4899" stroke-width="1.5"/>
+  <text x="495" y="74" font-size="12" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif"
+        fill="#9d174d">降载</text>
+  <!-- Arrow: 580+5=585 → 600-7=593, y=70 -->
+  <path d="M585,70 Q589,70 593,70" stroke="#64748b" stroke-width="2"
+        fill="none" marker-end="url(#arrow)"/>
+  <!-- Box 4: 超时 (green) x=600 -->
+  <rect x="600" y="52" width="170" height="36" rx="6"
+        fill="#d1fae5" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="685" y="74" font-size="12" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif"
+        fill="#166534">超时</text>
+  <!-- Description: box_bottom=88, y=88+20+12*0.75=117 -->
+  <text x="30" y="117" font-size="12"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif"
+        fill="#334155">在高并发场景下，go-zero 通过多重保护机制保持系统稳定。</text>
 </svg>

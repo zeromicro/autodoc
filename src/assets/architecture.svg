@@ -1,16 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 500">
-  <style>
-    .title{font:700 22px PingFang SC,Microsoft YaHei,system-ui;fill:#0f172a}
-    .txt{font:500 14px PingFang SC,Microsoft YaHei,system-ui;fill:#0f172a}
-  </style>
-  <rect width="820" height="500" fill="#f8fafc" rx="12"/>
-  <text class="title" x="24" y="38">go-zero 架构总览</text>
-  <rect x="40" y="70" width="740" height="72" rx="10" fill="#bfdbfe"/>
-  <text class="txt" x="64" y="112">网关与入口层：API Gateway / gRPC Gateway / Auth / Rate Limit</text>
-  <rect x="40" y="170" width="740" height="90" rx="10" fill="#fde68a"/>
-  <text class="txt" x="64" y="210">服务治理层：服务发现、负载均衡、超时控制、熔断、降载</text>
-  <rect x="40" y="290" width="740" height="90" rx="10" fill="#bbf7d0"/>
-  <text class="txt" x="64" y="330">业务服务层：HTTP API / RPC Service / Cron / MQ Consumer</text>
-  <rect x="40" y="410" width="740" height="60" rx="10" fill="#ddd6fe"/>
-  <text class="txt" x="64" y="447">基础设施层：MySQL / Redis / Kafka / Etcd / Observability</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="800">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="800" height="380" rx="12" fill="#f8fafc"/>
+  <!-- Title: margin=20, y=32 -->
+  <text x="400" y="32" font-size="16" font-weight="600" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif"
+        fill="#0f172a">go-zero 架构总览</text>
+  <!-- Layer 1: 网关与入口层 (blue) x=20, y=52, w=760, h=60 -->
+  <!-- two-line center: line1_y=box_top+21=73, line2_y=73+20=93 -->
+  <rect x="20" y="52" width="760" height="60" rx="8"
+        fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="400" y="73" font-size="12" font-weight="600" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif"
+        fill="#1e40af">网关与入口层</text>
+  <text x="400" y="95" font-size="10" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif"
+        fill="#1e40af">API Gateway / gRPC Gateway / Auth / Rate Limit</text>
+  <!-- Down arrow: layer1_bottom=112, +5=117 → layer2_top=134, -7=127 -->
+  <path d="M400,117 Q400,122 400,127" stroke="#64748b" stroke-width="2"
+        fill="none" marker-end="url(#arrow)"/>
+  <!-- Layer 2: 服务治理层 (amber) y=134, h=60 -->
+  <rect x="20" y="134" width="760" height="60" rx="8"
+        fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="400" y="155" font-size="12" font-weight="600" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif"
+        fill="#b45309">服务治理层</text>
+  <text x="400" y="177" font-size="10" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif"
+        fill="#b45309">服务发现 · 负载均衡 · 超时控制 · 熔断 · 降载</text>
+  <!-- Down arrow: 194+5=199 → 216-7=209 -->
+  <path d="M400,199 Q400,204 400,209" stroke="#64748b" stroke-width="2"
+        fill="none" marker-end="url(#arrow)"/>
+  <!-- Layer 3: 业务服务层 (green) y=216, h=60 -->
+  <rect x="20" y="216" width="760" height="60" rx="8"
+        fill="#d1fae5" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="400" y="237" font-size="12" font-weight="600" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif"
+        fill="#166534">业务服务层</text>
+  <text x="400" y="259" font-size="10" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif"
+        fill="#166534">HTTP API / RPC Service / Cron / MQ Consumer</text>
+  <!-- Down arrow: 276+5=281 → 298-7=291 -->
+  <path d="M400,281 Q400,286 400,291" stroke="#64748b" stroke-width="2"
+        fill="none" marker-end="url(#arrow)"/>
+  <!-- Layer 4: 基础设施层 (purple) y=298, h=60 -->
+  <rect x="20" y="298" width="760" height="60" rx="8"
+        fill="#f3e8ff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="400" y="319" font-size="12" font-weight="600" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif"
+        fill="#6b21a8">基础设施层</text>
+  <text x="400" y="341" font-size="10" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif"
+        fill="#6b21a8">MySQL / Redis / Kafka / Etcd / Observability</text>
 </svg>

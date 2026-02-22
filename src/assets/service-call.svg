@@ -1,11 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 300">
-  <rect width="860" height="300" rx="12" fill="#f8fafc"/>
-  <g font-family="PingFang SC, Microsoft YaHei, system-ui" font-size="14" fill="#0f172a">
-    <rect x="70" y="60" width="160" height="70" rx="9" fill="#bfdbfe" /><text x="107" y="100">order-api</text>
-    <rect x="340" y="60" width="160" height="70" rx="9" fill="#bbf7d0" /><text x="380" y="100">order-rpc</text>
-    <rect x="610" y="60" width="170" height="70" rx="9" fill="#ddd6fe" /><text x="648" y="100">inventory-rpc</text>
-    <rect x="340" y="185" width="160" height="70" rx="9" fill="#fde68a" /><text x="390" y="225">payment-rpc</text>
-  </g>
-  <path d="M230 95h110M500 95h110M420 130v55" stroke="#64748b" stroke-width="3"/>
-  <text x="74" y="36" font-size="20" font-family="PingFang SC, Microsoft YaHei, system-ui" fill="#0f172a">微服务调用关系</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 175" width="800">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="800" height="175" rx="12" fill="#f8fafc"/>
+  <!-- Title: y=32 -->
+  <text x="400" y="32" font-size="16" font-weight="600" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif"
+        fill="#0f172a">微服务调用关系</text>
+  <!--
+    Row 1: 3 boxes w=200, margin=50, gap=100
+    Box1: x=50  Box2: x=300  Box3: x=550
+    y=52, h=36 (12px*3), center_y=70, text_y=74
+    Arrows horizontal y=70:
+      1→2: 250+5=255 → 300-7=293
+      2→3: 500+5=505 → 550-7=543
+    Box4: x=300 (same column as box2), y=113, h=36
+    Vertical arrow: box2_bottom=88, +5=93 → box4_top=113, -7=106, x=400
+  -->
+  <!-- Box 1: order-api (blue) -->
+  <rect x="50" y="52" width="200" height="36" rx="6"
+        fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="150" y="74" font-size="12" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif"
+        fill="#1e40af">order-api</text>
+  <!-- Arrow 1→2 -->
+  <path d="M255,70 Q274,70 293,70" stroke="#64748b" stroke-width="2"
+        fill="none" marker-end="url(#arrow)"/>
+  <!-- Box 2: order-rpc (green) -->
+  <rect x="300" y="52" width="200" height="36" rx="6"
+        fill="#d1fae5" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="400" y="74" font-size="12" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif"
+        fill="#166534">order-rpc</text>
+  <!-- Arrow 2→3 -->
+  <path d="M505,70 Q524,70 543,70" stroke="#64748b" stroke-width="2"
+        fill="none" marker-end="url(#arrow)"/>
+  <!-- Box 3: inventory-rpc (purple) -->
+  <rect x="550" y="52" width="200" height="36" rx="6"
+        fill="#f3e8ff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="650" y="74" font-size="12" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif"
+        fill="#6b21a8">inventory-rpc</text>
+  <!-- Vertical arrow: 88+5=93 → 113-7=106, x=400 -->
+  <path d="M400,93 Q400,99 400,106" stroke="#64748b" stroke-width="2"
+        fill="none" marker-end="url(#arrow)"/>
+  <!-- Box 4: payment-rpc (amber), centered below box2 -->
+  <rect x="300" y="113" width="200" height="36" rx="6"
+        fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="400" y="135" font-size="12" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif"
+        fill="#b45309">payment-rpc</text>
 </svg>
