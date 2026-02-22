@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 170" width="800">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="170" rx="12" fill="#f8fafc"/>
+
+  <!-- Title: x=400, y=20+16*0.75=32 -->
+  <text x="400" y="32" font-size="16" font-weight="600"
+        font-family="system-ui, -apple-system, sans-serif"
+        fill="#0f172a" text-anchor="middle">Resilience Design</text>
+
+  <!-- Box 1: Rate Limiting (blue) — x=30, y=52, w=170, h=72, center=(115,88) -->
+  <rect x="30" y="52" width="170" height="72" rx="8"
+        fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <!-- two-line: line1 y=83, line2 y=101 -->
+  <text x="115" y="83" font-size="13" font-family="system-ui, -apple-system, sans-serif"
+        fill="#1e40af" text-anchor="middle">Rate</text>
+  <text x="115" y="101" font-size="13" font-family="system-ui, -apple-system, sans-serif"
+        fill="#1e40af" text-anchor="middle">Limiting</text>
+
+  <!-- Arrow 1: right of box1 (200) +5=205  →  left of box2 (230) -7=223, y=88 -->
+  <path d="M205,88 L223,88" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Box 2: Circuit Breaking (amber) — x=230, y=52, w=170, h=72, center=(315,88) -->
+  <rect x="230" y="52" width="170" height="72" rx="8"
+        fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="315" y="83" font-size="13" font-family="system-ui, -apple-system, sans-serif"
+        fill="#b45309" text-anchor="middle">Circuit</text>
+  <text x="315" y="101" font-size="13" font-family="system-ui, -apple-system, sans-serif"
+        fill="#b45309" text-anchor="middle">Breaking</text>
+
+  <!-- Arrow 2: right of box2 (400) +5=405  →  left of box3 (430) -7=423, y=88 -->
+  <path d="M405,88 L423,88" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Box 3: Load Shedding (pink) — x=430, y=52, w=170, h=72, center=(515,88) -->
+  <rect x="430" y="52" width="170" height="72" rx="8"
+        fill="#fce7f3" stroke="#ec4899" stroke-width="1.5"/>
+  <text x="515" y="83" font-size="13" font-family="system-ui, -apple-system, sans-serif"
+        fill="#9d174d" text-anchor="middle">Load</text>
+  <text x="515" y="101" font-size="13" font-family="system-ui, -apple-system, sans-serif"
+        fill="#9d174d" text-anchor="middle">Shedding</text>
+
+  <!-- Arrow 3: right of box3 (600) +5=605  →  left of box4 (630) -7=623, y=88 -->
+  <path d="M605,88 L623,88" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Box 4: Timeout (green) — x=630, y=52, w=140, h=72, center=(700,88) -->
+  <rect x="630" y="52" width="140" height="72" rx="8"
+        fill="#d1fae5" stroke="#22c55e" stroke-width="1.5"/>
+  <!-- single line: y = 88 + 13*0.35 ≈ 92 -->
+  <text x="700" y="92" font-size="13" font-family="system-ui, -apple-system, sans-serif"
+        fill="#166534" text-anchor="middle">Timeout</text>
+
+  <!-- Description — y = box_bottom(124) + 20 + 13*0.75 ≈ 154 -->
+  <text x="30" y="150" font-size="13" font-family="system-ui, -apple-system, sans-serif"
+        fill="#334155">In high-concurrency scenarios, go-zero maintains system stability through multiple protection layers.</text>
+</svg>

@@ -23,4 +23,4 @@ Handlers, logic modules, service context, and models are intentionally separated
 
 Production-grade systems need logs, metrics, and traces from day one, not after incidents happen.
 
-![resilience design](../../../assets/resilience.svg)
+![resilience design](../../../assets/resilience-en.svg)
