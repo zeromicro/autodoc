@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 48" role="img" aria-label="go-zero logo">
+  <rect x="0" y="0" width="160" height="48" rx="10" fill="#0f172a" />
+  <text x="16" y="31" fill="#60a5fa" font-size="25" font-family="PingFang SC, Microsoft YaHei, system-ui">go-zero</text>
+  <circle cx="140" cy="24" r="7" fill="#10b981" />
+</svg>

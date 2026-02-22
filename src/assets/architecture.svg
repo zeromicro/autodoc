@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 500">
+  <style>
+    .title{font:700 22px PingFang SC,Microsoft YaHei,system-ui;fill:#0f172a}
+    .txt{font:500 14px PingFang SC,Microsoft YaHei,system-ui;fill:#0f172a}
+  </style>
+  <rect width="820" height="500" fill="#f8fafc" rx="12"/>
+  <text class="title" x="24" y="38">go-zero 架构总览</text>
+  <rect x="40" y="70" width="740" height="72" rx="10" fill="#bfdbfe"/>
+  <text class="txt" x="64" y="112">网关与入口层：API Gateway / gRPC Gateway / Auth / Rate Limit</text>
+  <rect x="40" y="170" width="740" height="90" rx="10" fill="#fde68a"/>
+  <text class="txt" x="64" y="210">服务治理层：服务发现、负载均衡、超时控制、熔断、降载</text>
+  <rect x="40" y="290" width="740" height="90" rx="10" fill="#bbf7d0"/>
+  <text class="txt" x="64" y="330">业务服务层：HTTP API / RPC Service / Cron / MQ Consumer</text>
+  <rect x="40" y="410" width="740" height="60" rx="10" fill="#ddd6fe"/>
+  <text class="txt" x="64" y="447">基础设施层：MySQL / Redis / Kafka / Etcd / Observability</text>
+</svg>

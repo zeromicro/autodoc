@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 220">
+  <rect width="860" height="220" rx="12" fill="#f8fafc"/>
+  <g font-family="PingFang SC, Microsoft YaHei, system-ui" font-size="14" fill="#0f172a">
+    <rect x="35" y="80" width="150" height="62" rx="8" fill="#fde68a" /><text x="63" y="116">DSL 定义</text>
+    <rect x="230" y="80" width="170" height="62" rx="8" fill="#bfdbfe" /><text x="258" y="116">goctl 代码生成</text>
+    <rect x="445" y="80" width="160" height="62" rx="8" fill="#bbf7d0" /><text x="471" y="116">业务开发</text>
+    <rect x="650" y="80" width="170" height="62" rx="8" fill="#ddd6fe" /><text x="686" y="116">部署上线</text>
+  </g>
+  <path d="M185 111h45M400 111h45M605 111h45" stroke="#64748b" stroke-width="3"/>
+</svg>

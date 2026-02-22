@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 300">
+  <rect width="860" height="300" rx="12" fill="#f8fafc"/>
+  <g font-family="PingFang SC, Microsoft YaHei, system-ui" font-size="14" fill="#0f172a">
+    <rect x="70" y="60" width="160" height="70" rx="9" fill="#bfdbfe" /><text x="107" y="100">order-api</text>
+    <rect x="340" y="60" width="160" height="70" rx="9" fill="#bbf7d0" /><text x="380" y="100">order-rpc</text>
+    <rect x="610" y="60" width="170" height="70" rx="9" fill="#ddd6fe" /><text x="648" y="100">inventory-rpc</text>
+    <rect x="340" y="185" width="160" height="70" rx="9" fill="#fde68a" /><text x="390" y="225">payment-rpc</text>
+  </g>
+  <path d="M230 95h110M500 95h110M420 130v55" stroke="#64748b" stroke-width="3"/>
+  <text x="74" y="36" font-size="20" font-family="PingFang SC, Microsoft YaHei, system-ui" fill="#0f172a">微服务调用关系</text>
+</svg>

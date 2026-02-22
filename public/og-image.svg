@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0b1220" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <text x="110" y="290" font-size="84" fill="#ffffff" font-family="PingFang SC, Microsoft YaHei, system-ui">go-zero</text>
+  <text x="110" y="380" font-size="44" fill="#bfdbfe" font-family="PingFang SC, Microsoft YaHei, system-ui">Cloud-native web and RPC framework documentation</text>
+</svg>

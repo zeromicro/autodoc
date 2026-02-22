@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 360">
+  <rect width="860" height="360" rx="12" fill="#f8fafc"/>
+  <text x="28" y="38" font-size="22" fill="#0f172a" font-family="PingFang SC, Microsoft YaHei, system-ui">生产部署架构</text>
+  <rect x="40" y="70" width="250" height="110" rx="10" fill="#bfdbfe"/>
+  <text x="68" y="130" font-size="15" fill="#0f172a" font-family="PingFang SC, Microsoft YaHei, system-ui">Ingress / API Gateway</text>
+  <rect x="320" y="70" width="250" height="110" rx="10" fill="#bbf7d0"/>
+  <text x="370" y="130" font-size="15" fill="#0f172a" font-family="PingFang SC, Microsoft YaHei, system-ui">go-zero Services</text>
+  <rect x="600" y="70" width="220" height="110" rx="10" fill="#ddd6fe"/>
+  <text x="645" y="130" font-size="15" fill="#0f172a" font-family="PingFang SC, Microsoft YaHei, system-ui">Data Layer</text>
+  <rect x="40" y="210" width="780" height="110" rx="10" fill="#fde68a"/>
+  <text x="60" y="270" font-size="15" fill="#0f172a" font-family="PingFang SC, Microsoft YaHei, system-ui">Observability: Metrics / Logs / Traces / Alerting</text>
+  <path d="M290 125h30M570 125h30" stroke="#64748b" stroke-width="3"/>
+</svg>

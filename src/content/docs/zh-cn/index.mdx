@@ -1,0 +1,78 @@
+---
+title: go-zero 文档
+description: 一个云原生 Go 微服务框架，内置弹性治理与代码生成能力
+template: splash
+hero:
+  tagline: 用更少的代码，构建高可用的 Go 微服务。
+  image:
+    file: ../../../assets/logo.png
+  actions:
+    - text: 快速开始
+      link: /zh-cn/getting-started/
+      icon: right-arrow
+      variant: primary
+    - text: 查看 GitHub
+      link: https://github.com/zeromicro/go-zero
+      icon: external
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## 为什么选择 go-zero？
+
+<CardGrid stagger>
+	<Card title="简洁的代码生成" icon="rocket">
+		通过 `goctl` 从简单定义生成 Go、API 与 RPC 代码。减少样板代码，提升开发效率。
+	</Card>
+	<Card title="内置弹性治理" icon="approve-check">
+		燕断器、限流、自适应降载与超时控制自动生效，无需额外配置。
+	</Card>
+	<Card title="高性能" icon="star">
+		零分配路由、高效序列化与优化的中间件链路，满足生产级吞吐量需求。
+	</Card>
+	<Card title="大规模验证" icon="seti:lock">
+		已被数千家公司用于生产环境，每日处理数百万次请求。
+	</Card>
+</CardGrid>
+
+## 快速示例
+
+```go
+// 在 .api 文件中定义接口
+type (
+    LoginReq {
+        Username string `json:"username"`
+        Password string `json:"password"`
+    }
+
+    LoginResp {
+        Token string `json:"token"`
+    }
+)
+
+service user-api {
+    @handler Login
+    post /api/user/login (LoginReq) returns (LoginResp)
+}
+```
+
+一条命令生成所有代码：
+
+```bash
+goctl api go -api user.api -dir .
+```
+
+完成。你将得到一个完整的、可用于生产的 API 服务器，包含路由、参数校验、中间件支持与错误处理。
+
+## 准备好开始了吗？
+
+<CardGrid>
+	<Card title="阅读介绍" icon="open-book">
+		了解 go-zero 是什么以及它为何而生。
+		[介绍 →](/zh-cn/getting-started/)
+	</Card>
+	<Card title="5 分钟快速上手" icon="rocket">
+		5 分钟内构建你的第一个 API。
+		[第一个 API →](/zh-cn/getting-started/quickstart/hello-world/)
+	</Card>
+</CardGrid>

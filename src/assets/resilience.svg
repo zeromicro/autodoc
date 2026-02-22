@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340">
+  <rect width="800" height="340" rx="12" fill="#f8fafc" />
+  <text x="24" y="36" font-size="22" font-family="PingFang SC, Microsoft YaHei, system-ui" fill="#0f172a">弹性设计</text>
+  <rect x="30" y="70" width="170" height="80" rx="10" fill="#bfdbfe" />
+  <rect x="230" y="70" width="170" height="80" rx="10" fill="#fde68a" />
+  <rect x="430" y="70" width="170" height="80" rx="10" fill="#fecdd3" />
+  <rect x="630" y="70" width="140" height="80" rx="10" fill="#bbf7d0" />
+  <text x="82" y="116" font-size="16" font-family="PingFang SC, Microsoft YaHei, system-ui">限流</text>
+  <text x="282" y="116" font-size="16" font-family="PingFang SC, Microsoft YaHei, system-ui">熔断</text>
+  <text x="468" y="116" font-size="16" font-family="PingFang SC, Microsoft YaHei, system-ui">降载</text>
+  <text x="673" y="116" font-size="16" font-family="PingFang SC, Microsoft YaHei, system-ui">超时</text>
+  <path d="M200 110h30M400 110h30M600 110h30" stroke="#64748b" stroke-width="3" />
+  <text x="32" y="220" font-size="15" font-family="PingFang SC, Microsoft YaHei, system-ui" fill="#334155">在高并发场景下，go-zero 通过多重保护机制保持系统稳定。</text>
+</svg>
