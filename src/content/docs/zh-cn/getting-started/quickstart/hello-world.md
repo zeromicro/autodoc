@@ -1,39 +1,91 @@
 ---
 title: Hello World
-description: 通过最小示例快速运行一个 go-zero API 服务。
+description: 用五步创建并运行第一个 go-zero HTTP API 服务。
 sidebar:
   order: 8
 ---
 
 # Hello World
 
-## 前置条件
+五步构建并运行你的第一个 go-zero HTTP 服务。
 
-- [x] Go 已安装
-- [x] goctl 已安装
-
-## 第一步：创建项目
+## 第一步：生成服务脚手架
 
 ```bash
 goctl api new greet
 cd greet
+```
+
+## 第二步：查看 API DSL 文件
+
+```bash
+cat greet.api
+```
+
+```go
+syntax = "v1"
+
+type Request {
+    Name string `path:"name,options=you|me"`
+}
+
+type Response {
+    Message string `json:"message"`
+}
+
+service greet-api {
+    @handler Greethandler
+    get /from/:name (Request) returns (Response)
+}
+```
+
+## 第三步：拉取依赖并运行
+
+```bash
 go mod tidy
+go run greet.go -f etc/greet-api.yaml
 ```
 
-## 第二步：运行服务
+```
+Starting server at 0.0.0.0:8888...
+```
+
+## 第四步：测试
 
 ```bash
-go run greet.go
+curl http://localhost:8888/from/world
+# 输出：{"message":""}
 ```
 
-## 第三步：验证
+## 第五步：添加业务逻辑
+
+打开 `internal/logic/greetlogic.go`，填写 `Greet` 函数：
+
+```go
+func (l *GreetLogic) Greet(req *types.Request) (resp *types.Response, err error) {
+    return &types.Response{
+        Message: "Hello, " + req.Name + "!",
+    }, nil
+}
+```
+
+重启服务并重新测试：
 
 ```bash
-curl http://localhost:8888/from/you
+curl http://localhost:8888/from/world
+# 输出：{"message":"Hello, world!"}
 ```
 
-预期输出：
+## 请求流转过程
 
-```json
-{"message":"Hello you"}
 ```
+HTTP GET /from/world
+  → main.go（注册路由）
+  → handler/greethandler.go（解析请求 → types.Request）
+  → logic/greetlogic.go  ← 你的业务代码
+  → 返回 types.Response（序列化为 JSON）
+```
+
+## 下一步
+
+[构建完整 API 服务 →](./api-service)
