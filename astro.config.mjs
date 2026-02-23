@@ -27,7 +27,7 @@ function remarkMermaid() {
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://doc.go-zero.dev',
+	site: 'https://go-zero.dev',
 	integrations: [
 		starlight({
 			title: 'go-zero',
