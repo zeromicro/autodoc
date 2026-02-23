@@ -4,6 +4,10 @@ description: go-zero version history, breaking changes, and migration notes.
 sidebar:
   order: 10
 ---
+## v1.10.0 – 2026-02-23
+
+null
+
 
 # Changelog
 
