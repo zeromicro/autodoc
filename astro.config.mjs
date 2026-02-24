@@ -84,46 +84,150 @@ mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'loose'
 				},
 			],
 			sidebar: [
+				// ── Getting Started ──────────────────────────────────────
 				{
 					label: 'Getting Started',
 					translations: { 'zh-CN': '快速开始' },
 					autogenerate: { directory: 'getting-started' },
 				},
+				// ── Tutorials ────────────────────────────────────────────
+				// Explicit items so legacy duplicate dirs (mysql/, redis/,
+				// mongo/, ops/, log/, service-governance/) are hidden.
 				{
 					label: 'Tutorials',
 					translations: { 'zh-CN': '教程' },
-					autogenerate: { directory: 'tutorials' },
+					items: [
+						{ slug: 'tutorials' },
+						{
+							label: 'HTTP Service',
+							translations: { 'zh-CN': 'HTTP 服务' },
+							autogenerate: { directory: 'tutorials/http' },
+						},
+						{
+							label: 'API DSL',
+							translations: { 'zh-CN': 'API DSL' },
+							autogenerate: { directory: 'tutorials/api' },
+						},
+						{
+							label: 'gRPC Service',
+							translations: { 'zh-CN': 'gRPC 服务' },
+							autogenerate: { directory: 'tutorials/grpc' },
+						},
+						{
+							label: 'Proto DSL',
+							translations: { 'zh-CN': 'Proto DSL' },
+							autogenerate: { directory: 'tutorials/proto' },
+						},
+						{
+							label: 'Database',
+							translations: { 'zh-CN': '数据库' },
+							autogenerate: { directory: 'tutorials/database' },
+						},
+						{
+							label: 'Microservice',
+							translations: { 'zh-CN': '微服务' },
+							autogenerate: { directory: 'tutorials/microservice' },
+						},
+						{
+							label: 'Message Queue',
+							translations: { 'zh-CN': '消息队列' },
+							autogenerate: { directory: 'tutorials/queue' },
+						},
+						{
+							label: 'API Gateway',
+							translations: { 'zh-CN': 'API 网关' },
+							autogenerate: { directory: 'tutorials/gateway' },
+						},
+						{
+							label: 'Deployment',
+							translations: { 'zh-CN': '部署运维' },
+							autogenerate: { directory: 'tutorials/deployment' },
+						},
+						{
+							label: 'goctl CLI',
+							translations: { 'zh-CN': 'goctl 命令' },
+							autogenerate: { directory: 'tutorials/cli' },
+						},
+						{
+							label: 'Configuration',
+							translations: { 'zh-CN': '配置管理' },
+							autogenerate: { directory: 'tutorials/configuration' },
+						},
+						{
+							label: 'Cron Job',
+							translations: { 'zh-CN': '定时任务' },
+							autogenerate: { directory: 'tutorials/cron-job' },
+						},
+						{
+							label: 'Customization',
+							translations: { 'zh-CN': '模板定制' },
+							autogenerate: { directory: 'tutorials/customization' },
+						},
+						{
+							label: 'MCP Integration',
+							translations: { 'zh-CN': 'MCP 集成' },
+							autogenerate: { directory: 'tutorials/mcp' },
+						},
+					],
 				},
-				{
-					label: 'Tasks',
-					translations: { 'zh-CN': '任务' },
-					autogenerate: { directory: 'tasks' },
-				},
+				// ── Components ───────────────────────────────────────────
 				{
 					label: 'Components',
 					translations: { 'zh-CN': '组件' },
 					autogenerate: { directory: 'components' },
 				},
+				// ── Concepts ─────────────────────────────────────────────
+				// Explicit to hide duplicate layout.md, keywords.md,
+				// components.md, architecture-evolution.md.
 				{
 					label: 'Concepts',
 					translations: { 'zh-CN': '核心概念' },
-					autogenerate: { directory: 'concepts' },
+					items: [
+						{ slug: 'concepts' },
+						{ slug: 'concepts/architecture' },
+						{ slug: 'concepts/design-principles' },
+						{ slug: 'concepts/project-structure' },
+						{ slug: 'concepts/glossary' },
+					],
 				},
+				// ── Reference ────────────────────────────────────────────
+				// Explicit to hide examples.md, proto.md, about-us.md.
 				{
 					label: 'Reference',
 					translations: { 'zh-CN': '参考文档' },
-					autogenerate: { directory: 'reference' },
+					items: [
+						{ slug: 'reference' },
+						{
+							label: 'goctl',
+							autogenerate: { directory: 'reference/goctl' },
+						},
+						{
+							label: 'Configuration',
+							translations: { 'zh-CN': '配置参考' },
+							autogenerate: { directory: 'reference/configuration' },
+						},
+						{ slug: 'reference/goctl-plugins' },
+						{ slug: 'reference/changelog' },
+						{
+							label: 'Releases',
+							translations: { 'zh-CN': '版本记录' },
+							autogenerate: { directory: 'reference/releases' },
+						},
+					],
 				},
-				{
-					label: 'FAQ',
-					translations: { 'zh-CN': '常见问题' },
-					autogenerate: { directory: 'faq' },
-				},
+				// ── Examples ─────────────────────────────────────────────
 				{
 					label: 'Examples',
 					translations: { 'zh-CN': '示例' },
 					autogenerate: { directory: 'examples' },
 				},
+				// ── FAQ ──────────────────────────────────────────────────
+				{
+					label: 'FAQ',
+					translations: { 'zh-CN': '常见问题' },
+					autogenerate: { directory: 'faq' },
+				},
+				// ── Contributing ─────────────────────────────────────────
 				{
 					label: 'Contributing',
 					translations: { 'zh-CN': '贡献指南' },
