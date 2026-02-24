@@ -13,7 +13,7 @@ Learn go-zero through practical, step-by-step guides organized by topic.
 ## HTTP Services
 
 - [Basic HTTP Service](./http/basic.md) — Create your first REST API
-- [Middleware](./http/middleware.md) — Request/response interceptors
+- [Middleware](./http/server/middleware.md) — Request/response interceptors
 - [JWT Authentication](./http/jwt-auth.md) — Secure endpoints with tokens
 - [File Upload](./http/file-upload.md) — Handle multipart form data
 
