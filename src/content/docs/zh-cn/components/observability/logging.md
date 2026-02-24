@@ -2,7 +2,8 @@
 title: 日志
 description: 统一日志规范与采集策略。
 sidebar:
-  order: 10
+  order: 2
+
 ---
 
 # 日志

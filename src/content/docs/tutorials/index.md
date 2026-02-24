@@ -3,6 +3,7 @@ title: Tutorials
 description: Step-by-step guides for building with go-zero, from HTTP APIs to full microservice systems.
 sidebar:
   order: 1
+
 ---
 
 # Tutorials
@@ -18,8 +19,8 @@ Learn go-zero through practical, step-by-step guides organized by topic.
 
 ## gRPC Services
 
-- [gRPC Server](./grpc/server.md) — Define and serve a protobuf service
-- [gRPC Client](./grpc/client.md) — Call gRPC services from Go
+- [gRPC Server](./grpc/server/) — Define and serve a protobuf service
+- [gRPC Client](./grpc/client/) — Call gRPC services from Go
 - [Interceptors](./grpc/interceptor.md) — Middleware for gRPC
 
 ## Database
@@ -31,7 +32,7 @@ Learn go-zero through practical, step-by-step guides organized by topic.
 ## Microservices
 
 - [Service Discovery](./microservice/service-discovery.md) — Register and resolve services
-- [Load Balancing](./microservice/load-balancing.md) — Distribute RPC traffic
+- [Load Balancing](./microservice/load-balancing) — Distribute RPC traffic
 - [Distributed Tracing](./microservice/distributed-tracing.md) — Trace requests across services
 
 ## Deployment

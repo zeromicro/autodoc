@@ -2,7 +2,8 @@
 title: Project Structure
 description: Standard folder layout and responsibilities in a generated go-zero project.
 sidebar:
-  order: 5
+  order: 6
+
 ---
 
 # Project Structure

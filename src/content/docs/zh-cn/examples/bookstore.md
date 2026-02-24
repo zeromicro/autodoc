@@ -3,6 +3,7 @@ title: 书店示例
 description: 完整示例：API 网关调用 RPC 服务，后端使用 MySQL 存储。
 sidebar:
   order: 4
+
 ---
 
 # 书店示例

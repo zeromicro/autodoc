@@ -3,6 +3,7 @@ title: 入门指南
 description: go-zero 学习路径全览，从安装到运行第一个微服务。
 sidebar:
   order: 1
+
 ---
 
 # 入门指南

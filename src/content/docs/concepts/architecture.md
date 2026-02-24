@@ -2,7 +2,8 @@
 title: Architecture
 description: A deep-dive into go-zero's layered architecture, request lifecycle, middleware execution, and observability pipeline — with Mermaid diagrams.
 sidebar:
-  order: 3
+  order: 2
+
 ---
 
 # Architecture

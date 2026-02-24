@@ -3,6 +3,7 @@ title: Getting Started
 description: Prepare your environment and launch your first go-zero service in under 5 minutes.
 sidebar:
   order: 1
+
 ---
 
 # Getting Started

@@ -3,6 +3,7 @@ title: 微服务系统
 description: 多服务示例，演示服务发现、RPC 调用链与可观测性。
 sidebar:
   order: 5
+
 ---
 
 # 微服务系统

@@ -3,6 +3,7 @@ title: Pull Request Process
 description: How to open and get a pull request merged into go-zero.
 sidebar:
   order: 3
+
 ---
 
 # Pull Request Process

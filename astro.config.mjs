@@ -95,6 +95,16 @@ mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'loose'
 					autogenerate: { directory: 'tutorials' },
 				},
 				{
+					label: 'Tasks',
+					translations: { 'zh-CN': '任务' },
+					autogenerate: { directory: 'tasks' },
+				},
+				{
+					label: 'Components',
+					translations: { 'zh-CN': '组件' },
+					autogenerate: { directory: 'components' },
+				},
+				{
 					label: 'Concepts',
 					translations: { 'zh-CN': '核心概念' },
 					autogenerate: { directory: 'concepts' },
@@ -105,9 +115,19 @@ mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'loose'
 					autogenerate: { directory: 'reference' },
 				},
 				{
+					label: 'FAQ',
+					translations: { 'zh-CN': '常见问题' },
+					autogenerate: { directory: 'faq' },
+				},
+				{
 					label: 'Examples',
 					translations: { 'zh-CN': '示例' },
 					autogenerate: { directory: 'examples' },
+				},
+				{
+					label: 'Contributing',
+					translations: { 'zh-CN': '贡献指南' },
+					autogenerate: { directory: 'contributing' },
 				},
 			],
 		}),

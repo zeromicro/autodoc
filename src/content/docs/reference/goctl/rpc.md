@@ -2,7 +2,8 @@
 title: RPC Generation
 description: Reference for goctl rpc — generate gRPC service scaffolding from proto files.
 sidebar:
-  order: 3
+  order: 4
+
 ---
 
 # RPC Generation

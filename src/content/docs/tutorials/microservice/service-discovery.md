@@ -1,8 +1,9 @@
 ---
 title: Service Discovery
-description: Register and discover go-zero microservices using etcd or Kubernetes.
+description: Register and discover services in go-zero microservices.
 sidebar:
-  order: 1
+  order: 2
+
 ---
 
 # Service Discovery

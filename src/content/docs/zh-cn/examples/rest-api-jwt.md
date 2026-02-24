@@ -3,6 +3,7 @@ title: REST API + JWT 鉴权
 description: 使用 go-zero 构建基于 JWT 认证的 HTTP 服务。
 sidebar:
   order: 3
+
 ---
 
 # REST API + JWT 鉴权

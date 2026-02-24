@@ -2,7 +2,8 @@
 title: Rate Limiter
 description: Control request throughput in go-zero services with token bucket rate limiting.
 sidebar:
-  order: 2
+  order: 3
+
 ---
 
 # Rate Limiter

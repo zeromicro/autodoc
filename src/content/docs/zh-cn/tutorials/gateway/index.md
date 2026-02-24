@@ -1,0 +1,16 @@
+---
+title: API Gateway Tutorials
+description: Use go-zero's built-in API gateway to proxy HTTP and gRPC traffic.
+sidebar:
+  order: 8
+
+---
+
+## 概览
+
+go-zero 内置 API 网关，可以代理 HTTP 和 gRPC 服务。
+
+## 内容
+
+- [gRPC 网关](grpc.md) — 将 gRPC 服务暴露为 HTTP 端点
+- [HTTP 网关](http.md) — 通过网关代理 HTTP 请求

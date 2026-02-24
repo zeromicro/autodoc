@@ -2,7 +2,8 @@
 title: JWT Authentication
 description: Protect go-zero HTTP endpoints with JSON Web Token authentication.
 sidebar:
-  order: 3
+  order: 5
+
 ---
 
 # JWT Authentication

@@ -2,7 +2,8 @@
 title: RPC 服务配置
 description: RPC 项目中的常见配置项说明。
 sidebar:
-  order: 7
+  order: 3
+
 ---
 
 # RPC 服务配置

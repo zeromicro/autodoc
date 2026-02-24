@@ -1,8 +1,9 @@
 ---
 title: gRPC Interceptors
-description: Add server-side and client-side middleware to go-zero gRPC services.
+description: Add server-side and client-side interceptors to gRPC services.
 sidebar:
-  order: 3
+  order: 5
+
 ---
 
 # gRPC Interceptors

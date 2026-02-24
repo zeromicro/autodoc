@@ -2,7 +2,8 @@
 title: File Upload
 description: Handle multipart file uploads in go-zero HTTP services.
 sidebar:
-  order: 4
+  order: 6
+
 ---
 
 # File Upload

@@ -2,7 +2,8 @@
 title: 追踪
 description: 全链路追踪请求路径与耗时。
 sidebar:
-  order: 12
+  order: 4
+
 ---
 
 # 追踪

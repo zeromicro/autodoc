@@ -3,6 +3,7 @@ title: REST API with JWT
 description: A go-zero HTTP service protected with JWT authentication.
 sidebar:
   order: 3
+
 ---
 
 # REST API with JWT

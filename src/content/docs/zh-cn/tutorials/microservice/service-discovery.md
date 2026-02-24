@@ -1,8 +1,9 @@
 ---
 title: 服务发现
-description: 使用注册中心实现服务发现与治理。
+description: 在 go-zero 微服务中注册和发现服务。
 sidebar:
-  order: 12
+  order: 2
+
 ---
 
 # 服务发现

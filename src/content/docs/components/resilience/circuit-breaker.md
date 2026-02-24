@@ -2,7 +2,8 @@
 title: Circuit Breaker
 description: Prevent cascading failures in go-zero with automatic circuit breaking.
 sidebar:
-  order: 1
+  order: 2
+
 ---
 
 # Circuit Breaker

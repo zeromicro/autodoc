@@ -2,7 +2,8 @@
 title: API Generation
 description: Reference for goctl api — generate HTTP service scaffolding from .api files.
 sidebar:
-  order: 2
+  order: 3
+
 ---
 
 # API Generation

@@ -3,6 +3,7 @@ title: Microservice System
 description: A multi-service example demonstrating service discovery, RPC calls, and observability.
 sidebar:
   order: 5
+
 ---
 
 # Microservice System

@@ -1,6 +1,9 @@
 ---
 title: 架构概览
 description: go-zero 微服务架构深度解析，含 Mermaid 图表、各层职责说明与 YAML 配置示例。
+sidebar:
+  order: 2
+
 ---
 
 # 架构概览

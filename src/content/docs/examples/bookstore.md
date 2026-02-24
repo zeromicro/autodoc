@@ -3,6 +3,7 @@ title: Bookstore
 description: A complete example with API service calling an RPC service, backed by MySQL.
 sidebar:
   order: 4
+
 ---
 
 # Bookstore

@@ -2,7 +2,8 @@
 title: API 服务配置
 description: API 项目中的常见配置项说明。
 sidebar:
-  order: 6
+  order: 2
+
 ---
 
 # API 服务配置

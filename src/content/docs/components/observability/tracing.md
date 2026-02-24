@@ -2,7 +2,8 @@
 title: Tracing
 description: OpenTelemetry distributed tracing in go-zero services.
 sidebar:
-  order: 3
+  order: 4
+
 ---
 
 # Tracing

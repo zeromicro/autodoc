@@ -1,8 +1,9 @@
 ---
 title: Distributed Tracing
-description: Trace requests across go-zero microservices with OpenTelemetry and Jaeger — zero code changes required.
+description: Add distributed tracing to go-zero microservices.
 sidebar:
-  order: 3
+  order: 4
+
 ---
 
 # Distributed Tracing

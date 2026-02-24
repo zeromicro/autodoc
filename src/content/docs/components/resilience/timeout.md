@@ -3,6 +3,7 @@ title: Timeout
 description: Enforce per-request deadlines in go-zero HTTP and gRPC services.
 sidebar:
   order: 4
+
 ---
 
 # Timeout

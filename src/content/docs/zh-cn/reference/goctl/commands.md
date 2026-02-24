@@ -2,7 +2,8 @@
 title: goctl 命令参考
 description: goctl 全量命令与参数说明，涵盖 api、rpc、model、docker、kube 等所有子命令。
 sidebar:
-  order: 1
+  order: 2
+
 ---
 
 # goctl 命令参考

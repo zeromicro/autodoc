@@ -2,7 +2,8 @@
 title: 熔断器
 description: 通过熔断保护下游服务。
 sidebar:
-  order: 3
+  order: 2
+
 ---
 
 # 熔断器

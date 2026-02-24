@@ -2,7 +2,8 @@
 title: Metrics
 description: Prometheus metrics collection in go-zero services.
 sidebar:
-  order: 2
+  order: 3
+
 ---
 
 # Metrics

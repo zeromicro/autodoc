@@ -2,7 +2,8 @@
 title: Changelog
 description: go-zero version history, breaking changes, and migration notes.
 sidebar:
-  order: 10
+  order: 6
+
 ---
 ## v1.10.0 – 2026-02-23
 

@@ -2,7 +2,8 @@
 title: Design Principles
 description: Core engineering principles behind go-zero project design and scalability.
 sidebar:
-  order: 4
+  order: 5
+
 ---
 
 # Design Principles

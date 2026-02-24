@@ -3,6 +3,7 @@ title: Documentation
 description: How to contribute to the go-zero documentation website.
 sidebar:
   order: 4
+
 ---
 
 # Documentation

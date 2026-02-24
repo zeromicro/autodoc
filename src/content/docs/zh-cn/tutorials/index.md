@@ -3,6 +3,7 @@ title: 教程目录
 description: 按业务场景学习 go-zero 的开发、治理与部署。
 sidebar:
   order: 1
+
 ---
 
 # 教程目录

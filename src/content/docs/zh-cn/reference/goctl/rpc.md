@@ -3,6 +3,7 @@ title: goctl rpc
 description: RPC 项目创建与代码生成命令。
 sidebar:
   order: 4
+
 ---
 
 # goctl rpc

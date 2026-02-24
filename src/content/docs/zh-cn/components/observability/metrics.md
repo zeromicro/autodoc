@@ -2,7 +2,8 @@
 title: 指标
 description: 使用指标监控服务健康状态。
 sidebar:
-  order: 11
+  order: 3
+
 ---
 
 # 指标

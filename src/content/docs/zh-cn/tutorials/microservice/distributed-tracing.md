@@ -1,8 +1,9 @@
 ---
-title: 分布式链路追踪
-description: 使用 OpenTelemetry 与 Jaeger 追踪 go-zero 服务，添加自定义 span、多端导出与日志关联。
+title: 链路追踪
+description: 为 go-zero 微服务添加分布式链路追踪。
 sidebar:
-  order: 3
+  order: 4
+
 ---
 
 # 分布式链路追踪

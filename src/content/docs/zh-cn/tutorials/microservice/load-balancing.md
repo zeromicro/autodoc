@@ -1,8 +1,9 @@
 ---
 title: 负载均衡
-description: go-zero 默认使用 P2C 负载均衡，结合延迟感知与健康检查，智能路由 RPC 请求。
+description: 在 go-zero 微服务中配置负载均衡。
 sidebar:
-  order: 2
+  order: 3
+
 ---
 
 # 负载均衡

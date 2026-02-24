@@ -3,6 +3,7 @@ title: Installation FAQ
 description: Common installation and setup issues with go-zero.
 sidebar:
   order: 2
+
 ---
 
 # Installation FAQ

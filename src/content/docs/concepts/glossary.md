@@ -2,7 +2,8 @@
 title: Glossary
 description: Key terminology used in go-zero projects and documentation.
 sidebar:
-  order: 2
+  order: 8
+
 ---
 
 # Glossary

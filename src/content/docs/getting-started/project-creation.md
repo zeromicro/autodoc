@@ -2,7 +2,8 @@
 title: Project Creation Methods
 description: All ways to bootstrap and scaffold go-zero projects with goctl.
 sidebar:
-  order: 11
+  order: 4
+
 ---
 
 # Project Creation Methods

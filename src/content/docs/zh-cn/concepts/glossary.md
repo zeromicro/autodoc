@@ -2,7 +2,8 @@
 title: 名词术语表
 description: 快速理解 go-zero 文档中的常用概念。
 sidebar:
-  order: 2
+  order: 8
+
 ---
 
 # 名词术语表

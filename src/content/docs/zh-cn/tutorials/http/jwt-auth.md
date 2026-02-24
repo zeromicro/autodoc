@@ -2,7 +2,8 @@
 title: JWT 认证
 description: 在 API 服务中启用 JWT 鉴权。
 sidebar:
-  order: 4
+  order: 5
+
 ---
 
 # JWT 认证

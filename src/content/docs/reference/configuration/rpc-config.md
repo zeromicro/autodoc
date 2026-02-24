@@ -2,7 +2,8 @@
 title: RPC Service Configuration
 description: Complete reference for go-zero gRPC (zrpc) service configuration.
 sidebar:
-  order: 2
+  order: 3
+
 ---
 
 # RPC Service Configuration

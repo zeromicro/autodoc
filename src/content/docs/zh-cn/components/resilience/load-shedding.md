@@ -2,7 +2,8 @@
 title: 降载
 description: 通过过载保护机制避免系统雪崩。
 sidebar:
-  order: 4
+  order: 5
+
 ---
 
 # 降载

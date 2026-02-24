@@ -2,7 +2,8 @@
 title: goctl 常见问题
 description: goctl 使用时的常见错误与解决方案。
 sidebar:
-  order: 3
+  order: 6
+
 ---
 
 # goctl 常见问题

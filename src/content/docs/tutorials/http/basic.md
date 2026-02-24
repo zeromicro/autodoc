@@ -2,7 +2,8 @@
 title: Basic HTTP Service
 description: Create and run a REST API service with go-zero.
 sidebar:
-  order: 1
+  order: 2
+
 ---
 
 # Basic HTTP Service

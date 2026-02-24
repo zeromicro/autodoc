@@ -2,7 +2,8 @@
 title: 超时控制
 description: 配置请求超时以避免资源长期占用。
 sidebar:
-  order: 5
+  order: 4
+
 ---
 
 # 超时控制

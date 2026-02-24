@@ -2,7 +2,8 @@
 title: Load Shedding
 description: Automatically drop excess traffic when go-zero services are overloaded.
 sidebar:
-  order: 3
+  order: 5
+
 ---
 
 # Load Shedding

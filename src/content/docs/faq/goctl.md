@@ -2,7 +2,8 @@
 title: goctl FAQ
 description: Common questions about goctl code generation.
 sidebar:
-  order: 3
+  order: 6
+
 ---
 
 # goctl FAQ

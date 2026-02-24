@@ -1,8 +1,9 @@
 ---
 title: gRPC 拦截器
-description: 使用拦截器实现认证、日志和追踪。
+description: 为 gRPC 服务添加服务端和客户端拦截器。
 sidebar:
-  order: 8
+  order: 5
+
 ---
 
 # gRPC 拦截器

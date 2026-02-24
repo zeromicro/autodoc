@@ -3,6 +3,7 @@ title: 安装问题
 description: Go、goctl、protoc 安装常见问题。
 sidebar:
   order: 2
+
 ---
 
 # 安装问题

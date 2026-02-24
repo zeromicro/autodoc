@@ -2,7 +2,8 @@
 title: Logging
 description: Structured, level-based logging in go-zero with logx.
 sidebar:
-  order: 1
+  order: 2
+
 ---
 
 # Logging

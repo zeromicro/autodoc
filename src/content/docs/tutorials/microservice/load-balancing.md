@@ -1,8 +1,9 @@
 ---
 title: Load Balancing
-description: How go-zero distributes gRPC traffic across service instances using P2C and EWMA.
+description: Configure load balancing in go-zero microservices.
 sidebar:
-  order: 2
+  order: 3
+
 ---
 
 # Load Balancing

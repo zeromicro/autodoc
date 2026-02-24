@@ -2,7 +2,8 @@
 title: 限流器
 description: 自适应限流器的使用与配置。
 sidebar:
-  order: 2
+  order: 3
+
 ---
 
 # 限流器

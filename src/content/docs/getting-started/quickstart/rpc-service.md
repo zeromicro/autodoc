@@ -134,5 +134,5 @@ goctl rpc protoc user.proto \
 ## Next Steps
 
 - [Service discovery with etcd](../../tutorials/microservice/service-discovery)
-- [Circuit breaker configuration](../../components/breaker)
+- [Circuit breaker configuration](../../components/resilience/circuit-breaker)
 - [Project creation patterns](../project-creation)

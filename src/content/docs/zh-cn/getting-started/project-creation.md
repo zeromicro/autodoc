@@ -2,7 +2,8 @@
 title: 项目创建方式
 description: 使用 goctl 脚手架和创建 go-zero 项目的所有方式。
 sidebar:
-  order: 11
+  order: 4
+
 ---
 
 # 项目创建方式

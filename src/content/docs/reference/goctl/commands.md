@@ -2,7 +2,8 @@
 title: goctl Commands
 description: Complete reference for all goctl CLI subcommands and flags.
 sidebar:
-  order: 1
+  order: 2
+
 ---
 
 # goctl Commands

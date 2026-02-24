@@ -3,6 +3,7 @@ title: Code Style
 description: Coding conventions and style guide for go-zero contributors.
 sidebar:
   order: 2
+
 ---
 
 # Code Style

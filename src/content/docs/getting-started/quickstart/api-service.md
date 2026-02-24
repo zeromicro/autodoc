@@ -141,6 +141,6 @@ goctl only overwrites files it owns (`handler/`, `types/`, `routes.go`). Your `l
 
 ## Next Steps
 
-- Add [JWT middleware](../../components/middleware) to protect endpoints
-- Connect a [database model](../../tutorials/database/model-generation)
+- Add [JWT middleware](../../tutorials/http/middleware) to protect endpoints
+- Connect a [database model](../../tutorials/database/mysql)
 - [Create an RPC service →](./rpc-service)

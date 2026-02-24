@@ -2,7 +2,8 @@
 title: 更新日志
 description: 文档与框架能力更新记录。
 sidebar:
-  order: 8
+  order: 6
+
 ---
 
 # 更新日志

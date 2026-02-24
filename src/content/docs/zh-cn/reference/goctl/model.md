@@ -2,7 +2,8 @@
 title: goctl model
 description: 使用 goctl model 从 DDL、数据源或 MongoDB 生成数据库访问层代码。
 sidebar:
-  order: 3
+  order: 5
+
 ---
 
 # goctl model

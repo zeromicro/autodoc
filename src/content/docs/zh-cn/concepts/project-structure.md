@@ -2,7 +2,8 @@
 title: 项目结构
 description: 标准 go-zero 项目目录及职责说明。
 sidebar:
-  order: 5
+  order: 6
+
 ---
 
 # 项目结构

@@ -2,7 +2,8 @@
 title: 设计原则
 description: go-zero 设计理念与工程实践原则。
 sidebar:
-  order: 4
+  order: 5
+
 ---
 
 # 设计原则

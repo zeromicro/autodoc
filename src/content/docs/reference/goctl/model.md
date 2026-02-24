@@ -2,7 +2,8 @@
 title: Model Generation
 description: Reference for goctl model — generate type-safe database access code for MySQL, PostgreSQL, and MongoDB.
 sidebar:
-  order: 4
+  order: 5
+
 ---
 
 # Model Generation
