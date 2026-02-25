@@ -1,0 +1,68 @@
+<svg viewBox="0 0 600 340" width="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#22c55e"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#ef4444"/>
+    </marker>
+  </defs>
+  <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif; }</style>
+
+  <!-- Incoming Request — x=230, y=20, w=140, h=36, center=(300,38), bottom=56 -->
+  <rect x="230" y="20" width="140" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="300" y="43" font-size="12" fill="#1e40af" text-anchor="middle">Incoming Request</text>
+
+  <!-- Arrow down to Rate Limiter -->
+  <path d="M300,61 Q300,69 300,78" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Rate Limiter (diamond) — center=(300,110), bounding: y=85..135 -->
+  <polygon points="300,85 400,110 300,135 200,110" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="300" y="107" font-size="10" fill="#b45309" text-anchor="middle">Token Bucket</text>
+  <text x="300" y="119" font-size="9" fill="#b45309" text-anchor="middle">has capacity?</text>
+
+  <!-- No → 429 (left branch) -->
+  <path d="M200,110 C170,110 120,110 120,118" fill="none" stroke="#ef4444" stroke-width="1.2" marker-end="url(#arrow-red)"/>
+  <text x="157" y="103" font-size="9" fill="#ef4444" text-anchor="middle">no</text>
+  <rect x="60" y="125" width="120" height="36" rx="6" fill="#fce7f3" stroke="#ec4899" stroke-width="1.5"/>
+  <text x="120" y="148" font-size="11" fill="#9d174d" text-anchor="middle">429 Too Many</text>
+
+  <!-- Yes → Circuit Breaker (down) -->
+  <path d="M300,140 Q300,150 300,158" fill="none" stroke="#22c55e" stroke-width="1.2" marker-end="url(#arrow-green)"/>
+  <text x="315" y="152" font-size="9" fill="#22c55e" text-anchor="start">yes</text>
+
+  <!-- Circuit Breaker (diamond) — center=(300,190), bounding: y=165..215 -->
+  <polygon points="300,165 400,190 300,215 200,190" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="300" y="187" font-size="10" fill="#b45309" text-anchor="middle">Circuit Breaker</text>
+  <text x="300" y="199" font-size="9" fill="#b45309" text-anchor="middle">open?</text>
+
+  <!-- Open → 503 (left branch) -->
+  <path d="M200,190 C170,190 120,190 120,198" fill="none" stroke="#ef4444" stroke-width="1.2" marker-end="url(#arrow-red)"/>
+  <text x="157" y="183" font-size="9" fill="#ef4444" text-anchor="middle">open</text>
+  <rect x="60" y="205" width="120" height="36" rx="6" fill="#fce7f3" stroke="#ec4899" stroke-width="1.5"/>
+  <text x="120" y="228" font-size="11" fill="#9d174d" text-anchor="middle">503 Unavailable</text>
+
+  <!-- Closed → Backend (down) -->
+  <path d="M300,220 Q300,228 300,238" fill="none" stroke="#22c55e" stroke-width="1.2" marker-end="url(#arrow-green)"/>
+  <text x="315" y="232" font-size="9" fill="#22c55e" text-anchor="start">closed</text>
+
+  <!-- Backend Call — x=230, y=245, w=140, h=36 -->
+  <rect x="230" y="245" width="140" height="36" rx="6" fill="#d1fae5" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="300" y="268" font-size="12" fill="#166534" text-anchor="middle">Call RPC / DB</text>
+
+  <!-- Success (right) -->
+  <path d="M370,263 C400,263 440,263 440,268" fill="none" stroke="#22c55e" stroke-width="1.2" marker-end="url(#arrow-green)"/>
+  <text x="405" y="257" font-size="9" fill="#22c55e" text-anchor="middle">success</text>
+  <rect x="410" y="275" width="140" height="36" rx="6" fill="#d1fae5" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="480" y="293" font-size="10" fill="#166534" text-anchor="middle">Close breaker</text>
+  <text x="480" y="305" font-size="9" fill="#166534" text-anchor="middle">release token</text>
+
+  <!-- Error (left down) -->
+  <path d="M300,286 Q300,296 300,303" fill="none" stroke="#ef4444" stroke-width="1.2" marker-end="url(#arrow-red)"/>
+  <text x="315" y="299" font-size="9" fill="#ef4444" text-anchor="start">error</text>
+  <rect x="230" y="310" width="140" height="28" rx="6" fill="#fce7f3" stroke="#ec4899" stroke-width="1.2"/>
+  <text x="300" y="329" font-size="10" fill="#9d174d" text-anchor="middle">Record failure</text>
+</svg>

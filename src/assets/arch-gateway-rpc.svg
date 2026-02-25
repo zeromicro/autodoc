@@ -1,0 +1,55 @@
+<svg viewBox="0 0 650 210" width="650" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif; }</style>
+
+  <!-- API 服务 — x=20, y=75, w=115, h=50, center=(77,100), right=135 -->
+  <rect x="20" y="75" width="115" height="50" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="77" y="96" font-size="12" fill="#b45309" text-anchor="middle">API 服务</text>
+  <text x="77" y="112" font-size="10" fill="#b45309" text-anchor="middle">zrpc.Client</text>
+
+  <!-- Arrow → etcd -->
+  <path d="M140,100 Q155,100 168,100" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- etcd 服务发现 — x=175, y=75, w=130, h=50, center=(240,100), right=305 -->
+  <rect x="175" y="75" width="130" height="50" rx="6" fill="#f3e8ff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="240" y="96" font-size="12" fill="#6b21a8" text-anchor="middle">etcd 服务发现</text>
+  <text x="240" y="112" font-size="10" fill="#6b21a8" text-anchor="middle">解析实例列表</text>
+
+  <!-- Arrow → P2C -->
+  <path d="M310,100 Q325,100 338,100" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- P2C 负载均衡 — x=345, y=75, w=115, h=50, center=(402,100), right=460 -->
+  <rect x="345" y="75" width="115" height="50" rx="6" fill="#d1fae5" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="402" y="96" font-size="12" fill="#166534" text-anchor="middle">P2C 负载均衡</text>
+  <text x="402" y="112" font-size="10" fill="#166534" text-anchor="middle">加权随机</text>
+
+  <!-- 3 Arrows → RPC instances -->
+  <path d="M460,88 C480,88 505,45 513,45" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <path d="M465,100 Q488,100 498,100" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <path d="M460,112 C480,112 505,155 513,155" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- RPC 实例 1 — x=520, y=25, w=110, h=40 -->
+  <rect x="520" y="25" width="110" height="40" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="575" y="50" font-size="11" fill="#1e40af" text-anchor="middle">RPC 实例 1</text>
+
+  <!-- RPC 实例 2 — x=520, y=80, w=110, h=40 -->
+  <rect x="520" y="80" width="110" height="40" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="575" y="105" font-size="11" fill="#1e40af" text-anchor="middle">RPC 实例 2</text>
+
+  <!-- RPC 实例 3 — x=520, y=135, w=110, h=40 -->
+  <rect x="520" y="135" width="110" height="40" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="575" y="160" font-size="11" fill="#1e40af" text-anchor="middle">RPC 实例 3</text>
+
+  <!-- Dashed heartbeat arrows: instances → etcd -->
+  <path d="M520,55 C470,55 350,25 270,68" fill="none" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+  <path d="M520,110 C450,130 370,145 270,130" fill="none" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+  <text x="400" y="25" font-size="9" fill="#94a3b8" text-anchor="middle">注册心跳</text>
+  <text x="400" y="190" font-size="9" fill="#94a3b8" text-anchor="middle">注册心跳</text>
+</svg>

@@ -1,0 +1,103 @@
+<svg viewBox="0 0 800 420" width="800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrow-ret" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif; }</style>
+
+  <!-- Participants: 8 columns — centers at 55, 155, 255, 345, 435, 530, 630, 740 -->
+
+  <!-- Client -->
+  <rect x="15" y="20" width="80" height="30" rx="5" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.2"/>
+  <text x="55" y="40" font-size="10" fill="#1e40af" text-anchor="middle" font-weight="600">Client</text>
+
+  <!-- Router -->
+  <rect x="115" y="20" width="80" height="30" rx="5" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="155" y="40" font-size="10" fill="#b45309" text-anchor="middle" font-weight="600">Router</text>
+
+  <!-- Timeout -->
+  <rect x="212" y="20" width="86" height="30" rx="5" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="255" y="40" font-size="9" fill="#b45309" text-anchor="middle" font-weight="600">TimeoutHandler</text>
+
+  <!-- Shedding -->
+  <rect x="300" y="20" width="90" height="30" rx="5" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="345" y="40" font-size="9" fill="#b45309" text-anchor="middle" font-weight="600">SheddingHandler</text>
+
+  <!-- RateLimit -->
+  <rect x="392" y="20" width="86" height="30" rx="5" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="435" y="40" font-size="9" fill="#b45309" text-anchor="middle" font-weight="600">RateLimitHandler</text>
+
+  <!-- Middleware -->
+  <rect x="485" y="20" width="90" height="30" rx="5" fill="#d1fae5" stroke="#22c55e" stroke-width="1.2"/>
+  <text x="530" y="40" font-size="10" fill="#166534" text-anchor="middle" font-weight="600">Middleware</text>
+
+  <!-- Handler -->
+  <rect x="590" y="20" width="80" height="30" rx="5" fill="#d1fae5" stroke="#22c55e" stroke-width="1.2"/>
+  <text x="630" y="40" font-size="10" fill="#166534" text-anchor="middle" font-weight="600">Handler</text>
+
+  <!-- Logic -->
+  <rect x="700" y="20" width="80" height="30" rx="5" fill="#f3e8ff" stroke="#a855f7" stroke-width="1.2"/>
+  <text x="740" y="40" font-size="10" fill="#6b21a8" text-anchor="middle" font-weight="600">Logic</text>
+
+  <!-- Lifelines (dashed vertical) -->
+  <line x1="55" y1="55" x2="55" y2="395" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="155" y1="55" x2="155" y2="395" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="255" y1="55" x2="255" y2="395" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="345" y1="55" x2="345" y2="395" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="435" y1="55" x2="435" y2="395" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="530" y1="55" x2="530" y2="395" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="630" y1="55" x2="630" y2="395" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="740" y1="55" x2="740" y2="395" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Messages (solid arrows for calls, dashed for returns) -->
+
+  <!-- 1. Client → Router: HTTP Request (y=85) -->
+  <path d="M60,85 L148,85" fill="none" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="105" y="79" font-size="9" fill="#1e293b" text-anchor="middle">HTTP Request</text>
+
+  <!-- 2. Router → Timeout: match route (y=115) -->
+  <path d="M160,115 L248,115" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <text x="205" y="109" font-size="9" fill="#64748b" text-anchor="middle">match route</text>
+
+  <!-- 3. Timeout → Shedding: start deadline (y=145) -->
+  <path d="M260,145 L338,145" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <text x="299" y="139" font-size="9" fill="#64748b" text-anchor="middle">start timer</text>
+
+  <!-- 4. Shedding → RateLimit: check CPU (y=175) -->
+  <path d="M350,175 L428,175" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <text x="389" y="169" font-size="9" fill="#64748b" text-anchor="middle">check CPU</text>
+
+  <!-- 5. RateLimit → Middleware: check tokens (y=205) -->
+  <path d="M440,205 L523,205" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <text x="481" y="199" font-size="9" fill="#64748b" text-anchor="middle">check tokens</text>
+
+  <!-- 6. Middleware → Handler: custom MW (y=235) -->
+  <path d="M535,235 L623,235" fill="none" stroke="#22c55e" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <text x="579" y="229" font-size="9" fill="#166534" text-anchor="middle">custom MW</text>
+
+  <!-- 7. Handler → Logic: parse &amp; validate (y=265) -->
+  <path d="M635,265 L733,265" fill="none" stroke="#a855f7" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <text x="685" y="259" font-size="9" fill="#6b21a8" text-anchor="middle">parse &amp; validate</text>
+
+  <!-- 8. Logic → Handler: domain result (y=305, dashed return) -->
+  <path d="M735,305 L637,305" fill="none" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arrow-ret)"/>
+  <text x="685" y="299" font-size="9" fill="#94a3b8" text-anchor="middle">domain result</text>
+
+  <!-- 9. Handler → Client: JSON response (y=345, dashed return) -->
+  <path d="M625,345 L62,345" fill="none" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arrow-ret)"/>
+  <text x="340" y="339" font-size="9" fill="#94a3b8" text-anchor="middle">JSON response</text>
+
+  <!-- Activation boxes (thin rects on lifelines) -->
+  <rect x="51" y="80" width="8" height="10" rx="1" fill="#dbeafe" stroke="none"/>
+  <rect x="151" y="110" width="8" height="10" rx="1" fill="#fef3c7" stroke="none"/>
+  <rect x="251" y="140" width="8" height="10" rx="1" fill="#fef3c7" stroke="none"/>
+  <rect x="341" y="170" width="8" height="10" rx="1" fill="#fef3c7" stroke="none"/>
+  <rect x="431" y="200" width="8" height="10" rx="1" fill="#fef3c7" stroke="none"/>
+  <rect x="526" y="230" width="8" height="10" rx="1" fill="#d1fae5" stroke="none"/>
+  <rect x="626" y="260" width="8" height="270" rx="1" fill="#d1fae5" stroke="none" fill-opacity="0.4"/>
+  <rect x="736" y="260" width="8" height="50" rx="1" fill="#f3e8ff" stroke="none" fill-opacity="0.4"/>
+</svg>

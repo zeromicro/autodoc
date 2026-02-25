@@ -1,0 +1,47 @@
+<svg viewBox="0 0 750 90" width="750" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif; }</style>
+
+  <!-- 请求 (input, blue) — x=10, y=27, w=56, h=36, right=66 -->
+  <rect x="10" y="27" width="56" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="38" y="50" font-size="12" fill="#1e40af" text-anchor="middle">请求</text>
+
+  <path d="M71,45 Q80,45 88,45" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 日志中间件 — x=95, y=20, w=108, h=50, right=203 -->
+  <rect x="95" y="20" width="108" height="50" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="149" y="41" font-size="12" fill="#b45309" text-anchor="middle">日志中间件</text>
+  <text x="149" y="57" font-size="9" fill="#b45309" text-anchor="middle">记录耗时与状态码</text>
+
+  <path d="M208,45 Q218,45 226,45" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 认证中间件 — x=233, y=20, w=108, h=50, right=341 -->
+  <rect x="233" y="20" width="108" height="50" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="287" y="41" font-size="12" fill="#b45309" text-anchor="middle">认证中间件</text>
+  <text x="287" y="57" font-size="9" fill="#b45309" text-anchor="middle">校验 JWT</text>
+
+  <path d="M346,45 Q356,45 364,45" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 速率限制 — x=371, y=20, w=108, h=50, right=479 -->
+  <rect x="371" y="20" width="108" height="50" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="425" y="41" font-size="12" fill="#b45309" text-anchor="middle">速率限制</text>
+  <text x="425" y="57" font-size="9" fill="#b45309" text-anchor="middle">令牌桶</text>
+
+  <path d="M484,45 Q494,45 502,45" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 追踪注入 — x=509, y=20, w=108, h=50, right=617 -->
+  <rect x="509" y="20" width="108" height="50" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="563" y="41" font-size="12" fill="#b45309" text-anchor="middle">追踪注入</text>
+  <text x="563" y="57" font-size="9" fill="#b45309" text-anchor="middle">创建 OTel span</text>
+
+  <path d="M622,45 Q632,45 640,45" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 业务 Handler (output, green) — x=647, y=22, w=92, h=46, right=739 -->
+  <rect x="647" y="22" width="92" height="46" rx="6" fill="#d1fae5" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="693" y="44" font-size="12" fill="#166534" text-anchor="middle" font-weight="600">业务</text>
+  <text x="693" y="59" font-size="12" fill="#166534" text-anchor="middle" font-weight="600">Handler</text>
+</svg>

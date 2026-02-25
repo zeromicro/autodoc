@@ -1,0 +1,61 @@
+<svg viewBox="0 0 650 200" width="650" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif; }</style>
+
+  <!-- go-zero 服务 — x=15, y=70, w=115, h=50, center=(72,95), right=130 -->
+  <rect x="15" y="70" width="115" height="50" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="72" y="92" font-size="12" fill="#b45309" text-anchor="middle" font-weight="600">go-zero 服务</text>
+  <text x="72" y="108" font-size="9" fill="#b45309" text-anchor="middle">自动采集</text>
+
+  <!-- Arrow → OTel Collector (top) -->
+  <path d="M135,82 C165,82 180,35 198,35" fill="none" stroke="#a855f7" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <text x="170" y="48" font-size="8" fill="#94a3b8" text-anchor="middle">OTLP gRPC</text>
+
+  <!-- Arrow → Prometheus (middle) -->
+  <path d="M135,95 Q165,95 198,95" fill="none" stroke="#3b82f6" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <text x="167" y="88" font-size="8" fill="#94a3b8" text-anchor="middle">/metrics</text>
+
+  <!-- Arrow → Loki (bottom) -->
+  <path d="M135,108 C165,108 180,155 198,155" fill="none" stroke="#22c55e" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <text x="170" y="142" font-size="8" fill="#94a3b8" text-anchor="middle">JSON 日志</text>
+
+  <!-- OTel Collector — x=205, y=18, w=140, h=34, center=(275,35), right=345 -->
+  <rect x="205" y="18" width="140" height="34" rx="6" fill="#f3e8ff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="275" y="40" font-size="11" fill="#6b21a8" text-anchor="middle">OTel Collector</text>
+
+  <!-- Prometheus — x=205, y=78, w=140, h=34, center=(275,95), right=345 -->
+  <rect x="205" y="78" width="140" height="34" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="275" y="100" font-size="11" fill="#1e40af" text-anchor="middle">Prometheus</text>
+
+  <!-- Loki/ELK — x=205, y=138, w=140, h=34, center=(275,155), right=345 -->
+  <rect x="205" y="138" width="140" height="34" rx="6" fill="#d1fae5" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="275" y="160" font-size="11" fill="#166534" text-anchor="middle">Loki / ELK</text>
+
+  <!-- Arrow: OTel → Jaeger/Tempo -->
+  <path d="M350,28 Q375,28 393,28" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- Jaeger/Tempo — x=400, y=12, w=130, h=34 -->
+  <rect x="400" y="12" width="130" height="34" rx="6" fill="#f3e8ff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="465" y="34" font-size="11" fill="#6b21a8" text-anchor="middle">Jaeger / Tempo</text>
+
+  <!-- Arrow: OTel → Grafana -->
+  <path d="M350,42 C380,42 400,80 423,80" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- Arrow: Prometheus → Grafana -->
+  <path d="M350,95 Q380,95 423,95" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- Arrow: Loki → Grafana -->
+  <path d="M350,155 C380,155 400,110 423,110" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- Grafana — x=430, y=72, w=120, h=46 -->
+  <rect x="430" y="72" width="120" height="46" rx="8" fill="#fce7f3" stroke="#ec4899" stroke-width="1.5"/>
+  <text x="490" y="94" font-size="12" fill="#9d174d" text-anchor="middle" font-weight="600">Grafana</text>
+  <text x="490" y="110" font-size="9" fill="#9d174d" text-anchor="middle">可视化</text>
+
+  <!-- Jaeger/Tempo → Grafana (thin dashed) -->
+  <path d="M530,46 Q530,60 510,65" fill="none" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,2"/>
+</svg>

@@ -1,0 +1,95 @@
+<svg viewBox="0 0 750 300" width="750" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif; }</style>
+
+  <!-- === Row 1: 主流程 (horizontal) y_center=40 === -->
+
+  <!-- API 网关 — x=15, y=18, w=115, h=44, right=130, center=(72,40) -->
+  <rect x="15" y="18" width="115" height="44" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="72" y="36" font-size="12" fill="#b45309" text-anchor="middle">API 网关</text>
+  <text x="72" y="52" font-size="10" fill="#b45309" text-anchor="middle">rest.Server</text>
+
+  <!-- Arrow → 中间件链 -->
+  <path d="M135,40 Q145,40 153,40" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 中间件链 — x=160, y=18, w=115, h=44, right=275, center=(217,40) -->
+  <rect x="160" y="18" width="115" height="44" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="217" y="36" font-size="12" fill="#b45309" text-anchor="middle">中间件链</text>
+  <text x="217" y="52" font-size="10" fill="#b45309" text-anchor="middle">Auth · Log · Limit</text>
+
+  <!-- Arrow → RPC 服务 -->
+  <path d="M280,40 Q290,40 298,40" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- RPC 服务 — x=305, y=18, w=115, h=44, right=420, center=(362,40) -->
+  <rect x="305" y="18" width="115" height="44" rx="6" fill="#d1fae5" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="362" y="36" font-size="12" fill="#166534" text-anchor="middle">RPC 服务</text>
+  <text x="362" y="52" font-size="10" fill="#166534" text-anchor="middle">zrpc.Server</text>
+
+  <!-- Arrow → 负载均衡 -->
+  <path d="M425,40 Q435,40 443,40" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 负载均衡 — x=450, y=18, w=115, h=44, right=565, center=(507,40) -->
+  <rect x="450" y="18" width="115" height="44" rx="6" fill="#d1fae5" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="507" y="36" font-size="12" fill="#166534" text-anchor="middle">负载均衡</text>
+  <text x="507" y="52" font-size="10" fill="#166534" text-anchor="middle">P2C</text>
+
+  <!-- Arrow → 熔断器 -->
+  <path d="M570,40 Q580,40 588,40" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 熔断器 — x=595, y=18, w=130, h=44, right=725, center=(660,40) -->
+  <rect x="595" y="18" width="130" height="44" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="660" y="36" font-size="12" fill="#1e40af" text-anchor="middle">熔断器</text>
+  <text x="660" y="52" font-size="10" fill="#1e40af" text-anchor="middle">自适应限流</text>
+
+  <!-- === Row 2: 基础设施 y=130, dropped from RPC === -->
+
+  <!-- Arrows from RPC(362) down to infra — start=67, end=123 -->
+  <path d="M362,67 C362,90 120,90 120,123" fill="none" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <path d="M362,67 C362,88 293,88 293,123" fill="none" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <path d="M362,67 C362,90 462,90 462,123" fill="none" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <path d="M362,67 C362,92 625,92 625,123" fill="none" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- 服务注册 — x=45, y=130, w=150, h=44, center=(120,152) -->
+  <rect x="45" y="130" width="150" height="44" rx="6" fill="#f3e8ff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="120" y="148" font-size="12" fill="#6b21a8" text-anchor="middle">服务注册</text>
+  <text x="120" y="164" font-size="10" fill="#6b21a8" text-anchor="middle">etcd / Consul</text>
+
+  <!-- 缓存层 — x=218, y=130, w=150, h=44, center=(293,152) -->
+  <rect x="218" y="130" width="150" height="44" rx="6" fill="#f3e8ff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="293" y="148" font-size="12" fill="#6b21a8" text-anchor="middle">缓存层</text>
+  <text x="293" y="164" font-size="10" fill="#6b21a8" text-anchor="middle">Redis + 内存 LRU</text>
+
+  <!-- Arrow: 缓存→数据库 -->
+  <path d="M373,152 Q383,152 381,152" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- 数据库 — x=388, y=130, w=150, h=44, center=(463,152) -->
+  <rect x="388" y="130" width="150" height="44" rx="6" fill="#f3e8ff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="463" y="148" font-size="12" fill="#6b21a8" text-anchor="middle">数据库</text>
+  <text x="463" y="164" font-size="10" fill="#6b21a8" text-anchor="middle">MySQL / PG / Mongo</text>
+
+  <!-- 消息队列 — x=558, y=130, w=150, h=44, center=(633,152) -->
+  <rect x="558" y="130" width="150" height="44" rx="6" fill="#f3e8ff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="633" y="148" font-size="12" fill="#6b21a8" text-anchor="middle">消息队列</text>
+  <text x="633" y="164" font-size="10" fill="#6b21a8" text-anchor="middle">Kafka / RabbitMQ</text>
+
+  <!-- === Divider === -->
+  <line x1="30" y1="198" x2="720" y2="198" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="6,4"/>
+  <text x="375" y="216" font-size="10" fill="#94a3b8" text-anchor="middle">可观测性（自动采集）</text>
+
+  <!-- === Row 3: 可观测性 y=230 === -->
+  <rect x="60" y="232" width="170" height="44" rx="6" fill="#fce7f3" stroke="#ec4899" stroke-width="1.5"/>
+  <text x="145" y="250" font-size="12" fill="#9d174d" text-anchor="middle">指标采集</text>
+  <text x="145" y="266" font-size="10" fill="#9d174d" text-anchor="middle">Prometheus</text>
+
+  <rect x="290" y="232" width="170" height="44" rx="6" fill="#fce7f3" stroke="#ec4899" stroke-width="1.5"/>
+  <text x="375" y="250" font-size="12" fill="#9d174d" text-anchor="middle">链路追踪</text>
+  <text x="375" y="266" font-size="10" fill="#9d174d" text-anchor="middle">OpenTelemetry / Jaeger</text>
+
+  <rect x="520" y="232" width="170" height="44" rx="6" fill="#fce7f3" stroke="#ec4899" stroke-width="1.5"/>
+  <text x="605" y="250" font-size="12" fill="#9d174d" text-anchor="middle">结构化日志</text>
+  <text x="605" y="266" font-size="10" fill="#9d174d" text-anchor="middle">logx</text>
+</svg>

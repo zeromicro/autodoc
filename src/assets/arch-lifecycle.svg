@@ -1,0 +1,91 @@
+<svg viewBox="0 0 750 440" width="750" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrow-ret" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif; }</style>
+
+  <!-- 6 participants — centers: 65, 185, 310, 435, 555, 680 -->
+
+  <rect x="20" y="20" width="90" height="30" rx="5" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.2"/>
+  <text x="65" y="40" font-size="10" fill="#1e40af" text-anchor="middle" font-weight="600">客户端</text>
+
+  <rect x="135" y="20" width="100" height="30" rx="5" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="185" y="40" font-size="10" fill="#b45309" text-anchor="middle" font-weight="600">rest.Server</text>
+
+  <rect x="265" y="20" width="90" height="30" rx="5" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="310" y="40" font-size="10" fill="#b45309" text-anchor="middle" font-weight="600">中间件</text>
+
+  <rect x="395" y="20" width="80" height="30" rx="5" fill="#d1fae5" stroke="#22c55e" stroke-width="1.2"/>
+  <text x="435" y="40" font-size="10" fill="#166534" text-anchor="middle" font-weight="600">Handler</text>
+
+  <rect x="505" y="20" width="100" height="30" rx="5" fill="#d1fae5" stroke="#22c55e" stroke-width="1.2"/>
+  <text x="555" y="40" font-size="10" fill="#166534" text-anchor="middle" font-weight="600">zrpc.Client</text>
+
+  <rect x="630" y="20" width="100" height="30" rx="5" fill="#f3e8ff" stroke="#a855f7" stroke-width="1.2"/>
+  <text x="680" y="40" font-size="10" fill="#6b21a8" text-anchor="middle" font-weight="600">RPC 服务</text>
+
+  <!-- Lifelines -->
+  <line x1="65" y1="55" x2="65" y2="415" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="185" y1="55" x2="185" y2="415" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="310" y1="55" x2="310" y2="415" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="435" y1="55" x2="435" y2="415" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="555" y1="55" x2="555" y2="415" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="680" y1="55" x2="680" y2="415" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- 1. 客户端 → rest.Server: HTTP 请求 (y=85) -->
+  <path d="M70,85 L178,85" fill="none" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="125" y="79" font-size="9" fill="#1e293b" text-anchor="middle">HTTP 请求</text>
+
+  <!-- 2. rest.Server → 中间件: 执行中间件链 (y=115) -->
+  <path d="M190,115 L303,115" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <text x="247" y="109" font-size="9" fill="#64748b" text-anchor="middle">执行中间件链</text>
+
+  <!-- 3. 中间件 self-loop: JWT 验证 (y=145) -->
+  <path d="M315,145 C345,145 345,165 315,165" fill="none" stroke="#f59e0b" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <text x="358" y="157" font-size="9" fill="#b45309" text-anchor="start">JWT 验证</text>
+
+  <!-- 4. 中间件 self-loop: 速率限制检查 (y=185) -->
+  <path d="M315,185 C345,185 345,205 315,205" fill="none" stroke="#f59e0b" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <text x="358" y="197" font-size="9" fill="#b45309" text-anchor="start">速率限制检查</text>
+
+  <!-- 5. 中间件 self-loop: 注入 Trace Context (y=225) -->
+  <path d="M315,225 C345,225 345,245 315,245" fill="none" stroke="#f59e0b" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <text x="358" y="237" font-size="9" fill="#b45309" text-anchor="start">注入 Trace Context</text>
+
+  <!-- 6. 中间件 → Handler: 调用 Handler (y=270) -->
+  <path d="M315,270 L428,270" fill="none" stroke="#22c55e" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <text x="370" y="264" font-size="9" fill="#166534" text-anchor="middle">调用 Handler</text>
+
+  <!-- 7. Handler → zrpc.Client: RPC 调用（携带 ctx）(y=300) -->
+  <path d="M440,300 L548,300" fill="none" stroke="#22c55e" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <text x="494" y="294" font-size="9" fill="#166534" text-anchor="middle">RPC 调用（携带 ctx）</text>
+
+  <!-- 8. zrpc.Client → RPC 服务: gRPC 请求 (y=330) -->
+  <path d="M560,330 L673,330" fill="none" stroke="#a855f7" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <text x="616" y="324" font-size="9" fill="#6b21a8" text-anchor="middle">gRPC 请求</text>
+
+  <!-- 9. RPC 服务 → zrpc.Client: 响应 (y=355, dashed) -->
+  <path d="M675,355 L562,355" fill="none" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arrow-ret)"/>
+  <text x="616" y="349" font-size="9" fill="#94a3b8" text-anchor="middle">响应</text>
+
+  <!-- 10. zrpc.Client → Handler: 反序列化结果 (y=375, dashed) -->
+  <path d="M550,375 L442,375" fill="none" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arrow-ret)"/>
+  <text x="496" y="369" font-size="9" fill="#94a3b8" text-anchor="middle">反序列化结果</text>
+
+  <!-- 11. Handler → 客户端: JSON 响应 (y=400, dashed) -->
+  <path d="M430,400 L72,400" fill="none" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arrow-ret)"/>
+  <text x="250" y="394" font-size="9" fill="#94a3b8" text-anchor="middle">JSON 响应</text>
+
+  <!-- Activation boxes -->
+  <rect x="61" y="80" width="8" height="10" rx="1" fill="#dbeafe" stroke="none"/>
+  <rect x="181" y="110" width="8" height="10" rx="1" fill="#fef3c7" stroke="none"/>
+  <rect x="306" y="140" width="8" height="110" rx="1" fill="#fef3c7" stroke="none" fill-opacity="0.4"/>
+  <rect x="431" y="265" width="8" height="115" rx="1" fill="#d1fae5" stroke="none" fill-opacity="0.4"/>
+  <rect x="551" y="295" width="8" height="85" rx="1" fill="#d1fae5" stroke="none" fill-opacity="0.4"/>
+  <rect x="676" y="325" width="8" height="35" rx="1" fill="#f3e8ff" stroke="none" fill-opacity="0.4"/>
+</svg>
