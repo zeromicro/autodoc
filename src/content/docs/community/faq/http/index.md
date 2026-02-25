@@ -6,6 +6,8 @@ sidebar:
 
 ---
 
+Common questions about go-zero's HTTP server, including CORS setup, static file serving, and request handling.
+
 ## Contents
 
 - [CORS Configuration](cors.md) — Cross-Origin Resource Sharing

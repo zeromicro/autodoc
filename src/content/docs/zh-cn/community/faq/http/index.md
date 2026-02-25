@@ -6,6 +6,8 @@ sidebar:
 
 ---
 
+go-zero HTTP 服务的常见问题，包括 CORS 配置、静态文件服务和请求处理。
+
 ## 内容
 
 - [CORS 配置](cors.md) — 跨域资源共享

@@ -6,7 +6,9 @@ sidebar:
 
 ---
 
+Complete YAML configuration reference for go-zero services. Each option includes its type, default value, and usage notes.
+
 ## Contents
 
-- [API Config](api-config.md) — HTTP service configuration
-- [RPC Config](rpc-config.md) — gRPC service configuration
+- [API Config](api-config.md) — HTTP service configuration (`rest.RestConf`)
+- [RPC Config](rpc-config.md) — gRPC service configuration (`zrpc.RpcServerConf`)

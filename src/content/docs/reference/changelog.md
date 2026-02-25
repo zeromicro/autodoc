@@ -5,12 +5,6 @@ sidebar:
   order: 6
 
 ---
-## v1.10.0 – 2026-02-23
-
-null
-
-
-# Changelog
 
 For the full release history see the [GitHub releases page](https://github.com/zeromicro/go-zero/releases).
 
