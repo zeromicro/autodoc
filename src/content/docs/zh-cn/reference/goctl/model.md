@@ -133,4 +133,4 @@ goctl model mysql ddl \
 ## 延伸阅读
 
 - [goctl 命令参考](./commands) — 全部子命令与参数
-- [MySQL 教程](../../tutorials/database/mysql) — 在 go-zero 服务中使用生成的 model
+- [MySQL 教程](../../guides/database/mysql) — 在 go-zero 服务中使用生成的 model

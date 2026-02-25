@@ -216,5 +216,5 @@ All logs carry a `trace_id` and `span_id` field that correlate with Jaeger trace
 ## Next Steps
 
 - [Design Principles](./design-principles) — how go-zero enforces these layers
-- [Distributed Tracing tutorial](../tutorials/microservice/distributed-tracing) — hands-on Jaeger setup
+- [Distributed Tracing tutorial](../guides/microservice/distributed-tracing) — hands-on Jaeger setup
 - [Circuit Breaker component](../components/resilience/circuit-breaker) — configuration reference

@@ -11,7 +11,7 @@ sidebar:
 
 goctl api 提供了 plugin 命令来支持对 api 进行功能扩展，当 goctl api 中的功能不满足你的使用，
 或者需要对 goctl api 进行功能自定义的扩展，那么插件功能将非常适合开发人员进行自给自足，详情见
-<a href="/docs/tutorials/cli/api#plugin" target="_blank">goctl api plugin</a>
+<a href="/docs/reference/cli-guide/api#plugin" target="_blank">goctl api plugin</a>
 
 ## 插件资源
 
@@ -28,6 +28,6 @@ goctl api 提供了 plugin 命令来支持对 api 进行功能扩展，当 goctl
   goctl-helper 是一款基于 goland 的插件，用于生成简单的api protobuf文件
 
 - [goctl-proto](https://github.com/liferod/goctl-proto)
-  通过 api 文件生成 protobuf 文件，使用该文件生成 rpc 代码，参考[这里](https://go-zero.dev/docs/tutorials/cli/rpc#goctl-rpc-protoc)
+  通过 api 文件生成 protobuf 文件，使用该文件生成 rpc 代码，参考[这里](https://go-zero.dev/docs/reference/cli-guide/rpc#goctl-rpc-protoc)
 - [goctl-validate](https://github.com/linabellbiu/goctl-validate)
   一个go-zero api插件，使用go-playground/validator无缝接入go-zreo自动添加请求验证逻辑
