@@ -1,5 +1,5 @@
 ---
-title: Queue Components
+title: 队列组件
 description: Message queue components for go-zero.
 sidebar:
   order: 8

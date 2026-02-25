@@ -1,6 +1,6 @@
 ---
-title: API DSL Tutorials
-description: Tutorials for the go-zero .api DSL — parameters, types, route groups, middleware, JWT, and more.
+title: API DSL Reference
+description: Reference for the go-zero .api DSL — parameters, types, route groups, middleware, JWT, and more.
 sidebar:
   order: 5
 
@@ -8,7 +8,7 @@ sidebar:
 
 ## Overview
 
-The `.api` DSL is go-zero's domain-specific language for describing HTTP APIs. These tutorials cover every feature of the DSL.
+The `.api` DSL is go-zero's domain-specific language for describing HTTP APIs. This section covers every feature of the DSL.
 
 ## Contents
 

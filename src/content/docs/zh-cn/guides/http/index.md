@@ -1,5 +1,5 @@
 ---
-title: HTTP Tutorials
+title: HTTP 指南
 description: Build, configure, and extend HTTP services with go-zero.
 sidebar:
   order: 2

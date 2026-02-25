@@ -1,5 +1,5 @@
 ---
-title: Token Bucket Limiter
+title: 令牌桶限流器
 description: 使用 go-zero 令牌桶限制请求速率。
 sidebar:
   order: 3

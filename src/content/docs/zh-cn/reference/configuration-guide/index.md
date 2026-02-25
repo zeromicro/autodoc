@@ -1,6 +1,6 @@
 ---
-title: Configuration Tutorials
-description: Tutorials for configuring go-zero services — service settings, logging, Prometheus, and auto-validation.
+title: 配置指南
+description: go-zero 服务配置指南 — 服务设置、日志、Prometheus 和自动校验。
 sidebar:
   order: 7
 
@@ -8,7 +8,7 @@ sidebar:
 
 ## 概览
 
-go-zero 服务通过 YAML 文件进行配置。这些教程涵盖所有配置选项。
+go-zero 服务通过 YAML 文件进行配置。本节涵盖所有配置选项。
 
 ## 内容
 

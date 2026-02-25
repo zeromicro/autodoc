@@ -1,6 +1,6 @@
 ---
-title: API DSL Tutorials
-description: Tutorials for the go-zero .api DSL — parameters, types, route groups, middleware, JWT, and more.
+title: API DSL 参考
+description: go-zero .api DSL 参考 — 参数、类型、路由分组、中间件、JWT 等。
 sidebar:
   order: 5
 
@@ -8,7 +8,7 @@ sidebar:
 
 ## 概览
 
-`.api` DSL 是 go-zero 用于描述 HTTP API 的领域特定语言。这些教程涵盖了 DSL 的所有特性。
+`.api` DSL 是 go-zero 用于描述 HTTP API 的领域特定语言。本节涵盖了 DSL 的所有特性。
 
 ## 内容
 

@@ -9,7 +9,7 @@ sidebar:
 
 ## 概述
 
-在 go-zero 中，我们通过 api 语言来声明 HTTP 服务，然后通过 goctl 生成 HTTP 服务代码，在之前我们系统性的介绍了 <a href="/docs/tutorials" target="_blank">API 规范</a>。
+在 go-zero 中，我们通过 api 语言来声明 HTTP 服务，然后通过 goctl 生成 HTTP 服务代码，在之前我们系统性的介绍了 <a href="/docs/reference/api-dsl" target="_blank">API 规范</a>。
 
 在 go-zero 中已经内置了一些参数校验的规则，接下来我们来看一下 go-zero 中的参数接收/校验规则吧。
 

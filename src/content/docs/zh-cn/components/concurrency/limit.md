@@ -1,5 +1,5 @@
 ---
-title: Limit
+title: 并发限制
 sidebar:
   order: 10
 

@@ -1,5 +1,5 @@
 ---
-title: Deployment Tutorials
+title: 部署指南
 description: Deploy go-zero services with Docker or Kubernetes.
 sidebar:
   order: 19

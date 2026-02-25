@@ -1,5 +1,5 @@
 ---
-title: Observability Components
+title: 可观测性组件
 description: Logging, metrics, and tracing components for go-zero.
 sidebar:
   order: 7

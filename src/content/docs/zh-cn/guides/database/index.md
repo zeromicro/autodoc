@@ -1,5 +1,5 @@
 ---
-title: Database Tutorials
+title: 数据库指南
 description: Connect go-zero services to MongoDB, MySQL, and Redis.
 sidebar:
   order: 15

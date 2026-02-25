@@ -1,5 +1,5 @@
 ---
-title: gRPC Tutorials
+title: gRPC 指南
 description: Build, configure, and extend gRPC services with go-zero.
 sidebar:
   order: 3

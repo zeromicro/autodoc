@@ -1,5 +1,5 @@
 ---
-title: Log Components
+title: 日志组件
 description: Structured logging components for go-zero.
 sidebar:
   order: 6

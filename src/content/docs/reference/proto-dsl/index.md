@@ -1,5 +1,5 @@
 ---
-title: Proto Tutorials
+title: Proto DSL Reference
 description: Write Protocol Buffer definitions for go-zero gRPC services.
 sidebar:
   order: 6
@@ -8,7 +8,7 @@ sidebar:
 
 ## Overview
 
-go-zero uses standard Protocol Buffers (proto3) for gRPC service definitions. These tutorials cover go-zero conventions and best practices.
+go-zero uses standard Protocol Buffers (proto3) for gRPC service definitions. This section covers go-zero conventions and best practices.
 
 ## Contents
 

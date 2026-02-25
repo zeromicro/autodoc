@@ -1,6 +1,6 @@
 ---
-title: Customization
-description: Customize go-zero code generation templates and output.
+title: 模板定制
+description: 自定义 go-zero 代码生成模板与输出。
 sidebar:
   order: 22
 

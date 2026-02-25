@@ -9,6 +9,8 @@ sidebar:
 ## Contents
 
 - [Circuit Breaker](circuit-breaker.md) — Stop cascading failures
-- [Rate Limiter](rate-limiter.md) — Limit request rates
+- [Rate Limiter](rate-limiter.md) — Sliding-window rate limiter
+- [Period Limiter](period-limiter.md) — Redis-based period rate limiter
+- [Token Limiter](token-limiter.md) — Token-bucket rate limiter
 - [Timeout](timeout.md) — Enforce operation timeouts
 - [Load Shedding](load-shedding.md) — Reject excess load

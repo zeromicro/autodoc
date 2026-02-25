@@ -8,7 +8,7 @@ sidebar:
 
 ## 概述
 
-在 go-zero 中，我们通过 api 语言来声明 HTTP 服务，然后通过 goctl 生成 HTTP 服务代码，在之前我们系统性的介绍了 <a href="/docs/tutorials" target="_blank">API 规范</a>。
+在 go-zero 中，我们通过 api 语言来声明 HTTP 服务，然后通过 goctl 生成 HTTP 服务代码，在之前我们系统性的介绍了 <a href="/docs/reference/api-dsl" target="_blank">API 规范</a>。
 
 在 HTTP 服务开发中，我们都是通过 api 描述语言来描述 HTTP 服务，随着业务量的增加，api 文件可能会越来越大，又或者我们有一些公共结构体，如果我们都写在同一个 api 文件中，那么 api文件将变成非常巨大，不易阅读和维护，我们可以通过 api import 来引入其他 api 文件解决这类问题。
 

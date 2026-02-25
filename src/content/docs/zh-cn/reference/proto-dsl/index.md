@@ -1,6 +1,6 @@
 ---
-title: Proto Tutorials
-description: Write Protocol Buffer definitions for go-zero gRPC services.
+title: Proto DSL 参考
+description: go-zero gRPC 服务的 Protocol Buffer 定义参考。
 sidebar:
   order: 6
 
@@ -8,7 +8,7 @@ sidebar:
 
 ## 概览
 
-go-zero 使用标准的 Protocol Buffers（proto3）定义 gRPC 服务。这些教程涵盖 go-zero 的约定和最佳实践。
+go-zero 使用标准的 Protocol Buffers（proto3）定义 gRPC 服务。本节涵盖 go-zero 的约定和最佳实践。
 
 ## 内容
 

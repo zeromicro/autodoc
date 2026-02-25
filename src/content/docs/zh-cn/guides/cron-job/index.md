@@ -1,5 +1,5 @@
 ---
-title: Cron Jobs
+title: 定时任务
 description: Run scheduled tasks with go-zero on Kubernetes.
 sidebar:
   order: 20

@@ -29,10 +29,10 @@ Follow the steps in order the first time:
 2. Install goctl      →  installation/goctl
 3. Install protoc     →  installation/protoc     (RPC only)
 4. Configure IDE      →  installation/ide-plugins
-5. Understand API DSL →  dsl/api-syntax
-6. Hello World        →  quickstart/hello-world   ← start here if impatient
-7. Full API service   →  quickstart/api-service
-8. Full RPC service   →  quickstart/rpc-service
+5. Understand API DSL →  ../reference/dsl/api-syntax
+6. Hello World        →  ../guides/quickstart/hello-world   ← start here if impatient
+7. Full API service   →  ../guides/quickstart/api-service
+8. Full RPC service   →  ../guides/quickstart/rpc-service
 ```
 
 ## 60-Second Quick Start
@@ -57,7 +57,7 @@ curl http://localhost:8888/from/you
 # {"message":"Hello you"}
 ```
 
-That's it — you have a running API service. Continue to the [full API quickstart](./quickstart/api-service) to learn how to add handlers, middleware, and database access.
+That's it — you have a running API service. Continue to the [full API quickstart](../guides/quickstart/api-service) to learn how to add handlers, middleware, and database access.
 
 ## What goctl Generates
 
@@ -84,4 +84,4 @@ Edit only the files in `internal/logic/`. Everything else is regenerated from th
 
 - [Install Go →](./installation/golang)
 - [Install goctl →](./installation/goctl)
-- [Hello World →](./quickstart/hello-world)
+- [Hello World →](../guides/quickstart/hello-world)

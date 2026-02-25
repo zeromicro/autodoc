@@ -1,5 +1,5 @@
 ---
-title: Queue Tutorials
+title: 消息队列指南
 description: Use message queues and delay queues in go-zero services.
 sidebar:
   order: 16

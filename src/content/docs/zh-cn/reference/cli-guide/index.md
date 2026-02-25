@@ -1,6 +1,6 @@
 ---
-title: goctl CLI Tutorials
-description: Comprehensive tutorials for the goctl code generation tool.
+title: goctl CLI 参考
+description: goctl 代码生成工具完整参考。
 sidebar:
   order: 4
 

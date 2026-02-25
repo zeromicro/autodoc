@@ -9,7 +9,7 @@ sidebar:
 
 ## Overview
 
-In go-zero, we declared HTTP service via api language, and then generated HTTP service code via goctl, after our systematic introduction to <a href="/docs/tutorials" target="_blank">API norm</a>.
+In go-zero, we declared HTTP service via api language, and then generated HTTP service code via goctl, after our systematic introduction to <a href="/docs/reference/api-dsl" target="_blank">API norm</a>.
 
 In HTTP service development, as business develops, our services interfaces will grow, and the number of code files generated (handler, logic files, etc.) will grow, when some of the generated code files will need to be aggregated in order to facilitate development and maintenance.
 

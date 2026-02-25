@@ -57,4 +57,4 @@ require('lspconfig').gopls.setup({
 
 ## 下一步
 
-[Hello World 快速开始 →](../quickstart/hello-world)
+[Hello World 快速开始 →](../../guides/quickstart/hello-world)

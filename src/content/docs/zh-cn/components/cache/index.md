@@ -1,5 +1,5 @@
 ---
-title: Cache Components
+title: 缓存组件
 description: In-process and distributed caching components for go-zero.
 sidebar:
   order: 4

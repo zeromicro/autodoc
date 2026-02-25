@@ -56,4 +56,4 @@ goctl --version
 
 For RPC services: [Install protoc →](./protoc)
 
-For HTTP-only services: [Hello World →](../quickstart/hello-world)
+For HTTP-only services: [Hello World →](../../guides/quickstart/hello-world)

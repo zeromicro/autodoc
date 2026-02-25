@@ -1,6 +1,6 @@
 ---
-title: Configuration Tutorials
-description: Tutorials for configuring go-zero services — service settings, logging, Prometheus, and auto-validation.
+title: Configuration Guide
+description: Guide to configuring go-zero services — service settings, logging, Prometheus, and auto-validation.
 sidebar:
   order: 7
 
@@ -8,7 +8,7 @@ sidebar:
 
 ## Overview
 
-go-zero services are configured via YAML files. These tutorials cover all configuration options.
+go-zero services are configured via YAML files. This section covers all configuration options.
 
 ## Contents
 

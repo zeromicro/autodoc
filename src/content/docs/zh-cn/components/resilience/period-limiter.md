@@ -1,5 +1,5 @@
 ---
-title: Period Limiter
+title: 周期限流器
 description: 使用 go-zero 按时间段限制请求速率。
 sidebar:
   order: 2

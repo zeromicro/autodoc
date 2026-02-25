@@ -1,5 +1,5 @@
 ---
-title: MCP Tutorials
+title: MCP 指南
 description: Build Model Context Protocol (MCP) servers with go-zero.
 sidebar:
   order: 21
