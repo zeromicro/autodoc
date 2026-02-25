@@ -1,6 +1,6 @@
 ---
-title: Configuration Reference
-description: Complete configuration reference for go-zero API and RPC services.
+title: 配置参考
+description: go-zero API 和 RPC 服务的完整配置参考。
 sidebar:
   order: 2
 

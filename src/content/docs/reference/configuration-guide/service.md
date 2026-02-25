@@ -63,6 +63,6 @@ type ServiceConf struct {
 | Log        | logx.LogConf      | -             | Refer to [log](./log)                                         |                      |
 | Mode       | string            | pro           | Service environment. Dev is currently defined.In dev environment we will turn on reflection       | dev,test,rt,pre, pro |
 | MetricsUrl | string            | 空             | Tap to report and we'll report some metrics to the corresponding address, if empty, not an orphan |                      |
-| Prometheus | prometheus.Config | -             | References [Prometheus.md](../monitor/)    |                      |
-| Telemetry  | trace.Config      | -             | References [trace.md](../monitor/)                                         |                      |
+| Prometheus | prometheus.Config | -             | References [Prometheus](../../components/observability/metrics)    |                      |
+| Telemetry  | trace.Config      | -             | References [Tracing](../../components/observability/tracing)                                         |                      |
 | DevServer  | devserver.Config  | -             | go-Zero version `v1.4.3` and above                                                                |                      |

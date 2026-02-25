@@ -1,6 +1,6 @@
 ---
-title: Logging FAQ
-description: Frequently asked questions about logging in go-zero.
+title: 日志常见问题
+description: go-zero 日志常见问题解答。
 sidebar:
   order: 5
 

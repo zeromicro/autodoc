@@ -11,7 +11,7 @@ sidebar:
 
 ## 环境准备
 
-确保已安装 protoc 和相关插件，参考 [安装 protoc](../installation/protoc)。
+确保已安装 protoc 和相关插件，参考 [安装 protoc](../../getting-started/installation/protoc)。
 
 ## 创建项目
 
@@ -87,4 +87,4 @@ go run user.go -f etc/user.yaml
 
 ## 下一步
 
-[API DSL 语法参考 →](../dsl/api-syntax)
+[API DSL 语法参考 →](../../reference/dsl/api-syntax)

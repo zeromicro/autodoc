@@ -1,6 +1,6 @@
 ---
 title: 微服务指南
-description: Implement microservice patterns with go-zero — service discovery, load balancing, and distributed tracing.
+description: 使用 go-zero 实现微服务模式——服务发现、负载均衡和分布式链路追踪。
 sidebar:
   order: 10
 

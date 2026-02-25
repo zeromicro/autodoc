@@ -1,6 +1,6 @@
 ---
 title: 数据库指南
-description: Connect go-zero services to MongoDB, MySQL, and Redis.
+description: 将 go-zero 服务连接到 MongoDB、MySQL 和 Redis。
 sidebar:
   order: 15
 

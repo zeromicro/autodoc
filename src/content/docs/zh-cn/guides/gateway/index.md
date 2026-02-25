@@ -1,6 +1,6 @@
 ---
 title: API 网关指南
-description: Use go-zero's built-in API gateway to proxy HTTP and gRPC traffic.
+description: 使用 go-zero 内置 API 网关代理 HTTP 和 gRPC 流量。
 sidebar:
   order: 8
 

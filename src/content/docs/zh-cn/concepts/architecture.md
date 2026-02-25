@@ -173,6 +173,6 @@ Telemetry:
 
 ## 延伸阅读
 
-- [快速开始](../getting-started/quickstart) — 5 分钟运行第一个 go-zero 服务
+- [快速开始](../guides/quickstart/) — 5 分钟运行第一个 go-zero 服务
 - [gRPC 客户端](../guides/grpc/client) — zrpc.Client 完整配置参考
 - [分布式链路追踪](../guides/microservice/distributed-tracing) — 端到端追踪配置

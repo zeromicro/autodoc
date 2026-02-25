@@ -1,5 +1,5 @@
 ---
-title: API FAQ
+title: API 常见问题
 description: go-zero .api DSL 常见问题解答。
 sidebar:
   order: 12

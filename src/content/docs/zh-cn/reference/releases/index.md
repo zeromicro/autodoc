@@ -1,6 +1,6 @@
 ---
-title: Release Notes
-description: go-zero release notes and migration guides.
+title: 版本记录
+description: go-zero 版本发布说明和迁移指南。
 sidebar:
   order: 7
 

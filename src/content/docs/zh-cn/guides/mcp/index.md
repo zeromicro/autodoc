@@ -1,6 +1,6 @@
 ---
 title: MCP 指南
-description: Build Model Context Protocol (MCP) servers with go-zero.
+description: 使用 go-zero 构建 MCP (Model Context Protocol) 服务端。
 sidebar:
   order: 21
 

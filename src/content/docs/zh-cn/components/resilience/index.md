@@ -1,6 +1,6 @@
 ---
 title: 服务韧性组件
-description: "Fault tolerance components for go-zero: circuit breaker, rate limiter, timeout, load shedding."
+description: go-zero 容错组件：熔断器、限流器、超时控制、负载削减。
 sidebar:
   order: 9
 

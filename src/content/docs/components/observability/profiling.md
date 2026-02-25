@@ -136,4 +136,4 @@ Remove the artificial load, restart, and re-run the load test. The flame graph w
 
 - [Metrics](./metrics.md)
 - [Tracing](./tracing.md)
-- [Logging](./logging.md)
+- [Logging](../log/index.md)

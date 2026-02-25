@@ -1,5 +1,5 @@
 ---
-title: API Import
+title: API 导入
 description: 使用 import 语句组织 .api 文件。
 sidebar:
   order: 10

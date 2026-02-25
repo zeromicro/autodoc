@@ -8,6 +8,7 @@ sidebar:
 
 ## Contents
 
-- [Logging](logging.md) — Structured logging
+- [Logging](../log/index.md) — Structured logging
 - [Metrics](metrics.md) — Prometheus metrics
 - [Tracing](tracing.md) — Distributed tracing
+- [Profiling](profiling.md) — Continuous profiling with Pyroscope

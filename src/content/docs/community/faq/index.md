@@ -13,4 +13,4 @@ Answers to the most common questions about go-zero.
 
 - [Installation](./installation.md) — Troubleshoot tool and dependency setup
 - [goctl](./goctl.md) — Code generation questions
-- [Deployment](./deployment.md) — Docker, Kubernetes, and production issues
+- [Deployment](./deploy/index.md) — Docker, Kubernetes, and production issues

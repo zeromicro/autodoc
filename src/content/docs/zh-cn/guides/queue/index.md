@@ -1,6 +1,6 @@
 ---
 title: 消息队列指南
-description: Use message queues and delay queues in go-zero services.
+description: 在 go-zero 服务中使用消息队列和延迟队列。
 sidebar:
   order: 16
 

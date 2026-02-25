@@ -14,7 +14,7 @@ This page walks you through creating, running, and testing your first go-zero HT
 - Go 1.21+ installed (`go version`)
 - goctl installed (`goctl --version`)
 
-Not installed? See [Install Go](../installation/golang) and [Install goctl](../installation/goctl).
+Not installed? See [Install Go](../../getting-started/installation/golang) and [Install goctl](../../getting-started/installation/goctl).
 
 ## Step 1 — Scaffold the Project
 

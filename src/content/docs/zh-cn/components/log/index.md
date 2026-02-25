@@ -1,6 +1,6 @@
 ---
 title: 日志组件
-description: Structured logging components for go-zero.
+description: go-zero 结构化日志组件。
 sidebar:
   order: 6
 

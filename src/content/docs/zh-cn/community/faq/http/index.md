@@ -1,6 +1,6 @@
 ---
-title: HTTP FAQ
-description: Frequently asked questions about the go-zero HTTP server.
+title: HTTP 常见问题
+description: go-zero HTTP 服务常见问题解答。
 sidebar:
   order: 4
 

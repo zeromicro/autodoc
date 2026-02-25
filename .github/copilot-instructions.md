@@ -1,6 +1,6 @@
 # go-zero Documentation Writing Guide
 
-> 本文件供 AI 助手（GitHub Copilot、Cursor 等）在新增或修改文档时遵循。  
+> 本文件供 AI 助手（GitHub Copilot、Cursor 等）在新增或修改文档时遵循。
 > This file is the single source of truth for documentation conventions.
 
 ---

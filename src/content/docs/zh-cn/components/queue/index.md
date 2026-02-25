@@ -1,6 +1,6 @@
 ---
 title: 队列组件
-description: Message queue components for go-zero.
+description: go-zero 消息队列组件。
 sidebar:
   order: 8
 

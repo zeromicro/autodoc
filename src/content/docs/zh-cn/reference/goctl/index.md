@@ -1,6 +1,6 @@
 ---
-title: goctl Reference
-description: Complete command reference for the goctl code generation tool.
+title: goctl 参考
+description: goctl 代码生成工具的完整命令参考。
 sidebar:
   order: 3
 

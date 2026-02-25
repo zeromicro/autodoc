@@ -149,4 +149,4 @@ hey -c 100 -z 60m "http://localhost:8888/ping"
 
 - [指标监控](./metrics.md)
 - [链路追踪](./tracing.md)
-- [日志](./logging.md)
+- [日志](../log/index.md)

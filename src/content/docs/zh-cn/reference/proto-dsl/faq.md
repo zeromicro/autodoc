@@ -1,5 +1,5 @@
 ---
-title: Proto FAQ
+title: Proto 常见问题
 description: go-zero Proto 使用常见问题解答。
 sidebar:
   order: 4

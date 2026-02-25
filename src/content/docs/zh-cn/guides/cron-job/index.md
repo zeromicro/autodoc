@@ -1,6 +1,6 @@
 ---
 title: 定时任务
-description: Run scheduled tasks with go-zero on Kubernetes.
+description: 在 Kubernetes 上使用 go-zero 运行定时任务。
 sidebar:
   order: 20
 

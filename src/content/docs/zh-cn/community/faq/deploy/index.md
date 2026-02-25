@@ -1,6 +1,6 @@
 ---
-title: Deployment FAQ
-description: Frequently asked questions about deploying go-zero services.
+title: 部署常见问题
+description: go-zero 服务部署常见问题解答。
 sidebar:
   order: 3
 
