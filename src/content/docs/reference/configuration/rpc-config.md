@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# RPC Service Configuration
 
 All fields for `zrpc.RpcServerConf` and `zrpc.RpcClientConf`.
 

@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# Circuit Breaker
 
 go-zero integrates a Google SRE-style circuit breaker into every RPC client and HTTP service automatically — no manual wiring required.
 

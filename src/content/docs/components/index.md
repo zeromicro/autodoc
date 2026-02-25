@@ -5,7 +5,6 @@ sidebar:
   order: 1
 ---
 
-# Components
 
 go-zero ships a comprehensive set of production-ready components that you can drop into any service.
 

@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# JWT Authentication
 
 go-zero supports JWT auth natively — declare `@jwt` in your API spec and the framework handles token validation automatically. This guide covers token generation, claim extraction, refresh tokens, and role-based access.
 

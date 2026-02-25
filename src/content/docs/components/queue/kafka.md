@@ -5,7 +5,6 @@ sidebar:
   order: 1
 ---
 
-# Kafka
 
 go-zero's `kq` package provides a high-throughput Kafka consumer backed by a goroutine pool, and a lightweight producer using `go-zero/core/queue`.
 

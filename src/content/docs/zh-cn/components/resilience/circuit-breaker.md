@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# 熔断器
 
 go-zero 在每个 RPC 客户端和 HTTP 服务中内置了 Google SRE 风格的熔断器——无需手动配置即可自动生效。
 

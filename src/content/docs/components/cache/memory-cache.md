@@ -5,7 +5,6 @@ sidebar:
   order: 1
 ---
 
-# Memory Cache
 
 go-zero's `collection.Cache` provides a thread-safe, size-bounded, TTL-evicting in-process cache backed by LRU eviction. It's ideal as an **L1 cache** in front of Redis for frequently-read, slow-changing data.
 

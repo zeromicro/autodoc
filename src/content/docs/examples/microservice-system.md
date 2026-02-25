@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# Microservice System
 
 This advanced example shows how multiple go-zero services collaborate using etcd for service discovery.
 

@@ -5,7 +5,6 @@ sidebar:
   order: 7
 ---
 
-# Proto Syntax for go-zero
 
 go-zero uses standard **protobuf 3** syntax for RPC services. This page covers the patterns goctl expects and good conventions to follow.
 

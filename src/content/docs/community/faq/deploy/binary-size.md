@@ -3,7 +3,6 @@ title: Reducing Binary Size
 description: Tips to reduce the Go binary size for production deployments.
 ---
 
-# Reducing Binary File Size
 
 ## How to reduce the size of go-zero compiled binary files?
 

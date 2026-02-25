@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# Distributed Tracing
 
 go-zero integrates **OpenTelemetry** and emits spans for every HTTP request, gRPC call, SQL query, and Redis command automatically — no manual instrumentation needed for the common case.
 

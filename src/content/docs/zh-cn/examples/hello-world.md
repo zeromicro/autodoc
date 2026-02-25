@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# Hello World
 
 适合任何 go-zero 新手的入门示例。
 

@@ -5,7 +5,6 @@ sidebar:
   order: 7
 ---
 
-# go-zero 的 Proto 语法
 
 go-zero 使用标准的 **protobuf 3** 语法来定义 RPC 服务。
 

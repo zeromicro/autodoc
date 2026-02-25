@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# gRPC Client
 
 `zrpc.Client` is go-zero's gRPC client wrapper. It integrates **service discovery**, **P2C load balancing**, **circuit breaking**, and **OpenTelemetry tracing** automatically.
 

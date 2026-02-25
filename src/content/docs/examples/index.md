@@ -5,7 +5,6 @@ sidebar:
   order: 1
 ---
 
-# Examples
 
 This section collects practical, runnable examples to help you apply go-zero patterns to real problems.
 

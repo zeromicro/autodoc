@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# Design Principles
 
 ## Convention Over Configuration
 

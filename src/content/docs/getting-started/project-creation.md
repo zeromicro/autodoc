@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# Project Creation Methods
 
 goctl provides several ways to create projects depending on your starting point.
 

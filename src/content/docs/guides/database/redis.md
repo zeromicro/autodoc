@@ -5,7 +5,6 @@ sidebar:
   order: 2
 ---
 
-# Redis
 
 go-zero wraps the Redis client with connection pooling, automatic retries, metrics, and tracing. The `core/stores/redis` package exposes a clean API covering strings, hashes, sets, sorted sets, lists, and distributed locks.
 

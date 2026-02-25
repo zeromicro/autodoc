@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# Project Structure
 
 goctl generates a consistent directory layout for every project. Understanding it is the fastest way to be productive in any go-zero codebase.
 

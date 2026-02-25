@@ -5,7 +5,6 @@ sidebar:
   order: 1
 ---
 
-# Docker
 
 go-zero services compile to a single static binary, giving you minimal Docker images.
 

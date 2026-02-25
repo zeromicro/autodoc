@@ -3,7 +3,6 @@ title: 文件服务器
 description: 通过 go-zero HTTP 服务提供静态文件。
 ---
 
-# File Server
 
 ## 如何用 go-zero 服务同时提供文件服务？
 

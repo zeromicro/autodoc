@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# goctl FAQ
 
 ## How do I add custom logic without it being overwritten on re-generation?
 

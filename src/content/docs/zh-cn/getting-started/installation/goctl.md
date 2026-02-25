@@ -5,7 +5,6 @@ sidebar:
   order: 3
 ---
 
-# 安装 goctl
 
 `goctl`（读作"go control"）是 go-zero 的脚手架工具，可从 `.api` 或 `.proto` 文件一键生成完整的服务代码。
 

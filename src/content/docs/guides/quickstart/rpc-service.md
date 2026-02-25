@@ -5,7 +5,6 @@ sidebar:
   order: 10
 ---
 
-# Create an RPC Service
 
 This guide creates a **user RPC service** that an API gateway can call over gRPC.
 

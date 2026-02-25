@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# goctl model
 
 `goctl model` 从 MySQL DDL、在线数据源或 MongoDB 集合生成完整的 Go 数据访问层代码，内置两级缓存（内存 LRU + Redis）。
 

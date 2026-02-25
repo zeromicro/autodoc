@@ -293,7 +293,6 @@ func main() {
 6. 分别开两个终端启动 grpc server 服务和 gateway 服务，然后访问 `http://localhost:8888/ping`：
 
 ```bash
-# 进入 demo1/server 目录下，启动 grpc 服务
 $ go run hello.go
 Starting rpc server at 0.0.0.0:8080...
 ```

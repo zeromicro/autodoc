@@ -4,7 +4,6 @@ description: Build Model Context Protocol servers with go-zero.
 ---
 
 
-# Model Context Protocol (MCP) Implementation
 
 ## Overview
 This package implements the Model Context Protocol (MCP) server specification in Go, providing a framework for real-time communication between AI models and clients using Server-Sent Events (SSE). The implementation follows the standardized protocol for building AI-assisted applications with bidirectional communication capabilities.

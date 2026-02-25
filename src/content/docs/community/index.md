@@ -5,7 +5,6 @@ sidebar:
   order: 1
 ---
 
-# Community
 
 Welcome to the go-zero community! This section covers how to contribute,
 frequently asked questions, and community resources.

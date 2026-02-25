@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# Timeout
 
 go-zero enforces request timeouts at multiple layers to prevent slow upstreams from exhausting goroutine pools.
 

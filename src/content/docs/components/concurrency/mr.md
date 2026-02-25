@@ -7,7 +7,6 @@ sidebar:
 ---
 
 
-# mr Package Documentation
 
 ## Overview
 

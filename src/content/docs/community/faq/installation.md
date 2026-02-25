@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# Installation FAQ
 
 ## `goctl: command not found` after installation
 

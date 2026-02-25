@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# Service Discovery
 
 go-zero supports pluggable service discovery backends. Every RPC server registers itself automatically at startup; every RPC client watches the registry and picks healthy instances with P2C load balancing.
 

@@ -5,7 +5,6 @@ sidebar:
   order: 9
 ---
 
-# MySQL
 
 go-zero 使用 `goctl` 从 DDL 生成类型安全、零反射的数据访问代码。生成的 model 透明处理连接池、缓存、指标和链路追踪。
 

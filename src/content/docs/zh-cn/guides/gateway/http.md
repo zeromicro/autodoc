@@ -4,7 +4,6 @@ description: 通过 go-zero 网关代理 HTTP 请求。
 ---
 
 
-# Gateway：HTTP-to-HTTP 路由功能
 
 **作者**：Kevin Wan  
 **日期**：2025-01-28

@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# Contributors
 
 go-zero is built by a growing open-source community. Thank you to everyone who has contributed code, documentation, bug reports, and ideas.
 

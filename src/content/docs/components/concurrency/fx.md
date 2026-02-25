@@ -7,7 +7,6 @@ sidebar:
 ---
 
 
-# `fx` Package Documentation
 
 The `fx` package provides a powerful and flexible API for stream processing. It allows users to perform various operations on streams, including filtering, mapping, reducing, grouping, and more.
 

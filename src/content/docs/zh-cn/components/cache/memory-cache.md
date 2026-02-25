@@ -5,7 +5,6 @@ sidebar:
   order: 6
 ---
 
-# 内存缓存
 
 go-zero 的 `collection.Cache` 提供线程安全、大小有界、按 TTL 淘汰的进程内 LRU 缓存。适合作为 Redis 前面的 **L1 缓存**，用于读取频繁、变化缓慢的数据。
 

@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# Getting Started
 
 This section walks you from a blank machine to a running go-zero service. By the end you will have Go, goctl, and (optionally) protoc installed, and you will have run your first HTTP API and RPC service.
 

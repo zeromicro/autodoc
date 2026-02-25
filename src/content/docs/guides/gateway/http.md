@@ -3,7 +3,6 @@ title: HTTP Gateway
 description: Proxy HTTP requests through the go-zero gateway.
 ---
 
-# HTTP-to-HTTP in go-zero Gateway
 
 **Author**: Kevin Wan  
 **Date**: January 27, 2025
@@ -148,5 +147,4 @@ For more information, check out:
 We welcome feedback and contributions from the community to help improve this feature further.
 
 ---
-
 Would you like me to expand on any particular aspect of the article or make any adjustments?

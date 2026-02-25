@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# Load Shedding
 
 go-zero uses an **adaptive load shedder** based on CPU utilisation and in-flight request count. When the system is overloaded, new requests are rejected with HTTP 503 / gRPC UNAVAILABLE to protect existing in-flight work.
 

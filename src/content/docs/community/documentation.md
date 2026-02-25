@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# Documentation
 
 The documentation site is built with [Astro Starlight](https://starlight.astro.build/) and lives in the `zeromicro/zerodoc` repository.
 

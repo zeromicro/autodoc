@@ -5,7 +5,6 @@ sidebar:
   order: 6
 ---
 
-# API DSL 语法
 
 goctl API DSL 是一种用于描述 HTTP 服务的简洁语言，`.api` 文件是唯一的事实来源。
 

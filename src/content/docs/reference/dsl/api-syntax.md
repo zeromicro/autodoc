@@ -5,7 +5,6 @@ sidebar:
   order: 6
 ---
 
-# API DSL Syntax
 
 The goctl API DSL is a concise language for describing HTTP services. A `.api` file is the single source of truth: running `goctl api go` regenerates all handlers, routes, and type definitions from it.
 

@@ -5,7 +5,6 @@ sidebar:
   order: 2
 ---
 
-# Kubernetes
 
 go-zero services run well on Kubernetes with minimal configuration.
 

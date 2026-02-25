@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# goctl Commands
 
 `goctl` is the code-generation CLI for go-zero. It generates complete service scaffolding from `.api` or `.proto` files, and produces DB models, Docker images, Kubernetes manifests, and more.
 
@@ -16,7 +15,6 @@ goctl --version
 ```
 
 ---
-
 ## `goctl api`
 
 Generate HTTP service scaffolding from a `.api` definition file.
@@ -87,7 +85,6 @@ goctl api doc -dir . -o ./docs
 ```
 
 ---
-
 ## `goctl rpc`
 
 Generate gRPC service scaffolding from a `.proto` file.
@@ -135,7 +132,6 @@ goctl rpc protoc multi.proto \
 ```
 
 ---
-
 ## `goctl model`
 
 Generate type-safe, zero-reflection data access code.
@@ -231,7 +227,6 @@ goctl model mongo -type Article -dir ./internal/model -cache
 ```
 
 ---
-
 ## `goctl docker`
 
 Generate an optimized multi-stage `Dockerfile`:
@@ -254,7 +249,6 @@ goctl docker -go main.go -port 8080 -version 1.22-alpine
 ```
 
 ---
-
 ## `goctl kube`
 
 Generate Kubernetes Deployment + Service + HPA manifests:
@@ -287,7 +281,6 @@ goctl kube deploy \
 ```
 
 ---
-
 ## `goctl template`
 
 Manage goctl's code generation templates.
@@ -307,7 +300,6 @@ ls ~/.goctl/model/       # model templates
 ```
 
 ---
-
 ## `goctl env`
 
 Check and auto-install required tools.
@@ -338,7 +330,6 @@ goctl-vscode: OK
 ```
 
 ---
-
 ## `goctl upgrade`
 
 Upgrade goctl to the latest release:
@@ -348,7 +339,6 @@ goctl upgrade
 ```
 
 ---
-
 ## File Naming Styles
 
 | Style value | Example output |

@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# REST API + JWT 鉴权
 
 本示例演示如何使用 go-zero 构建带 JWT 认证的安全 REST API，包含 MySQL 用户存储和 Refresh Token 机制。
 

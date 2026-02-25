@@ -3,7 +3,6 @@ title: CORS Configuration
 description: Configure Cross-Origin Resource Sharing in go-zero HTTP services.
 ---
 
-# Cross-Origin Resource Sharing (CORS)
 
 `go-zero` offers three ways to handle CORS:
 - `rest.WithCors(origin ...string)`

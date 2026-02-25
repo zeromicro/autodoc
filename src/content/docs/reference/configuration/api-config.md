@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# API Service Configuration
 
 All fields for `rest.RestConf`, embedded as `RestConf` in your service config struct.
 

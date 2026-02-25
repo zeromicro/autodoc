@@ -5,7 +5,6 @@ sidebar:
   order: 4
 ---
 
-# Database Read-Write Splitting
 
 In high-concurrency applications, the database is often the bottleneck. Read-write splitting routes write operations to a primary (master) and read operations to replicas, significantly improving throughput and resilience.
 

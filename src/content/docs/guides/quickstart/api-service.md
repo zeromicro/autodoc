@@ -5,7 +5,6 @@ sidebar:
   order: 9
 ---
 
-# Create an API Service
 
 This guide builds a simple **user service** with login and profile endpoints. You will write a `.api` DSL file, generate the project, and fill in the business logic.
 

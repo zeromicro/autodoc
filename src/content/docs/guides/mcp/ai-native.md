@@ -7,7 +7,6 @@ sidebar:
 
 import { Card, CardGrid, Aside } from '@astrojs/starlight/components';
 
-# AI-Assisted go-zero Development
 
 In the AI-assisted coding era, how do you make your AI coding assistant truly understand your framework and generate spec-compliant code? The go-zero team has built a complete AI tooling ecosystem around three projects:
 

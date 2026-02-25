@@ -5,7 +5,6 @@ sidebar:
   order: 3
 ---
 
-# Log Desensitization
 
 In microservice architectures, logging is essential for debugging and monitoring. However, logs often contain sensitive data such as passwords, phone numbers, or ID numbers. go-zero v1.9.0 introduced a built-in log desensitization feature that elegantly solves this problem.
 

@@ -7,7 +7,6 @@ sidebar:
 
 import { Aside } from '@astrojs/starlight/components';
 
-# Continuous Profiling
 
 As microservice architectures grow more complex and traffic increases, performance issues become harder to diagnose. Traditional `pprof` profiling requires manual triggering, file downloads, and manual analysis — none of which work well in production.
 

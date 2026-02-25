@@ -5,7 +5,6 @@ sidebar:
   order: 1
 ---
 
-# Reference
 
 Technical reference documentation for go-zero's configuration schemas, goctl CLI, and DSL syntax.
 

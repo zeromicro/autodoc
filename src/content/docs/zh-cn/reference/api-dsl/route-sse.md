@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# go-zero API 中的 SSE（服务器推送事件）支持
 
 ## 概述
 

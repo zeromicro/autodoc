@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# gRPC Interceptors
 
 Interceptors are the gRPC equivalent of HTTP middleware. They run before and after each RPC call and can modify context, validate credentials, record metrics, or short-circuit requests.
 

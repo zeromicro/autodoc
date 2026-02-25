@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# Tracing
 
 go-zero uses OpenTelemetry for distributed tracing. Spans are created automatically for every inbound HTTP request, outbound zrpc call, and SQL query — no instrumentation code required for the happy path.
 

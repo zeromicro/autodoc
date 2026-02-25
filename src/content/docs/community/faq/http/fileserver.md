@@ -3,7 +3,6 @@ title: File Server
 description: Serve static files from a go-zero HTTP service.
 ---
 
-# File Server
 
 ## How to provide file services using go-zero?
 

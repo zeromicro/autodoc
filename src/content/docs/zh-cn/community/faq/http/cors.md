@@ -3,7 +3,6 @@ title: CORS 配置
 description: 在 go-zero HTTP 服务中配置跨域资源共享。
 ---
 
-# 跨域（CORS）
 
 `go-zero` 针对跨域提供了三种用法：
 - `rest.WithCors(origin ...string)`

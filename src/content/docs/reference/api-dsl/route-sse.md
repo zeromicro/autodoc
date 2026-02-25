@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# SSE (Server-Sent Events) Support in go-zero API
 
 ## Overview
 

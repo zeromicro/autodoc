@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# RPC Generation
 
 `goctl rpc protoc` reads a standard `.proto` file and generates a complete zrpc service alongside the Go protobuf bindings.
 

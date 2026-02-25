@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# 负载均衡
 
 go-zero 的 `zrpc` 客户端默认使用 **P2C（Pick of Two Choices，二选一）** 负载均衡，相较于传统轮询更能感知实例延迟。
 

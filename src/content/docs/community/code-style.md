@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# Code Style
 
 go-zero follows standard Go conventions with a few additional guidelines.
 

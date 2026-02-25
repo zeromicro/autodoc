@@ -7,7 +7,6 @@ sidebar:
 
 import { Card, CardGrid, Aside } from '@astrojs/starlight/components';
 
-# 让大模型成为你的 go-zero 专家
 
 在 AI 辅助编程时代，如何让大模型真正理解你使用的框架，生成符合框架规范的代码？go-zero 团队构建了一套完整的 AI 工具生态，包括 **ai-context**、**zero-skills** 和 **mcp-zero** 三个项目，让 Claude、GitHub Copilot、Cursor 等 AI 编程助手成为你的 go-zero 专家。
 

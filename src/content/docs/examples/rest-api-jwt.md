@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# REST API with JWT
 
 This example demonstrates building a secure REST API with JWT-based authentication, a MySQL-backed user store, and Redis session management using go-zero.
 

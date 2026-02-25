@@ -7,7 +7,6 @@ sidebar:
 ---
 
 
-# Building Real-Time Updates with Server-Sent Events (SSE)
 
 In web development, real-time updates are everywhere—think live stock tickers, chat notifications, or server monitoring dashboards. While WebSocket often steals the spotlight for real-time communication, Server-Sent Events (SSE) offers a simpler, HTTP-based alternative for server-to-client streaming. In this article, we’ll explore how to implement SSE using **go-zero**, a high-performance Go framework, complete with a working example you can try yourself.
 

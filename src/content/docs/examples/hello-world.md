@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# Hello World
 
 The canonical entry point for any new go-zero developer.
 

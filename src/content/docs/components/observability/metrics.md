@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# Metrics
 
 go-zero automatically records key metrics for HTTP and gRPC services and exposes them via a Prometheus scrape endpoint.
 

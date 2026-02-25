@@ -5,7 +5,6 @@ sidebar:
   order: 1
 ---
 
-# FAQ
 
 Answers to the most common questions about go-zero.
 

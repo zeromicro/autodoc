@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# JWT 认证
 
 go-zero 原生支持 JWT 认证——在 API DSL 中声明 `@jwt`，框架自动注入 Token 验证中间件。
 

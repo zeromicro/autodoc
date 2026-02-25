@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# API Generation
 
 `goctl api go` reads a `.api` definition file and generates a complete go-zero HTTP service scaffold.
 

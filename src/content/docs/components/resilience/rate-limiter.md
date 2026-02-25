@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# Rate Limiter
 
 go-zero provides two complementary rate limiting primitives backed by Redis: a **token-bucket** limiter for smooth throughput control, and a **period limiter** for fixed-window quotas.
 

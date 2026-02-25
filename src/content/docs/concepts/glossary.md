@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# Glossary
 
 ## API DSL
 

@@ -3,7 +3,6 @@ title: Log to File and Console
 description: Output logs to both file and console in go-zero.
 ---
 
-# How to Output Logs to Both File and Console in go-zero?
 
 To output logs to both a file and the console while using the go-zero framework, follow these steps to configure and write your code.
 

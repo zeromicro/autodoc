@@ -5,7 +5,6 @@ sidebar:
   order: 11
 ---
 
-# Redis
 
 go-zero 对 Redis 客户端进行封装，内置连接池、自动重试、指标统计和链路追踪。
 

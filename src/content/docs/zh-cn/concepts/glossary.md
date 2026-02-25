@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# 名词术语表
 
 ## API DSL
 

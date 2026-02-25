@@ -7,7 +7,6 @@ sidebar:
 
 import { Aside } from '@astrojs/starlight/components';
 
-# 持续性能分析（Continuous Profiling）
 
 在微服务架构日益复杂、业务流量不断攀升的背景下，系统的稳定性成为我们追求的核心目标。而性能问题的排查，往往需要结合指标监控、日志、tracing，还少不了最难搞的 CPU/内存 Profiling。
 

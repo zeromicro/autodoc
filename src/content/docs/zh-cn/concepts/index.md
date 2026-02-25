@@ -5,7 +5,6 @@ sidebar:
   order: 1
 ---
 
-# 框架概述
 
 go-zero 是面向云原生场景的 Go 语言框架，覆盖 API、RPC、微服务治理与基础组件。
 

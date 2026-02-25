@@ -5,7 +5,6 @@ sidebar:
   order: 3
 ---
 
-# Install goctl
 
 `goctl` (pronounced "go control") is go-zero's code-generation CLI. It reads `.api` and `.proto` files and produces complete, production-ready Go services — eliminating boilerplate.
 

@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# File Upload
 
 go-zero exposes the raw `http.Request` inside every handler, so standard Go multipart handling applies. This guide covers single-file upload, validation, multiple files, and cloud storage integration.
 

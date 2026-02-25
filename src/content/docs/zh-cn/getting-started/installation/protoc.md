@@ -5,7 +5,6 @@ sidebar:
   order: 4
 ---
 
-# 安装 protoc
 
 构建 **gRPC 服务**需要以下工具：
 

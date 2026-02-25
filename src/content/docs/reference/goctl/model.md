@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# Model Generation
 
 `goctl model` generates type-safe CRUD code with **no ORM, no reflection** — just plain Go functions backed by `sqlx` for relational databases and the official driver for MongoDB.
 
@@ -74,7 +73,6 @@ type UserModel interface {
 - The `Trans` method wraps multiple operations in a database transaction.
 
 ---
-
 ## PostgreSQL
 
 ```bash
@@ -100,7 +98,6 @@ goctl model pg datasource \
 The generated code is nearly identical to MySQL — same CRUD interface, same cache integration, different SQL placeholder syntax (`$1` vs `?`).
 
 ---
-
 ## MongoDB
 
 ```bash
@@ -130,7 +127,6 @@ internal/model/
 ```
 
 ---
-
 ## Cache Layer
 
 When `-cache` is passed, the generated model wraps every `FindOne` and `FindOneBy*` read in a two-level cache:
@@ -159,7 +155,6 @@ func NewServiceContext(c config.Config) *ServiceContext {
 ```
 
 ---
-
 ## Custom Templates
 
 Override any generated file by editing the corresponding template:

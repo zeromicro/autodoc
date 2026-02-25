@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# gRPC 客户端
 
 `zrpc.Client` 是 go-zero 的 gRPC 客户端封装，自动集成**服务发现**、**P2C 负载均衡**、**熔断器**和 **OpenTelemetry 链路追踪**。
 

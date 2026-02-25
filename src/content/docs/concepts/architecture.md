@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# Architecture
 
 go-zero is a cloud-native microservices framework built around a layered design that separates concerns while keeping each layer thin and replaceable.
 

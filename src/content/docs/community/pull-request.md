@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# Pull Request Process
 
 ## Before Opening a PR
 

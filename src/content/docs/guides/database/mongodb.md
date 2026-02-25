@@ -5,7 +5,6 @@ sidebar:
   order: 3
 ---
 
-# MongoDB
 
 go-zero wraps the official `mongo-driver` with connection management and instrumentation.
 

@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# 分布式链路追踪
 
 go-zero 内置 OpenTelemetry SDK，开箱即支持分布式链路追踪、跨服务 span 传播和 Prometheus 指标采集——无需手动埋点。
 

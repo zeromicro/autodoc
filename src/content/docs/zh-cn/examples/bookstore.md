@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# 书店示例
 
 go-zero 官方示例：HTTP API 网关委托给后端 gRPC 服务，使用 MySQL 持久化数据。
 

@@ -4,7 +4,6 @@ description: 使用 go-zero 构建 Model Context Protocol 服务器。
 ---
 
 
-# Model Context Protocol (MCP) 实现
 
 ## 概述
 该包在 Go 中实现了 Model Context Protocol (MCP) 服务器规范，提供了一个使用 Server-Sent Events (SSE) 在 AI 模型和客户端之间进行实时通信的框架。该实现遵循标准化协议，用于构建具有双向通信能力的 AI 辅助应用程序。

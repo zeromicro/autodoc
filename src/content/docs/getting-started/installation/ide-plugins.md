@@ -5,7 +5,6 @@ sidebar:
   order: 5
 ---
 
-# IDE Plugins
 
 The right IDE setup gives you auto-completion for `.api` files, inline errors, and one-click code generation.
 

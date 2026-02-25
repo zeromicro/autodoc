@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# Bookstore
 
 The go-zero official bookstore example is the canonical starting point for multi-service development. It demonstrates how an HTTP API gateway delegates to a backend gRPC service, which reads and writes MySQL through a goctl-generated model.
 

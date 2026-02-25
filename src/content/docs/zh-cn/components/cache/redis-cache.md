@@ -5,7 +5,6 @@ sidebar:
   order: 7
 ---
 
-# Redis 缓存
 
 go-zero 的 `cache` 包对 Redis 进行了封装，支持旁路读取、写穿、缓存失效等模式，并通过 singleflight 内置防击穿保护。goctl 生成的所有带缓存的 model 均基于此包。
 

@@ -5,7 +5,6 @@ sidebar:
   order: 10
 ---
 
-# MongoDB
 
 go-zero 封装了官方 `mongo-driver`，提供连接管理与可观测性支持。
 

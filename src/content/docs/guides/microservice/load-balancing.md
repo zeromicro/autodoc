@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# Load Balancing
 
 go-zero uses **P2C (Power of Two Choices)** with **EWMA load estimation** as its default load balancer. This algorithm is statistically superior to round-robin under bursty or heterogeneous traffic patterns.
 

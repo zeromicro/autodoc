@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# gRPC Server
 
 go-zero wraps the standard gRPC server with resilience, service registration, and tracing built in.
 

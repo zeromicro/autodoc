@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# 文件上传
 
 go-zero 的每个 handler 都可访问原始 `http.Request`，因此标准 Go multipart 处理将直接适用。
 

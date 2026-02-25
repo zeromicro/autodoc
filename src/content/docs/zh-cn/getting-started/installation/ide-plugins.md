@@ -5,7 +5,6 @@ sidebar:
   order: 5
 ---
 
-# 安装 IDE 插件
 
 ## VS Code
 

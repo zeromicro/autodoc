@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# Basic HTTP Service
 
 This guide walks you through creating a minimal HTTP service using go-zero's API framework.
 

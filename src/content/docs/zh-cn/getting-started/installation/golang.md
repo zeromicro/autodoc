@@ -5,7 +5,6 @@ sidebar:
   order: 2
 ---
 
-# 安装 Go
 
 go-zero 需要 Go **1.19 或更高版本**。
 

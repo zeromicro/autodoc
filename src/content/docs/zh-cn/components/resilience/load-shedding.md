@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# 降载
 
 go-zero 基于 CPU 使用率和在途请求数实现**自适应降载**。当系统过载时，新请求会被拒绝（HTTP 503 / gRPC UNAVAILABLE），以保护正在处理的请求。
 

@@ -5,7 +5,6 @@ sidebar:
   order: 1
 ---
 
-# Concepts
 
 This section provides the mental model you need before writing production services with go-zero.
 

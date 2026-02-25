@@ -5,7 +5,6 @@ sidebar:
   order: 2
 ---
 
-# Install Go
 
 go-zero requires **Go 1.21 or later**. This page shows how to install Go on macOS, Linux, and Windows, and how to verify the setup.
 

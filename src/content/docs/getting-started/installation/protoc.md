@@ -5,7 +5,6 @@ sidebar:
   order: 4
 ---
 
-# Install protoc
 
 RPC services in go-zero use protobuf. You need three components:
 

@@ -5,7 +5,6 @@ sidebar:
   order: 1
 ---
 
-# MySQL
 
 go-zero uses `goctl` to generate type-safe, zero-reflection data access code from a DDL schema. The generated models handle connection pooling, caching, metrics, and tracing transparently.
 

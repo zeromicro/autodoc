@@ -5,7 +5,6 @@ sidebar:
   order: 8
 ---
 
-# Hello World
 
 This page walks you through creating, running, and testing your first go-zero HTTP service from scratch. The whole thing takes about 5 minutes.
 

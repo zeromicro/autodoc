@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# 追踪
 
 go-zero 基于 OpenTelemetry 实现分布式追踪。每个 HTTP 请求、zrpc 调用和 SQL 查询都会自动创建 span——常规链路无需任何手动埋点。
 

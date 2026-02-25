@@ -6,7 +6,6 @@ sidebar:
 
 ---
 
-# Guides
 
 Learn go-zero through practical, step-by-step guides organized by topic.
 

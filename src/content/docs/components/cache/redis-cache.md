@@ -5,7 +5,6 @@ sidebar:
   order: 2
 ---
 
-# Redis Cache
 
 go-zero's `cache` package wraps Redis with read-through, write-through, and cache-aside patterns, plus built-in stampede protection via singleflight. It is used internally by every `goctl`-generated model that has a cache layer.
 

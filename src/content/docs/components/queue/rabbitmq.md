@@ -5,7 +5,6 @@ sidebar:
   order: 2
 ---
 
-# RabbitMQ
 
 go-zero works with RabbitMQ through the official `amqp091-go` library. The community provides a `rabbitmq` plugin under `zeromicro/zero-contrib`.
 
