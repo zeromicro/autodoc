@@ -72,10 +72,13 @@ autodoc/
 │   ├── workflows/
 │   │   ├── deploy.yml            # Auto-deploy to GitHub Pages on push to main
 │   │   └── sync-release.yml      # Auto-sync go-zero release notes (weekly)
+│   ├── copilot-instructions.md   # AI documentation writing conventions
 │   └── SITE_IMPLEMENTATION_GUIDE.md
 ├── public/
 │   ├── CNAME                     # Custom domain: go-zero.dev
 │   └── favicon.svg
+├── scripts/
+│   └── check_links.py            # Internal link checker utility
 ├── src/
 │   ├── assets/                   # Images and SVG diagrams
 │   └── content/
@@ -83,12 +86,10 @@ autodoc/
 │           ├── index.mdx         # English homepage
 │           ├── concepts/         # Core concepts & architecture
 │           ├── getting-started/  # Installation & quickstart
-│           ├── tutorials/        # Hands-on guides (HTTP, gRPC, DB, etc.)
+│           ├── guides/           # Step-by-step guides (HTTP, gRPC, DB, etc.)
 │           ├── components/       # Built-in components (resilience, cache, etc.)
-│           ├── reference/        # goctl CLI, configuration, changelog
-│           ├── examples/         # Code examples
-│           ├── faq/              # Frequently asked questions
-│           ├── contributing/     # Contribution guidelines
+│           ├── reference/        # goctl CLI, DSL syntax, configuration, releases
+│           ├── community/        # FAQ, contributing, code examples
 │           └── zh-cn/            # Simplified Chinese translations (mirrors above)
 ├── astro.config.mjs              # Astro + Starlight configuration
 ├── package.json
@@ -99,15 +100,14 @@ autodoc/
 
 ## Documentation Structure
 
-| Section | Description |
-|---------|-------------|
-| **Getting Started** | Environment setup, goctl installation, hello world |
-| **Tutorials** | Step-by-step guides for HTTP, gRPC, databases, microservices, deployment |
-| **Components** | Built-in components: rate limiter, circuit breaker, cache, queue, observability |
-| **Concepts** | Architecture overview, design principles, project structure, glossary |
-| **Reference** | goctl CLI reference, configuration options, changelog |
-| **FAQ** | Common issues and solutions |
-| **Contributing** | How to contribute to go-zero |
+| Section | Path | Description |
+|---------|------|-------------|
+| **Concepts** | `concepts/` | Architecture overview, design principles, project structure, glossary |
+| **Getting Started** | `getting-started/` | Environment setup, goctl installation, first project |
+| **Guides** | `guides/` | Step-by-step guides for HTTP, gRPC, databases, microservices, deployment |
+| **Components** | `components/` | Built-in components: rate limiter, circuit breaker, cache, queue, observability |
+| **Reference** | `reference/` | goctl CLI, DSL syntax, configuration reference, release notes |
+| **Community** | `community/` | FAQ, contributing guidelines, code examples |
 
 All sections are available in both **English** (`/`) and **Simplified Chinese** (`/zh-cn/`).
 
