@@ -1,38 +1,58 @@
 ---
 title: 构建 RPC 服务
-description: 使用 goctl 和 protobuf 构建完整的 gRPC 服务。
+description: 使用 go-zero 构建 gRPC 服务并将其连接到 API 网关。
 sidebar:
   order: 10
 ---
 
-# 构建 RPC 服务
+本指南创建一个**用户 RPC 服务**，API 网关可通过 gRPC 调用它。
 
-本节创建一个**用户 gRPC 服务**，并展示如何在另一个服务中调用它。
+## 前置条件
 
-## 环境准备
+- 已安装 `protoc`
+- 已安装 `protoc-gen-go` 和 `protoc-gen-go-grpc`
 
-确保已安装 protoc 和相关插件，参考 [安装 protoc](../../getting-started/installation/protoc)。
+未安装？参见[安装 protoc](../../getting-started/installation/protoc)。
 
-## 创建项目
+## 第一步：创建项目
 
 ```bash
-mkdir user-rpc && cd user-rpc
-go mod init user-rpc
+goctl rpc new user
+cd user
+go mod tidy
 ```
 
-## 编写 Proto 文件
+goctl 会创建 `.proto` 文件和完整的服务骨架：
 
-新建 `user.proto`：
+```
+user/
+├── etc/
+│   └── user.yaml
+├── internal/
+│   ├── config/config.go
+│   ├── logic/
+│   │   └── getuserlogic.go      # ← 在这里实现
+│   ├── server/userserver.go   # gRPC 服务端适配器
+│   └── svc/servicecontext.go
+├── user/
+│   └── user.pb.go             # 生成的 protobuf 类型
+│   └── user_grpc.pb.go        # 生成的 gRPC 桩代码
+├── user.go                  # 主入口
+└── user.proto               # 源定义
+```
+
+## 第二步：查看生成的 Proto
+
+打开 `user.proto`：
 
 ```proto
 syntax = "proto3";
 
 package user;
-option go_package = "./pb";
+option go_package = "./user";
 
 service User {
     rpc GetUser(GetUserRequest) returns (GetUserResponse);
-    rpc CreateUser(CreateUserRequest) returns (CreateUserResponse);
 }
 
 message GetUserRequest {
@@ -40,51 +60,77 @@ message GetUserRequest {
 }
 
 message GetUserResponse {
-    int64  id       = 1;
-    string username = 2;
-    string email    = 3;
-}
-
-message CreateUserRequest {
-    string username = 1;
-    string email    = 2;
-}
-
-message CreateUserResponse {
     int64 id = 1;
+    string name = 2;
 }
 ```
 
-## 生成代码
+## 第三步：实现业务逻辑
 
-```bash
-goctl rpc protoc user.proto \
-    --go_out=./pb \
-    --go-grpc_out=./pb \
-    --zrpc_out=.
-go mod tidy
-```
-
-## 实现业务逻辑
-
-打开 `internal/logic/getuserlogic.go`：
+编辑 `internal/logic/getuserlogic.go`：
 
 ```go
-func (l *GetUserLogic) GetUser(in *pb.GetUserRequest) (*pb.GetUserResponse, error) {
-    return &pb.GetUserResponse{
-        Id:       in.Id,
-        Username: "admin",
-        Email:    "admin@example.com",
+func (l *GetUserLogic) GetUser(in *user.GetUserRequest) (*user.GetUserResponse, error) {
+    // 生产环境：通过 l.svcCtx 查询数据库
+    return &user.GetUserResponse{
+        Id:   in.Id,
+        Name: "alice",
     }, nil
 }
 ```
 
-## 运行服务
+## 第四步：配置并运行
+
+打开 `etc/user.yaml` — 默认端口为 `8080`：
+
+```yaml
+Name: user.rpc
+ListenOn: 0.0.0.0:8080
+```
+
+运行 RPC 服务：
 
 ```bash
-go run user.go -f etc/user.yaml
+go run user.go
+# Starting rpc server at 0.0.0.0:8080...
+```
+
+## 第五步：从 API 服务中调用
+
+生成 API 网关使用的 RPC 客户端桩代码：
+
+```bash
+goctl rpc protoc user.proto \
+    --go_out=./user \
+    --go-grpc_out=./user \
+    --zrpc_out=./client
+```
+
+在 API 服务的 `servicecontext.go` 中：
+
+```go
+UserRpc userclient.User  // 注入生成的客户端
+```
+
+然后在 logic 文件中调用：
+
+```go
+resp, err := l.svcCtx.UserRpc.GetUser(l.ctx, &user.GetUserRequest{Id: 1})
+```
+
+go-zero 自动处理连接池、负载均衡和熔断。
+
+## Proto 变更后重新生成
+
+```bash
+goctl rpc protoc user.proto \
+    --go_out=./user \
+    --go-grpc_out=./user \
+    --zrpc_out=.
 ```
 
 ## 下一步
 
-[API DSL 语法参考 →](../../reference/dsl/api-syntax)
+- [使用 etcd 进行服务发现](../../guides/microservice/service-discovery)
+- [熔断器配置](../../components/resilience/circuit-breaker)
+- [项目创建模式](../../getting-started/project-creation)
