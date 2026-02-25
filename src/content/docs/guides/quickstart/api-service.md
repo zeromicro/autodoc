@@ -76,7 +76,7 @@ user-api/
 │   │   └── getuserinfologic.go     # ← implement this
 │   ├── svc/servicecontext.go
 │   └── types/types.go             # auto-generated from DSL
-└── main.go
+└── user.go
 ```
 
 ## Step 3 — Implement Logic
@@ -111,7 +111,7 @@ func (l *GetUserInfoLogic) GetUserInfo(req *types.UserInfoReq) (resp *types.User
 ## Step 4 — Run and Test
 
 ```bash
-go run main.go
+go run user.go
 ```
 
 In another terminal:

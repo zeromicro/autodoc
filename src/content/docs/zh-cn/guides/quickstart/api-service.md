@@ -75,7 +75,7 @@ user-api/
 │   │   └── getuserinfologic.go     # ← 在这里实现
 │   ├── svc/servicecontext.go
 │   └── types/types.go             # 从 DSL 自动生成
-└── main.go
+└── user.go
 ```
 
 ## 第三步：实现逻辑
@@ -110,7 +110,7 @@ func (l *GetUserInfoLogic) GetUserInfo(req *types.UserInfoReq) (resp *types.User
 ## 第四步：运行和测试
 
 ```bash
-go run main.go
+go run user.go
 ```
 
 在另一个终端中：
