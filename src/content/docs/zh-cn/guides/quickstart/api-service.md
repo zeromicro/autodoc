@@ -49,11 +49,10 @@ service user-api {
     post /user/login (LoginReq) returns (LoginResp)
 }
 
+@server (
+    jwt: Auth
+)
 service user-api {
-    @server (
-        jwt: Auth
-    )
-
     @handler GetUserInfo
     get /user/:id (UserInfoReq) returns (UserInfoResp)
 }
