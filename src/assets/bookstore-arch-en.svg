@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340" width="400">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="340" rx="12" fill="#f8fafc"/>
+
+  <!-- Title: y = 20 + 16*0.75 = 32 -->
+  <text x="200" y="32" font-size="16" font-weight="600" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#1e293b">Bookstore Architecture</text>
+
+  <!-- Client: x=130, y=55, w=140, h=36, cx=200, bottom=91 -->
+  <rect x="130" y="55" width="140" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="200" y="78" font-size="12" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#1e40af">Client</text>
+
+  <!-- Arrow: Client → bookstore-api, start=91+5=96, end=121-7=114 -->
+  <path d="M200,96 Q 200,105 200,114" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <text x="228" y="108" font-size="10" text-anchor="start"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#64748b">HTTP :8888</text>
+
+  <!-- bookstore-api: x=115, y=121, w=170, h=54, cx=200, bottom=175 -->
+  <rect x="115" y="121" width="170" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="200" y="144" font-size="12" font-weight="500" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#b45309">bookstore-api</text>
+  <text x="200" y="162" font-size="10" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#b45309">go-zero REST Server</text>
+
+  <!-- Arrow: bookstore-api → bookstore-rpc, start=175+5=180, end=205-7=198 -->
+  <path d="M200,180 Q 200,189 200,198" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <text x="228" y="192" font-size="10" text-anchor="start"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#64748b">gRPC :8080</text>
+
+  <!-- bookstore-rpc: x=115, y=205, w=170, h=54, cx=200, bottom=259 -->
+  <rect x="115" y="205" width="170" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="200" y="228" font-size="12" font-weight="500" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#6b21a8">bookstore-rpc</text>
+  <text x="200" y="246" font-size="10" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#6b21a8">zrpc Server</text>
+
+  <!-- Arrow: bookstore-rpc → MySQL, start=259+5=264, end=289-7=282 -->
+  <path d="M200,264 Q 200,273 200,282" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- MySQL: x=140, y=289, w=120, h=36, cx=200, bottom=325 -->
+  <rect x="140" y="289" width="120" height="36" rx="6" fill="#d1fae5" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="200" y="312" font-size="12" font-weight="500" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#166534">MySQL</text>
+</svg>

@@ -120,11 +120,7 @@ if err != nil {
 
 The circuit breaker is enabled by default. It opens when the error ratio over the last 10 seconds exceeds 50%, stopping requests from reaching the broken upstream:
 
-```
-Normal flow:   Request → RPC call → Response
-Open breaker:  Request → 503 immediately (no RPC call made)
-Half-open:     One probe request allowed through to check recovery
-```
+![Circuit breaker states](../../../../../assets/circuit-breaker-states-en.svg)
 
 No configuration needed — it's automatic for every `zrpc.Client`.
 

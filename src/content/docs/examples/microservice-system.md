@@ -11,13 +11,7 @@ This advanced example shows how multiple go-zero services collaborate using etcd
 
 ## Services Overview
 
-```text
-order-api  ──→  order-rpc  ──→  MySQL
-               ↓
-          inventory-rpc  ──→  Redis
-               ↓
-          payment-rpc    ──→  MySQL
-```
+![Microservice topology](../../../assets/microservice-topology-en.svg)
 
 ## Prerequisites
 

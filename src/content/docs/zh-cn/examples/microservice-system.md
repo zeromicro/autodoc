@@ -11,13 +11,7 @@ sidebar:
 
 ## 服务拓扑
 
-```text
-order-api  ──→  order-rpc  ──→  MySQL
-               ↓
-          inventory-rpc  ──→  Redis
-               ↓
-          payment-rpc    ──→  MySQL
-```
+![微服务拓扑图](../../../../assets/microservice-topology.svg)
 
 ## 前提条件
 

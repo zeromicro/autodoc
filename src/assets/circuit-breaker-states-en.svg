@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 170" width="600">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#22c55e"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#ef4444"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="170" rx="12" fill="#f8fafc"/>
+
+  <!-- Title: y = 15 + 16*0.75 = 27 -->
+  <text x="300" y="27" font-size="16" font-weight="600" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#1e293b">Circuit Breaker States</text>
+
+  <!-- Row 1: Normal flow — Request → RPC call → Response -->
+  <!-- State label -->
+  <text x="25" y="60" font-size="10" font-weight="600"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#166534">Normal</text>
+  <!-- Request: x=80, y=45, w=90, h=30, right=170, cx=125 -->
+  <rect x="80" y="45" width="90" height="30" rx="5" fill="#d1fae5" stroke="#22c55e" stroke-width="1.2"/>
+  <text x="125" y="64" font-size="11" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#166534">Request</text>
+  <!-- Arrow -->
+  <path d="M175,60 Q 194,60 213,60" fill="none" stroke="#22c55e" stroke-width="1.2" marker-end="url(#arrow-green)"/>
+  <!-- RPC call: x=220, y=45, w=100, h=30, right=320, cx=270 -->
+  <rect x="220" y="45" width="100" height="30" rx="5" fill="#d1fae5" stroke="#22c55e" stroke-width="1.2"/>
+  <text x="270" y="64" font-size="11" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#166534">RPC call</text>
+  <!-- Arrow -->
+  <path d="M325,60 Q 344,60 363,60" fill="none" stroke="#22c55e" stroke-width="1.2" marker-end="url(#arrow-green)"/>
+  <!-- Response: x=370, y=45, w=100, h=30, right=470, cx=420 -->
+  <rect x="370" y="45" width="100" height="30" rx="5" fill="#d1fae5" stroke="#22c55e" stroke-width="1.2"/>
+  <text x="420" y="64" font-size="11" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#166534">Response</text>
+
+  <!-- Row 2: Open breaker — Request → 503 immediately -->
+  <text x="25" y="105" font-size="10" font-weight="600"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#dc2626">Open</text>
+  <!-- Request: x=80, y=90, w=90, h=30, right=170, cx=125 -->
+  <rect x="80" y="90" width="90" height="30" rx="5" fill="#fce7f3" stroke="#ec4899" stroke-width="1.2"/>
+  <text x="125" y="109" font-size="11" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#9d174d">Request</text>
+  <!-- Arrow -->
+  <path d="M175,105 Q 194,105 213,105" fill="none" stroke="#ef4444" stroke-width="1.2" marker-end="url(#arrow-red)"/>
+  <!-- 503: x=220, y=90, w=180, h=30, cx=310 -->
+  <rect x="220" y="90" width="180" height="30" rx="5" fill="#fce7f3" stroke="#ec4899" stroke-width="1.2"/>
+  <text x="310" y="109" font-size="11" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#9d174d">503 immediately (no RPC)</text>
+
+  <!-- Row 3: Half-open — one probe request -->
+  <text x="25" y="150" font-size="10" font-weight="600"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#b45309">Half-open</text>
+  <!-- Request: x=80, y=135, w=90, h=30, right=170, cx=125 -->
+  <rect x="80" y="135" width="90" height="30" rx="5" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="125" y="154" font-size="11" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#b45309">Request</text>
+  <!-- Arrow -->
+  <path d="M175,150 Q 194,150 213,150" fill="none" stroke="#f59e0b" stroke-width="1.2" marker-end="url(#arrow-orange)"/>
+  <!-- Probe: x=220, y=135, w=260, h=30, cx=350 -->
+  <rect x="220" y="135" width="260" height="30" rx="5" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="350" y="154" font-size="11" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#b45309">One probe request to check recovery</text>
+</svg>

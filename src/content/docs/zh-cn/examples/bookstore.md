@@ -11,18 +11,7 @@ go-zero 官方示例：HTTP API 网关委托给后端 gRPC 服务，使用 MySQL
 
 ## 架构
 
-```text
-客户端
-  │
-  ▼ HTTP :8888
-bookstore-api  （go-zero REST 服务）
-  │
-  ▼ gRPC :8080
-bookstore-rpc  （zrpc 服务）
-  │
-  ▼
- MySQL
-```
+![书店架构图](../../../../assets/bookstore-arch.svg)
 
 ## 获取代码
 

@@ -11,18 +11,7 @@ The go-zero official bookstore example is the canonical starting point for multi
 
 ## Architecture
 
-```text
-Client
-  │
-  ▼  HTTP :8888
-bookstore-api   (go-zero REST server)
-  │
-  ▼  gRPC :8080
-bookstore-rpc   (zrpc server)
-  │
-  ▼
- MySQL
-```
+![Bookstore architecture](../../../assets/bookstore-arch-en.svg)
 
 ## Get the Code
 

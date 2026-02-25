@@ -32,9 +32,7 @@ Telemetry:
 
 go-zero 使用 **W3C TraceContext** 标准（`traceparent` 请求头）在服务间传播追踪上下文。API 服务调用 RPC 服务时，trace ID 和 span ID 自动流转——整条调用链在 Jaeger 或 Zipkin 中呈现为单一 trace。
 
-```
-客户端 → [order-api: span A] → [order-rpc: span B（A 的子 span）] → DB: span C（B 的子 span）
-```
+![跨服务追踪传播](../../../../../assets/trace-propagation.svg)
 
 RPC 服务端侧无需任何代码——gRPC 拦截器自动从入站 metadata 中提取上下文。
 

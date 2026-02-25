@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 370" width="600">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#3b82f6"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#a855f7"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#22c55e"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="370" rx="12" fill="#f8fafc"/>
+
+  <!-- Title: y = 20 + 16*0.75 = 32 -->
+  <text x="300" y="32" font-size="16" font-weight="600" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#1e293b">AI Tooling Ecosystem</text>
+
+  <!-- AI Assistant: x=155, y=55, w=290, h=36, cx=300, bottom=91 -->
+  <rect x="155" y="55" width="290" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="300" y="78" font-size="12" font-weight="500" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#1e40af">AI Assistant (Claude / Copilot / Cursor)</text>
+
+  <!-- Left branch arrow: AI → ai-context, from cx-60=240 bottom=91+5=96, to y=136-7=129 -->
+  <path d="M210,96 Q 210,112 175,129" fill="none" stroke="#3b82f6" stroke-width="1.2" marker-end="url(#arrow-blue)"/>
+
+  <!-- Right branch arrow: AI → mcp-zero, from cx+60=360 bottom=91+5=96, to y=136-7=129 -->
+  <path d="M390,96 Q 390,112 425,129" fill="none" stroke="#a855f7" stroke-width="1.2" marker-end="url(#arrow-purple)"/>
+
+  <!-- ai-context: x=60, y=136, w=200, h=72, cx=160, bottom=208 -->
+  <rect x="60" y="136" width="200" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="160" y="160" font-size="12" font-weight="600" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#b45309">ai-context</text>
+  <text x="160" y="178" font-size="10" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#b45309">~5KB instruction layer</text>
+  <text x="160" y="196" font-size="10" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#b45309">Workflows &amp; Patterns</text>
+
+  <!-- mcp-zero: x=340, y=136, w=200, h=72, cx=440, bottom=208 -->
+  <rect x="340" y="136" width="200" height="72" rx="6" fill="#f3e8ff" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="440" y="160" font-size="12" font-weight="600" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#6b21a8">mcp-zero</text>
+  <text x="440" y="178" font-size="10" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#6b21a8">MCP runtime server</text>
+  <text x="440" y="196" font-size="10" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#6b21a8">Tools &amp; Code Generation</text>
+
+  <!-- Arrow: ai-context → zero-skills, from cx=160, bottom=208+5=213, to y=270-7=263 -->
+  <path d="M160,213 Q 160,230 240,263" fill="none" stroke="#22c55e" stroke-width="1.2" marker-end="url(#arrow-green)"/>
+
+  <!-- Arrow: mcp-zero → zero-skills, from cx=440, bottom=208+5=213, to y=270-7=263 -->
+  <path d="M440,213 Q 440,230 360,263" fill="none" stroke="#22c55e" stroke-width="1.2" marker-end="url(#arrow-green)"/>
+
+  <!-- zero-skills: x=175, y=270, w=250, h=72, cx=300, bottom=342 -->
+  <rect x="175" y="270" width="250" height="72" rx="6" fill="#d1fae5" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="300" y="294" font-size="12" font-weight="600" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#166534">zero-skills</text>
+  <text x="300" y="312" font-size="10" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#166534">~40KB+ knowledge base</text>
+  <text x="300" y="330" font-size="10" text-anchor="middle"
+        font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif" fill="#166534">Patterns, Examples, Troubleshooting</text>
+</svg>

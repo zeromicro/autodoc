@@ -32,9 +32,7 @@ Telemetry:
 
 go-zero propagates trace context between services using the **W3C TraceContext** standard (`traceparent` header). When an API service calls an RPC service, the trace ID and span ID flow automatically — the entire call chain appears as a single trace in Jaeger or Zipkin.
 
-```
-Client → [order-api: span A] → [order-rpc: span B (child of A)] → DB: span C (child of B)
-```
+![Trace propagation](../../../../assets/trace-propagation-en.svg)
 
 No code is needed on the RPC server side — the gRPC interceptor extracts the context from incoming metadata automatically.
 
