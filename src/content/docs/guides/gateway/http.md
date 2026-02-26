@@ -6,7 +6,7 @@ sidebar:
 ---
 
 
-**Author**: Kevin Wan  
+**Author**: Kevin Wan
 **Date**: January 27, 2025
 
 ## Feature Overview
@@ -68,7 +68,7 @@ func main() {
 
     gw := gateway.MustNewServer(c)
     defer gw.Stop()
-    
+
     gw.Start()
 }
 ```

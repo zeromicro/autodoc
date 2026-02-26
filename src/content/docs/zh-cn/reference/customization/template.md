@@ -2049,7 +2049,7 @@ map[string]any{
     "functions":   functions,
     "packageName": packageName,
     "imports":     strings.Join(imports.KeysStr(), pathx.NL),
-} 
+}
 ```
 
 | pipeline变量   | 类型     | 描述      |

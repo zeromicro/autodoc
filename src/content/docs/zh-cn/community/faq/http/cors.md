@@ -14,7 +14,7 @@ sidebar:
 - `rest.WithCustomCors(middlewareFn func(header http.Header), notAllowedFn func(http.ResponseWriter),
   origin ...string)`
   - 设置复杂的跨域需求
- 
+
 ## 如何自定义跨域 `header`？
 
 可以通过 `go-zero` 的 `rest.WithCorsHeaders(headers ...string)` 增加允许跨域的 `header`。
@@ -100,7 +100,7 @@ func main() {
 			},
 		},
 	)
-	
+
 	fmt.Printf("Starting server at %s:%d...\n", c.Host, c.Port)
 	server.Start()
 }
@@ -181,7 +181,7 @@ func main() {
 
 	var c config.Config
 	conf.MustLoad(*configFile, &c)
- 
+
 	# 需要通过的域名，这里可以写多个域名 或者可以写 * 全部通过
 	domains := []string{"*","http://127.0.0.1", "https://go-zero.dev", "http://localhost"}
 	server := rest.MustNewServer(
@@ -200,7 +200,7 @@ func main() {
 	ctx := svc.NewServiceContext(c)
 	handler.RegisterHandlers(server, ctx)
 
-	
+
 	fmt.Printf("Starting admin_user-api server at %s:%d...\n", c.Host, c.Port)
 	server.Start()
 }

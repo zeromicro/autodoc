@@ -7,7 +7,7 @@ sidebar:
 
 
 
-**作者**：Kevin Wan  
+**作者**：Kevin Wan
 **日期**：2025-01-28
 
 ## 功能概述
@@ -70,7 +70,7 @@ func main() {
 
     gw := gateway.MustNewServer(c)
     defer gw.Stop()
-    
+
     gw.Start()
 }
 ```
