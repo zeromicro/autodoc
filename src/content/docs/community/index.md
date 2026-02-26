@@ -17,7 +17,7 @@ go-zero is an open-source project and welcomes contributions of all kinds.
 - **Fix bugs** — Find `good first issue` labels and submit a PR
 - **Add features** — Discuss the idea in an issue first, then implement
 - **Improve docs** — Edit this site via the "Edit page" link on any page
-- **Share examples** — Add to the [examples](../examples/index.md) chapter
+- **Share examples** — Add to the [examples](../examples/) chapter
 
 ### Get Started
 
@@ -29,6 +29,6 @@ go-zero is an open-source project and welcomes contributions of all kinds.
 
 ### Guides
 
-- [Code Style](./code-style.md)
-- [Pull Request Process](./pull-request.md)
-- [Documentation](./documentation.md)
+- [Code Style](./code-style/)
+- [Pull Request Process](./pull-request/)
+- [Documentation](./documentation/)

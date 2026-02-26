@@ -12,6 +12,6 @@ go-zero provides built-in support for common microservice patterns including ser
 
 ## Contents
 
-- [Service Discovery](service-discovery.md) — Register and discover services
-- [Load Balancing](load-balancing.md) — Configure client-side load balancing
-- [Distributed Tracing](distributed-tracing.md) — Add tracing to microservices
+- [Service Discovery](service-discovery/) — Register and discover services
+- [Load Balancing](load-balancing/) — Configure client-side load balancing
+- [Distributed Tracing](distributed-tracing/) — Add tracing to microservices

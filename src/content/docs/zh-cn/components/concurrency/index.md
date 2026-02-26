@@ -8,6 +8,6 @@ sidebar:
 
 ## 内容
 
-- [fx](fx.md) — 函数式流处理
-- [MapReduce](mr.md) — 并行 map-reduce
-- [Limit](limit.md) — syncx 并发限制
+- [fx](fx/) — 函数式流处理
+- [MapReduce](mr/) — 并行 map-reduce
+- [Limit](limit/) — syncx 并发限制

@@ -7,7 +7,7 @@ sidebar:
 
 ## Setup Guides
 
-- [Go](./golang.md) — Install the Go toolchain
-- [goctl](./goctl.md) — Install go-zero's code generation CLI
-- [protoc](./protoc.md) — Install the Protocol Buffers compiler
-- [IDE Plugins](./ide-plugins.md) — Syntax highlighting and autocompletion for `.api` files
+- [Go](./golang/) — Install the Go toolchain
+- [goctl](./goctl/) — Install go-zero's code generation CLI
+- [protoc](./protoc/) — Install the Protocol Buffers compiler
+- [IDE Plugins](./ide-plugins/) — Syntax highlighting and autocompletion for `.api` files

@@ -7,5 +7,5 @@ sidebar:
 
 ## 语法规范
 
-- [API 语法](./api-syntax.md) — 用于定义 HTTP 服务的 `.api` 文件格式
-- [Proto 语法](./proto-syntax.md) — Proto 约定与 goctl 特定扩展
+- [API 语法](./api-syntax/) — 用于定义 HTTP 服务的 `.api` 文件格式
+- [Proto 语法](./proto-syntax/) — Proto 约定与 goctl 特定扩展

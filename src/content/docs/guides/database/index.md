@@ -12,6 +12,6 @@ go-zero provides built-in support for major databases. Select a database to lear
 
 ## Contents
 
-- [MongoDB](mongodb.md) — Connect and query MongoDB
-- [MySQL](mysql.md) — Connect and query MySQL
-- [Redis](redis.md) — Connect and query Redis
+- [MongoDB](mongodb/) — Connect and query MongoDB
+- [MySQL](mysql/) — Connect and query MySQL
+- [Redis](redis/) — Connect and query Redis

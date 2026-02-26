@@ -12,10 +12,10 @@ This section collects practical, runnable examples to help you apply go-zero pat
 
 | Example | Difficulty | Description |
 |---------|------------|-------------|
-| [Hello World](./hello-world.md) | Beginner | Minimal API service |
-| [REST API with JWT](./rest-api-jwt.md) | Intermediate | Authenticated HTTP endpoints |
-| [Bookstore](./bookstore.md) | Intermediate | Full-stack API + RPC service |
-| [Microservice System](./microservice-system.md) | Advanced | Multi-service with service discovery |
+| [Hello World](./hello-world/) | Beginner | Minimal API service |
+| [REST API with JWT](./rest-api-jwt/) | Intermediate | Authenticated HTTP endpoints |
+| [Bookstore](./bookstore/) | Intermediate | Full-stack API + RPC service |
+| [Microservice System](./microservice-system/) | Advanced | Multi-service with service discovery |
 
 ## Running Examples
 

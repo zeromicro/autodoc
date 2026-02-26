@@ -12,8 +12,8 @@ go-zero services are configured via YAML files. This section covers all configur
 
 ## Contents
 
-- [Configuration Overview](overview.md) — Introduction to go-zero configuration
-- [Service Configuration](service.md) — Full HTTP server settings reference
-- [Log Configuration](log.md) — Structured logging settings
-- [Prometheus Configuration](prometheus.md) — Metrics endpoint settings
-- [Config Auto-Validation](auto-validation.md) — Validate config on startup
+- [Configuration Overview](overview/) — Introduction to go-zero configuration
+- [Service Configuration](service/) — Full HTTP server settings reference
+- [Log Configuration](log/) — Structured logging settings
+- [Prometheus Configuration](prometheus/) — Metrics endpoint settings
+- [Config Auto-Validation](auto-validation/) — Validate config on startup

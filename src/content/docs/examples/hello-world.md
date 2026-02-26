@@ -52,5 +52,5 @@ curl http://localhost:8888/from/you
 
 ## What's Next
 
-- Add [middleware](../guides/http/server/middleware.md) for logging
-- Connect a [database](../guides/database/mysql.md)
+- Add [middleware](../guides/http/server/middleware/) for logging
+- Connect a [database](../guides/database/mysql/)

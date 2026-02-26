@@ -10,4 +10,4 @@ Answers to frequently asked questions about configuring and using go-zero's logg
 
 ## Contents
 
-- [Log to File and Console](fileconsole.md) — Output to both destinations
+- [Log to File and Console](fileconsole/) — Output to both destinations

@@ -12,5 +12,5 @@ go-zero supports Kafka for publish-subscribe messaging and Beanstalkd for delay 
 
 ## Contents
 
-- [Kafka Queue](kafka.md) — Publish/subscribe with Kafka
-- [Beanstalkd Queue](beanstalkd.md) — Delay queues with Beanstalkd
+- [Kafka Queue](kafka/) — Publish/subscribe with Kafka
+- [Beanstalkd Queue](beanstalkd/) — Delay queues with Beanstalkd

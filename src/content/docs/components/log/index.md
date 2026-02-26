@@ -10,5 +10,5 @@ go-zero provides structured, high-performance logging through two packages: `log
 
 ## Contents
 
-- [logx](logx.md) — Core structured logger
-- [logc](logc.md) — Context-aware logging
+- [logx](logx/) — Core structured logger
+- [logc](logc/) — Context-aware logging

@@ -12,6 +12,6 @@ go-zero 提供完整的 gRPC 支持——服务端脚手架、客户端生成、
 
 ## 章节
 
-- [**服务端**](server/index.md) — 构建和配置 gRPC 服务端
-- [**客户端**](client/index.md) — 连接 gRPC 服务
-- [拦截器](interceptor.md) — 为 gRPC 调用添加中间件
+- [**服务端**](server/) — 构建和配置 gRPC 服务端
+- [**客户端**](client/) — 连接 gRPC 服务
+- [拦截器](interceptor/) — 为 gRPC 调用添加中间件

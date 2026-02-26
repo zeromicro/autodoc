@@ -10,5 +10,5 @@ Common questions about go-zero's HTTP server, including CORS setup, static file 
 
 ## Contents
 
-- [CORS Configuration](cors.md) — Cross-Origin Resource Sharing
-- [File Server](fileserver.md) — Serve static files
+- [CORS Configuration](cors/) — Cross-Origin Resource Sharing
+- [File Server](fileserver/) — Serve static files

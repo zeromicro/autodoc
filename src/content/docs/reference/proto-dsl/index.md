@@ -12,6 +12,6 @@ go-zero uses standard Protocol Buffers (proto3) for gRPC service definitions. Th
 
 ## Contents
 
-- [Proto Spec](spec.md) — go-zero proto conventions
-- [Services Grouping](services-group.md) — Organize services in a proto file
-- [FAQ](faq.md) — Common questions
+- [Proto Spec](spec/) — go-zero proto conventions
+- [Services Grouping](services-group/) — Organize services in a proto file
+- [FAQ](faq/) — Common questions

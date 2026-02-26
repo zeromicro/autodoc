@@ -135,7 +135,7 @@ A comprehensive knowledge base (~40KB+):
 
 **Repo:** https://github.com/zeromicro/mcp-zero
 
-A [Model Context Protocol](./index.md) server with 10+ tools:
+A [Model Context Protocol](./) server with 10+ tools:
 - Create API / RPC services
 - Generate model code from SQL
 - Validate `.api` specs and `.proto` definitions
@@ -183,5 +183,5 @@ Using submodules ensures your project automatically tracks upstream updates to a
 
 ## Related
 
-- [MCP Server Overview](./index.md)
-- [MCP Servers Reference](./servers.md)
+- [MCP Server Overview](./)
+- [MCP Servers Reference](./servers/)

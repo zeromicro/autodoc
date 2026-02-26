@@ -12,19 +12,19 @@ sidebar:
 
 ## Contents
 
-- [Overview](overview.md) — Introduction to goctl
-- [Quickstart](quickstart.md) — Get started fast
-- [API Generation](api.md) — HTTP service from `.api` file
-- [RPC Generation](rpc.md) — gRPC service from `.proto` file
-- [Model Generation](model.md) — Database model code
-- [Docker](docker.md) — Generate Dockerfiles
-- [Kubernetes](kube.md) — Generate K8s manifests
-- [Environment](env.md) — Check build environment
-- [Configuration](config.md) — Manage goctl config
-- [Template](template.md) — Customize templates
-- [Style](style.md) — Configure naming style
-- [Swagger](swagger.md) — Generate API docs
-- [Upgrade](upgrade.md) — Upgrade goctl
-- [Migrate](migrate.md) — Migrate templates
-- [Shell Completion](completion.md) — Auto-completion setup
-- [Bug Report](bug.md) — Report a bug
+- [Overview](overview/) — Introduction to goctl
+- [Quickstart](quickstart/) — Get started fast
+- [API Generation](api/) — HTTP service from `.api` file
+- [RPC Generation](rpc/) — gRPC service from `.proto` file
+- [Model Generation](model/) — Database model code
+- [Docker](docker/) — Generate Dockerfiles
+- [Kubernetes](kube/) — Generate K8s manifests
+- [Environment](env/) — Check build environment
+- [Configuration](config/) — Manage goctl config
+- [Template](template/) — Customize templates
+- [Style](style/) — Configure naming style
+- [Swagger](swagger/) — Generate API docs
+- [Upgrade](upgrade/) — Upgrade goctl
+- [Migrate](migrate/) — Migrate templates
+- [Shell Completion](completion/) — Auto-completion setup
+- [Bug Report](bug/) — Report a bug

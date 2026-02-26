@@ -22,5 +22,5 @@ go-zero 由不断壮大的开源社区共同构建。感谢所有贡献代码、
 ## 如何参与
 
 - 从 [`good first issue`](https://github.com/zeromicro/go-zero/labels/good%20first%20issue) 开始
-- 阅读 [贡献指南](./index.md)
+- 阅读 [贡献指南](./)
 - 参与 [GitHub Discussions](https://github.com/zeromicro/go-zero/discussions) 讨论

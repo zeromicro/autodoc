@@ -8,6 +8,6 @@ sidebar:
 
 ## Contents
 
-- [fx](fx.md) — Functional stream processing
-- [MapReduce](mr.md) — Parallel map-reduce
-- [Limit](limit.md) — Concurrency limiting via syncx
+- [fx](fx/) — Functional stream processing
+- [MapReduce](mr/) — Parallel map-reduce
+- [Limit](limit/) — Concurrency limiting via syncx

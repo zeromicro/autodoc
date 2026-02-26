@@ -11,30 +11,30 @@ Learn go-zero through practical, step-by-step guides organized by topic.
 
 ## HTTP Services
 
-- [Basic HTTP Service](./http/basic.md) — Create your first REST API
-- [Middleware](./http/server/middleware.md) — Request/response interceptors
-- [JWT Authentication](./http/jwt-auth.md) — Secure endpoints with tokens
-- [File Upload](./http/file-upload.md) — Handle multipart form data
+- [Basic HTTP Service](./http/basic/) — Create your first REST API
+- [Middleware](./http/server/middleware/) — Request/response interceptors
+- [JWT Authentication](./http/jwt-auth/) — Secure endpoints with tokens
+- [File Upload](./http/file-upload/) — Handle multipart form data
 
 ## gRPC Services
 
 - [gRPC Server](./grpc/server/) — Define and serve a protobuf service
 - [gRPC Client](./grpc/client/) — Call gRPC services from Go
-- [Interceptors](./grpc/interceptor.md) — Middleware for gRPC
+- [Interceptors](./grpc/interceptor/) — Middleware for gRPC
 
 ## Database
 
-- [MySQL](./database/mysql.md) — ORM-free data access with goctl models
-- [Redis](./database/redis.md) — Caching and distributed data
-- [MongoDB](./database/mongodb.md) — Document store integration
+- [MySQL](./database/mysql/) — ORM-free data access with goctl models
+- [Redis](./database/redis/) — Caching and distributed data
+- [MongoDB](./database/mongodb/) — Document store integration
 
 ## Microservices
 
-- [Service Discovery](./microservice/service-discovery.md) — Register and resolve services
+- [Service Discovery](./microservice/service-discovery/) — Register and resolve services
 - [Load Balancing](./microservice/load-balancing) — Distribute RPC traffic
-- [Distributed Tracing](./microservice/distributed-tracing.md) — Trace requests across services
+- [Distributed Tracing](./microservice/distributed-tracing/) — Trace requests across services
 
 ## Deployment
 
-- [Docker](./deployment/docker.md) — Containerize go-zero services
-- [Kubernetes](./deployment/kubernetes.md) — Deploy to a K8s cluster
+- [Docker](./deployment/docker/) — Containerize go-zero services
+- [Kubernetes](./deployment/kubernetes/) — Deploy to a K8s cluster

@@ -12,5 +12,5 @@ go-zero 支持 Kafka 的发布/订阅消息传递和 Beanstalkd 延迟队列。
 
 ## 内容
 
-- [Kafka 队列](kafka.md) — 使用 Kafka 发布/订阅
-- [Beanstalkd 队列](beanstalkd.md) — 使用 Beanstalkd 延迟队列
+- [Kafka 队列](kafka/) — 使用 Kafka 发布/订阅
+- [Beanstalkd 队列](beanstalkd/) — 使用 Beanstalkd 延迟队列

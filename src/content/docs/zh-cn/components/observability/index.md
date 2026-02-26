@@ -8,7 +8,7 @@ sidebar:
 
 ## 内容
 
-- [日志](../log/index.md) — 结构化日志
-- [指标](metrics.md) — Prometheus 指标
-- [追踪](tracing.md) — 分布式追踪
-- [性能分析](profiling.md) — 基于 Pyroscope 的持续性能分析
+- [日志](../log/) — 结构化日志
+- [指标](metrics/) — Prometheus 指标
+- [追踪](tracing/) — 分布式追踪
+- [性能分析](profiling/) — 基于 Pyroscope 的持续性能分析

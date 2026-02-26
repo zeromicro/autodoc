@@ -12,4 +12,4 @@ goctl's output can be customized via templates, allowing teams to enforce their 
 
 ## Contents
 
-- [Template Customization](template.md) — Customize goctl templates
+- [Template Customization](template/) — Customize goctl templates

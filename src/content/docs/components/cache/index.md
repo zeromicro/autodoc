@@ -10,5 +10,5 @@ go-zero offers both in-process and distributed caching to reduce database load a
 
 ## Contents
 
-- [Memory Cache](memory-cache.md) — In-process LRU cache for hot data
-- [Redis Cache](redis-cache.md) — Distributed Redis cache with automatic invalidation
+- [Memory Cache](memory-cache/) — In-process LRU cache for hot data
+- [Redis Cache](redis-cache/) — Distributed Redis cache with automatic invalidation

@@ -12,14 +12,14 @@ The `.api` DSL is go-zero's domain-specific language for describing HTTP APIs. T
 
 ## Contents
 
-- [Route Rules](route-rule.md) — Define URL patterns, methods, and handlers
-- [Route Groups](route-group.md) — Organize routes with shared settings
-- [Route Prefix](route-prefix.md) — Add a URL prefix to a group
-- [Parameters](parameter.md) — Request and response field types and tags
-- [Types](type.md) — Define shared request/response structs
-- [JWT Authentication](jwt.md) — Protect routes with JWT
-- [Middleware](middleware.md) — Apply pre/post-processing to routes
-- [Request Signing](signature.md) — HMAC signature verification
-- [Import](import.md) — Split `.api` files with imports
-- [SSE Routes](route-sse.md) — Server-Sent Events endpoints
-- [FAQ](faq.md) — Common questions and answers
+- [Route Rules](route-rule/) — Define URL patterns, methods, and handlers
+- [Route Groups](route-group/) — Organize routes with shared settings
+- [Route Prefix](route-prefix/) — Add a URL prefix to a group
+- [Parameters](parameter/) — Request and response field types and tags
+- [Types](type/) — Define shared request/response structs
+- [JWT Authentication](jwt/) — Protect routes with JWT
+- [Middleware](middleware/) — Apply pre/post-processing to routes
+- [Request Signing](signature/) — HMAC signature verification
+- [Import](import/) — Split `.api` files with imports
+- [SSE Routes](route-sse/) — Server-Sent Events endpoints
+- [FAQ](faq/) — Common questions and answers

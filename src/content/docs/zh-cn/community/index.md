@@ -15,7 +15,7 @@ go-zero 是一个开源项目，欢迎各种形式的贡献。
 - **修复 Bug** — 找到 `good first issue` 标签并提交 PR
 - **添加特性** — 先在 issue 中讨论方案，再实现
 - **改进文档** — 通过任意页面上的"编辑页面"链接编辑本站
-- **分享示例** — 添加到[示例](../examples/index.md)章节
+- **分享示例** — 添加到[示例](../examples/)章节
 
 ### 快速上手
 
@@ -27,6 +27,6 @@ go-zero 是一个开源项目，欢迎各种形式的贡献。
 
 ### 指南
 
-- [代码规范](./code-style.md)
-- [PR 流程](./pull-request.md)
-- [文档贡献](./documentation.md)
+- [代码规范](./code-style/)
+- [PR 流程](./pull-request/)
+- [文档贡献](./documentation/)

@@ -135,7 +135,7 @@ User Request →
 
 **仓库**：https://github.com/zeromicro/mcp-zero
 
-基于 [Model Context Protocol](./index.md) 的工具服务，提供 10+ 个工具：
+基于 [Model Context Protocol](./) 的工具服务，提供 10+ 个工具：
 - 创建 API/RPC 服务
 - 从 SQL 生成 model 代码
 - 验证 `.api` spec 和 `.proto` 定义
@@ -183,5 +183,5 @@ AI：好的，我将按照 go-zero 的三层架构创建...
 
 ## 相关文档
 
-- [MCP 服务概述](./index.md)
-- [MCP Servers 参考](./servers.md)
+- [MCP 服务概述](./)
+- [MCP Servers 参考](./servers/)

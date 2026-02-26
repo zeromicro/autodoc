@@ -12,4 +12,4 @@ go-zero supports building [Model Context Protocol](https://modelcontextprotocol.
 
 ## Contents
 
-- [MCP Servers](servers.md) — Build MCP servers with go-zero
+- [MCP Servers](servers/) — Build MCP servers with go-zero

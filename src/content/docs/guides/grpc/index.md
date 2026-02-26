@@ -12,6 +12,6 @@ go-zero provides full gRPC support — server scaffolding, client generation, in
 
 ## Sections
 
-- [**Server**](server/index.md) — Build and configure gRPC servers
-- [**Client**](client/index.md) — Connect to gRPC services
-- [Interceptors](interceptor.md) — Add middleware to gRPC calls
+- [**Server**](server/) — Build and configure gRPC servers
+- [**Client**](client/) — Connect to gRPC services
+- [Interceptors](interceptor/) — Add middleware to gRPC calls

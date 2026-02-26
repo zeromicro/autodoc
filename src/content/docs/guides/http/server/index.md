@@ -7,10 +7,10 @@ sidebar:
 
 ## Sections
 
-- [Configuration](./configuration.md) — Server configuration options
-- [Middleware](./middleware.md) — Add and customize middleware
-- [Error Handling](./error.md) — Custom error responses
-- [Request Body](./request-body.md) — Parse and validate request payloads
-- [Response Body](./response-body.md) — Structure and format responses
-- [Response Extensions](./response-ext.md) — Custom response writers
-- [SSE](./sse.md) — Server-Sent Events support
+- [Configuration](./configuration/) — Server configuration options
+- [Middleware](./middleware/) — Add and customize middleware
+- [Error Handling](./error/) — Custom error responses
+- [Request Body](./request-body/) — Parse and validate request payloads
+- [Response Body](./response-body/) — Structure and format responses
+- [Response Extensions](./response-ext/) — Custom response writers
+- [SSE](./sse/) — Server-Sent Events support

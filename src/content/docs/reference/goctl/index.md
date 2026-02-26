@@ -8,7 +8,7 @@ sidebar:
 
 ## Contents
 
-- [Commands](commands.md) — All goctl commands
-- [API](api.md) — `goctl api` reference
-- [RPC](rpc.md) — `goctl rpc` reference
-- [Model](model.md) — `goctl model` reference
+- [Commands](commands/) — All goctl commands
+- [API](api/) — `goctl api` reference
+- [RPC](rpc/) — `goctl rpc` reference
+- [Model](model/) — `goctl model` reference

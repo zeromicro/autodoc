@@ -12,5 +12,5 @@ go-zero includes an API gateway that can proxy both HTTP and gRPC services.
 
 ## Contents
 
-- [gRPC Gateway](grpc.md) — Expose gRPC services as HTTP endpoints
+- [gRPC Gateway](grpc/) — Expose gRPC services as HTTP endpoints
 - [HTTP Gateway](http.md) — Proxy HTTP requests through the gateway

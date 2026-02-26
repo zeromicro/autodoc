@@ -8,7 +8,7 @@ sidebar:
 
 ## 内容
 
-- [命令](commands.md) — 所有 goctl 命令
-- [API](api.md) — `goctl api` 参考
-- [RPC](rpc.md) — `goctl rpc` 参考
-- [Model](model.md) — `goctl model` 参考
+- [命令](commands/) — 所有 goctl 命令
+- [API](api/) — `goctl api` 参考
+- [RPC](rpc/) — `goctl rpc` 参考
+- [Model](model/) — `goctl model` 参考

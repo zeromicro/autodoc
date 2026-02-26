@@ -10,4 +10,4 @@ sidebar:
 
 ## 内容
 
-- [同时输出到文件和控制台](fileconsole.md) — 输出到两个目标
+- [同时输出到文件和控制台](fileconsole/) — 输出到两个目标

@@ -12,10 +12,10 @@ sidebar:
 
 | 示例 | 难度 | 说明 |
 |------|------|------|
-| [Hello World](./hello-world.md) | 入门 | 最简 API 服务 |
-| [REST API + JWT](./rest-api-jwt.md) | 中级 | 带鉴权的 HTTP 接口 |
-| [书店](./bookstore.md) | 中级 | 完整 API + RPC 服务 |
-| [微服务系统](./microservice-system.md) | 高级 | 多服务 + 服务发现 |
+| [Hello World](./hello-world/) | 入门 | 最简 API 服务 |
+| [REST API + JWT](./rest-api-jwt/) | 中级 | 带鉴权的 HTTP 接口 |
+| [书店](./bookstore/) | 中级 | 完整 API + RPC 服务 |
+| [微服务系统](./microservice-system/) | 高级 | 多服务 + 服务发现 |
 
 ## 运行准备
 

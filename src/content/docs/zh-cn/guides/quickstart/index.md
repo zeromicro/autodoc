@@ -7,6 +7,6 @@ sidebar:
 
 ## 教程
 
-- [Hello World](./hello-world.md) — 5 分钟构建第一个 HTTP API
-- [API 服务](./api-service.md) — 构建带自定义类型的完整 API 服务
-- [RPC 服务](./rpc-service.md) — 创建 gRPC 服务并连接 API 网关
+- [Hello World](./hello-world/) — 5 分钟构建第一个 HTTP API
+- [API 服务](./api-service/) — 构建带自定义类型的完整 API 服务
+- [RPC 服务](./rpc-service/) — 创建 gRPC 服务并连接 API 网关

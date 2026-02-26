@@ -208,5 +208,5 @@ Log desensitization requires **go-zero ≥ v1.9.0**.
 
 ## Related
 
-- [Logging Overview](./logx.md)
-- [logx API](./logc.md)
+- [Logging Overview](./logx/)
+- [logx API](./logc/)

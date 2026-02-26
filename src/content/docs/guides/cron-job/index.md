@@ -12,4 +12,4 @@ go-zero services can be deployed as Kubernetes CronJobs for scheduled task execu
 
 ## Contents
 
-- [Kubernetes Cron Jobs](k8s.md) — Schedule cron jobs on Kubernetes
+- [Kubernetes Cron Jobs](k8s/) — Schedule cron jobs on Kubernetes

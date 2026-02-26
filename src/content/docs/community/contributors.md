@@ -22,5 +22,5 @@ See the [go-zero GitHub team](https://github.com/orgs/zeromicro/people) for the 
 ## How to Join
 
 - Start with a [`good first issue`](https://github.com/zeromicro/go-zero/labels/good%20first%20issue)
-- Read the [contribution guide](./index.md)
+- Read the [contribution guide](./)
 - Join discussions on [GitHub Discussions](https://github.com/zeromicro/go-zero/discussions)

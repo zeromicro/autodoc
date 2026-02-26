@@ -7,6 +7,6 @@ sidebar:
 
 ## Tutorials
 
-- [Hello World](./hello-world.md) — Your first HTTP API in 5 minutes
-- [API Service](./api-service.md) — Build a full API service with custom types
-- [RPC Service](./rpc-service.md) — Create a gRPC service and connect it to an API gateway
+- [Hello World](./hello-world/) — Your first HTTP API in 5 minutes
+- [API Service](./api-service/) — Build a full API service with custom types
+- [RPC Service](./rpc-service/) — Create a gRPC service and connect it to an API gateway

@@ -10,5 +10,5 @@ go-zero 集成了主流消息中间件，用于服务之间的异步通信。根
 
 ## 内容
 
-- [Kafka](kafka.md) — 基于内置 `kq` 消费者的高吞吐事件流
-- [RabbitMQ](rabbitmq.md) — 支持可靠投递的 AMQP 消息队列
+- [Kafka](kafka/) — 基于内置 `kq` 消费者的高吞吐事件流
+- [RabbitMQ](rabbitmq/) — 支持可靠投递的 AMQP 消息队列

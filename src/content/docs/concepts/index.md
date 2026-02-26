@@ -16,7 +16,7 @@ This section provides the mental model you need before writing production servic
 
 ## Recommended Reading Order
 
-1. [Glossary](./glossary.md)
-2. [Architecture](./architecture.md)
-3. [Design Principles](./design-principles.md)
-4. [Project Structure](./project-structure.md)
+1. [Glossary](./glossary/)
+2. [Architecture](./architecture/)
+3. [Design Principles](./design-principles/)
+4. [Project Structure](./project-structure/)

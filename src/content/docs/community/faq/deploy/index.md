@@ -10,4 +10,4 @@ Common questions and solutions related to deploying go-zero services in producti
 
 ## Contents
 
-- [Reducing Binary Size](binary-size.md) — Shrink production binaries
+- [Reducing Binary Size](binary-size/) — Shrink production binaries

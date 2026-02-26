@@ -7,5 +7,5 @@ sidebar:
 
 ## Specifications
 
-- [API Syntax](./api-syntax.md) — The `.api` file format for defining HTTP services
-- [Proto Syntax](./proto-syntax.md) — Proto conventions and goctl-specific extensions
+- [API Syntax](./api-syntax/) — The `.api` file format for defining HTTP services
+- [Proto Syntax](./proto-syntax/) — Proto conventions and goctl-specific extensions
