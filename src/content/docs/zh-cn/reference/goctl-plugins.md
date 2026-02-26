@@ -11,7 +11,7 @@ sidebar:
 
 goctl api 提供了 plugin 命令来支持对 api 进行功能扩展，当 goctl api 中的功能不满足你的使用，
 或者需要对 goctl api 进行功能自定义的扩展，那么插件功能将非常适合开发人员进行自给自足，详情见
-<a href="/docs/reference/cli-guide/api#plugin" target="_blank">goctl api plugin</a>
+<a href="/reference/cli-guide/api#plugin" target="_blank">goctl api plugin</a>
 
 ## 插件资源
 

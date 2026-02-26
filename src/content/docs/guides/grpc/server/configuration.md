@@ -47,7 +47,7 @@ type RpcServerConf struct {
 | Health        | bool                  | Enable health check                                                                          | true          | NO        |
 | Middlewares   | ServerMiddlewaresConf | Enable Middleware                                                                            | None          | NO        |
 
-ServiceConfig General Configuration please refer to  <a href="/docs/reference/configuration-guide/service" target="_blank">Basic Service Configuration</a>
+ServiceConfig General Configuration please refer to  <a href="/reference/configuration-guide/service" target="_blank">Basic Service Configuration</a>
 
 #### EtcdConf
 

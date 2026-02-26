@@ -55,4 +55,4 @@ go install golang.org/x/tools/gopls@latest
 
 ## Next Step
 
-[Understand API DSL syntax →](../../reference/dsl/api-syntax)
+[Understand API DSL syntax →](../../../reference/dsl/api-syntax)

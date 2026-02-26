@@ -146,6 +146,6 @@ hey -c 100 -z 60m "http://localhost:8888/ping"
 
 ## 相关文档
 
-- [指标监控](./metrics/)
-- [链路追踪](./tracing/)
-- [日志](../log/)
+- [指标监控](../metrics/)
+- [链路追踪](../tracing/)
+- [日志](../../log/)

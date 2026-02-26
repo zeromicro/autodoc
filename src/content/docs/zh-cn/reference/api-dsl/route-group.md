@@ -9,7 +9,7 @@ sidebar:
 
 ## 概述
 
-在 go-zero 中，我们通过 api 语言来声明 HTTP 服务，然后通过 goctl 生成 HTTP 服务代码，在之前我们系统性的介绍了 <a href="/docs/reference/api-dsl" target="_blank">API 规范</a>。
+在 go-zero 中，我们通过 api 语言来声明 HTTP 服务，然后通过 goctl 生成 HTTP 服务代码，在之前我们系统性的介绍了 <a href="/reference/api-dsl/" target="_blank">API 规范</a>。
 
 在 HTTP 服务开发中，随着业务的发展，我们的服务接口会越来越多，生成的代码文件(handler，logic，types 文件等)也会越来越多，这时候我们需要将一些生成的代码文件按照一定维度进行文件夹聚合，以便于开发和维护。
 

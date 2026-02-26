@@ -174,7 +174,7 @@ err = cache.TakeCtx(ctx, &product, fmt.Sprintf("product:%d", id), func(v any) er
 })
 ```
 
-See [Memory Cache](../../components/cache/memory-cache) for the full L1/L2 pattern.
+See [Memory Cache](../../../components/cache/memory-cache) for the full L1/L2 pattern.
 
 ## Connection Health
 

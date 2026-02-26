@@ -13,7 +13,7 @@ This guide creates a **user RPC service** that an API gateway can call over gRPC
 - `protoc` installed
 - `protoc-gen-go` and `protoc-gen-go-grpc` installed
 
-Not installed? See [Install protoc](../../getting-started/installation/protoc).
+Not installed? See [Install protoc](../../../getting-started/installation/protoc).
 
 ## Step 1 — Scaffold the Service
 
@@ -132,6 +132,6 @@ goctl rpc protoc user.proto \
 
 ## Next Steps
 
-- [Service discovery with etcd](../../guides/microservice/service-discovery)
-- [Circuit breaker configuration](../../components/resilience/circuit-breaker)
-- [Project creation patterns](../../getting-started/project-creation)
+- [Service discovery with etcd](../../microservice/service-discovery)
+- [Circuit breaker configuration](../../../components/resilience/circuit-breaker)
+- [Project creation patterns](../../../getting-started/project-creation)

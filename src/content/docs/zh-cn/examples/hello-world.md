@@ -52,5 +52,5 @@ curl http://localhost:8888/from/you
 
 ## 下一步
 
-- 添加[中间件](../guides/http/server/middleware/)实现日志记录
-- 接入[数据库](../guides/database/mysql/)
+- 添加[中间件](../../guides/http/server/middleware/)实现日志记录
+- 接入[数据库](../../guides/database/mysql/)

@@ -51,4 +51,4 @@ export PATH=$PATH:$HOME/go/bin
 
 ## 下一步
 
-[安装 protoc →](./protoc)
+[安装 protoc →](../protoc)

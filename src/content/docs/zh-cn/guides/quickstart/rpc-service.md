@@ -12,7 +12,7 @@ sidebar:
 - 已安装 `protoc`
 - 已安装 `protoc-gen-go` 和 `protoc-gen-go-grpc`
 
-未安装？参见[安装 protoc](../../getting-started/installation/protoc)。
+未安装？参见[安装 protoc](../../../getting-started/installation/protoc)。
 
 ## 第一步：创建项目
 
@@ -131,6 +131,6 @@ goctl rpc protoc user.proto \
 
 ## 下一步
 
-- [使用 etcd 进行服务发现](../../guides/microservice/service-discovery)
-- [熔断器配置](../../components/resilience/circuit-breaker)
-- [项目创建模式](../../getting-started/project-creation)
+- [使用 etcd 进行服务发现](../../microservice/service-discovery)
+- [熔断器配置](../../../components/resilience/circuit-breaker)
+- [项目创建模式](../../../getting-started/project-creation)

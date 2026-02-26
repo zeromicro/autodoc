@@ -12,7 +12,7 @@ sidebar:
 - 已安装 Go 1.21+（`go version`）
 - 已安装 goctl（`goctl --version`）
 
-未安装？参见[安装 Go](../../getting-started/installation/golang) 和[安装 goctl](../../getting-started/installation/goctl)。
+未安装？参见[安装 Go](../../../getting-started/installation/golang) 和[安装 goctl](../../../getting-started/installation/goctl)。
 
 ## 第一步：生成服务脚手架
 
@@ -135,5 +135,5 @@ curl /from/alice
 
 ## 下一步
 
-- [构建完整 API 服务 →](./api-service)
-- [构建 RPC 服务 →](./rpc-service)
+- [构建完整 API 服务 →](../api-service)
+- [构建 RPC 服务 →](../rpc-service)

@@ -52,7 +52,7 @@ type (
 
 | <img width={100}/>名称 | 说明 | 类型 | 是否必填 | 示例 |
 | --- | --- | --- | --- | --- |
-| RestConf | rest 服务配置 | RestConf | 是 | 参考<a href="/docs/reference/configuration-guide/service" target="_blank">基础服务配置</a> |
+| RestConf | rest 服务配置 | RestConf | 是 | 参考<a href="/reference/configuration-guide/service" target="_blank">基础服务配置</a> |
 | Upstreams | gRPC 服务配置 | []Upstream | 是 | |
 | Timeout |  超时时间 | duration | 否 | `5s` |
 
@@ -61,7 +61,7 @@ type (
 | <img width={100}/>名称 | 说明 | 类型 | 是否必填 | 示例 |
 | --- | --- | --- | --- | --- |
 | Name | 服务名称 | string | 否 | `demo1-gateway` |
-| Grpc | gRPC 服务配置 | RpcClientConf | 是 | 参考<a href="/docs/guides/grpc/server/configuration" target="_blank">RPC 配置</a> |
+| Grpc | gRPC 服务配置 | RpcClientConf | 是 | 参考<a href="/guides/grpc/server/configuration" target="_blank">RPC 配置</a> |
 | ProtoSets | proto 文件列表 | []string | 否 | `["hello.pb"]` |
 | Mappings | 路由映射,不填则默认映射所有 grpc 路径 | []RouteMapping | 否 | |
 
@@ -313,5 +313,5 @@ $ curl http://localhost:8888/ping
 ## 参考文献
 
 - <a href="https://github.com/zeromicro/go-zero/tree/master/gateway" target="_blank">《go-zero • gateway》</a>
-- <a href="/docs/reference/configuration-guide/service" target="_blank">《go-zero • 基础服务配置》</a>
-- <a href="/docs/guides/grpc/server/configuration" target="_blank">《go-zero • grpc 配置》</a>
+- <a href="/reference/configuration-guide/service" target="_blank">《go-zero • 基础服务配置》</a>
+- <a href="/guides/grpc/server/configuration" target="_blank">《go-zero • grpc 配置》</a>

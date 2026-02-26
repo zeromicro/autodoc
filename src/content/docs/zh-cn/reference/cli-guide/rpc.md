@@ -79,7 +79,7 @@ Flags:
 | home                        | string                      | NO                          | `~/.goctl`                | 模板仓库本地路径，优先级低于 --remote                                                     |
 | idea                        | bool                        | NO                          | false                     | 仅 idea 插件用，终端请忽略此字段                                                          |
 | remote                      | string                      | NO                          | 空字符串                  | 模板仓库远程路径                                                                          |
-| style                       | string                      | NO                          | gozero                    | 文件命名风格，详情可参考 <a href="/docs/reference/cli-guide/style" target="_blank">文件风格</a> |
+| style                       | string                      | NO                          | gozero                    | 文件命名风格，详情可参考 <a href="/reference/cli-guide/style" target="_blank">文件风格</a> |
 
 示例：
 
@@ -119,7 +119,7 @@ Usage:
 | client                  | bool                        | NO                          | true                   | 是否生成客户端代码                                                                 |
 | multiple                | bool                        | NO                          | false                  | 是否生成多个 rpc 服务                                                             |
 | remote                  | string                      | NO                          | 空字符串                   | 模板仓库远程路径                                                                  |
-| style                   | string                      | NO                          | gozero                 | 文件命名风格，详情可参考 <a href="/docs/reference/cli-guide/style" target="_blank">文件风格</a> |
+| style                   | string                      | NO                          | gozero                 | 文件命名风格，详情可参考 <a href="/reference/cli-guide/style" target="_blank">文件风格</a> |
 | zrpc_out                | string                      | NO                          | 空字符串                   | 输出目录                                                                      |
 
 除了上述参数外，还有支持 protoc 指令的原生参数，详情可参考 <a href="https://developers.google.com/protocol-buffers/docs/reference/go-generated#invocation" target="_blank"> Go Generated Code Guide</a>。
@@ -134,7 +134,7 @@ $ goctl rpc protoc greet.proto --go_out=./pb --go-grpc_out=./pb --zrpc_out=. --c
 ```
 
 :::tip
-多个 rpc 服务生成示例（rpc 分组）生成效果可参考 <a href="/docs/reference/proto-dsl/services-group" target="_blank">服务分组</a>
+多个 rpc 服务生成示例（rpc 分组）生成效果可参考 <a href="/reference/proto-dsl/services-group" target="_blank">服务分组</a>
 :::
 
 :::tip 小技能
@@ -191,7 +191,7 @@ $ goctl rpc template -o greet.proto
 
 ## 参考文献
 
-- <a href="/docs/reference/cli-guide/style" target="_blank">《文件风格》</a>
-- <a href="/docs/reference/proto-dsl/services-group" target="_blank">《服务分组》</a>
+- <a href="/reference/cli-guide/style" target="_blank">《文件风格》</a>
+- <a href="/reference/proto-dsl/services-group" target="_blank">《服务分组》</a>
 - <a href="https://developers.google.com/protocol-buffers/docs/reference/go-generated#invocation" target="_blank"> 《Go Generated Code Guide》</a>
 - <a href="https://protobuf.dev/overview/" target="_blank"> 《Protocol Buffers Documentation》</a>

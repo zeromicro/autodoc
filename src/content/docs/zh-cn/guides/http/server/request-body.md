@@ -119,7 +119,7 @@ var req Request
 err := httpx.Parse(r, &req) // 解析参数
 ```
 
-关于参数区间的详细说明请参考 api 语法 <a href="/docs/reference/api-dsl/parameter" target="_blank">参数规则</a>
+关于参数区间的详细说明请参考 api 语法 <a href="/reference/api-dsl/parameter" target="_blank">参数规则</a>
 
 ### 参数枚举值
 
@@ -149,4 +149,4 @@ err := httpx.Parse(r, &req) // 解析参数
 
 ## 参考文献
 
-- <a href="/docs/reference/api-dsl/parameter" target="_blank">《api | HTTP 请求参数规则》</a>
+- <a href="/reference/api-dsl/parameter" target="_blank">《api | HTTP 请求参数规则》</a>

@@ -79,7 +79,7 @@ Flags:
 | home                                                 | string                                              | NO                                             | `~/.goctl`                                         | Template repository local path higher than --remote        |
 | idea                                                 | bool                                                | NO                                             | false                                              | Use this field only for plugins, please ignore this field  |
 | remote                                               | string                                              | NO                                             | Empty string                                       | Template repository remote path                            |
-| style                                                | string                                              | NO                                             | gozero                                             | Filename style, reference <a href="/docs/reference/cli-guide/style" target="_blank">file style</a>         |
+| style                                                | string                                              | NO                                             | gozero                                             | Filename style, reference <a href="/reference/cli-guide/style" target="_blank">file style</a>         |
 
 Example:
 
@@ -119,7 +119,7 @@ Flags:
 | home                                                 | string                                              | NO                                             | `~/.goctl`                                         | Template repository local path higher than --remote        |
 | multiple                                             | bool                                                | NO                                             | false                                              | Whether to generate multiple rpc services                  |
 | remote                                               | string                                              | NO                                             | Empty string                                       | Template repository remote path                            |
-| style                                                | string                                              | NO                                             | gozero                                             | Filename style, reference <a href="/docs/reference/cli-guide/style" target="_blank">file style</a>         |
+| style                                                | string                                              | NO                                             | gozero                                             | Filename style, reference <a href="/reference/cli-guide/style" target="_blank">file style</a>         |
 | zrpc_out                                             | string                                              | NO                                             | Empty string                                       | Output directory                                           |
 
 In addition to the above parameters, there are native arguments that support the protoc directive. See <a href="https://developers.google.com/protocol-buffers/docs/reference/go-generated#invocation" target="_blank"> Go Generated Code Guide</a> for details.
@@ -134,7 +134,7 @@ $ goctl rpc protoc greet.proto --go_out=./pb --go-grpc_out=./pb --zrpc_out=. -m
 ```
 
 :::tip
-multiple rpc services generate examples (rpc group) with reference <a href="/docs/reference/proto-dsl/services-group" target="_blank">service group</a>
+multiple rpc services generate examples (rpc group) with reference <a href="/reference/proto-dsl/services-group" target="_blank">service group</a>
 :::
 
 ::tip Small skills
@@ -190,7 +190,7 @@ $ goctl rpc template -o greet.proto
 
 ## References
 
-- <a href="/docs/reference/cli-guide/style" target="_blank">File Style</a>
-- <a href="/docs/reference/proto-dsl/services-group" target="_blank">Services group</a>
+- <a href="/reference/cli-guide/style" target="_blank">File Style</a>
+- <a href="/reference/proto-dsl/services-group" target="_blank">Services group</a>
 - <a href="https://developers.google.com/protocol-buffers/docs/reference/go-generated#invocation" target="_blank"> Go Generated Code Guide</a>
 - <a href="https://protobuf.dev/overview/" target="_blank"> Protocol Buffers Documentation</a>

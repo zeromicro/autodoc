@@ -155,7 +155,7 @@ Flags:
 | dir                                                  | string                                              | NO                                             | Current working directory                          | Generate Code Output Directory                                                                                    |
 | home                                                 | string                                              | NO                                             | `${HOME}/.goctl`                                   | Local Template File Directory                                                                                     |
 | remote                                               | string                                              | NO                                             | Empty string                                       | Remote template is a git repository address. Priority is higher than `home` field value when this field is passed |
-| style                                                | string                                              | NO                                             | `gozero`                                           | Named style symbols for output files and directories, see<a href="/docs/reference/cli-guide/style" target="_blank"> file style</a>                                |
+| style                                                | string                                              | NO                                             | `gozero`                                           | Named style symbols for output files and directories, see<a href="/reference/cli-guide/style" target="_blank"> file style</a>                                |
 
 ### new
 
@@ -185,7 +185,7 @@ Flags:
 | branch                                               | string                                              | NO                                             | Empty string                                       | Remote template name is used only if `remote` has value                                                           |
 | home                                                 | string                                              | NO                                             | `${HOME}/.goctl`                                   | Local Template File Directory                                                                                     |
 | remote                                               | string                                              | NO                                             | Empty string                                       | Remote template is a git repository address. Priority is higher than `home` field value when this field is passed |
-| style                                                | string                                              | NO                                             | `gozero`                                           | Named style symbols for output files and directories, see<a href="/docs/reference/cli-guide/style" target="_blank"> file style</a>                                |
+| style                                                | string                                              | NO                                             | `gozero`                                           | Named style symbols for output files and directories, see<a href="/reference/cli-guide/style" target="_blank"> file style</a>                                |
 
 :::note reminder
 goctl api new requires a terminal parameter to specify the name of the service to be generated, output directory to the current work directory, e.g. demo service generated instructions below：
@@ -220,14 +220,14 @@ Flags:
 | api                                                  | string                                              | YES                                            | Empty string                                       | api file                                                                           |
 | dir                                                  | string                                              | NO                                             | Current working directory                          | api file                                                                           |
 | plugin                                               | string                                              | YES                                            | Empty string                                       | Path to plugin executable, support local and HTML files                            |
-| style                                                | string                                              | NO                                             | `gozero`                                           | Named style symbols for output files and directories, see<a href="/docs/reference/cli-guide/style" target="_blank"> file style</a> |
+| style                                                | string                                              | NO                                             | `gozero`                                           | Named style symbols for output files and directories, see<a href="/reference/cli-guide/style" target="_blank"> file style</a> |
 
-Plugin resource reference <a href="/docs/reference/goctl/plugins" target="_blank"> goctl plugin resource </a>
+Plugin resource reference <a href="/reference/goctl-plugins" target="_blank"> goctl plugin resource </a>
 
 
 ### swagger
 
-Generate swagger file from api file, for details please see <a href="/docs/reference/cli-guide/swagger"> swagger 生成 </a>
+Generate swagger file from api file, for details please see <a href="/reference/cli-guide/swagger"> swagger 生成 </a>
 
 :::note Tips
 The current function is in the experimental stage, and the requirements are:
@@ -281,7 +281,7 @@ Flags:
 | dir                                                  | string                                              | NO                                             | Current working directory                          | api file                                                                           |
 | caller                                               | string                                              | NO                                             | `webapi`                                           | web caller，                                                                        |
 | plugin                                               | string                                              | YES                                            | Empty string                                       | Path to plugin executable, support local and HTML files                            |
-| style                                                | string                                              | NO                                             | `gozero`                                           | Named style symbols for output files and directories, see<a href="/docs/reference/cli-guide/style" target="_blank"> file style</a> |
+| style                                                | string                                              | NO                                             | `gozero`                                           | Named style symbols for output files and directories, see<a href="/reference/cli-guide/style" target="_blank"> file style</a> |
 
 ### validate
 

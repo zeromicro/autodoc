@@ -143,7 +143,7 @@ sidebar:
 4. 接着上面步骤，我们修改一下 `demo/internal/handler/loginhandler.go` 文件，将 `loginHandler` 中的响应方法替换成扩展包中的方法
 
 :::tip 温馨提示
-这一步，为了防止每次代码生成都要更改，可以通过修改模板来实现，自定义模板用法可参考 <a href="/docs/guides/customization/template" target="_blank">《模板定制化》</a>
+这一步，为了防止每次代码生成都要更改，可以通过修改模板来实现，自定义模板用法可参考 <a href="/reference/customization/template" target="_blank">《模板定制化》</a>
 :::
 
 ```go
@@ -268,6 +268,6 @@ curl --location '127.0.0.1:8888/user/login' \
 
 ## 参考文献
 
-- <a href="/docs/reference/cli-guide/overview" target="_blank">《goctl 代码生成工具使用》</a>
+- <a href="/reference/cli-guide/" target="_blank">《goctl 代码生成工具使用》</a>
 - https://github.com/zeromicro/x
-- <a href="/docs/guides/customization/template" target="_blank">《模板定制化》</a>
+- <a href="/reference/customization/template" target="_blank">《模板定制化》</a>

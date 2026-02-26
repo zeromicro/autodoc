@@ -65,7 +65,7 @@ Flags:
 | easy                    | boolean                 | NO                      | `false`                | 是否暴露集合名称变量                                                                         |
 | home                    | string                  | NO                      | `${HOME}/.goctl`       | 本地模板文件目录                                                                           |
 | remote                  | string                  | NO                      | 空字符串                   | 远程模板所在 git 仓库地址，当此字段传值时，优先级高于 `home` 字段值                                           |
-| style                   | string                  | NO                      | `gozero`               | 输出文件和目录的命名风格格式化符号，详情见<a href="/docs/reference/cli-guide/style" target="_blank"> 文件风格</a> |
+| style                   | string                  | NO                      | `gozero`               | 输出文件和目录的命名风格格式化符号，详情见<a href="/reference/cli-guide/style" target="_blank"> 文件风格</a> |
 | type                    | []string                | YES                     | `nil`                  | 结构体类型名称                                                                            |
 
 #### 使用示例
@@ -591,7 +591,7 @@ Global Flags:
 | easy                    | boolean               | NO                      | `false`                | 是否暴露集合名称变量                                                                                                                                                                  |
 | home                    | string                | NO                      | `${HOME}/.goctl`       | 本地模板文件目录                                                                                                                                                                    |
 | remote                  | string                | NO                      | 空字符串                   | 远程模板所在 git 仓库地址，当此字段传值时，优先级高于 `home` 字段值                                                                                                                                    |
-| style                   | string                | NO                      | `gozero`               | 输出文件和目录的命名风格格式化符号，详情见<a href="/docs/reference/cli-guide/style" target="_blank"> 文件风格</a>                                                                                          |
+| style                   | string                | NO                      | `gozero`               | 输出文件和目录的命名风格格式化符号，详情见<a href="/reference/cli-guide/style" target="_blank"> 文件风格</a>                                                                                          |
 | table                   | []string              | YES                     | `nil`                  | 需要生成代码的表                                                                                                                                                                    |
 | url                     | string                | YES                     | 空字符串                   | 数据库连接，格式{{username}}:{{password}}@tcp({{host_port}})/{{db}}                                                                                                                 |
 | ignore-columns          | []string              | NO                      | `nil`                  | 需要忽略的字段，插入或者更新时需要忽略的字段，如 `create_time`                                                                                                                                      |
@@ -637,7 +637,7 @@ Global Flags:
 | home                    | string                  | NO                      | `${HOME}/.goctl`       | 本地模板文件目录                                                                                                                                                                    |
 | remote                  | string                  | NO                      | 空字符串                   | 远程模板所在 git 仓库地址，当此字段传值时，优先级高于 `home` 字段值                                                                                                                                    |
 | src                     | string                  | YES                     | 空字符串                   | sql 文件路径                                                                                                                                                                    |
-| style                   | string                  | NO                      | `gozero`               | 输出文件和目录的命名风格格式化符号，详情见<a href="/docs/reference/cli-guide/style" target="_blank"> 文件风格</a>                                                                                          |
+| style                   | string                  | NO                      | `gozero`               | 输出文件和目录的命名风格格式化符号，详情见<a href="/reference/cli-guide/style" target="_blank"> 文件风格</a>                                                                                          |
 | ignore-columns          | []string                | NO                      | `nil`                  | 需要忽略的字段，插入或者更新时需要忽略的字段，如 `create_time`                                                                                                                                      |
 | strict                  | boolean                 | NO                      | `false`                | 是否是严格模式，如果是严格模式下，会对 `unsigned` 修饰的字段转换为对应的数据类型，主要针对数值型，例如：如果数据库中列为 `bigint` 类型，如果为`unsigned` 修饰则对应的 golang 数据类型就为 `int64`，否则为 `uint64`，如果 strict 为 false，则不关注 `unsigned` 修饰 |
 | prefix                  | string                  | NO                      | `cache`                | 自定义缓存 key 前缀，默认为 `cache`, goctl 版本需要大于 1.7.6                                                                                                                                |
@@ -826,7 +826,7 @@ Flags:
 | idea                    | boolean                 | NO                      | `false`                | 是否为 idea 使用，终端请忽略此字段                                                                                                                                                        |
 | remote                  | string                  | NO                      | 空字符串                   | 远程模板所在 git 仓库地址，当此字段传值时，优先级高于 `home` 字段值                                                                                                                                    |
 | strict                  | boolean                 | NO                      | `false`                | 是否是严格模式，如果是严格模式下，会对 `unsigned` 修饰的字段转换为对应的数据类型，主要针对数值型，例如：如果数据库中列为 `bigint` 类型，如果为`unsigned` 修饰则对应的 golang 数据类型就为 `int64`，否则为 `uint64`，如果 strict 为 false，则不关注 `unsigned` 修饰 |
-| style                   | string                  | NO                      | `gozero`               | 输出文件和目录的命名风格格式化符号，详情见<a href="/docs/reference/cli-guide/style" target="_blank"> 文件风格</a>                                                                                          |
+| style                   | string                  | NO                      | `gozero`               | 输出文件和目录的命名风格格式化符号，详情见<a href="/reference/cli-guide/style" target="_blank"> 文件风格</a>                                                                                          |
 | table                   | []string                | YES                     | `nil`                  | 需要生成代码的表                                                                                                                                                                    |
 | url                     | string                  | YES                     | 空字符串                   | 数据库连接，格式 postgres://{{username}}:{{password}}@{{host_port}}/{{db}}?sslmode=disable                                                                                          |
 
@@ -898,8 +898,8 @@ Flags:
 
 ### 类型映射自定义
 
-类型映射自定义只有试验版本才能使用，关于如何开启试验版本，请参考 <a href="do../reference/cli-guide/env" target="_blank">goctl
-env</a>，关于配置使用请参考 <a href="do../reference/cli-guide/config" target="_blank">goctl config</a>
+类型映射自定义只有试验版本才能使用，关于如何开启试验版本，请参考 <a href="../env" target="_blank">goctl
+env</a>，关于配置使用请参考 <a href="../config" target="_blank">goctl config</a>
 
 示例 1. 修改 decimal 为 decimal.Decimal 类型
 

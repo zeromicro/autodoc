@@ -9,7 +9,7 @@ sidebar:
 
 ## 概述
 
-在 go-zero 中，我们通过 api 语言来声明 HTTP 服务，然后通过 goctl 生成 HTTP 服务代码，在之前我们系统性的介绍了 <a href="/docs/reference/api-dsl" target="_blank">API 规范</a>。
+在 go-zero 中，我们通过 api 语言来声明 HTTP 服务，然后通过 goctl 生成 HTTP 服务代码，在之前我们系统性的介绍了 <a href="/reference/api-dsl/" target="_blank">API 规范</a>。
 
 在 HTTP 服务开发中，路由前缀需求是非常常见的，比如我们通过路由来区分版本，或者通过路由来区分不同的服务，这些都是非常常见的需求。
 

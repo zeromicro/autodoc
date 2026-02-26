@@ -239,5 +239,5 @@ func output(writer io.Writer, level string, val any, fields ...LogField) {
 
 ## 相关文档
 
-- [日志组件概述](./logx/)
-- [logx API 参考](./logc/)
+- [日志组件概述](../logx/)
+- [logx API 参考](../logc/)

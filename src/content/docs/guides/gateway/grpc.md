@@ -52,7 +52,7 @@ type (
 
 | <img width={100} />Name | Note                       | DataType   | Required? | Sample                             |
 | ---------------------------------------- | -------------------------- | ---------- | --------- | ---------------------------------- |
-| RestConf                                 | rest Service Configuration | RestConf   | YES       | Reference<a href="/docs/reference/configuration-guide/service" target="_blank">Basic Service Configuration</a> |
+| RestConf                                 | rest Service Configuration | RestConf   | YES       | Reference<a href="/reference/configuration-guide/service" target="_blank">Basic Service Configuration</a> |
 | Upstreams                                | gRPC Service Configuration | []Upstream | YES       |                                    |
 | Timeout                                  | Timeout time               | duration   | NO        | `5s`                               |
 
@@ -61,7 +61,7 @@ type (
 | <img width={100} />Name | Note                                                 | DataType       | Required? | Sample                             |
 | ---------------------------------------- | ---------------------------------------------------- | -------------- | --------- | ---------------------------------- |
 | Name                                     | Service Name                                         | string         | NO        | `demo1-gateway`                    |
-| Grpc                                     | gRPC Service Configuration                           | RpcClientConf  | YES       | Reference<a href="/docs/guides/grpc/server/configuration" target="_blank">RPC configuration</a> |
+| Grpc                                     | gRPC Service Configuration                           | RpcClientConf  | YES       | Reference<a href="/guides/grpc/server/configuration" target="_blank">RPC configuration</a> |
 | ProtoSets                                | proto file list                                      | []string       | NO        | `["hello.pb"]`                     |
 | Mappings                                 | Route mapping, do not fill by default all grpc paths | []RouteMapping | NO        |                                    |
 
@@ -314,5 +314,5 @@ $ curl http://localhost:8888/ping
 ## References
 
 - <a href="https://github.com/zeromicro/go-zero/tree/master/gateway" target="_blank">go-zero • gateway</a>
-- <a href="/docs/reference/configuration-guide/service" target="_blank">go-zero Basic Service Configuration</a>
-- <a href="/docs/guides/grpc/server/configuration" target="_blank">go-zero • grpc configuration</a>
+- <a href="/reference/configuration-guide/service" target="_blank">go-zero Basic Service Configuration</a>
+- <a href="/guides/grpc/server/configuration" target="_blank">go-zero • grpc configuration</a>

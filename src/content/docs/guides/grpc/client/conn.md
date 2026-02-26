@@ -27,9 +27,9 @@ $ touch main.go
 ```
 
 :::tip
-The following configuration details are referenced <a href="/docs/guides/grpc/client/configuration" target="_blank">service configuration</a>
+The following configuration details are referenced <a href="/guides/grpc/client/configuration" target="_blank">service configuration</a>
 
-goctl rpc usage reference <a href="/docs/reference/cli-guide/rpc" target="_blank"> goctl rpc</a>
+goctl rpc usage reference <a href="/reference/cli-guide/rpc" target="_blank"> goctl rpc</a>
 :::
 
 ## Direct

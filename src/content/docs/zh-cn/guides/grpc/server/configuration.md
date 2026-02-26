@@ -47,7 +47,7 @@ type RpcServerConf struct {
 | Health        | bool                  | 是否开启健康检查                                                   | true   | 否       |
 | Middlewares   | ServerMiddlewaresConf | 启用中间件                                                         | 无     | 否       |
 
-ServiceConfig 通用配置请参考 <a href="/docs/reference/configuration-guide/service" target="_blank">基础服务配置</a>
+ServiceConfig 通用配置请参考 <a href="/reference/configuration-guide/service" target="_blank">基础服务配置</a>
 
 #### EtcdConf
 

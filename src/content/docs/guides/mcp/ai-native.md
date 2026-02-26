@@ -184,4 +184,4 @@ Using submodules ensures your project automatically tracks upstream updates to a
 ## Related
 
 - [MCP Server Overview](./)
-- [MCP Servers Reference](./servers/)
+- [MCP Servers Reference](../servers/)

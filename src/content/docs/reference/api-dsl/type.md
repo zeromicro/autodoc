@@ -56,7 +56,7 @@ type StructureExample {
 ```
 
 :::tip
-New API features are referenced <a href="/docs/reference/api-dsl/faq#1-%E6%80%8E%E4%B9%88%E4%BD%93%E9%AA%8C%E6%96%B0%E7%9A%84-api-%E7%89%B9%E6%80%A7" target="_blank"> New API Resolver Us</a>
+New API features are referenced <a href="/reference/api-dsl/faq#1-%E6%80%8E%E4%B9%88%E4%BD%93%E9%AA%8C%E6%96%B0%E7%9A%84-api-%E7%89%B9%E6%80%A7" target="_blank"> New API Resolver Us</a>
 
 We don't support generic, weak types, e.g. `any` type
 

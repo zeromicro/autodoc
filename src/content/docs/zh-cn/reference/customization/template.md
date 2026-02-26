@@ -10,7 +10,7 @@ sidebar:
 
 goctl 代码生成是基于 go 的模板去实现数据驱动的，虽然目前 goctl 的代码生成可以满足一部分代码生成功能，但是模板的自定义可以更加丰富代码生成。
 
-模板指令可参考 <a href="/docs/reference/cli-guide/template" target="_blank">goctl template</a>
+模板指令可参考 <a href="/reference/cli-guide/template" target="_blank">goctl template</a>
 
 ## 示例
 
@@ -2222,5 +2222,5 @@ map[string]any{
 
 ## 参考文献
 
-- <a href="/docs/reference/cli-guide/template" target="_blank">《goctl template》</a>
+- <a href="/reference/cli-guide/template" target="_blank">《goctl template》</a>
 - <a href="https://golang.org/pkg/text/template/" target="_blank">《text/template》</a>

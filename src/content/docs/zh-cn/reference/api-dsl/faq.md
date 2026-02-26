@@ -26,7 +26,7 @@ $ goctl env -w GOCTL_EXPERIMENTAL=on
 
 1. syntax 头部变为必填
 
-数据类型写法可参考 <a href="/docs/reference/api-dsl/types#示例" target="_blank"> 《类型声明 • 示例》</a> 中 goctl 1.5.1 说明部分内容
+数据类型写法可参考 <a href="/reference/api-dsl/type#示例" target="_blank"> 《类型声明 • 示例》</a> 中 goctl 1.5.1 说明部分内容
 
 ## 2. goctl api 生成报错： multiple service names defined ...
 

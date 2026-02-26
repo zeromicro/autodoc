@@ -13,7 +13,7 @@ This page walks you through creating, running, and testing your first go-zero HT
 - Go 1.21+ installed (`go version`)
 - goctl installed (`goctl --version`)
 
-Not installed? See [Install Go](../../getting-started/installation/golang) and [Install goctl](../../getting-started/installation/goctl).
+Not installed? See [Install Go](../../../getting-started/installation/golang) and [Install goctl](../../../getting-started/installation/goctl).
 
 ## Step 1 — Scaffold the Project
 
@@ -136,5 +136,5 @@ You only write the logic. go-zero handles routing, parsing, validation, serializ
 
 ## Next Steps
 
-- [Create a full API service with custom types →](./api-service)
-- [Create an RPC service →](./rpc-service)
+- [Create a full API service with custom types →](../api-service)
+- [Create an RPC service →](../rpc-service)

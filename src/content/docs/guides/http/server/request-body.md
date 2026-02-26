@@ -113,7 +113,7 @@ var req Request
 err := httpx.Parse(r, &req) 
 ```
 
-See api syntax for more details on parameter intervals <a href="/docs/reference/api-dsl/parameter" target="_blank">parameter rules</a>
+See api syntax for more details on parameter intervals <a href="/reference/api-dsl/parameter" target="_blank">parameter rules</a>
 
 ### Parameter enumeration value
 
@@ -143,4 +143,4 @@ err := httpx.Parse(r, &req)
 
 ## References
 
-- <a href="/docs/reference/api-dsl/parameter" target="_blank">Api | HTTP Request Parameter Rules</a>
+- <a href="/reference/api-dsl/parameter" target="_blank">Api | HTTP Request Parameter Rules</a>

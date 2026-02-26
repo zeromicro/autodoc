@@ -98,6 +98,6 @@ $ curl --location '127.0.0.1:8080/hello' \
 ```
 
 ::tip hint
-Here is only a demonstration of the usability of `httpx.SetErrorHandler` , refer to <a href="/docs/guides/http/server/response-ext" target="_blank">Unified Response Format</a>
+Here is only a demonstration of the usability of `httpx.SetErrorHandler` , refer to <a href="/guides/http/server/response-ext" target="_blank">Unified Response Format</a>
 :
 :::

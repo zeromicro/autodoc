@@ -100,4 +100,4 @@ goctl rpc protoc user.proto \
 
 ## 下一步
 
-[Hello World →](../../guides/quickstart/hello-world)
+[Hello World →](../../../guides/quickstart/hello-world)

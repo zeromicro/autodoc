@@ -184,4 +184,4 @@ AI：好的，我将按照 go-zero 的三层架构创建...
 ## 相关文档
 
 - [MCP 服务概述](./)
-- [MCP Servers 参考](./servers/)
+- [MCP Servers 参考](../servers/)

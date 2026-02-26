@@ -27,9 +27,9 @@ $ touch main.go
 ```
 
 :::tip
-以下配置详情请参考 <a href="/docs/guides/grpc/client/configuration" target="_blank">服务配置</a>
+以下配置详情请参考 <a href="/guides/grpc/client/configuration" target="_blank">服务配置</a>
 
-goctl rpc 指令使用请参考 <a href="/docs/reference/cli-guide/rpc" target="_blank"> goctl rpc</a>
+goctl rpc 指令使用请参考 <a href="/reference/cli-guide/rpc" target="_blank"> goctl rpc</a>
 :::
 
 ## 直连

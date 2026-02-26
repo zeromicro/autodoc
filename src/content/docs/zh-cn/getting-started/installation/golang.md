@@ -66,4 +66,4 @@ go env GOPATH
 
 ## 下一步
 
-[安装 goctl →](./goctl)
+[安装 goctl →](../goctl)

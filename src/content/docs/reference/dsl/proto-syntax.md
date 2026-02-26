@@ -138,4 +138,4 @@ Following these conventions ensures correct Go identifier generation.
 
 ## Next Step
 
-[Run Hello World →](../../guides/quickstart/hello-world)
+[Run Hello World →](../../../guides/quickstart/hello-world)

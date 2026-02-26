@@ -9,7 +9,7 @@ sidebar:
 
 ## Overview
 
-In go-zero, we declared HTTP service via api language, and then generated HTTP service code via goctl, after our systematic introduction to <a href="/docs/reference/api-dsl" target="_blank">API norm</a>.
+In go-zero, we declared HTTP service via api language, and then generated HTTP service code via goctl, after our systematic introduction to <a href="/reference/api-dsl/" target="_blank">API norm</a>.
 
 Routing prefix demand is very common in HTTP service development, for example, we differentiate versions by routing, or different services by routing, which are very common.
 

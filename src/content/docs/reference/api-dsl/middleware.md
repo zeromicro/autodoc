@@ -8,7 +8,7 @@ sidebar:
 
 ## Overview
 
-In go-zero, we declared HTTP service via api language, and then generated HTTP service code via goctl, after our systematic introduction to <a href="/docs/reference/api-dsl" target="_blank">API norm</a>.
+In go-zero, we declared HTTP service via api language, and then generated HTTP service code via goctl, after our systematic introduction to <a href="/reference/api-dsl/" target="_blank">API norm</a>.
 
 Middleware is a very common need in HTTP development, such as that we need to authenticate requests or log requests that are very common.
 

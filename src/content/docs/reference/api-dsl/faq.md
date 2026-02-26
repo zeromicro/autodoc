@@ -26,7 +26,7 @@ When enabling new features in 1.5.1, there are some breaking changes to be aware
 
 1. syntax header is required
 
-For data type usage examples, see <a href="/docs/reference/api-dsl/types#示例" target="_blank">Type Declarations • Examples</a>.
+For data type usage examples, see <a href="/reference/api-dsl/type#示例" target="_blank">Type Declarations • Examples</a>.
 
 ## 2. goctl api generated error： multiple service names defined...
 

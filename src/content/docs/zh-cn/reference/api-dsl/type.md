@@ -54,7 +54,7 @@ type StructureExample {
 ```
 
 :::tip
-API 新特性使用可参考<a href="/docs/reference/api-dsl/faq#1-%E6%80%8E%E4%B9%88%E4%BD%93%E9%AA%8C%E6%96%B0%E7%9A%84-api-%E7%89%B9%E6%80%A7" target="_blank"> 新版 API 解析器使用</a>
+API 新特性使用可参考<a href="/reference/api-dsl/faq#1-%E6%80%8E%E4%B9%88%E4%BD%93%E9%AA%8C%E6%96%B0%E7%9A%84-api-%E7%89%B9%E6%80%A7" target="_blank"> 新版 API 解析器使用</a>
 
 我们暂时不支持泛型、弱类型，如 `any` 类型
 

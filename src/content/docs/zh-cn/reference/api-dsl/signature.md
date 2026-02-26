@@ -9,7 +9,7 @@ sidebar:
 
 ## 概述
 
-在 go-zero 中，我们通过 api 语言来声明 HTTP 服务，然后通过 goctl 生成 HTTP 服务代码，在之前我们系统性的介绍了 <a href="/docs/reference/api-dsl" target="_blank">API 规范</a>。
+在 go-zero 中，我们通过 api 语言来声明 HTTP 服务，然后通过 goctl 生成 HTTP 服务代码，在之前我们系统性的介绍了 <a href="/reference/api-dsl/" target="_blank">API 规范</a>。
 
 在 go-zero 中，已经内置了签名功能，我们可以通过 api 语言来开启签名功能，然后通过 goctl 生成签名代码，这样我们就可以在 HTTP 服务中使用签名功能了。
 
@@ -46,7 +46,7 @@ service sign-api {
 
 ```
 
-我们来看一下生成的路由代码，完整代码点击 <a href={require('/docs/resour../reference/api-dsl/signdemo.zip').default} target="_blank">这里下载</a>
+我们来看一下生成的路由代码，完整代码点击 <a href="/resource/tutorials/api/signdemo.zip" target="_blank">这里下载</a>
 
 ```go {10}
 func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {

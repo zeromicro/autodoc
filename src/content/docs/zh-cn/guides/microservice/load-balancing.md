@@ -104,4 +104,4 @@ UserRpc:
 ## 延伸阅读
 
 - [gRPC 客户端](../grpc/client) — 客户端完整配置参考
-- [分布式链路追踪](./distributed-tracing) — 追踪请求在各实例间的路径
+- [分布式链路追踪](../distributed-tracing) — 追踪请求在各实例间的路径

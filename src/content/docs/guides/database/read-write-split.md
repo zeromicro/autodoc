@@ -189,6 +189,6 @@ func (m *UserModel) FindUserWithFallback(ctx context.Context, id int64) (*User, 
 
 ## Related
 
-- [MySQL](./mysql/)
-- [MongoDB](./mongodb/)
-- [Redis](./redis/)
+- [MySQL](../mysql/)
+- [MongoDB](../mongodb/)
+- [Redis](../redis/)

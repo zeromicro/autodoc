@@ -98,5 +98,5 @@ $ curl --location '127.0.0.1:8080/hello' \
 ```
 
 :::tip 温馨提示
-这里仅演示 `httpx.SetErrorHandler` 的用法，如需指定 HTTP 统一响应格式请参考 <a href="/docs/guides/http/server/response-ext" target="_blank">《统一响应格式》</a>
+这里仅演示 `httpx.SetErrorHandler` 的用法，如需指定 HTTP 统一响应格式请参考 <a href="/guides/http/server/response-ext" target="_blank">《统一响应格式》</a>
 :::

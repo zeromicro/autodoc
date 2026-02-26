@@ -24,7 +24,7 @@ go-zero provides a gRPC server that provides：
 In go-zero, we can use goctl to quickly sound a gRPC service or create an example of a gRPC service using the goctl 0 code.
 
 :::tip Tips
-Quickly generate and start a goctl service example for a gRPC service that can be referenced <a href="/docs/reference/cli-guide/quickstart" target="_blank">Quick Start Microservice Book</a>
+Quickly generate and start a goctl service example for a gRPC service that can be referenced <a href="/reference/cli-guide/quickstart" target="_blank">Quick Start Microservice Book</a>
 :::
 
 We're here to create a full gRPC service with a proto.
@@ -50,9 +50,9 @@ $ goctl rpc protoc greet.proto --go_out=.  --go-grpc_out=.  --zrpc_out=.
 
 ::tip Tips
 
-1. goctl installation please refer to <a href="/docs/tasks/installation/goctl" target="_blank">Goctl Installation</a>
-1. rpc code generation command tutorial reference <a href="/docs/reference/cli-guide/rpc" target="_blank">goctl rpc</a>
-1. Proto use related questions refer to <a href="/docs/reference/proto-dsl/faq" target="_blank">Proto Code Generating FAQ</a>
+1. goctl installation please refer to <a href="/getting-started/installation/goctl" target="_blank">Goctl Installation</a>
+1. rpc code generation command tutorial reference <a href="/reference/cli-guide/rpc" target="_blank">goctl rpc</a>
+1. Proto use related questions refer to <a href="/reference/proto-dsl/faq" target="_blank">Proto Code Generating FAQ</a>
 :::
 
 ### 4. Layout
@@ -84,7 +84,7 @@ demo
 ```
 
 :::tip hint
-service directory structure introduction refer to <a href="/docs/concepts/layout" target="_blank">Project Structure</a>
+service directory structure introduction refer to <a href="/concepts/project-structure" target="_blank">Project Structure</a>
 :::
 
 ### 5. Discovery/direct service mode
@@ -92,7 +92,7 @@ service directory structure introduction refer to <a href="/docs/concepts/layout
 In go-zero we support the etcd service registration and direct connection mode and we only adjust the static configuration files in the etc directory.
 
 :::tip hint
-gRPC service configuration accessible <a href="/docs/guides/grpc/server/configuration" target="_blank">GRPC Service Configuration </a>
+gRPC service configuration accessible <a href="/guides/grpc/server/configuration" target="_blank">GRPC Service Configuration </a>
 
 In addition to a go-zero built-in ecd as a service, the community also provides support for the discovery of services such as nacos, consul, etc. More Services found components <a href="https://github.com/zeromicro/zero-contrib/tree/main/zrpc/registry" target="_blank">for details</a>
 :::
@@ -256,7 +256,7 @@ go-zero rpc is embedded in a very rich intermediary, see<a href="https://github.
 - UnaryTimeoutInterceptor
 - StreamTraceInterceptor|UnaryTraceInterceptor
 
-In the above built-in intermediates, link tracking intermediates, indicator statistical intermediary, time statistical intermediary, abnormal capture medium, melting intermediation can be configured to turn on or off and other intermediates will be enabled by default. Specific configuration can be consulted<a href="/docs/guides/grpc/server/configuration" target="_blank">service configuration</a>
+In the above built-in intermediates, link tracking intermediates, indicator statistical intermediary, time statistical intermediary, abnormal capture medium, melting intermediation can be configured to turn on or off and other intermediates will be enabled by default. Specific configuration can be consulted<a href="/guides/grpc/server/configuration" target="_blank">service configuration</a>
 
 #### Custom Middleware
 

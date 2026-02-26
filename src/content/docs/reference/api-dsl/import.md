@@ -8,7 +8,7 @@ sidebar:
 
 ## Overview
 
-In go-zero, we declared HTTP service via api language, and then generated HTTP service code via goctl, after our systematic introduction to <a href="/docs/reference/api-dsl" target="_blank">API norm</a>.
+In go-zero, we declared HTTP service via api language, and then generated HTTP service code via goctl, after our systematic introduction to <a href="/reference/api-dsl/" target="_blank">API norm</a>.
 
 In HTTP service development, we all describe HTTP services through api description. As business volume increases, api files may grow larger, or we have some public structures. If we all write in the same api file, api files will become very large and not easy to read and maintain, we can use api import to solve these problems by introducing other api documents.
 

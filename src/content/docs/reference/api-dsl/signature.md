@@ -9,7 +9,7 @@ sidebar:
 
 ## Overview
 
-In go-zero, we declared HTTP service via api language, and then generated HTTP service code via goctl, after our systematic introduction to <a href="/docs/reference/api-dsl" target="_blank">API norm</a>.
+In go-zero, we declared HTTP service via api language, and then generated HTTP service code via goctl, after our systematic introduction to <a href="/reference/api-dsl/" target="_blank">API norm</a>.
 
 In go-zero we already have built-in signature features. We can enable signature by api language and then generate signature code by goctl, so we can use the signature function in the HTTP service.
 
@@ -46,7 +46,7 @@ service sign-api {
 
 ```
 
-Let's see the routing code generated, the full code click <a href={require('/docs/resour../reference/api-dsl/signdemo.zip').default} target="_blank">to download it here</a>
+Let's see the routing code generated, the full code click <a href="/resource/tutorials/api/signdemo.zip" target="_blank">to download it here</a>
 
 ```go {10}
 func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {

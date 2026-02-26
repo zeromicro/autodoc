@@ -9,7 +9,7 @@ sidebar:
 
 ## 概述
 
-在 go-zero 中，我们通过 api 语言来声明 HTTP 服务，然后通过 goctl 生成 HTTP 服务代码，在之前我们系统性的介绍了 <a href="/docs/reference/api-dsl" target="_blank">API 规范</a>。
+在 go-zero 中，我们通过 api 语言来声明 HTTP 服务，然后通过 goctl 生成 HTTP 服务代码，在之前我们系统性的介绍了 <a href="/reference/api-dsl/" target="_blank">API 规范</a>。
 
 在 api 描述语言中，有特定的路由规则，这些路由规则并非和 HTTP 的路由规则完全引用，接下来我们来看一下 api 描述语言中的路由规则吧。
 
@@ -19,8 +19,8 @@ sidebar:
 
 1. 路由必须以 `/` 开头
 1. 路由节点必须以 `/` 分隔
-1. 路由节点中可以包含 `:`，但是 `:` 必须是路由节点的第一个字符，`:` 后面的节点值必须要在结请求体中有 `path` tag 声明，用于接收路由参数，详细规则可参考 <a href="/docs/reference/api-dsl/parameter" target="_blank">路由参数</a>。
-1. 路由节点可以包含字母、数字(`goctl 1.5.1` 支持，可参考<a href="/docs/reference/api-dsl/faq#1-%E6%80%8E%E4%B9%88%E4%BD%93%E9%AA%8C%E6%96%B0%E7%9A%84-api-%E7%89%B9%E6%80%A7" target="_blank"> 新版 API 解析器使用</a>)、下划线、中划线
+1. 路由节点中可以包含 `:`，但是 `:` 必须是路由节点的第一个字符，`:` 后面的节点值必须要在结请求体中有 `path` tag 声明，用于接收路由参数，详细规则可参考 <a href="/reference/api-dsl/parameter" target="_blank">路由参数</a>。
+1. 路由节点可以包含字母、数字(`goctl 1.5.1` 支持，可参考<a href="/reference/api-dsl/faq#1-%E6%80%8E%E4%B9%88%E4%BD%93%E9%AA%8C%E6%96%B0%E7%9A%84-api-%E7%89%B9%E6%80%A7" target="_blank"> 新版 API 解析器使用</a>)、下划线、中划线
 
 路由示例：
 

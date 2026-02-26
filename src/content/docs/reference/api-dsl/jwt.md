@@ -8,7 +8,7 @@ sidebar:
 
 ## Overview
 
-In go-zero, we declared HTTP service via api language, and then generated HTTP service code via goctl, after our systematic introduction to <a href="/docs/reference/api-dsl" target="_blank">API norm</a>.
+In go-zero, we declared HTTP service via api language, and then generated HTTP service code via goctl, after our systematic introduction to <a href="/reference/api-dsl/" target="_blank">API norm</a>.
 
 Service authentication is also a frequently used feature in HTTP service development, this document will describe how to declare intermediate in api files.
 
@@ -19,7 +19,7 @@ JWT (JSON Web Token) is an open standard (RFC 7519) used to transmit declaratory
 For more documentation about jwt
 
 1. <a href="https://jwt.io/" target="_blank">《JSON Web Tokens》</a>
-2. <a href="/docs/guides/http/server/jwt" target="_blank">JWT Certification</a>
+2. <a href="/guides/http/jwt-auth" target="_blank">JWT Certification</a>
 
 Let's see how to declare jwt authentication in an api file
 

@@ -159,7 +159,7 @@ Flags:
 | dir                     | string                  | NO                      | 当前工作目录                 | 代码输出目录                                                                             |
 | home                    | string                  | NO                      | `${HOME}/.goctl`       | 本地模板文件目录                                                                           |
 | remote                  | string                  | NO                      | 空字符串                   | 远程模板所在 git 仓库地址，当此字段传值时，优先级高于 `home` 字段值                                           |
-| style                   | string                  | NO                      | `gozero`               | 输出文件和目录的命名风格格式化符号，详情见<a href="/docs/reference/cli-guide/style" target="_blank"> 文件风格</a> |
+| style                   | string                  | NO                      | `gozero`               | 输出文件和目录的命名风格格式化符号，详情见<a href="/reference/cli-guide/style" target="_blank"> 文件风格</a> |
 
 ### new
 
@@ -189,7 +189,7 @@ Flags:
 | branch                  | string                  | NO                      | 空字符串                   | 远程模板所在 git 分支名称，仅当 `remote` 有值时使用                                                  |
 | home                    | string                  | NO                      | `${HOME}/.goctl`       | 本地模板文件目录                                                                           |
 | remote                  | string                  | NO                      | 空字符串                   | 远程模板所在 git 仓库地址，当此字段传值时，优先级高于 `home` 字段值                                           |
-| style                   | string                  | NO                      | `gozero`               | 输出文件和目录的命名风格格式化符号，详情见<a href="/docs/reference/cli-guide/style" target="_blank"> 文件风格</a> |
+| style                   | string                  | NO                      | `gozero`               | 输出文件和目录的命名风格格式化符号，详情见<a href="/reference/cli-guide/style" target="_blank"> 文件风格</a> |
 
 :::note 温馨提示
 goctl api new 需要一个终端参数来指定需要生成的服务名称，输出目录为当前工作目录，如 demo 服务生成的指令示例如下：
@@ -224,13 +224,13 @@ Flags:
 | api                     | string                  | YES                     | 空字符串                   | api 文件路径                                                                           |
 | dir                     | string                  | NO                      | 当前工作目录                 | api 文件路径                                                                           |
 | plugin                  | string                  | YES                     | 空字符串                   | 插件可执行文件所在路径，支持本地和 http 文件                                                          |
-| style                   | string                  | NO                      | `gozero`               | 输出文件和目录的命名风格格式化符号，详情见<a href="/docs/reference/cli-guide/style" target="_blank"> 文件风格</a> |
+| style                   | string                  | NO                      | `gozero`               | 输出文件和目录的命名风格格式化符号，详情见<a href="/reference/cli-guide/style" target="_blank"> 文件风格</a> |
 
-插件资源请参考 <a href="/docs/reference/goctl/plugins" target="_blank"> goctl 插件资源 </a>
+插件资源请参考 <a href="/reference/goctl-plugins" target="_blank"> goctl 插件资源 </a>
 
 ### swagger
 
-根据 api 文件生成 swagger 文档，详情可参考 <a href="/docs/reference/cli-guide/swagger"> swagger 生成 </a>
+根据 api 文件生成 swagger 文档，详情可参考 <a href="/reference/cli-guide/swagger"> swagger 生成 </a>
 
 
 :::note 温馨提示
@@ -286,7 +286,7 @@ Flags:
 | dir                     | string                  | NO                      | 当前工作目录                 | api 文件路径                                                                           |
 | caller                  | string                  | NO                      | `webapi`               | web caller，                                                                        |
 | plugin                  | string                  | YES                     | 空字符串                   | 插件可执行文件所在路径，支持本地和 http 文件                                                          |
-| style                   | string                  | NO                      | `gozero`               | 输出文件和目录的命名风格格式化符号，详情见<a href="/docs/reference/cli-guide/style" target="_blank"> 文件风格</a> |
+| style                   | string                  | NO                      | `gozero`               | 输出文件和目录的命名风格格式化符号，详情见<a href="/reference/cli-guide/style" target="_blank"> 文件风格</a> |
 
 ### validate
 
