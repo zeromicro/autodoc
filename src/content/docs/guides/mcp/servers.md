@@ -1,6 +1,8 @@
 ---
 title: MCP Servers
 description: Build Model Context Protocol servers with go-zero.
+sidebar:
+  order: 2
 ---
 
 

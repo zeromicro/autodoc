@@ -1,6 +1,8 @@
 ---
 title: Reducing Binary Size
 description: Tips to reduce the Go binary size for production deployments.
+sidebar:
+  order: 2
 ---
 
 

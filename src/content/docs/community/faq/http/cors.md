@@ -1,6 +1,8 @@
 ---
 title: CORS Configuration
 description: Configure Cross-Origin Resource Sharing in go-zero HTTP services.
+sidebar:
+  order: 2
 ---
 
 

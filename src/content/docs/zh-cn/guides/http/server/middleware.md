@@ -1,8 +1,8 @@
 ---
 title: 中间件
+description: 在 go-zero HTTP 服务中使用和自定义中间件。
 sidebar:
   order: 3
-
 ---
 
 ## 概述

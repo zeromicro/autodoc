@@ -1,6 +1,8 @@
 ---
 title: HTTP 网关
 description: 通过 go-zero 网关代理 HTTP 请求。
+sidebar:
+  order: 2
 ---
 
 

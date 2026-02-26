@@ -1,6 +1,8 @@
 ---
 title: 减小二进制体积
 description: 减小生产环境 Go 二进制体积的技巧。
+sidebar:
+  order: 2
 ---
 
 

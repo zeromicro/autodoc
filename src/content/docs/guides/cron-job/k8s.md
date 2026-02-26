@@ -1,6 +1,8 @@
 ---
 title: Cron Jobs on Kubernetes
 description: Schedule cron jobs with go-zero on Kubernetes.
+sidebar:
+  order: 2
 ---
 
 ## Overview

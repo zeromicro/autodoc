@@ -1,6 +1,8 @@
 ---
 title: Template Customization
 description: Customize goctl code generation templates.
+sidebar:
+  order: 2
 ---
 
 

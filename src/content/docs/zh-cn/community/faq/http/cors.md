@@ -1,6 +1,8 @@
 ---
 title: CORS 配置
 description: 在 go-zero HTTP 服务中配置跨域资源共享。
+sidebar:
+  order: 2
 ---
 
 

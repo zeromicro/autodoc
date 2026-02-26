@@ -1,6 +1,8 @@
 ---
 title: gRPC Gateway
 description: Expose gRPC services over HTTP using go-zero's gateway.
+sidebar:
+  order: 3
 ---
 
 ## Overview

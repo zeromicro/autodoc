@@ -1,8 +1,8 @@
 ---
 title: 并发限制
+description: 使用 go-zero 的并发限制组件控制 goroutine 数量，防止系统过载。
 sidebar:
   order: 10
-
 ---
 
 

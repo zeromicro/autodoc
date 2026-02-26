@@ -1,6 +1,8 @@
 ---
 title: HTTP Gateway
 description: Proxy HTTP requests through the go-zero gateway.
+sidebar:
+  order: 2
 ---
 
 

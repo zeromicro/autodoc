@@ -1,6 +1,8 @@
 ---
 title: 模板自定义
 description: 自定义 goctl 代码生成模板。
+sidebar:
+  order: 2
 ---
 
 

@@ -1,6 +1,8 @@
 ---
 title: 文件服务器
 description: 通过 go-zero HTTP 服务提供静态文件。
+sidebar:
+  order: 3
 ---
 
 

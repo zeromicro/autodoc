@@ -1,6 +1,8 @@
 ---
 title: 同时输出到文件和控制台
 description: 在 go-zero 中同时将日志输出到文件和控制台。
+sidebar:
+  order: 2
 ---
 
 

@@ -1,6 +1,8 @@
 ---
 title: Kubernetes 定时任务
 description: 在 Kubernetes 上使用 go-zero 调度定时任务。
+sidebar:
+  order: 2
 ---
 
 ## 1、概述

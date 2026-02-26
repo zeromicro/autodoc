@@ -1,6 +1,8 @@
 ---
 title: MCP 服务器
 description: 使用 go-zero 构建 Model Context Protocol 服务器。
+sidebar:
+  order: 2
 ---
 
 

@@ -1,6 +1,8 @@
 ---
 title: File Server
 description: Serve static files from a go-zero HTTP service.
+sidebar:
+  order: 3
 ---
 
 

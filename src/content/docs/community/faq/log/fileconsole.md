@@ -1,6 +1,8 @@
 ---
 title: Log to File and Console
 description: Output logs to both file and console in go-zero.
+sidebar:
+  order: 2
 ---
 
 

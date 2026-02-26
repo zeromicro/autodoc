@@ -1,6 +1,8 @@
 ---
 title: gRPC 网关
 description: 使用 go-zero 网关将 gRPC 服务暴露为 HTTP 接口。
+sidebar:
+  order: 3
 ---
 
 ## 概述
