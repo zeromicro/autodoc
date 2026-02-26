@@ -193,4 +193,4 @@ goctl api go -api user.api -dir .
 
 ## Next Step
 
-[Proto DSL syntax →](../proto-syntax)
+[Proto DSL syntax →](./proto-syntax)

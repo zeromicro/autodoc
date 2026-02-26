@@ -138,4 +138,4 @@ goctl api go -api user.api -dir .
 
 ## 下一步
 
-[Proto DSL 语法 →](../proto-syntax)
+[Proto DSL 语法 →](./proto-syntax)

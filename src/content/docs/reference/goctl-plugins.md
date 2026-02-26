@@ -9,7 +9,7 @@ sidebar:
 
 ## Overview
 
-goctl api provides plugins to support the api functionality extension, if goctl api does not meet the features you use, or needs to customize the goctl api, then plugin functionality will be well suited for developer self-sufficiency. See [goctl plugin](../goctl/commands)
+goctl api provides plugins to support the api functionality extension, if goctl api does not meet the features you use, or needs to customize the goctl api, then plugin functionality will be well suited for developer self-sufficiency. See [goctl plugin](./goctl/commands)
 
 ## Plugin Resources
 

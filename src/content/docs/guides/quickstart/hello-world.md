@@ -136,5 +136,5 @@ You only write the logic. go-zero handles routing, parsing, validation, serializ
 
 ## Next Steps
 
-- [Create a full API service with custom types →](../api-service)
-- [Create an RPC service →](../rpc-service)
+- [Create a full API service with custom types →](./api-service)
+- [Create an RPC service →](./rpc-service)

@@ -62,4 +62,4 @@ protoc-gen-go --version
 
 ## 下一步
 
-[安装 IDE 插件 →](../ide-plugins)
+[安装 IDE 插件 →](./ide-plugins)

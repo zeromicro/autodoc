@@ -135,5 +135,5 @@ curl /from/alice
 
 ## 下一步
 
-- [构建完整 API 服务 →](../api-service)
-- [构建 RPC 服务 →](../rpc-service)
+- [构建完整 API 服务 →](./api-service)
+- [构建 RPC 服务 →](./rpc-service)

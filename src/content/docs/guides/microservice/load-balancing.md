@@ -111,5 +111,5 @@ If a request exceeds `Timeout`, go-zero cancels it, records the failure in the c
 
 ## Next Steps
 
-- [Service Discovery](../service-discovery) — register and discover services with etcd
-- [Distributed Tracing](../distributed-tracing) — trace requests across instances
+- [Service Discovery](./service-discovery) — register and discover services with etcd
+- [Distributed Tracing](./distributed-tracing) — trace requests across instances
