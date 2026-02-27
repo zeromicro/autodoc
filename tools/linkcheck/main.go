@@ -185,9 +185,12 @@ func (c *crawler) crawl(rawURL, foundOn string) {
 		// Only parse HTML pages for more links.
 		ct := resp.Header.Get("Content-Type")
 		if resp.StatusCode == http.StatusOK && strings.Contains(ct, "text/html") {
+			// Use the final URL after redirects for resolving relative links.
+			// e.g. /foo redirects to /foo/ — relative links must resolve from /foo/.
+			finalURL := resp.Request.URL.String()
 			links := extractLinks(resp.Body)
 			for _, link := range links {
-				resolved := c.resolve(normalized, link)
+				resolved := c.resolve(finalURL, link)
 				if resolved != "" && c.isInternal(resolved) {
 					c.crawl(resolved, normalized)
 				}
