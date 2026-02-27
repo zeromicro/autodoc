@@ -131,6 +131,6 @@ goctl rpc protoc user.proto \
 
 ## 下一步
 
-- [使用 etcd 进行服务发现](../microservice/service-discovery)
+- [使用 etcd 进行服务发现](../../microservice/service-discovery)
 - [熔断器配置](../../../components/resilience/circuit-breaker)
 - [项目创建模式](../../../getting-started/project-creation)

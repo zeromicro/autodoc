@@ -139,6 +139,6 @@ goctl 只会覆盖它管理的文件（`handler/`、`types/`、`routes.go`）。
 
 ## 下一步
 
-- 添加 [JWT 中间件](../http/server/middleware) 保护接口
-- 连接[数据库模型](../database/mysql)
-- [构建 RPC 服务 →](./rpc-service)
+- 添加 [JWT 中间件](../../http/server/middleware) 保护接口
+- 连接[数据库模型](../../database/mysql)
+- [构建 RPC 服务 →](../rpc-service)

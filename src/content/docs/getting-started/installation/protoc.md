@@ -68,4 +68,4 @@ protoc-gen-go-grpc --version
 
 ## Next Step
 
-[Configure your IDE →](./ide-plugins)
+[Configure your IDE →](../ide-plugins)
