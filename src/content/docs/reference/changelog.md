@@ -5,6 +5,10 @@ sidebar:
   order: 6
 
 ---
+## v1.10.0 – 2026-03-02
+
+null
+
 
 Detailed release notes for every go-zero version are available in the [Release Notes](../releases/) section.
 
