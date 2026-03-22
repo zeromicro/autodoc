@@ -31,4 +31,4 @@ Flags:
 | verbose | boolean | NO | false | 是否输出日志 |
 | version | string | NO | `v1.3.0` | 从 `tal-tech` 迁移到 `zeromicro` 组织后的目标版本，默认是 `v1.3.0` |
 
-go-zero 的 zeromicro 组织下的 release 版本列表请 <a href="https://github.com/zeromicro/go-zero/releases" target="_blank">点击这里</a> 查看
+go-zero 的 zeromicro 组织下的 release 版本列表请 [点击这里](https://github.com/zeromicro/go-zero/releases) 查看

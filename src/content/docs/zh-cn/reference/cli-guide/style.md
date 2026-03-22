@@ -9,7 +9,7 @@ sidebar:
 
 ## 概述
 
-goctl 生成代码支持对文件和文件夹的命名风格进行格式化，可以满足不同开发者平时的阅读习惯，不过在 Golang 中，文件夹和文件命名规范推荐使用全小写风格，详情可参考 <a href="https://google.github.io/styleguide/go/" target="_blank">Go Style</a>。
+goctl 生成代码支持对文件和文件夹的命名风格进行格式化，可以满足不同开发者平时的阅读习惯，不过在 Golang 中，文件夹和文件命名规范推荐使用全小写风格，详情可参考 [Go Style](https://google.github.io/styleguide/go/)。
 
 ## 格式化符号
 

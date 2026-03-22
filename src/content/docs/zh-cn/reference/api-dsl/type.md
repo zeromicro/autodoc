@@ -54,9 +54,9 @@ type StructureExample {
 ```
 
 :::tip
-API 新特性使用可参考<a href="/reference/api-dsl/faq#1-%E6%80%8E%E4%B9%88%E4%BD%93%E9%AA%8C%E6%96%B0%E7%9A%84-api-%E7%89%B9%E6%80%A7" target="_blank"> 新版 API 解析器使用</a>
+API 新特性使用可参考 [新版 API 解析器使用](/reference/api-dsl/faq#1-%E6%80%8E%E4%B9%88%E4%BD%93%E9%AA%8C%E6%96%B0%E7%9A%84-api-%E7%89%B9%E6%80%A7)
 
 我们暂时不支持泛型、弱类型，如 `any` 类型
 
-可以参与 discussion 讨论说出你的看法 <a href="https://github.com/zeromicro/go-zero/discussions/3121" target="_blank">https://github.com/zeromicro/go-zero/discussions/3121</a>
+可以参与 discussion 讨论说出你的看法 [https://github.com/zeromicro/go-zero/discussions/3121](https://github.com/zeromicro/go-zero/discussions/3121)
 :::

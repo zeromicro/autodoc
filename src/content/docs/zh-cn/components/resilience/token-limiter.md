@@ -93,7 +93,7 @@ import (
 )
 
 func main() {
-    store := redis.NewRedis("localhost:6379", redis.NodeType)
+    store := redis.MustNewRedis(redis.RedisConf{Host: "localhost:6379"})
     limiter := limit.NewTokenLimiter(10, 20, store, "example-key")
 
     if limiter.Allow() {
@@ -124,7 +124,7 @@ func main() {
     ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
     defer cancel()
 
-    store := redis.NewRedis("localhost:6379", redis.NodeType)
+    store := redis.MustNewRedis(redis.RedisConf{Host: "localhost:6379"})
     limiter := limit.NewTokenLimiter(5, 10, store, "example-key")
 
     if limiter.AllowCtx(ctx) {
@@ -149,7 +149,7 @@ import (
 )
 
 func main() {
-    store := redis.NewRedis("localhost:6379", redis.NodeType)
+    store := redis.MustNewRedis(redis.RedisConf{Host: "localhost:6379"})
     limiter := limit.NewTokenLimiter(10, 20, store, "example-key")
 
     now := time.Now()
