@@ -25,7 +25,7 @@ type Request struct {
 
 
 var req Request
-err := httpx.Parse(r, &req) 
+err := httpx.Parse(r, &req)
 ```
 
 ### Json Request Parameters
@@ -59,7 +59,7 @@ rest.Route{
 }
 
 var req Request
-err := httpx.Parse(r, &req) 
+err := httpx.Parse(r, &req)
 ```
 
 ### Header parameters get
@@ -83,11 +83,11 @@ In go-zero, the parameter is optional via `optional` keywords in a structural ta
 
 ```go
 type Request struct {
-    Age int `form:"age, optional"`
+    Age int `form:"age,optional"`
 }
 
 var req Request
-err := httpx.Parse(r, &req) 
+err := httpx.Parse(r, &req)
 ```
 
 :::tip
@@ -110,10 +110,10 @@ type Request struct {
 }
 
 var req Request
-err := httpx.Parse(r, &req) 
+err := httpx.Parse(r, &req)
 ```
 
-See api syntax for more details on parameter intervals <a href="/reference/api-dsl/parameter" target="_blank">parameter rules</a>
+See api syntax for more details on parameter intervals [parameter rules](../../../reference/api-dsl/parameter.md).
 
 ### Parameter enumeration value
 
@@ -138,9 +138,9 @@ type Request struct {
 }
 
 var req Request
-err := httpx.Parse(r, &req) 
+err := httpx.Parse(r, &req)
 ```
 
 ## References
 
-- <a href="/reference/api-dsl/parameter" target="_blank">Api | HTTP Request Parameter Rules</a>
+- [API | HTTP Request Parameter Rules](../../../reference/api-dsl/parameter.md)

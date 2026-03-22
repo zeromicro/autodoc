@@ -14,9 +14,9 @@ go-zero uses OpenTelemetry for distributed tracing. Spans are created automatica
 ```yaml title="etc/app.yaml"
 Telemetry:
   Name: order-api             # service name shown in the trace UI
-  Endpoint: http://jaeger:14268/api/traces
+  Endpoint: localhost:4317     # OTLP gRPC endpoint
   Sampler: 1.0                # 1.0 = 100% sampling; use 0.1 in high-traffic production
-  Batcher: jaeger             # see Backends table below
+  Batcher: otlpgrpc           # see Backends table below
 ```
 
 ## What Is Traced Automatically
@@ -91,19 +91,41 @@ A ratio sampler makes the decision at the trace root (the API gateway). All down
 
 | Backend | `Batcher` value | Endpoint format |
 |---------|----------------|-----------------|
-| Jaeger | `jaeger` | `http://jaeger:14268/api/traces` |
-| Zipkin | `zipkin` | `http://zipkin:9411/api/v2/spans` |
-| OTLP gRPC | `otlpgrpc` | `otel-collector:4317` |
+| OTLP gRPC | `otlpgrpc` (default) | `otel-collector:4317` |
 | OTLP HTTP | `otlphttp` | `http://otel-collector:4318` |
+| Zipkin | `zipkin` | `http://zipkin:9411/api/v2/spans` |
+| File | `file` | (writes to local file) |
 
-### Jaeger All-in-One (Docker)
+:::caution
+The `jaeger` batcher was removed in **go-zero v1.10.0** ([#5361](https://github.com/zeromicro/go-zero/pull/5361)) because the OpenTelemetry Jaeger exporter has been officially deprecated. If you upgrade to v1.10.0+ with `Batcher: jaeger`, the service will fail to start with:
+
+```
+value "jaeger" is not defined in options "[zipkin otlpgrpc otlphttp file]"
+```
+
+See [Migrating from Jaeger Batcher](#migrating-from-jaeger-batcher) below.
+:::
+
+### Jaeger via OTLP (Docker)
+
+Jaeger 1.35+ natively accepts OTLP. Use the `all-in-one` image with OTLP enabled:
 
 ```bash
 docker run -d --name jaeger \
+  -e COLLECTOR_OTLP_ENABLED=true \
   -p 16686:16686 \
-  -p 14268:14268 \
+  -p 4317:4317 \
+  -p 4318:4318 \
   jaegertracing/all-in-one:latest
 # UI: http://localhost:16686
+```
+
+```yaml title="etc/app.yaml"
+Telemetry:
+  Name: order-api
+  Endpoint: localhost:4317
+  Sampler: 1.0
+  Batcher: otlpgrpc
 ```
 
 ### OpenTelemetry Collector
@@ -121,3 +143,66 @@ Telemetry:
 ## Disable Tracing
 
 Set `Sampler: 0` or remove the `Telemetry` block entirely to disable all tracing overhead.
+
+## Migrating from Jaeger Batcher
+
+Starting from **go-zero v1.10.0**, the `jaeger` batcher has been removed because the upstream [OpenTelemetry Jaeger exporter is deprecated](https://opentelemetry.io/blog/2023/jaeger-exporter-collector-migration/). Jaeger itself has adopted OTLP as its native protocol since v1.35, so you can continue using Jaeger — just switch to the OTLP exporter.
+
+### Step 1: Update the Docker Compose / Jaeger Deployment
+
+Make sure your Jaeger instance exposes the OTLP ports (`4317` for gRPC, `4318` for HTTP):
+
+```yaml title="docker-compose.yaml"
+services:
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    environment:
+      - COLLECTOR_OTLP_ENABLED=true
+    ports:
+      - "16686:16686"   # Jaeger UI
+      - "4317:4317"     # OTLP gRPC
+      - "4318:4318"     # OTLP HTTP
+    restart: unless-stopped
+```
+
+:::tip
+If ports `4317`/`4318` conflict with other services on your host, map them to different host ports (e.g. `34317:4317`) and update the `Endpoint` accordingly.
+:::
+
+### Step 2: Update Your YAML Config
+
+Replace the old Jaeger-specific configuration with OTLP:
+
+```diff
+ Telemetry:
+   Name: my-service
+-  Endpoint: http://jaeger:14268/api/traces
+-  Batcher: jaeger
++  Endpoint: jaeger:4317
++  Batcher: otlpgrpc
+   Sampler: 1.0
+```
+
+Or use OTLP HTTP:
+
+```diff
+ Telemetry:
+   Name: my-service
+-  Endpoint: http://jaeger:14268/api/traces
+-  Batcher: jaeger
++  Endpoint: http://jaeger:4318
++  Batcher: otlphttp
+   Sampler: 1.0
+```
+
+### Step 3: Restart and Verify
+
+Restart your service and open the Jaeger UI at `http://localhost:16686`. Your traces should appear exactly as before — the only difference is the transport protocol.
+
+### Quick Reference
+
+| Before (< v1.10.0) | After (>= v1.10.0) |
+|---------------------|---------------------|
+| `Batcher: jaeger` | `Batcher: otlpgrpc` (recommended) or `otlphttp` |
+| `Endpoint: http://jaeger:14268/api/traces` | `Endpoint: jaeger:4317` (gRPC) or `http://jaeger:4318` (HTTP) |
+| Jaeger image: any version | Jaeger image: **1.35+** (for native OTLP support) |

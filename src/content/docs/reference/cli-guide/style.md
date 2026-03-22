@@ -9,7 +9,7 @@ sidebar:
 
 ## Overview
 
-goctl generation supports formatting of files and folders by naming styles that meet the normal reading habits of different developers, although in Golang, folders and filename instructions are recommended to use a full lowercase style, refer to <a href="https://google.github.io/styleguide/go/" target="_blank">Go Style</a>.
+goctl generation supports formatting of files and folders by naming styles that meet the normal reading habits of different developers, although in Golang, folders and filenames are recommended to use a full lowercase style — see [Go Style Guide](https://google.github.io/styleguide/go/).
 
 ## Formatting symbols
 
@@ -32,7 +32,7 @@ Assume that we have a source string `welcome_to_go_ner`with reference formatting
 | `GOZERO`           | `WELCOMETOGOZERO`      | upper case                                                                               |
 | `_go#zero_`        | `_welcome#to#go#zero_` | Prefix, suffix and custom separators, use `_` as prefix and suffix, use `#` as separator |
 
-::note illegal symbol
+:::note Illegal symbols
 
 - go
 - gOZero

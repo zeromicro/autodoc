@@ -13,17 +13,23 @@ go-zero integrates **OpenTelemetry** and emits spans for every HTTP request, gRP
 
 | `Batcher` value | Exports to |
 |---|---|
-| `jaeger` | Jaeger (via HTTP Thrift) |
-| `zipkin` | Zipkin |
-| `otlpgrpc` | Any OTLP endpoint over gRPC (e.g. Grafana Tempo, OpenTelemetry Collector) |
+| `otlpgrpc` (default) | Any OTLP endpoint over gRPC (e.g. Jaeger, Grafana Tempo, OpenTelemetry Collector) |
 | `otlphttp` | Any OTLP endpoint over HTTP |
+| `zipkin` | Zipkin |
+| `file` | Local file |
+
+:::note
+The `jaeger` batcher was removed in go-zero v1.10.0. Use `otlpgrpc` or `otlphttp` instead — Jaeger 1.35+ natively supports OTLP. See [Migrating from Jaeger Batcher](../../components/observability/tracing/#migrating-from-jaeger-batcher).
+:::
 
 ## Step 1: Run Jaeger Locally
 
 ```bash
 docker run -d --name jaeger \
+  -e COLLECTOR_OTLP_ENABLED=true \
   -p 16686:16686 \
-  -p 14268:14268 \
+  -p 4317:4317 \
+  -p 4318:4318 \
   jaegertracing/all-in-one:latest
 ```
 
@@ -38,9 +44,9 @@ Port: 8888
 
 Telemetry:
   Name: order-api            # service name as it appears in Jaeger
-  Endpoint: http://localhost:14268/api/traces
+  Endpoint: localhost:4317    # OTLP gRPC
   Sampler: 1.0               # 1.0 = 100% sampling; 0.1 = 10%
-  Batcher: jaeger
+  Batcher: otlpgrpc
 ```
 
 That's it — no code changes. go-zero reads this config and creates an OTel tracer at startup.
@@ -73,9 +79,9 @@ ListenOn: 0.0.0.0:8081
 
 Telemetry:
   Name: user.rpc
-  Endpoint: http://localhost:14268/api/traces
+  Endpoint: localhost:4317
   Sampler: 1.0
-  Batcher: jaeger
+  Batcher: otlpgrpc
 ```
 
 A cross-service trace looks like:

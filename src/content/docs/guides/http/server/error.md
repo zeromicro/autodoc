@@ -19,7 +19,6 @@ Let's simulate an error in the format `code-msg` when the error is `*errors.Code
 package main
 
 import (
-    "go/types"
     "net/http"
 
     "github.com/zeromicro/go-zero/rest"
@@ -42,7 +41,7 @@ func main() {
     httpx.SetErrorHandler(func(err error) (int, any) {
         switch e := err.(type) {
         case *errors.CodeMsg:
-            return http.StatusOK, xhttp.BaseResponse[types.Nil]{
+            return http.StatusOK, xhttp.BaseResponse[struct{}]{
                 Code: e.Code,
                 Msg:  e.Msg,
             }
@@ -97,7 +96,6 @@ $ curl --location '127.0.0.1:8080/hello' \
 {"code":400,"msg":"dummy error","data":{}}
 ```
 
-::tip hint
-Here is only a demonstration of the usability of `httpx.SetErrorHandler` , refer to <a href="/guides/http/server/response-ext" target="_blank">Unified Response Format</a>
-:
+:::tip
+This example only demonstrates `httpx.SetErrorHandler`. For a full unified response pattern, see [Unified Response Format](./response-ext.md).
 :::

@@ -75,9 +75,9 @@ CacheRedis:
 # 可观测性
 Telemetry:
   Name: user-api
-  Endpoint: http://jaeger:14268/api/traces
+  Endpoint: localhost:4317
   Sampler: 1.0
-  Batcher: jaeger
+  Batcher: otlpgrpc
 ```
 
 ## 延伸阅读

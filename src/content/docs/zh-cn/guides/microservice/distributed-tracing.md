@@ -13,8 +13,10 @@ go-zero 内置 OpenTelemetry SDK，开箱即支持分布式链路追踪、跨服
 
 ```bash
 docker run -d --name jaeger \
-  -p 5775:5775/udp -p 6831:6831/udp -p 6832:6832/udp \
-  -p 5778:5778 -p 16686:16686 -p 14268:14268 \
+  -e COLLECTOR_OTLP_ENABLED=true \
+  -p 16686:16686 \
+  -p 4317:4317 \
+  -p 4318:4318 \
   jaegertracing/all-in-one:latest
 ```
 
@@ -25,18 +27,22 @@ Jaeger UI：http://localhost:16686
 ```yaml title="etc/user-api.yaml"
 Telemetry:
   Name: user-api
-  Endpoint: http://localhost:14268/api/traces
+  Endpoint: localhost:4317
   Sampler: 1.0      # 1.0 = 全量采样
-  Batcher: jaeger   # 协议：jaeger | otlp
+  Batcher: otlpgrpc
 ```
 
 ```yaml title="etc/user-rpc.yaml"
 Telemetry:
   Name: user-rpc
-  Endpoint: http://localhost:14268/api/traces
+  Endpoint: localhost:4317
   Sampler: 1.0
-  Batcher: jaeger
+  Batcher: otlpgrpc
 ```
+
+:::note
+`jaeger` batcher 已在 go-zero v1.10.0 中移除，请使用 `otlpgrpc` 或 `otlphttp` 代替——Jaeger 1.35+ 原生支持 OTLP。详见 [从 Jaeger Batcher 迁移](../../components/observability/tracing/#从-jaeger-batcher-迁移)。
+:::
 
 go-zero 在首次请求时自动注册追踪器，无需任何代码改动。
 
@@ -88,7 +94,7 @@ Telemetry:
   Name: user-api
   Endpoint: http://tempo:4318/v1/traces
   Sampler: 1.0
-  Batcher: otlp    # OTLP HTTP 协议
+  Batcher: otlphttp
 ```
 
 使用 OpenTelemetry Collector 代理时，可同时输出到多个后端：

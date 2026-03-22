@@ -141,8 +141,8 @@ code: 1001, msg: invalid username or password
 
 4 Next, we modify `demo/internal/handler/loginhandler.go` file, replacing the response method in `loginHandler` with the method in the extension pack
 
-::tip tip tips
-This step can be implemented by modifying templates to prevent every time they are generated, custom templates can be referenced <a href="/reference/customization/template" target="_blank">Template Customization</a>
+:::tip
+This step can be implemented by modifying templates so you don't have to repeat it every time code is regenerated. See [Template Customization](../../../reference/customization/template.md).
 :::
 
 ```go
@@ -266,6 +266,6 @@ curl --location '127.0.0.1:8888/user/login' \
 
 ## References
 
-- <a href="/reference/cli-guide/" target="_blank">Use goctl code generation tool</a>
+- [goctl code generation tool](../../../reference/cli-guide/index.md)
 - https://github.com/zeromicro/x
-- <a href="/reference/customization/template" target="_blank">Template customization</a>
+- [Template customization](../../../reference/customization/template.md)

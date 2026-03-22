@@ -21,10 +21,10 @@ go-zero provides a gRPC server that provides：
 
 ## Examples
 
-In go-zero, we can use goctl to quickly sound a gRPC service or create an example of a gRPC service using the goctl 0 code.
+In go-zero, we can use goctl to quickly scaffold a gRPC service or create a gRPC service example using goctl's zero-code-generation feature.
 
 :::tip Tips
-Quickly generate and start a goctl service example for a gRPC service that can be referenced <a href="/reference/cli-guide/quickstart" target="_blank">Quick Start Microservice Book</a>
+Quickly generate and start a goctl gRPC service example — see [Quick Start Microservice](../../../reference/cli-guide/quickstart.md).
 :::
 
 We're here to create a full gRPC service with a proto.
@@ -48,11 +48,11 @@ $ goctl rpc -o greet.proto
 $ goctl rpc protoc greet.proto --go_out=.  --go-grpc_out=.  --zrpc_out=.
 ```
 
-::tip Tips
+:::tip Tips
 
-1. goctl installation please refer to <a href="/getting-started/installation/goctl" target="_blank">Goctl Installation</a>
-1. rpc code generation command tutorial reference <a href="/reference/cli-guide/rpc" target="_blank">goctl rpc</a>
-1. Proto use related questions refer to <a href="/reference/proto-dsl/faq" target="_blank">Proto Code Generating FAQ</a>
+1. For goctl installation, see [Goctl Installation](../../../getting-started/installation/goctl.md).
+1. For the rpc code generation command, see [goctl rpc](../../../reference/cli-guide/rpc.md).
+1. For proto-related questions, see [Proto Code Generating FAQ](../../../reference/proto-dsl/faq.md).
 :::
 
 ### 4. Layout
@@ -84,7 +84,7 @@ demo
 ```
 
 :::tip hint
-service directory structure introduction refer to <a href="/concepts/project-structure" target="_blank">Project Structure</a>
+For the service directory structure, see [Project Structure](../../../concepts/project-structure.md).
 :::
 
 ### 5. Discovery/direct service mode
@@ -92,13 +92,13 @@ service directory structure introduction refer to <a href="/concepts/project-str
 In go-zero we support the etcd service registration and direct connection mode and we only adjust the static configuration files in the etc directory.
 
 :::tip hint
-gRPC service configuration accessible <a href="/guides/grpc/server/configuration" target="_blank">GRPC Service Configuration </a>
+For gRPC service configuration, see [gRPC Service Configuration](./configuration.md).
 
-In addition to a go-zero built-in ecd as a service, the community also provides support for the discovery of services such as nacos, consul, etc. More Services found components <a href="https://github.com/zeromicro/zero-contrib/tree/main/zrpc/registry" target="_blank">for details</a>
+Beyond the built-in etcd support, the community provides adapters for nacos, consul, and more. See [zero-contrib service registries](https://github.com/zeromicro/zero-contrib/tree/main/zrpc/registry) for details.
 :::
 
-**etcd 服务注册**
-To use <a href="https://etcd.io/" target="_blank">etcd</a> as a registry, simply add the etcd configuration to the static configuration file, with the following minimal reference configuration (gray underlined section):
+**etcd Service Registration**
+To use [etcd](https://etcd.io/) as a registry, simply add the etcd configuration to the static configuration file:
 
 ```yaml title=demo/etc/greet.yaml {3-6}
 Name: greet.rpc
@@ -120,8 +120,8 @@ greet.rpc/7587870460981677828
 Since the key registered by etcd is `greet.rpc`, from the business presentation layer, it is a key registered to etcd, but go-zero is actually storing the key with an etcd
 The go-zero layer is actually storing the key with a tenant id of etcd, so during service discovery, it will also fetch all available ip nodes with the `etcdctl get --prefix` command.
 
-**直连模式**
-By contrast, using direct link mode removes the etcd configuration, go-zero auto-identification, with a minimum configuration reference：
+**Direct Connection Mode**
+By contrast, using direct connection mode removes the etcd configuration. go-zero auto-detects this and uses direct connections instead. Minimum configuration:
 
 ```yaml title=demo/etc/greet.yaml {3-6}
 Name: greet.rpc
@@ -204,7 +204,7 @@ func (l *PingLogic) Ping(in *greet.Request) (*greet.Response, error) {
 
 ### 8. Enable gRPC debug switch
 
-gRPC provides debugging capabilities so that we can debug with tools like <a href="https://github.com/fullstorydev/grpcurl" target="_blank">grpcurl</a>， In go-zero, it is recommended to turn it on in development and test environments, and off in pre-production and official environments，So we configure the environment mode in the static configuration file as `dev` or `test` (default is dev environment), the relevant code is as follows:
+gRPC provides debugging capabilities so that we can debug with tools like [grpcurl](https://github.com/fullstorydev/grpcurl). In go-zero, it is recommended to turn it on in development and test environments, and off in pre-production and official environments，So we configure the environment mode in the static configuration file as `dev` or `test` (default is dev environment), the relevant code is as follows:
 
 **demo/greet.go**
 ```go {13-15}
@@ -245,7 +245,7 @@ Etcd:
 
 #### Built Middleware
 
-go-zero rpc is embedded in a very rich intermediary, see<a href="https://github.com/zeromicro/go-zero/tree/master/zrpc/internal/serverinterceptors" target="_blank">serverinterceptors</a>
+go-zero rpc ships with a rich set of built-in interceptors. See [serverinterceptors](https://github.com/zeromicro/go-zero/tree/master/zrpc/internal/serverinterceptors) for the full list.
 
 - StreamAuthorizeInterceptor|UnaryAuthorizeInterceptor
 - StreamBreakerInterceptor|UnaryBreakerInterceptor
@@ -256,7 +256,7 @@ go-zero rpc is embedded in a very rich intermediary, see<a href="https://github.
 - UnaryTimeoutInterceptor
 - StreamTraceInterceptor|UnaryTraceInterceptor
 
-In the above built-in intermediates, link tracking intermediates, indicator statistical intermediary, time statistical intermediary, abnormal capture medium, melting intermediation can be configured to turn on or off and other intermediates will be enabled by default. Specific configuration can be consulted<a href="/guides/grpc/server/configuration" target="_blank">service configuration</a>
+In the above built-in interceptors, trace, metrics, stats, recovery, and circuit-breaker interceptors can be toggled individually; others are always enabled. For configuration details, see [service configuration](./configuration.md).
 
 #### Custom Middleware
 
@@ -300,4 +300,4 @@ func exampleStreamInterceptor(srv interface{}, ss grpc.ServerStream, info *grpc.
 
 ### 10. Metadata transfer
 
-Reference <a href="https://github.com/grpc/grpc-go/blob/master/Documentation/grpc-metadata.md" target="_blank">Metata</a>
+See [gRPC Metadata](https://github.com/grpc/grpc-go/blob/master/Documentation/grpc-metadata.md) for reference.

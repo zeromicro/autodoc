@@ -116,8 +116,8 @@ Integrates OpenTelemetry. To export traces to Jaeger:
 ```yaml title="etc/config.yaml"
 Telemetry:
   Name: my-service
-  Endpoint: http://127.0.0.1:14268/api/traces
-  Batcher: jaeger
+  Endpoint: localhost:4317
+  Batcher: otlpgrpc
   Sampler: 1.0
 ```
 

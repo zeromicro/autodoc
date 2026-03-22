@@ -9,41 +9,41 @@ sidebar:
 
 ## Overview
 
-This paper describes how to use the gRPC framework for the development of GRPC Client.
+This guide describes how to use the gRPC framework for gRPC client development.
 
-## Sample
+## Example
 
 **Preparation**
 
 We run `goctl rpc new greet` to generate a rpc server service.
 
 ```bash
-# Create a demo directory, Enter the demo directory
+# Create a demo directory and enter it
 $ mkdir demo && cd demo
-# Generate a gret service
+# Generate a greet service
 $ goctl rpc new greet
-# Create a new main. o File to create a client for a greet service
+# Create a new main.go file for the greet client
 $ touch main.go
 ```
 
 :::tip
-The following configuration details are referenced <a href="/guides/grpc/client/configuration" target="_blank">service configuration</a>
+For configuration details, see [service configuration](../configuration).
 
-goctl rpc usage reference <a href="/reference/cli-guide/rpc" target="_blank"> goctl rpc</a>
+For goctl rpc usage, see [goctl rpc](../../../reference/cli-guide/rpc).
 :::
 
-## Direct
+## Direct Connection
 
-There are two modes of continuous connectivity, one for a single service and one for a continual service cluster.
+There are two direct connection modes: connecting to a single service, or connecting to a service cluster.
 
 ### Address resolve mode
 
-In main.go file the following code
+Add the following code to `main.go`:
 
 ```go
 func main() {
-    clientConf:=zrpc.RpcClientConf{}
-    conf.FillDefault(&clientConf)
+    clientConf := zrpc.RpcClientConf{}
+    conf.FillDefault(&clientConf) // fill defaults (e.g. trace propagation)
     clientConf.Target = "dns:///127.0.0.1:8080"
     conn := zrpc.MustNewClient(clientConf)
     client := greet.NewGreetClient(conn.Conn())
@@ -58,13 +58,14 @@ func main() {
 
 ### Multi-node direct connection mode
 
-In main.go file the following code
+Add the following code to `main.go`:
 
 ```go
 func main() {
-   clientConf:=zrpc.RpcClientConf{}
+    clientConf := zrpc.RpcClientConf{}
     conf.FillDefault(&clientConf)
-    clientConf.Endpoints = []string{"127.0.0.1:8080","127.0.0.2:8080"}
+    // direct connect to a cluster — set Endpoints to the list of rpc server addresses
+    clientConf.Endpoints = []string{"127.0.0.1:8080", "127.0.0.2:8080"}
     conn := zrpc.MustNewClient(clientConf)
     client := greet.NewGreetClient(conn.Conn())
     resp, err := client.Ping(context.Background(), &greet.Request{})
@@ -76,23 +77,25 @@ func main() {
 }
 ```
 
-## etcd service discovery
+## etcd Service Discovery
 
-In main.go file the following code
+Add the following code to `main.go`:
 
 ```go
 func main() {
-    clientConf:=zrpc.RpcClientConf{}
-    conf.FillDefault(&clientConf)// 填充默认值，比如 trace 透传等，参考服务配置说明
-    clientConf.Etcd = discov.EtcdConf{// 通过 etcd 服务发现时，只需要给 Etcd 配置即可
-        Hosts:              []string{"127.0.0.1:2379"},
-        Key:                "greet.rpc",
-        User:               "",// 当 etcd 开启 acl 时才填写，这里为了展示所以没有删除，实际使用如果没有开启 acl 可忽略
-        Pass:               "",// 当 etcd 开启 acl 时才填写，这里为了展示所以没有删除，实际使用如果没有开启 acl 可忽略
-        CertFile:           "",// 当 etcd 开启 acl 时才填写，这里为了展示所以没有删除，实际使用如果没有开启 acl 可忽略
-        CertKeyFile:        "",// 当 etcd 开启 acl 时才填写，这里为了展示所以没有删除，实际使用如果没有开启 acl 可忽略
-        CACertFile:         "",// 当 etcd 开启 acl 时才填写，这里为了展示所以没有删除，实际使用如果没有开启 acl 可忽略
-        InsecureSkipVerify: false,// 当 etcd 开启 acl 时才填写，这里为了展示所以没有删除，实际使用如果没有开启 acl 可忽略
+    clientConf := zrpc.RpcClientConf{}
+    conf.FillDefault(&clientConf)
+    clientConf.Etcd = discov.EtcdConf{
+        Hosts: []string{"127.0.0.1:2379"},
+        Key:   "greet.rpc",
+        // The following fields are only needed when etcd ACL is enabled;
+        // omit them if ACL is not in use.
+        User:               "",
+        Pass:               "",
+        CertFile:           "",
+        CertKeyFile:        "",
+        CACertFile:         "",
+        InsecureSkipVerify: false,
     }
     conn := zrpc.MustNewClient(clientConf)
     client := greet.NewGreetClient(conn.Conn())
@@ -105,14 +108,14 @@ func main() {
 }
 ```
 
-## Native Support
+## Native gRPC Support
 
-If you do not want to initialize using a go-zero repc client, zrpc also supports grpc.ClientConn, you can use grpc.ClientConn directly.
+If you prefer not to use the go-zero RPC client, zrpc also accepts a raw `grpc.ClientConn`:
 
 ```go
 func main() {
-    conn,err:=grpc.Dial("127.0.0.1:8080",grpc.WithBlock(), grpc.WithTransportCredentials(insecure.NewCredentials()))
-    if err!=nil{
+    conn, err := grpc.Dial("127.0.0.1:8080", grpc.WithBlock(), grpc.WithTransportCredentials(insecure.NewCredentials()))
+    if err != nil {
         log.Println(err)
         return
     }
@@ -126,6 +129,6 @@ func main() {
 }
 ```
 
-## Other Service Discoveries
+## Other Service Registries
 
-In addition to a go-zero built-in ecd as a service, the community also provides support for the discovery of services such as nacos, consul, etc. More Services found components <a href="https://github.com/zeromicro/zero-contrib/tree/main/zrpc/registry" target="_blank">for details</a>
+Beyond the built-in etcd support, the community provides adapters for nacos, consul, and more. See [zero-contrib service registries](https://github.com/zeromicro/zero-contrib/tree/main/zrpc/registry) for details.

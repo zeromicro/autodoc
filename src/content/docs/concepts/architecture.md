@@ -82,9 +82,9 @@ Prometheus:
 # Distributed tracing
 Telemetry:
   Name: order-api
-  Endpoint: http://jaeger:14268/api/traces
+  Endpoint: localhost:4317
   Sampler: 1.0        # 1.0 = 100% sampling
-  Batcher: jaeger
+  Batcher: otlpgrpc
 ```
 
 All logs carry a `trace_id` and `span_id` field that correlate with Jaeger traces — no manual instrumentation required.

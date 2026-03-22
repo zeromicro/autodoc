@@ -10,7 +10,7 @@ sidebar:
 
 goctl code generation is go based on template to implement data drive. While currently goctl code generation meets some of the code successes, the template custom can enrich code generation.
 
-Template instructions can be consulted <a href="/reference/cli-guide/template" target="_blank">goctl template</a>
+For template command usage, see [goctl template](../cli-guide/template.md).
 
 ## Sample
 
@@ -110,8 +110,12 @@ func {{.HandlerName}}(svcCtx *svc.ServiceContext) http.HandlerFunc {
 
 ② Custom Template Content
 
-::tip 1. If you don't have`~/.goctl/${goctl版本号}/api/handler.tpl`file you can initialize the template initialization command`goctl template format in`initialize
-:
+:::tip
+If you don't have a `~/.goctl/{version}/api/handler.tpl` file, you can initialize the template files with:
+
+```bash
+goctl template init
+```
 :::
 
 ### Compare the template before and after
@@ -187,5 +191,5 @@ func GreetHandler(svcCtx *svc.ServiceContext) http.HandlerFunc {
 
 ## References
 
-- <a href="/reference/cli-guide/template" target="_blank">goctl template</a>
-- <a href="https://golang.org/pkg/text/template/" target="_blank">text/template</a>
+- [goctl template](../cli-guide/template.md)
+- [text/template](https://golang.org/pkg/text/template/)

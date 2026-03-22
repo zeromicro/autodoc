@@ -9,7 +9,7 @@ sidebar:
 
 ## Overview
 
-In go-zero, the `Write` method of `http.ResponseWriter` is supported to return the response parameters, and the `Header` method of `http.ResponseWriter` is supported to return the response headersFor other response formats, see https://github.com/zeromicro/x/blob/main/http/responses.go , currently <a href="https://github.com/zeromicro/x" target="_blank">zeromicro/x</a> implements an extension to xml.
+In go-zero, `http.ResponseWriter`'s `Write` method returns the response body and the `Header` method sets response headers. For additional response formats (e.g. XML), see the [zeromicro/x](https://github.com/zeromicro/x) extension package — `https://github.com/zeromicro/x/blob/main/http/responses.go`.
 
 ## Sample
 

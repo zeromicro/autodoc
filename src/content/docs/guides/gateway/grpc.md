@@ -7,21 +7,21 @@ sidebar:
 
 ## Overview
 
-With the prevalence of the microservice architecture, the gRPC framework is widely used as a high-performance, cross-language remote process call (RPC).However, gRPC does not apply to all application scenarios.For example, when the client does not support a gRPC protocol or needs to expose the gRPC service to a web application, a way to convert the RESTful API to a gRPC.The gRPC gateway should therefore be created.
+As microservice architectures become more common, gRPC is widely adopted as a high-performance, cross-language RPC framework. However, gRPC is not suitable for every scenario — for example, when clients do not support gRPC, or when you need to expose gRPC services to web applications via a RESTful API. In these cases, a gRPC gateway bridges the gap.
 
-## Implementation in gRPC brokered go-Zero
+## How go-zero's gRPC Gateway Works
 
-The gRPC gateway in go-Zero is a HTTP server that converts RESTful API into a gRPC request and converts gRPC response to RESTful API.The process is as follows:：
+The gRPC gateway in go-zero is an HTTP server that translates RESTful requests into gRPC calls and converts gRPC responses back to HTTP. The flow is:
 
-1. Resolves the definition of a gRPC service from proto file.
-2. Resolve HTTP mapping rules for gRPC services from the configuration file.
-3. Generate HTTP processor for gRPC services based on the definition of a gRPC service and HTTP mapping rules.
-4. Start HTTP server, handle HTTP requests.
-5. Convert HTTP request to a gRPC request.
-6. Convert gRPC response to HTTP response.
-7. Return HTTP response.
+1. Load the gRPC service definition from a proto file.
+2. Load HTTP-to-gRPC mapping rules from the configuration file.
+3. Generate HTTP handlers for each gRPC method.
+4. Start the HTTP server and accept incoming requests.
+5. Translate each HTTP request into a gRPC request.
+6. Translate the gRPC response into an HTTP response.
+7. Return the HTTP response to the caller.
 
-Details can be consulted <a href="https://github.com/zeromicro/go-zero/tree/master/gateway" target="_blank">gateway</a>.
+For the full gateway source, see [go-zero/gateway](https://github.com/zeromicro/go-zero/tree/master/gateway).
 
 ## Configure Introduction
 
@@ -52,7 +52,7 @@ type (
 
 | <img width={100} />Name | Note                       | DataType   | Required? | Sample                             |
 | ---------------------------------------- | -------------------------- | ---------- | --------- | ---------------------------------- |
-| RestConf                                 | rest Service Configuration | RestConf   | YES       | Reference<a href="/reference/configuration-guide/service" target="_blank">Basic Service Configuration</a> |
+| RestConf                                 | rest Service Configuration | RestConf   | YES       | See [Basic Service Configuration](../../reference/configuration-guide/service) |
 | Upstreams                                | gRPC Service Configuration | []Upstream | YES       |                                    |
 | Timeout                                  | Timeout time               | duration   | NO        | `5s`                               |
 
@@ -61,7 +61,7 @@ type (
 | <img width={100} />Name | Note                                                 | DataType       | Required? | Sample                             |
 | ---------------------------------------- | ---------------------------------------------------- | -------------- | --------- | ---------------------------------- |
 | Name                                     | Service Name                                         | string         | NO        | `demo1-gateway`                    |
-| Grpc                                     | gRPC Service Configuration                           | RpcClientConf  | YES       | Reference<a href="/guides/grpc/server/configuration" target="_blank">RPC configuration</a> |
+| Grpc                                     | gRPC Service Configuration                           | RpcClientConf  | YES       | See [RPC configuration](../grpc/server/configuration) |
 | ProtoSets                                | proto file list                                      | []string       | NO        | `["hello.pb"]`                     |
 | Mappings                                 | Route mapping, do not fill by default all grpc paths | []RouteMapping | NO        |                                    |
 
@@ -313,6 +313,6 @@ $ curl http://localhost:8888/ping
 
 ## References
 
-- <a href="https://github.com/zeromicro/go-zero/tree/master/gateway" target="_blank">go-zero • gateway</a>
-- <a href="/reference/configuration-guide/service" target="_blank">go-zero Basic Service Configuration</a>
-- <a href="/guides/grpc/server/configuration" target="_blank">go-zero • grpc configuration</a>
+- [go-zero • gateway](https://github.com/zeromicro/go-zero/tree/master/gateway)
+- [Basic Service Configuration](../../reference/configuration-guide/service)
+- [gRPC Server Configuration](../grpc/server/configuration)

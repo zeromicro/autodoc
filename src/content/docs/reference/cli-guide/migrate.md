@@ -31,4 +31,4 @@ Flags:
 | verbose                                              | boolean                                             | NO                                             | false                                              | Whether to output log                                                           |
 | version                                              | string                                              | NO                                             | `v1.3.0`                                           | Migration from `tal-tech` to `zeroicro` after organization, default is `v1.3.0` |
 
-Please <a href="https://github.com/zeromicro/go-zero/releases" target="_blank">click here</a> for a list of versions of the release organized by zeroicro
+See the [go-zero releases](https://github.com/zeromicro/go-zero/releases) for a full list of versions organized by zeromicro.

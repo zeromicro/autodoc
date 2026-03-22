@@ -87,6 +87,6 @@ Enable distributed tracing by adding four lines to `etc/user-api.yaml`:
 ```yaml
 Telemetry:
   Name: user-api
-  Endpoint: http://jaeger:14268/api/traces
+  Endpoint: localhost:4317
   Sampler: 1.0
 ```

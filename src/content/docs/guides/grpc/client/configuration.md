@@ -9,7 +9,7 @@ sidebar:
 
 ## Overview
 
-This paper describes how to use the go-Zero framework for gRPC client development.
+This guide describes how to use the go-zero framework for gRPC client development.
 
 ## Configuration
 

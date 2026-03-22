@@ -17,4 +17,4 @@ This tutorial uses proto3 versions of Protocol Buffers language and provides a b
 
 ## Link References
 
-Protocol Buffers is a Google product and is not repeated here. For more information, refer to <a href="https://developers.google.com/protocol-buffers/docs/gotutorial" target="_blank">Protocol Buffer</a> and <a href="https://grpc.io/docs/" target="_blank">gRPC</a>
+Protocol Buffers is a Google product and is not repeated here. For more information, refer to [Protocol Buffer](https://developers.google.com/protocol-buffers/docs/gotutorial) and [gRPC](https://grpc.io/docs/).

@@ -9,9 +9,9 @@ sidebar:
 
 ## Overview
 
-With regard to extended tasks, there are many scenarios in which the return of stocks is automatically closed without payment after 20 minutes.
+Delay queues are useful for scheduled tasks — for example, automatically cancelling an unpaid order 20 minutes after it is placed.
 
-<a href="https://github.com/zeromicro/go-queue" target="_blank"> go-queue </a> implements the time queue dq, in addition to providing kafka message queue kq.The bottom layer of the go-queue is used for the <a href="https://beanstalkd.github.io/" target="_blank">beanstalkd</a>.
+[go-queue](https://github.com/zeromicro/go-queue) implements the delay queue `dq` (backed by [beanstalkd](https://beanstalkd.github.io/)), in addition to the Kafka message queue `kq`.
 
 ### Config
 
@@ -70,7 +70,7 @@ type Config struct {
 }
 ```
 
-Initialize a penchant dq client in svc/serviceContext.go
+Initialize a dq producer client in `svc/serviceContext.go`:
 
 ```go
 type ServiceContext struct {
@@ -178,7 +178,7 @@ func NewServiceContext(c config.Config) *ServiceContext {
 }
 ```
 
-logic 中消费延时消息
+Consume delay messages in logic:
 
 ```go
 func (l *PusherLogic) Consumer() error {
@@ -188,8 +188,8 @@ func (l *PusherLogic) Consumer() error {
 }
 ```
 
-Write in the end, the beanstalk is not reliant on redis, but go-queue is the better we want to prevent repeated consumption in a short period of time, using redis Setnx to allow us to filter spent messages within a short period of time
+Note that beanstalkd itself does not depend on Redis. go-queue uses Redis `SETNX` as a short-window deduplication filter to prevent the same message from being consumed more than once.
 
 ## References
 
-1. <a href="https://beanstalkd.github.io/" target="_blank">Beanstalkd Introduction and Installation</a>
+1. [Beanstalkd Introduction and Installation](https://beanstalkd.github.io/)

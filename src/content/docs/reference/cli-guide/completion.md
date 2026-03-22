@@ -8,7 +8,7 @@ sidebar:
 
 ## Overview
 
-goctl uses <a href="https://github.com/spf13/cobra" target="_blank"> Cobra </a> framework development, so it inherits Cobra auto completion, in goctl, They provide the auto-completion features of `cash`,`fish`,`zsh`and`powershell`.
+goctl uses the [Cobra](https://github.com/spf13/cobra) framework, so it inherits Cobra's auto-completion. goctl provides auto-completion for `bash`, `fish`, `zsh`, and `powershell`.
 
 ## goctl completion directive
 
@@ -205,8 +205,8 @@ Flags:
       --no-descriptions   disable completion descriptions
 ```
 
-::tip hint
-If you are using zsh, and shell completion is not enabled, you can enable： by following instructions
+:::tip
+If you are using zsh, and shell completion is not enabled, you can enable it by following these instructions:
 
 ```bash
 echo "autoload -U compinit; compinit" >> ~/.zshrc

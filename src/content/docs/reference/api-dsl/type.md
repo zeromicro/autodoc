@@ -56,9 +56,9 @@ type StructureExample {
 ```
 
 :::tip
-New API features are referenced <a href="/reference/api-dsl/faq#1-%E6%80%8E%E4%B9%88%E4%BD%93%E9%AA%8C%E6%96%B0%E7%9A%84-api-%E7%89%B9%E6%80%A7" target="_blank"> New API Resolver Us</a>
+New API features are available since goctl 1.5.1 — see [New API Feature FAQ](./faq.md).
 
-We don't support generic, weak types, e.g. `any` type
+Note: generic and weak (any) types are not supported.
 
-You can participate in the discussion discussion to share your views <a href="https://github.com/zeromicro/go-zero/discussions/3121" target="_blank">https://github.com/zeroicro/go-zero/discussions/3121</a>
-::
+For discussion, see [go-zero/discussions/3121](https://github.com/zeromicro/go-zero/discussions/3121).
+:::

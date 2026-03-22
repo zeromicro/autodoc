@@ -95,8 +95,8 @@ Middlewares:
   Metrics: true
 Telemetry:
   Name: hello
-  Endpoint: http://127.0.0.1:14268/api/traces
-  Batcher: jaeger
+  Endpoint: localhost:4317
+  Batcher: otlpgrpc
   Sampler: 1.0
 ```
 
@@ -107,7 +107,7 @@ conf.MustLoad("etc/config.yaml", &restConf)
 srv := rest.MustNewServer(restConf)
 ```
 
-再次请求 `http://127.0.0.1:8080/hello`，打开jaeger页面即可查看链路请求信息，默认会携带`http.host`、`http.method`、`http.route`、`http.status_code`等属性
+再次请求 `http://127.0.0.1:8080/hello`，打开 Jaeger 页面即可查看链路请求信息，默认会携带`http.host`、`http.method`、`http.route`、`http.status_code`等属性
 
 ### LogHandler
 

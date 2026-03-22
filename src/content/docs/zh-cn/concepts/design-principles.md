@@ -86,6 +86,6 @@ logx.Infow("order created", logx.Field("orderId", id))
 ```yaml
 Telemetry:
   Name: user-api
-  Endpoint: http://jaeger:14268/api/traces
+  Endpoint: localhost:4317
   Sampler: 1.0
 ```

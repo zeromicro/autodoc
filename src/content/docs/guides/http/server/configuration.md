@@ -49,5 +49,5 @@ HTTP server primary configuration entry is set out below table：
 |  Signature   |  SignatureConf  |                   Signature Configuration                    |               |    NO     |
 | Middlewares  | MiddlewaresConf |                      Enable Middleware                       |               |    NO     |
 
-ServiceConfig General Configuration refer to <a href="/reference/configuration-guide/service" target="_blank">Basic Service Configuration</a>
-MidslewaresConf Configuration Reference <a href="/guides/http/server/middleware" target="_blank">Middleware</a>
+For `ServiceConfig` general configuration, see [Basic Service Configuration](../../../reference/configuration-guide/service.md).
+For `MiddlewaresConf` configuration, see [Middleware](./middleware.md).

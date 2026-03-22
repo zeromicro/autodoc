@@ -46,7 +46,7 @@ Log:
 # ── 链路追踪 ──────────────────────────────────────────────────────────────────
 Telemetry:
   Name: my-api
-  Endpoint: http://jaeger:14268/api/traces
+  Endpoint: localhost:4317
   Sampler: 1.0
-  Batcher: jaeger
+  Batcher: otlpgrpc
 ```

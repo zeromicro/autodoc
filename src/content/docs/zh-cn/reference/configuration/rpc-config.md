@@ -39,9 +39,9 @@ Prometheus:
 # ── 链路追踪 ────────────────────────────────────────────────────────────────
 Telemetry:
   Name: my.rpc
-  Endpoint: http://jaeger:14268/api/traces
+  Endpoint: localhost:4317
   Sampler: 1.0
-  Batcher: jaeger
+  Batcher: otlpgrpc
 ```
 
 ## 客户端配置
