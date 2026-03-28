@@ -14,4 +14,4 @@ go-zero 内置支持常见的微服务模式，包括通过 etcd 进行服务发
 
 - [服务发现](service-discovery/) — 注册和发现服务
 - [负载均衡](load-balancing/) — 配置客户端负载均衡
-- [链路追踪](distributed-tracing/) — 为微服务添加追踪
+- [链路追踪](distributed-tracing/) — 为微服务添加追踪- [配置中心](config-center/) — 使用 etcd 管理动态配置

@@ -289,6 +289,7 @@ mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'loose'
 					collapsed: true,
 					items: [
 						{ slug: 'community' },
+						{ slug: 'community/about' },
 						{ slug: 'community/code-style' },
 						{ slug: 'community/pull-request' },
 						{ slug: 'community/documentation' },
