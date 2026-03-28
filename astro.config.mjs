@@ -226,12 +226,6 @@ mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'loose'
 					items: [
 						{ slug: 'reference' },
 						{
-							label: 'DSL Syntax',
-							translations: { 'zh-CN': 'DSL 语法' },
-							collapsed: true,
-							autogenerate: { directory: 'reference/dsl' },
-						},
-						{
 							label: 'API DSL',
 							translations: { 'zh-CN': 'API DSL' },
 							collapsed: true,
@@ -250,16 +244,10 @@ mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'loose'
 							autogenerate: { directory: 'reference/cli-guide' },
 						},
 						{
-							label: 'Configuration Reference',
-							translations: { 'zh-CN': '配置参考' },
+							label: 'Configuration',
+							translations: { 'zh-CN': '配置' },
 							collapsed: true,
 							autogenerate: { directory: 'reference/configuration' },
-						},
-						{
-							label: 'Configuration Guide',
-							translations: { 'zh-CN': '配置管理' },
-							collapsed: true,
-							autogenerate: { directory: 'reference/configuration-guide' },
 						},
 						{
 							label: 'Customization',

@@ -52,7 +52,7 @@ type (
 
 | <img width={100}/>名称 | 说明 | 类型 | 是否必填 | 示例 |
 | --- | --- | --- | --- | --- |
-| RestConf | rest 服务配置 | RestConf | 是 | 参考[基础服务配置](/reference/configuration-guide/service) |
+| RestConf | rest 服务配置 | RestConf | 是 | 参考[基础服务配置](/zh-cn/reference/configuration/service-config) |
 | Upstreams | gRPC 服务配置 | []Upstream | 是 | |
 | Timeout |  超时时间 | duration | 否 | `5s` |
 
@@ -313,5 +313,5 @@ $ curl http://localhost:8888/ping
 ## 参考文献
 
 - [《go-zero • gateway》](https://github.com/zeromicro/go-zero/tree/master/gateway)
-- [《go-zero • 基础服务配置》](/reference/configuration-guide/service)
+- [《go-zero • 基础服务配置》](/zh-cn/reference/configuration/service-config)
 - [《go-zero • grpc 配置》](/guides/grpc/server/configuration)

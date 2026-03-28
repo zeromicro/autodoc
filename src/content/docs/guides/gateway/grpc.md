@@ -52,7 +52,7 @@ type (
 
 | <img width={100} />Name | Note                       | DataType   | Required? | Sample                             |
 | ---------------------------------------- | -------------------------- | ---------- | --------- | ---------------------------------- |
-| RestConf                                 | rest Service Configuration | RestConf   | YES       | See [Basic Service Configuration](../../reference/configuration-guide/service) |
+| RestConf                                 | rest Service Configuration | RestConf   | YES       | See [Basic Service Configuration](../../reference/configuration/service-config) |
 | Upstreams                                | gRPC Service Configuration | []Upstream | YES       |                                    |
 | Timeout                                  | Timeout time               | duration   | NO        | `5s`                               |
 
@@ -314,5 +314,5 @@ $ curl http://localhost:8888/ping
 ## References
 
 - [go-zero • gateway](https://github.com/zeromicro/go-zero/tree/master/gateway)
-- [Basic Service Configuration](../../reference/configuration-guide/service)
+- [Basic Service Configuration](../../reference/configuration/service-config)
 - [gRPC Server Configuration](../grpc/server/configuration)

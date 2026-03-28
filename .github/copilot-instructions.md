@@ -45,13 +45,11 @@ src/content/docs/
 │   ├── observability/
 │   └── queue/
 ├── reference/                  # 5️⃣ 参考文档
-│   ├── dsl/
 │   ├── api-dsl/
 │   ├── proto-dsl/
 │   ├── cli-guide/
 │   ├── goctl/
 │   ├── configuration/
-│   ├── configuration-guide/
 │   ├── customization/
 │   └── releases/
 ├── community/                  # 6️⃣ 社区（FAQ + 贡献 + 示例）

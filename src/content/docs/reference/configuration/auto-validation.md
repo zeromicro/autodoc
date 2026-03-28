@@ -2,7 +2,7 @@
 title: Config Auto-Validation
 description: Automatically validate configuration on startup.
 sidebar:
-  order: 6
+  order: 7
 
 ---
 
