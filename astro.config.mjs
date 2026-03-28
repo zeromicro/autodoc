@@ -250,11 +250,6 @@ mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'loose'
 							autogenerate: { directory: 'reference/cli-guide' },
 						},
 						{
-							label: 'goctl',
-							collapsed: true,
-							autogenerate: { directory: 'reference/goctl' },
-						},
-						{
 							label: 'Configuration Reference',
 							translations: { 'zh-CN': '配置参考' },
 							collapsed: true,

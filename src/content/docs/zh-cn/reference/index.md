@@ -9,10 +9,11 @@ go-zero 的配置模式、goctl CLI 和 DSL 语法的技术参考文档。
 
 ## goctl CLI
 
-- [命令概览](./goctl/commands/) — 所有 goctl 子命令
-- [API 代码生成](./goctl/api/) — 生成 HTTP 服务脚手架
-- [RPC 代码生成](./goctl/rpc/) — 生成 gRPC 服务脚手架
-- [Model 代码生成](./goctl/model/) — 生成数据库模型代码
+- [概览](./cli-guide/overview/) — goctl 工具介绍
+- [命令参考](./cli-guide/) — goctl 完整命令参考
+- [API 代码生成](./cli-guide/api/) — 生成 HTTP 服务脚手架
+- [RPC 代码生成](./cli-guide/rpc/) — 生成 gRPC 服务脚手架
+- [Model 代码生成](./cli-guide/model/) — 生成数据库模型代码
 
 ## 配置
 
