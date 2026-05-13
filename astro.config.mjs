@@ -35,6 +35,7 @@ export default defineConfig({
 			locales: {
 				root: { label: 'English', lang: 'en' },
 				'zh-cn': { label: '简体中文', lang: 'zh-CN' },
+				ko: { label: '한국어', lang: 'ko' },
 			},
 			defaultLocale: 'root',
 			logo: {
@@ -66,13 +67,17 @@ mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'loose'
 
 							// Only redirect on first visit to root pages
 							const path = window.location.pathname;
-							const isRootLocale = !path.startsWith('/zh-cn');
+							const isRootLocale = !path.startsWith('/zh-cn') && !path.startsWith('/ko');
 
 							if (isRootLocale) {
-								const lang = navigator.language || navigator.userLanguage;
-								if (lang && lang.toLowerCase().startsWith('zh')) {
+								const lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+								if (lang.startsWith('zh')) {
 									// Redirect to Chinese version
 									const newPath = '/zh-cn' + (path === '/' ? '/' : path);
+									window.location.replace(newPath);
+								} else if (lang.startsWith('ko')) {
+									// Redirect to Korean version
+									const newPath = '/ko' + (path === '/' ? '/' : path);
 									window.location.replace(newPath);
 								}
 							}
@@ -87,7 +92,7 @@ mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'loose'
 				// ── 1. Concepts ──────────────────────────────────────────
 				{
 					label: 'Concepts',
-					translations: { 'zh-CN': '核心概念' },
+					translations: { 'zh-CN': '核心概念', ko: '개념' },
 					collapsed: true,
 					items: [
 						{ slug: 'concepts' },
@@ -100,74 +105,74 @@ mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'loose'
 				// ── 2. Getting Started ───────────────────────────────────
 				{
 					label: 'Getting Started',
-					translations: { 'zh-CN': '快速开始' },
+					translations: { 'zh-CN': '快速开始', ko: '시작하기' },
 					collapsed: true,
 					autogenerate: { directory: 'getting-started' },
 				},
 				// ── 3. Guides (was Tutorials) ────────────────────────────
 				{
 					label: 'Guides',
-					translations: { 'zh-CN': '指南' },
+					translations: { 'zh-CN': '指南', ko: '가이드' },
 					collapsed: true,
 					items: [
 						{ slug: 'guides' },
 						{
 							label: 'Quick Start',
-							translations: { 'zh-CN': '快速入门' },
+							translations: { 'zh-CN': '快速入门', ko: '빠른 시작' },
 							collapsed: true,
 							autogenerate: { directory: 'guides/quickstart' },
 						},
 						{
 							label: 'HTTP Service',
-							translations: { 'zh-CN': 'HTTP 服务' },
+							translations: { 'zh-CN': 'HTTP 服务', ko: 'HTTP 서비스' },
 							collapsed: true,
 							autogenerate: { directory: 'guides/http' },
 						},
 						{
 							label: 'gRPC Service',
-							translations: { 'zh-CN': 'gRPC 服务' },
+							translations: { 'zh-CN': 'gRPC 服务', ko: 'gRPC 서비스' },
 							collapsed: true,
 							autogenerate: { directory: 'guides/grpc' },
 						},
 						{
 							label: 'Database',
-							translations: { 'zh-CN': '数据库' },
+							translations: { 'zh-CN': '数据库', ko: '데이터베이스' },
 							collapsed: true,
 							autogenerate: { directory: 'guides/database' },
 						},
 						{
 							label: 'Microservice',
-							translations: { 'zh-CN': '微服务' },
+							translations: { 'zh-CN': '微服务', ko: '마이크로서비스' },
 							collapsed: true,
 							autogenerate: { directory: 'guides/microservice' },
 						},
 						{
 							label: 'Message Queue',
-							translations: { 'zh-CN': '消息队列' },
+							translations: { 'zh-CN': '消息队列', ko: '메시지 큐' },
 							collapsed: true,
 							autogenerate: { directory: 'guides/queue' },
 						},
 						{
 							label: 'API Gateway',
-							translations: { 'zh-CN': 'API 网关' },
+							translations: { 'zh-CN': 'API 网关', ko: 'API 게이트웨이' },
 							collapsed: true,
 							autogenerate: { directory: 'guides/gateway' },
 						},
 						{
 							label: 'Deployment',
-							translations: { 'zh-CN': '部署运维' },
+							translations: { 'zh-CN': '部署运维', ko: '배포' },
 							collapsed: true,
 							autogenerate: { directory: 'guides/deployment' },
 						},
 						{
 							label: 'Cron Job',
-							translations: { 'zh-CN': '定时任务' },
+							translations: { 'zh-CN': '定时任务', ko: 'Cron 작업' },
 							collapsed: true,
 							autogenerate: { directory: 'guides/cron-job' },
 						},
 						{
 							label: 'MCP Integration',
-							translations: { 'zh-CN': 'MCP 集成' },
+							translations: { 'zh-CN': 'MCP 集成', ko: 'MCP 통합' },
 							collapsed: true,
 							autogenerate: { directory: 'guides/mcp' },
 						},
@@ -176,43 +181,43 @@ mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'loose'
 				// ── 4. Components ────────────────────────────────────────
 				{
 					label: 'Components',
-					translations: { 'zh-CN': '组件' },
+					translations: { 'zh-CN': '组件', ko: '컴포넌트' },
 					collapsed: true,
 					items: [
 						{ slug: 'components' },
 						{
 							label: 'Cache',
-							translations: { 'zh-CN': '缓存' },
+							translations: { 'zh-CN': '缓存', ko: '캐시' },
 							collapsed: true,
 							autogenerate: { directory: 'components/cache' },
 						},
 						{
 							label: 'Resilience',
-							translations: { 'zh-CN': '服务韧性' },
+							translations: { 'zh-CN': '服务韧性', ko: '탄력성' },
 							collapsed: true,
 							autogenerate: { directory: 'components/resilience' },
 						},
 						{
 							label: 'Concurrency',
-							translations: { 'zh-CN': '并发工具' },
+							translations: { 'zh-CN': '并发工具', ko: '동시성 도구' },
 							collapsed: true,
 							autogenerate: { directory: 'components/concurrency' },
 						},
 						{
 							label: 'Log',
-							translations: { 'zh-CN': '日志' },
+							translations: { 'zh-CN': '日志', ko: '로그' },
 							collapsed: true,
 							autogenerate: { directory: 'components/log' },
 						},
 						{
 							label: 'Observability',
-							translations: { 'zh-CN': '可观测性' },
+							translations: { 'zh-CN': '可观测性', ko: '관측 가능성' },
 							collapsed: true,
 							autogenerate: { directory: 'components/observability' },
 						},
 						{
 							label: 'Queue',
-							translations: { 'zh-CN': '队列' },
+							translations: { 'zh-CN': '队列', ko: '큐' },
 							collapsed: true,
 							autogenerate: { directory: 'components/queue' },
 						},
@@ -221,37 +226,37 @@ mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'loose'
 				// ── 5. Reference ─────────────────────────────────────────
 				{
 					label: 'Reference',
-					translations: { 'zh-CN': '参考文档' },
+					translations: { 'zh-CN': '参考文档', ko: '참조 문서' },
 					collapsed: true,
 					items: [
 						{ slug: 'reference' },
 						{
 							label: 'API DSL',
-							translations: { 'zh-CN': 'API DSL' },
+							translations: { 'zh-CN': 'API DSL', ko: 'API DSL' },
 							collapsed: true,
 							autogenerate: { directory: 'reference/api-dsl' },
 						},
 						{
 							label: 'Proto DSL',
-							translations: { 'zh-CN': 'Proto DSL' },
+							translations: { 'zh-CN': 'Proto DSL', ko: 'Proto DSL' },
 							collapsed: true,
 							autogenerate: { directory: 'reference/proto-dsl' },
 						},
 						{
 							label: 'goctl CLI',
-							translations: { 'zh-CN': 'goctl 命令' },
+							translations: { 'zh-CN': 'goctl 命令', ko: 'goctl 명령어' },
 							collapsed: true,
 							autogenerate: { directory: 'reference/cli-guide' },
 						},
 						{
 							label: 'Configuration',
-							translations: { 'zh-CN': '配置' },
+							translations: { 'zh-CN': '配置', ko: '설정' },
 							collapsed: true,
 							autogenerate: { directory: 'reference/configuration' },
 						},
 						{
 							label: 'Customization',
-							translations: { 'zh-CN': '模板定制' },
+							translations: { 'zh-CN': '模板定制', ko: '템플릿 커스터마이징' },
 							collapsed: true,
 							autogenerate: { directory: 'reference/customization' },
 						},
@@ -259,7 +264,7 @@ mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'loose'
 						{ slug: 'reference/changelog' },
 						{
 							label: 'Releases',
-							translations: { 'zh-CN': '版本记录' },
+							translations: { 'zh-CN': '版本记录', ko: '릴리스 노트' },
 							collapsed: true,
 							autogenerate: { directory: 'reference/releases' },
 						},
@@ -268,7 +273,7 @@ mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'loose'
 				// ── 6. Community (FAQ + Contributing + Examples) ─────────
 				{
 					label: 'Community',
-					translations: { 'zh-CN': '社区' },
+					translations: { 'zh-CN': '社区', ko: '커뮤니티' },
 					collapsed: true,
 					items: [
 						{ slug: 'community' },
@@ -279,13 +284,13 @@ mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'loose'
 						{ slug: 'community/contributors' },
 						{
 							label: 'FAQ',
-							translations: { 'zh-CN': '常见问题' },
+							translations: { 'zh-CN': '常见问题', ko: '자주 묻는 질문' },
 							collapsed: true,
 							autogenerate: { directory: 'community/faq' },
 						},
 						{
 							label: 'Examples',
-							translations: { 'zh-CN': '示例' },
+							translations: { 'zh-CN': '示例', ko: '예제' },
 							collapsed: true,
 							autogenerate: { directory: 'examples' },
 						},
