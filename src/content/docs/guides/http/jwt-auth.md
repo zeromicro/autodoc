@@ -7,28 +7,30 @@ sidebar:
 ---
 
 
-go-zero supports JWT auth natively — declare `@jwt` in your API spec and the framework handles token validation automatically. This guide covers token generation, claim extraction, refresh tokens, and role-based access.
+go-zero natively supports JWT authentication — declare `jwt` in the `@server` block within the API DSL, and the framework automatically injects token validation middleware for endpoints in that block.
 
 ## API Spec
 
 ```text
 service user-api {
-    // Public endpoints
+    // public endpoints
     @handler Login
     post /user/login (LoginReq) returns (LoginResp)
 
     @handler RefreshToken
     post /user/refresh (RefreshReq) returns (LoginResp)
+}
 
-    // Protected endpoints — @jwt injects token validation middleware
-    @jwt Auth
+// Protected endpoints — jwt: Auth enables token validation middleware
+// Auth maps to the JWT configuration key in the yaml config file
+@server (
+    jwt: Auth
+)
+service user-api {
     @handler GetProfile
     get /user/profile (ProfileReq) returns (ProfileResp)
-
-    @jwt Auth
-    @handler UpdateProfile
-    put /user/profile (UpdateProfileReq) returns (UpdateProfileResp)
 }
+
 ```
 
 ## Configuration
