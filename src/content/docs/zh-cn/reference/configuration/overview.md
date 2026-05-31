@@ -8,7 +8,7 @@ sidebar:
 
 ## 概述
 
-go-zero 提供了一个强大的 conf 包用于加载配置。我们目前支持的 **yaml**, **json**, **toml** 3 种格式的配置文件，go-zero 通过文件后缀会自行加载对应的文件格式。
+go-zero 提供了一个强大的 conf 包用于加载配置。我们目前支持的 **yaml**, **json**, **json5**, **toml** 4 种格式的配置文件，go-zero 通过文件后缀会自行加载对应的文件格式。
 
 ## 如何使用
 
@@ -71,6 +71,7 @@ func Load(file string, v interface{}, opts ...Option) error
 - json
 - yaml | yml
 - toml
+- json5（自 v1.10.1 起支持）
 
 我们程序会自动通过文件后缀进行对应格式的加载。
 
@@ -83,6 +84,8 @@ func LoadFromJsonBytes(content []byte, v interface{}) error
 func LoadFromTomlBytes(content []byte, v interface{}) error
 
 func LoadFromYamlBytes(content []byte, v interface{}) error
+
+func LoadFromJson5Bytes(content []byte, v interface{}) error
 ```
 
 简单示例：
@@ -270,3 +273,49 @@ OtherRpc:
     Key: OtherRpc
 `
 ```
+
+## JSON5 配置（自 v1.10.1 起）
+
+JSON5 是 JSON 的超集，新增了注释、尾随逗号、无引号键名等人性化语法。go-zero v1.10.1+ 原生支持 `.json5` 文件。
+
+**与 JSON 的主要区别：**
+
+| 特性 | JSON | JSON5 |
+|------|------|-------|
+| 注释 | ❌ | ✅（`//` 和 `/* */`）|
+| 尾随逗号 | ❌ | ✅ |
+| 无引号键名 | ❌ | ✅ |
+| 单引号字符串 | ❌ | ✅ |
+
+### config.json5 示例
+
+```json5
+{
+  // 服务配置
+  Host: "0.0.0.0",
+  Port: 8080,   // 尾随逗号合法
+  Name: "my-service",
+}
+```
+
+```go
+var c Config
+conf.MustLoad("config.json5", &c)
+```
+
+### 内联加载
+
+```go
+data := []byte(`{
+  // 注释
+  Host: "localhost",
+  Port: 8080,
+}`)
+
+var c Config
+conf.LoadFromJson5Bytes(data, &c)
+```
+
+:::note
+`.json` 文件仍使用标准 JSON 解析器以保留大整数精度（大于 2⁵³ 的数字）。只有 `.json5` 文件才会使用 JSON5 解析器。所有现有的 `.json` 配置无需任何改动即可继续使用。
+:::

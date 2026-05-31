@@ -81,4 +81,4 @@ Make sure `GOBIN` is in your `PATH` — this is where `goctl` and other Go-insta
 
 ## Next Step
 
-[Install goctl →](../goctl)
+[Install goctl →](./goctl)

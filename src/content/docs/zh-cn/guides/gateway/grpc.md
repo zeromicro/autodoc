@@ -52,7 +52,7 @@ type (
 
 | <img width={100}/>名称 | 说明 | 类型 | 是否必填 | 示例 |
 | --- | --- | --- | --- | --- |
-| RestConf | rest 服务配置 | RestConf | 是 | 参考[基础服务配置](/reference/configuration-guide/service) |
+| RestConf | rest 服务配置 | RestConf | 是 | 参考[基础服务配置](/zh-cn/reference/configuration/service-config) |
 | Upstreams | gRPC 服务配置 | []Upstream | 是 | |
 | Timeout |  超时时间 | duration | 否 | `5s` |
 
@@ -310,8 +310,52 @@ $ curl http://localhost:8888/ping
 {"msg":"pong"}%
 ```
 
+## 自定义 gRPC 客户端（`WithDialer`）（自 v1.10.0 起）
+
+网关默认使用标准选项创建 gRPC 客户端。使用 `WithDialer` 可覆盖此行为——例如，提升消息大小上限：
+
+```go
+package main
+
+import (
+    "flag"
+
+    "github.com/zeromicro/go-zero/core/conf"
+    "github.com/zeromicro/go-zero/gateway"
+    "github.com/zeromicro/go-zero/zrpc"
+    "google.golang.org/grpc"
+)
+
+var configFile = flag.String("f", "etc/gateway.yaml", "config file")
+
+func main() {
+    flag.Parse()
+
+    var c gateway.GatewayConf
+    conf.MustLoad(*configFile, &c)
+
+    gw := gateway.MustNewServer(c,
+        gateway.WithDialer(func(conf zrpc.RpcClientConf) zrpc.Client {
+            return zrpc.MustNewClient(conf,
+                zrpc.WithDialOption(grpc.MaxCallRecvMsgSize(50*1024*1024)),
+                zrpc.WithDialOption(grpc.MaxCallSendMsgSize(50*1024*1024)),
+            )
+        }),
+    )
+    defer gw.Stop()
+    gw.Start()
+}
+```
+
+| 场景 | Dial 选项 |
+|------|----------|
+| 增大接收消息大小 | `grpc.MaxCallRecvMsgSize(n)` |
+| 增大发送消息大小 | `grpc.MaxCallSendMsgSize(n)` |
+| 自定义 TLS | `grpc.WithTransportCredentials(creds)` |
+| Keep-alive | `grpc.WithKeepaliveParams(params)` |
+
 ## 参考文献
 
 - [《go-zero • gateway》](https://github.com/zeromicro/go-zero/tree/master/gateway)
-- [《go-zero • 基础服务配置》](/reference/configuration-guide/service)
+- [《go-zero • 基础服务配置》](/zh-cn/reference/configuration/service-config)
 - [《go-zero • grpc 配置》](/guides/grpc/server/configuration)

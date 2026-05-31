@@ -2,7 +2,7 @@
 title: API Service Configuration
 description: Complete reference for go-zero HTTP (REST) service configuration.
 sidebar:
-  order: 2
+  order: 3
 
 ---
 

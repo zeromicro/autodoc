@@ -2,7 +2,7 @@
 title: 配置自动校验
 description: 在 go-zero 启动时自动校验配置。
 sidebar:
-  order: 6
+  order: 7
 
 ---
 

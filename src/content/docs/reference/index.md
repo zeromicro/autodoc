@@ -10,10 +10,11 @@ Technical reference documentation for go-zero's configuration schemas, goctl CLI
 
 ## goctl CLI
 
-- [Commands Overview](./goctl/commands/) — All goctl subcommands
-- [API Generation](./goctl/api/) — Generate HTTP service scaffolding
-- [RPC Generation](./goctl/rpc/) — Generate gRPC service scaffolding
-- [Model Generation](./goctl/model/) — Generate database model code
+- [Overview](./cli-guide/overview/) — Introduction to goctl
+- [CLI Reference](./cli-guide/) — Comprehensive goctl command reference
+- [API Generation](./cli-guide/api/) — Generate HTTP service scaffolding
+- [RPC Generation](./cli-guide/rpc/) — Generate gRPC service scaffolding
+- [Model Generation](./cli-guide/model/) — Generate database model code
 
 ## Configuration
 

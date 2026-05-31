@@ -28,7 +28,7 @@ Follow the steps in order the first time:
 2. Install goctl      →  installation/goctl
 3. Install protoc     →  installation/protoc     (RPC only)
 4. Configure IDE      →  installation/ide-plugins
-5. Understand API DSL →  ../reference/dsl/api-syntax
+5. Understand API DSL →  ../reference/api-dsl
 6. Hello World        →  ../guides/quickstart/hello-world   ← start here if impatient
 7. Full API service   →  ../guides/quickstart/api-service
 8. Full RPC service   →  ../guides/quickstart/rpc-service

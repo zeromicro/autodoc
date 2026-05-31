@@ -49,5 +49,5 @@ HTTP server primary configuration entry is set out below table：
 |  Signature   |  SignatureConf  |                   Signature Configuration                    |               |    NO     |
 | Middlewares  | MiddlewaresConf |                      Enable Middleware                       |               |    NO     |
 
-For `ServiceConfig` general configuration, see [Basic Service Configuration](../../../reference/configuration-guide/service.md).
+For `ServiceConfig` general configuration, see [Basic Service Configuration](../../../reference/configuration/service-config.md).
 For `MiddlewaresConf` configuration, see [Middleware](./middleware.md).

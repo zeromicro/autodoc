@@ -2,7 +2,7 @@
 title: Log Configuration
 description: Configure structured logging in go-zero.
 sidebar:
-  order: 4
+  order: 6
 
 ---
 

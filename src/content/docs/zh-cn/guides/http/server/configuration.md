@@ -49,5 +49,5 @@ http server主要配置项如下表：
 |  Signature   |  SignatureConf      |                   签名配置                    |         |    否    |
 | Middlewares  |  MiddlewaresConf      |                  启用中间件                   |         |    否    |
 
-ServiceConfig 通用配置请参考 [《基础服务配置》](/reference/configuration-guide/service)
+ServiceConfig 通用配置请参考 [《基础服务配置》](/zh-cn/reference/configuration/service-config)
 MiddlewaresConf 配置可参考 [《中间件》](/guides/http/server/middleware)

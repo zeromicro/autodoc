@@ -1,8 +1,8 @@
 ---
 title: Service Configuration
-description: Full reference for go-zero HTTP service configuration.
+description: Base service configuration shared by all go-zero service types.
 sidebar:
-  order: 3
+  order: 5
 
 ---
 
@@ -60,7 +60,7 @@ type ServiceConf struct {
 | Params     | DataType          | Default value | Note                                                                                              | Enum Values          |
 | ---------- | ----------------- | ------------- | ------------------------------------------------------------------------------------------------- | -------------------- |
 | Name       | string            | -             | Define the name of the service, which will appear in log and tracer                               |                      |
-| Log        | logx.LogConf      | -             | Refer to [log](../log)                                         |                      |
+| Log        | logx.LogConf      | -             | Refer to [Log Configuration](log/)                                                                |                      |
 | Mode       | string            | pro           | Service environment. Dev is currently defined.In dev environment we will turn on reflection       | dev,test,rt,pre, pro |
 | MetricsUrl | string            | 空             | Tap to report and we'll report some metrics to the corresponding address, if empty, not an orphan |                      |
 | Prometheus | prometheus.Config | -             | References [Prometheus](../../../components/observability/metrics)    |                      |

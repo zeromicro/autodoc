@@ -2,7 +2,7 @@
 title: 日志配置
 description: 在 go-zero 中配置结构化日志。
 sidebar:
-  order: 4
+  order: 6
 
 ---
 

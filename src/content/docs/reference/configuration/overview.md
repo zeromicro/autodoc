@@ -8,7 +8,7 @@ sidebar:
 
 ## Overview
 
-go-Zero provides a powerful conf package to load configurations.We currently support **yaml**, **json**, **toml** 3 format configuration files, go-zero will load their own file format by suffix.
+go-Zero provides a powerful conf package to load configurations.We currently support **yaml**, **json**, **json5**, **toml** 4 format configuration files, go-zero will load their own file format by suffix.
 
 ## How to use
 
@@ -70,6 +70,7 @@ We currently support the configuration format below：
 - json
 - yaml | yml
 - toml
+- json5 (since v1.10.1)
 
 Our program will automatically load the corresponding format with a file suffix.
 
@@ -82,6 +83,8 @@ func LoadFromJsonBytes(content []byte, v interface{}) error
 func LoadFromTomlBytes(content []byte, v interface{}) error
 
 func LoadFromYamlBytes(content []byte, v interface{}) error
+
+func LoadFromJson5Bytes(content []byte, v interface{}) error
 ```
 
 Simple Example：
@@ -268,3 +271,49 @@ OtherRpc:
     Key: OtherRpc
 `
 ```
+
+## JSON5 Configuration (since v1.10.1)
+
+JSON5 is a superset of JSON that adds human-friendly features like comments, trailing commas, and unquoted keys. go-zero v1.10.1+ natively supports `.json5` files.
+
+**Key differences from plain JSON:**
+
+| Feature | JSON | JSON5 |
+|---------|------|-------|
+| Comments | ❌ | ✅ (`//` and `/* */`) |
+| Trailing commas | ❌ | ✅ |
+| Unquoted keys | ❌ | ✅ |
+| Single-quoted strings | ❌ | ✅ |
+
+### Example config.json5
+
+```json5
+{
+  // Service configuration
+  Host: "0.0.0.0",
+  Port: 8080,   // trailing comma is valid
+  Name: "my-service",
+}
+```
+
+```go
+var c Config
+conf.MustLoad("config.json5", &c)
+```
+
+### Inline loading
+
+```go
+data := []byte(`{
+  // comment
+  Host: "localhost",
+  Port: 8080,
+}`)
+
+var c Config
+conf.LoadFromJson5Bytes(data, &c)
+```
+
+:::note
+`.json` files continue to use the standard JSON parser to preserve large integer precision (numbers > 2⁵³). Only `.json5` files use the JSON5 parser. All existing `.json` configs continue to work without any changes.
+:::
