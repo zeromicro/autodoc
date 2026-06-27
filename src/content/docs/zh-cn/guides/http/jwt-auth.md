@@ -7,14 +7,13 @@ sidebar:
 ---
 
 
-go-zero 原生支持 JWT 认证——在 API DSL 中通过 `@server` 块声明 `jwt` 配置，框架会自动为该块内的接口注入 Token 验证中间件。
-
+go-zero 原生支持 JWT 认证。在 API DSL 的 `@server` 块中声明 `jwt` 配置后，框架会自动为该块内的接口注入 Token 验证中间件。
 
 ## API 规范
 
 ```text
 service user-api {
-    //公开接口
+    // 公开接口
     @handler Login
     post /user/login (LoginReq) returns (LoginResp)
 
@@ -22,14 +21,17 @@ service user-api {
     post /user/refresh (RefreshReq) returns (LoginResp)
 }
 
-// 受保护接口，jwt: Auth 声明需要 JWT 认证
-// Auth 是 jwt 配置的名称，对应 yaml 配置文件中的 Auth 键
+// 受保护接口：jwt: Auth 启用 Token 验证中间件。
+// Auth 对应 YAML 配置文件中的 JWT 配置键。
 @server (
     jwt: Auth
 )
 service user-api {
     @handler GetProfile
     get /user/profile (ProfileReq) returns (ProfileResp)
+
+    @handler UpdateProfile
+    put /user/profile (UpdateProfileReq) returns (UpdateProfileResp)
 }
 ```
 
