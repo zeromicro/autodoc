@@ -7,7 +7,7 @@ sidebar:
 ---
 
 
-go-zero는 JWT 인증을 기본 지원합니다. API spec에 `@jwt`를 선언하면 프레임워크가 token 검증을 자동으로 처리합니다. 이 가이드는 token 생성, claim 추출, refresh token, role 기반 접근 제어를 다룹니다.
+go-zero는 JWT 인증을 기본 지원합니다. API DSL의 `@server` 블록에서 `jwt`를 선언하면 프레임워크가 해당 블록의 엔드포인트에 token 검증 미들웨어를 자동으로 주입합니다. 이 가이드는 token 생성, claim 추출, refresh token, role 기반 접근 제어를 다룹니다.
 
 ## API Spec
 
@@ -19,13 +19,17 @@ service user-api {
 
     @handler RefreshToken
     post /user/refresh (RefreshReq) returns (LoginResp)
+}
 
-    // 보호된 엔드포인트 — @jwt가 token 검증 미들웨어를 주입합니다
-    @jwt Auth
+// 보호된 엔드포인트: jwt: Auth가 token 검증 미들웨어를 활성화합니다.
+// Auth는 YAML 설정 파일의 JWT 설정 키와 매핑됩니다.
+@server (
+    jwt: Auth
+)
+service user-api {
     @handler GetProfile
     get /user/profile (ProfileReq) returns (ProfileResp)
 
-    @jwt Auth
     @handler UpdateProfile
     put /user/profile (UpdateProfileReq) returns (UpdateProfileResp)
 }

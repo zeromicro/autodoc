@@ -7,13 +7,13 @@ sidebar:
 ---
 
 
-go-zero natively supports JWT authentication — declare `jwt` in the `@server` block within the API DSL, and the framework automatically injects token validation middleware for endpoints in that block.
+go-zero natively supports JWT authentication. Declare `jwt` in an `@server` block in the API DSL, and the framework automatically injects token validation middleware for endpoints in that block.
 
 ## API Spec
 
 ```text
 service user-api {
-    // public endpoints
+    // Public endpoints
     @handler Login
     post /user/login (LoginReq) returns (LoginResp)
 
@@ -21,16 +21,18 @@ service user-api {
     post /user/refresh (RefreshReq) returns (LoginResp)
 }
 
-// Protected endpoints — jwt: Auth enables token validation middleware
-// Auth maps to the JWT configuration key in the yaml config file
+// Protected endpoints: jwt: Auth enables token validation middleware.
+// Auth maps to the JWT configuration key in the YAML config file.
 @server (
     jwt: Auth
 )
 service user-api {
     @handler GetProfile
     get /user/profile (ProfileReq) returns (ProfileResp)
-}
 
+    @handler UpdateProfile
+    put /user/profile (UpdateProfileReq) returns (UpdateProfileResp)
+}
 ```
 
 ## Configuration
