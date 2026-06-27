@@ -23,9 +23,18 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
+      models: read
 
     steps:
       - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
 
       - name: Fetch go-zero latest release info
         id: release
@@ -47,6 +56,13 @@ jobs:
           RELEASE_TAG: ${{ steps.release.outputs.tag }}
           RELEASE_BODY: ${{ steps.release.outputs.body }}
         run: |
+          CHANGELOG="src/content/docs/reference/changelog.md"
+          if grep -q "^## ${RELEASE_TAG}[[:space:]]" "$CHANGELOG"; then
+            echo "Changelog already contains ${RELEASE_TAG}; skipping."
+            echo "entry_added=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
           PROMPT="You are a technical writer for go-zero documentation. Based on the following release notes for ${RELEASE_TAG}, write a concise Markdown changelog entry suitable for a documentation site. Use third-person present tense, keep it under 300 words, group changes under headings (New Features, Bug Fixes, Breaking Changes). Release notes:\n\n${RELEASE_BODY}"
 
           # GitHub Models endpoint — available to GitHub Copilot subscribers
@@ -58,7 +74,6 @@ jobs:
             | jq -r '.choices[0].message.content')
 
           # Prepend to changelog file
-          CHANGELOG="src/content/docs/reference/changelog.md"
           TAG="${RELEASE_TAG}"
           DATE=$(date +%Y-%m-%d)
           ENTRY="## ${TAG} – ${DATE}\n\n${RESPONSE}\n\n"
@@ -68,6 +83,12 @@ jobs:
           awk '/^---/{n++} n==2{print; while((getline line < "'$TMPFILE'") > 0) print line; n=99; next} {print}' "$CHANGELOG" > /tmp/merged.md
           mv /tmp/merged.md "$CHANGELOG"
           echo "entry_added=true" >> "$GITHUB_OUTPUT"
+
+      - name: Validate generated docs
+        if: steps.ai.outputs.entry_added == 'true'
+        run: |
+          npm run validate
+          npm run build
 
       - name: Open pull request
         if: steps.ai.outputs.entry_added == 'true'

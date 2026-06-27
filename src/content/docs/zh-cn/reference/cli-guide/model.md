@@ -934,7 +934,7 @@ model:
 
 我们在表中有一个 pg 的数据类型为 inet
 
-```SQL
+```sql
 -- auto-generated definition
 create table student
 (

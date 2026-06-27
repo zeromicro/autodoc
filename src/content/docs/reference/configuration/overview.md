@@ -130,7 +130,7 @@ conf.MustLoad("config.yaml", &c, conf.UseEnv())
 
 ```
 
-```config.yaml
+```yaml
 Name: ${SERVER_NAME}
 ```
 
@@ -192,7 +192,7 @@ More reference [unmarshaler_test.go](https://github.com/zeromicro/go-zero/blob/m
 
 In our daily configuration, there are many duplicate configurations, such as rpcClientConf where each rpc has a etcd configuration, but in most of our cases the etcd configuration is the same and we hope it can be configured only once. Examples below
 
-```goc
+```text
 type Config struct {
     Etcd     discov.EtcdConf
     UserRpc  zrpc.RpcClientConf

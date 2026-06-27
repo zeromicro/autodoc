@@ -806,7 +806,7 @@ model:
 
 We have pg 에서 table 사용하여 데이터 타입 `inet`.
 
-```SQL
+```sql
 -- auto-generated definition
 create table student
 (

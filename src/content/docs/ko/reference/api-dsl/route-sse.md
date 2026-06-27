@@ -14,7 +14,7 @@ sidebar:
 
 ### SSE 지원
 
-```api
+```text
 syntax = "v1"
 
 type EventMessage {

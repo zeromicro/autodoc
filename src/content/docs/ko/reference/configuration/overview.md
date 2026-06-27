@@ -124,7 +124,7 @@ conf.MustLoad("config.yaml", &c, conf.UseEnv())
 
 ```
 
-```config.yaml
+```yaml
 Name: ${SERVER_NAME}
 ```
 
@@ -177,7 +177,7 @@ More 참조 [unmarshaler_test.go](https://github.com/zeromicro/go-zero/releases/
 
 이 항목은 해당 기능의 사용 방법, 설정, 주의 사항을 설명합니다.
 
-```goc
+```text
 type Config struct {
     Etcd     discov.EtcdConf
     UserRpc  zrpc.RpcClientConf

@@ -811,7 +811,7 @@ model:
 
 We have a pg in the table with data type `inet`.
 
-```SQL
+```sql
 -- auto-generated definition
 create table student
 (

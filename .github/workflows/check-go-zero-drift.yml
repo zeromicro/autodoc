@@ -1,0 +1,66 @@
+name: Check go-zero documentation drift
+
+on:
+  workflow_dispatch:
+    inputs:
+      base_ref:
+        description: 'Base go-zero ref, for example v1.10.1. Leave empty for latest release.'
+        required: false
+        default: ''
+      head_ref:
+        description: 'Head go-zero ref. Leave empty for upstream default branch.'
+        required: false
+        default: ''
+  schedule:
+    - cron: '15 3 * * 2'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  drift:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate upstream drift report
+        id: drift
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_REF: ${{ github.event.inputs.base_ref || '' }}
+          HEAD_REF: ${{ github.event.inputs.head_ref || '' }}
+        run: node scripts/check-go-zero-drift.mjs
+
+      - name: Validate docs
+        if: steps.drift.outputs.has_changes == 'true'
+        run: npm run validate
+
+      - name: Open pull request
+        if: steps.drift.outputs.has_changes == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: drift/go-zero-${{ steps.drift.outputs.base_ref }}-${{ steps.drift.outputs.head_ref }}
+          commit-message: "docs: report go-zero drift ${{ steps.drift.outputs.base_ref }}...${{ steps.drift.outputs.head_ref }}"
+          title: "docs: report go-zero drift ${{ steps.drift.outputs.base_ref }}...${{ steps.drift.outputs.head_ref }}"
+          body: |
+            Automated upstream drift report for `zeromicro/go-zero`.
+
+            Compare: `${{ steps.drift.outputs.base_ref }}...${{ steps.drift.outputs.head_ref }}`
+            Report: `${{ steps.drift.outputs.report_path }}`
+
+            Matched documentation areas: `${{ steps.drift.outputs.topic_count }}`
+            Changed upstream files reviewed: `${{ steps.drift.outputs.file_count }}`
+
+            Please review the report and decide whether related public docs need updates.
+          labels: automated, documentation, drift

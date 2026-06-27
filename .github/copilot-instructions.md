@@ -2,6 +2,7 @@
 
 > 本文件供 AI 助手（GitHub Copilot、Cursor 等）在新增或修改文档时遵循。
 > This file is the single source of truth for documentation conventions.
+> For source-driven or multi-page documentation work, also use `docs-memory/` as the persistent documentation memory.
 
 ---
 
@@ -55,7 +56,8 @@ src/content/docs/
 ├── community/                  # 6️⃣ 社区（FAQ + 贡献 + 示例）
 │   └── faq/
 ├── examples/                   # 示例（归属 Community 侧边栏）
-└── zh-cn/                      # 🇨🇳 中文镜像（结构 1:1 对应）
+├── zh-cn/                      # 🇨🇳 中文镜像（结构 1:1 对应）
+└── ko/                         # 🇰🇷 韩文镜像（结构 1:1 对应）
 ```
 
 ### 分区职责
@@ -79,13 +81,30 @@ src/content/docs/
 
 ---
 
-## 3. 双语言要求（EN + zh-CN）
+## 3. 多语言要求（EN + zh-CN + ko）
 
 - 英文文档放 `src/content/docs/` 根目录。
 - 中文镜像放 `src/content/docs/zh-cn/`，**目录结构 1:1 完全对应**。
-- **每新增一个英文 `.md`，必须同时新增对应的 `zh-cn/` 翻译文件。**
+- 韩文镜像放 `src/content/docs/ko/`，**目录结构 1:1 完全对应**。
+- **每新增一个英文 `.md`，必须同时新增对应的 `zh-cn/` 和 `ko/` 翻译文件。**
 - 中文 frontmatter 的 `title` 和 `description` 必须翻译为中文。
+- 韩文 frontmatter 的 `title` 和 `description` 必须翻译为韩文。
 - 中文正文使用中文书写；代码块、命令、变量名保持英文不翻译。
+- 韩文正文使用韩文书写；代码块、命令、变量名保持英文不翻译。
+
+## 3.1 文档记忆工作流
+
+当文档修改来自版本发布、源码变更、Issue、PR、外部文章、社区反馈或跨页面梳理时，使用 `docs-memory/`：
+
+1. 将原始材料保存为 `docs-memory/sources/` 下的 source packet。
+2. 编辑前先阅读 `docs-memory/index.md`，定位相关页面和已知缺口。
+3. 修改 `src/content/docs/` 下的公开文档，而不是只生成一次性回答。
+4. 如果新增重要主题、页面族或 source packet，更新 `docs-memory/index.md`。
+5. 在 `docs-memory/log.md` 追加一条日期化记录，说明本次 ingest、query 或 lint pass。
+
+`src/content/docs/` 是发布层；`docs-memory/` 是 AI/维护者用于持续积累上下文的工作台。
+
+`docs-memory/reports/` 下的 drift report 是源码变更审查队列。处理时先阅读 report 中列出的 upstream 文件，再决定是否更新公开文档。
 
 ---
 
@@ -95,7 +114,7 @@ src/content/docs/
 
 ```yaml
 ---
-title: Circuit Breaker          # 页面标题（zh-cn 文件用中文）
+title: Circuit Breaker          # 页面标题（zh-cn 文件用中文，ko 文件用韩文）
 description: Prevent cascading failures with automatic circuit breaking.
 sidebar:
   order: 2                      # 数字越小越靠前
@@ -106,7 +125,7 @@ sidebar:
 
 | 字段 | 必填 | 说明 |
 |------|------|------|
-| `title` | ✅ | 简洁的页面标题。EN 用英文，zh-cn 用中文 |
+| `title` | ✅ | 简洁的页面标题。EN 用英文，zh-cn 用中文，ko 用韩文 |
 | `description` | ✅ | 一句话描述，用于 SEO 和搜索摘要 |
 | `sidebar.order` | ✅ | 决定在侧边栏中的排序位置 |
 | `sidebar.label` | ❌ | 仅当侧边栏显示名需要和 title 不同时使用 |
@@ -117,7 +136,7 @@ sidebar:
 
 ```yaml
 ---
-title: HTTP Guide               # zh-cn: HTTP 指南
+title: HTTP Guide               # zh-cn: HTTP 指南；ko: HTTP 가이드
 description: Build, configure, and extend HTTP services with go-zero.
 sidebar:
   order: 1                      # index 通常 order: 1
@@ -234,21 +253,21 @@ This is a danger warning.
    ```js
    {
      label: 'WebSocket',
-     translations: { 'zh-CN': 'WebSocket' },
+     translations: { 'zh-CN': 'WebSocket', ko: 'WebSocket' },
      autogenerate: { directory: 'guides/websocket' },
    },
    ```
 2. 确保新目录有 `index.md`。
-3. `zh-cn/guides/websocket/` 镜像同步新增。
+3. `zh-cn/guides/websocket/` 和 `ko/guides/websocket/` 镜像同步新增。
 
 ### 翻译标签
 
-每个侧边栏条目都需要 `translations` 字段提供中文标签：
+每个侧边栏条目都需要 `translations` 字段提供中文和韩文标签：
 
 ```js
 {
   label: 'HTTP Service',           // 英文
-  translations: { 'zh-CN': 'HTTP 服务' },  // 中文
+  translations: { 'zh-CN': 'HTTP 服务', ko: 'HTTP 서비스' },
   autogenerate: { directory: 'guides/http' },
 }
 ```
@@ -282,14 +301,16 @@ This is a danger warning.
 在提交前确认以下事项：
 
 - [ ] `npm run build` 无报错
-- [ ] 新增英文文档在 `zh-cn/` 有对应中文翻译
+- [ ] `npm run validate` 无报错
+- [ ] 新增英文文档在 `zh-cn/` 和 `ko/` 有对应翻译
 - [ ] Frontmatter 包含 `title`、`description`、`sidebar.order`
-- [ ] zh-cn 文件的 `title` 和 `description` 已翻译为中文
+- [ ] zh-cn/ko 文件的 `title` 和 `description` 已翻译为对应语言
 - [ ] 内部链接使用相对路径且可正确跳转
 - [ ] 新目录已加入 `astro.config.mjs` 的 sidebar 配置
-- [ ] 新侧边栏条目包含 `translations: { 'zh-CN': '...' }`
+- [ ] 新侧边栏条目包含 `translations: { 'zh-CN': '...', ko: '...' }`
 - [ ] 代码示例完整可运行，语言标注正确
 - [ ] 目录下有 `index.md` 入口文件
+- [ ] Source-driven changes have updated `docs-memory/index.md` and `docs-memory/log.md`
 
 ---
 
@@ -374,10 +395,10 @@ exists := filter.Exists([]byte("key"))
 
 | ❌ 错误做法 | ✅ 正确做法 |
 |-------------|------------|
-| 只写英文不写中文 | EN + zh-cn 同时新增 |
+| 只写英文不写翻译 | EN + zh-cn + ko 同时新增 |
 | 绝对路径 `/docs/guides/http` | 相对路径 `../http/basic.md` |
 | 缺少 frontmatter | 始终包含 title + description + sidebar.order |
 | 目录没有 index.md | 每个目录必须有 index.md |
 | 代码块不标语言 | 始终标注 ` ```go ` / ` ```bash ` 等 |
-| 中文文件用英文 title | zh-cn 的 title/description 必须翻译 |
+| 翻译文件用英文 title | zh-cn/ko 的 title/description 必须翻译 |
 | 新目录不改 sidebar 配置 | 同步更新 `astro.config.mjs` |

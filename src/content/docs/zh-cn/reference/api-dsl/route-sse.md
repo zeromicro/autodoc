@@ -15,7 +15,7 @@ go-zero 现已通过 `@server` 指令中的 `sse: true` 注解支持服务器推
 
 ### SSE 支持
 
-```api
+```text
 syntax = "v1"
 
 type EventMessage {
