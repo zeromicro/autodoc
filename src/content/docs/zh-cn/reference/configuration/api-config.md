@@ -2,7 +2,7 @@
 title: API 服务配置
 description: go-zero HTTP（REST）服务的完整配置参考。
 sidebar:
-  order: 2
+  order: 3
 
 ---
 

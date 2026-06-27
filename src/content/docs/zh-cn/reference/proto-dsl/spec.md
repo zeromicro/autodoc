@@ -17,4 +17,4 @@ sidebar:
 
 ## 链接参考
 
-由于  Protocol Buffers 是 Google 的产物，这里就不重复介绍了，详情请参考<a href="https://developers.google.com/protocol-buffers/docs/gotutorial" target="_blank">《Protocol Buffer》</a> 和 <a href="https://grpc.io/docs/" target="_blank">《gRPC》</a>
+由于  Protocol Buffers 是 Google 的产物，这里就不重复介绍了，详情请参考 [《Protocol Buffer》](https://developers.google.com/protocol-buffers/docs/gotutorial) 和 [《gRPC》](https://grpc.io/docs/)

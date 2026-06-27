@@ -8,7 +8,7 @@
 
 ## Overview
 
-This repository contains the full source of the go-zero documentation site, built with [Astro](https://astro.build/) and the [Starlight](https://starlight.astro.build/) documentation theme. It provides bilingual documentation (English + Simplified Chinese) covering concepts, tutorials, components, API reference, and more.
+This repository contains the full source of the go-zero documentation site, built with [Astro](https://astro.build/) and the [Starlight](https://starlight.astro.build/) documentation theme. It provides multilingual documentation (English + Simplified Chinese + Korean) covering concepts, tutorials, components, API reference, and more.
 
 **Live site:** https://go-zero.dev
 
@@ -56,6 +56,14 @@ npm run build
 
 The static output is generated into the `dist/` directory.
 
+### Validate Docs
+
+```bash
+npm run validate
+```
+
+This checks frontmatter, locale parity, supported code fences, and internal Markdown links.
+
 ### Preview Production Build
 
 ```bash
@@ -90,7 +98,8 @@ autodoc/
 │           ├── components/       # Built-in components (resilience, cache, etc.)
 │           ├── reference/        # goctl CLI, DSL syntax, configuration, releases
 │           ├── community/        # FAQ, contributing, code examples
-│           └── zh-cn/            # Simplified Chinese translations (mirrors above)
+│           ├── zh-cn/            # Simplified Chinese translations (mirrors above)
+│           └── ko/               # Korean translations (mirrors above)
 ├── astro.config.mjs              # Astro + Starlight configuration
 ├── package.json
 └── tsconfig.json
@@ -109,7 +118,7 @@ autodoc/
 | **Reference** | `reference/` | goctl CLI, DSL syntax, configuration reference, release notes |
 | **Community** | `community/` | FAQ, contributing guidelines, code examples |
 
-All sections are available in both **English** (`/`) and **Simplified Chinese** (`/zh-cn/`).
+All sections are available in **English** (`/`), **Simplified Chinese** (`/zh-cn/`), and **Korean** (`/ko/`).
 
 ---
 
@@ -119,7 +128,7 @@ Contributions to improve the documentation are welcome! You can:
 
 - Fix typos or clarify explanations
 - Add missing content or examples
-- Improve Chinese translations
+- Improve Chinese and Korean translations
 - Report issues via [GitHub Issues](https://github.com/zeromicro/autodoc/issues)
 
 ### Making Changes
@@ -140,7 +149,15 @@ Every push to `main` automatically builds and deploys the site to GitHub Pages. 
 
 ### Release Notes Sync (`sync-release.yml`)
 
-Every Monday, a workflow checks for new go-zero releases and opens a pull request with an AI-generated changelog entry. Can also be triggered manually with a specific version tag.
+Every Monday, a workflow checks for new go-zero releases and opens a pull request with an AI-generated changelog entry. Can also be triggered manually with a specific version tag. Existing changelog entries are skipped to avoid repeat PRs.
+
+### Documentation Update Sync (`sync-go-zero-docs.yml`)
+
+Every Monday, a workflow checks the latest `zeromicro/go-zero` release. When a release does not yet have docs, it generates localized release pages, updates release indexes, writes a `docs-memory/sources/` packet with changed files and documentation impact notes, builds the site, and opens a review PR.
+
+### Upstream Drift Check (`check-go-zero-drift.yml`)
+
+Every Tuesday, a workflow compares the latest go-zero release with the upstream default branch and opens a PR with a `docs-memory/reports/` impact report when source changes map to documentation areas. It can also be run manually with explicit `base_ref` and `head_ref` values.
 
 ---
 

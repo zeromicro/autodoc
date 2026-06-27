@@ -8,7 +8,12 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "sync:go-zero-release": "node scripts/sync-go-zero-release.mjs",
+    "check:go-zero-drift": "node scripts/check-go-zero-drift.mjs",
+    "check:docs": "python3 scripts/check_docs.py",
+    "check:links": "python3 scripts/check_links.py",
+    "validate": "npm run check:docs && npm run check:links"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.37.6",

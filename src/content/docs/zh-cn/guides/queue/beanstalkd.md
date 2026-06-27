@@ -11,7 +11,7 @@ sidebar:
 
 关于延时任务，在很多场景也会被使用到，比如订单 20 分钟后未支付自动关闭归还库存等。
 
-<a href="https://github.com/zeromicro/go-queue" target="_blank"> go-queue </a> 除了提供了 kafka 消息队列 kq 之外，也实现了延时队列 dq。目前 go-queue 的延时队列底层是使用的 <a href="https://beanstalkd.github.io/" target="_blank">beanstalkd</a>。
+[go-queue](https://github.com/zeromicro/go-queue) 除了提供了 kafka 消息队列 kq 之外，也实现了延时队列 dq。目前 go-queue 的延时队列底层是使用的 [beanstalkd](https://beanstalkd.github.io/)。
 
 ### Config
 
@@ -192,4 +192,4 @@ func (l *PusherLogic) Consumer() error {
 
 ## 参考文献
 
-1. <a href="https://beanstalkd.github.io/" target="_blank">《beanstalkd 介绍及安装》</a>
+1. [《beanstalkd 介绍及安装》](https://beanstalkd.github.io/)

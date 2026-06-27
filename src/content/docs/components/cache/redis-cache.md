@@ -140,6 +140,32 @@ stats := cache.NewStat("user")
 // when prometheus is configured in app.yaml
 ```
 
+## Generic Redis Commands (`Do`/`DoCtx`) (since v1.10.1)
+
+For Redis commands not covered by the typed helper methods, use `Do`/`DoCtx` to send arbitrary commands:
+
+```go
+import "github.com/zeromicro/go-zero/core/stores/redis"
+
+rdb := redis.MustNewRedis(redis.RedisConf{
+    Host: "127.0.0.1:6379",
+    Type: redis.NodeType,
+})
+
+// Execute any Redis command
+cmd := rdb.Do(ctx, "SET", "key", "value", "EX", 3600)
+if err := cmd.Err(); err != nil {
+    // handle error
+}
+
+// Retrieve result
+val, err := rdb.Do(ctx, "GET", "key").Text()
+```
+
+:::note
+`Do`/`DoCtx` are escape hatches for commands not yet wrapped by the typed API. Prefer the typed methods (e.g. `SetWithExpire`, `Get`) where available — they include metrics, tracing, and consistent error handling.
+:::
+
 ## Best Practices
 
 - Always **delete** the cache key after a database write rather than updating it (cache-aside). This avoids race conditions between the cache write and the DB write.

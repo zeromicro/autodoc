@@ -1,0 +1,78 @@
+---
+title: go-zero 문서
+description: 탄력성과 코드 생성을 내장한 클라우드 네이티브 Go 마이크로서비스 프레임워크
+template: splash
+hero:
+  tagline: 더 적은 코드로, 더 높은 확신을 가지고 탄력적인 Go 마이크로서비스를 구축하세요.
+  image:
+    file: ../../../assets/logo.png
+  actions:
+    - text: 시작하기
+      link: /ko/getting-started/
+      icon: right-arrow
+      variant: primary
+    - text: GitHub에서 보기
+      link: https://github.com/zeromicro/go-zero
+      icon: external
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## 왜 go-zero인가요?
+
+<CardGrid>
+	<Card title="간단한 코드 생성" icon="rocket">
+		`goctl`을 사용해 간단한 정의 파일에서 Go, API, RPC 코드를 생성합니다. 반복 코드는 줄이고 생산성은 높입니다.
+	</Card>
+	<Card title="내장 탄력성" icon="approve-check">
+		서킷 브레이커, 속도 제한, 적응형 부하 차단, 타임아웃 제어가 자동으로 동작합니다. 별도의 추가 설정이 필요하지 않습니다.
+	</Card>
+	<Card title="고성능" icon="star">
+		제로 할당 라우터, 효율적인 직렬화, 최적화된 미들웨어 체인으로 프로덕션 수준의 처리량을 제공합니다.
+	</Card>
+	<Card title="실전 검증" icon="seti:lock">
+		수많은 회사가 프로덕션에서 사용하며 매일 수백만 건의 요청을 처리하고 있습니다.
+	</Card>
+</CardGrid>
+
+## 빠른 예제
+
+```go
+// 정의합니다
+type (
+    LoginReq {
+        Username string `json:"username"`
+        Password string `json:"password"`
+    }
+
+    LoginResp {
+        Token string `json:"token"`
+    }
+)
+
+service user-api {
+    @handler Login
+    post /api/user/login (LoginReq) returns (LoginResp)
+}
+```
+
+그다음 한 줄의 명령으로 필요한 코드를 생성합니다.
+
+```bash
+goctl api go -api user.api -dir .
+```
+
+이것으로 라우팅, 검증, 미들웨어 지원, 오류 처리를 포함한 프로덕션 준비 API 서버가 생성됩니다.
+
+## 시작할 준비가 되셨나요?
+
+<CardGrid>
+	<Card title="소개 읽기" icon="open-book">
+		go-zero가 무엇이고 왜 만들어졌는지 알아봅니다.
+		[소개 →](/ko/getting-started/)
+	</Card>
+	<Card title="5분 빠른 시작" icon="rocket">
+		5분 안에 첫 API를 만들어 봅니다.
+		[첫 API 만들기 →](/ko/guides/quickstart/hello-world/)
+	</Card>
+</CardGrid>

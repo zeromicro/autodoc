@@ -142,5 +142,6 @@ go-zero 自动将 `trace_id` 和 `span_id` 注入结构化日志输出：
 
 ## 延伸阅读
 
+- [追踪组件参考](../../components/observability/tracing/) — 采样策略、后端对比、Jaeger 迁移、自定义 span API
 - [负载均衡](./load-balancing) — 了解请求如何在多实例间分发
 - [架构概览](../../concepts/architecture) — Observability 流水线全貌
