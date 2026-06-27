@@ -54,6 +54,10 @@ defer q.Stop()
 q.Start()
 ```
 
+:::tip
+For a full step-by-step tutorial with producer/consumer setup in a go-zero project, see the [Kafka Queue Guide](../../guides/queue/kafka/).
+:::
+
 ## Error Handling
 
 Returning an error from the handler causes the message to be **retried**. For dead-lettering, write failures to a separate topic:

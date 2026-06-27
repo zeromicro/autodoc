@@ -9,14 +9,7 @@ sidebar:
 
 go-zero integrates **OpenTelemetry** and emits spans for every HTTP request, gRPC call, SQL query, and Redis command automatically — no manual instrumentation needed for the common case.
 
-## Supported Exporters
-
-| `Batcher` value | Exports to |
-|---|---|
-| `otlpgrpc` (default) | Any OTLP endpoint over gRPC (e.g. Jaeger, Grafana Tempo, OpenTelemetry Collector) |
-| `otlphttp` | Any OTLP endpoint over HTTP |
-| `zipkin` | Zipkin |
-| `file` | Local file |
+go-zero supports several trace exporters (`otlpgrpc`, `otlphttp`, `zipkin`, `file`). See [Components > Tracing](../../components/observability/tracing/#backends) for the full backends table, sampling strategies, and migration notes.
 
 :::note
 The `jaeger` batcher was removed in go-zero v1.10.0. Use `otlpgrpc` or `otlphttp` instead — Jaeger 1.35+ natively supports OTLP. See [Migrating from Jaeger Batcher](../../components/observability/tracing/#migrating-from-jaeger-batcher).
@@ -195,19 +188,12 @@ go-zero's structured JSON logger automatically injects `trace_id` and `span_id` 
   "trace_id": "4bf92f3577b34da6a3ce929d0e0e4736",
   "span_id": "00f067aa0ba902b7"
 }
-
-Open `http://localhost:16686` to view traces.
-
-## Custom Spans
-
-```go
-tracer := otel.Tracer("order-service")
-ctx, span := tracer.Start(l.ctx, "validate-inventory")
-defer span.End()
-
-_, err := l.svcCtx.InventoryRpc.CheckStock(ctx, req)
 ```
 
-## Propagation
+In Grafana you can jump from a trace span to the matching log entry using the `trace_id` field.
 
-go-zero propagates the W3C `traceparent` header across HTTP and gRPC boundaries automatically.
+## Further Reading
+
+- [Tracing Component Reference](../../components/observability/tracing/) — sampling strategies, backend comparison, Jaeger migration, custom spans API
+- [Load Balancing](./load-balancing) — how requests are distributed across instances
+- [Architecture Overview](../../concepts/architecture) — observability pipeline overview

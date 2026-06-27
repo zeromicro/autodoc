@@ -98,6 +98,32 @@ err = c.DelCtx(ctx,
 
 go-zero 对每个缓存条目的 TTL 增加 ±10% 的随机抖动，防止大量同类型缓存在同一时刻集中过期导致数据库流量突增。
 
+## 通用 Redis 命令（`Do`/`DoCtx`）（自 v1.10.1 起）
+
+对于类型化帮助方法尚未封装的 Redis 命令，可使用 `Do`/`DoCtx` 执行任意命令：
+
+```go
+import "github.com/zeromicro/go-zero/core/stores/redis"
+
+rdb := redis.MustNewRedis(redis.RedisConf{
+    Host: "127.0.0.1:6379",
+    Type: redis.NodeType,
+})
+
+// 执行任意 Redis 命令
+cmd := rdb.Do(ctx, "SET", "key", "value", "EX", 3600)
+if err := cmd.Err(); err != nil {
+    // 处理错误
+}
+
+// 获取结果
+val, err := rdb.Do(ctx, "GET", "key").Text()
+```
+
+:::note
+`Do`/`DoCtx` 是针对类型化 API 尚未封装的命令的逃生舱口。在有对应封装方法时（如 `SetWithExpire`、`Get`），优先使用类型化方法——它们包含指标采集、链路追踪和统一的错误处理。
+:::
+
 ## 最佳实践
 
 - 写入后**删除缓存**而不是更新缓存，避免并发竞态。

@@ -19,7 +19,6 @@ sidebar:
 package main
 
 import (
-	"go/types"
 	"net/http"
 
 	"github.com/zeromicro/go-zero/rest"
@@ -42,7 +41,7 @@ func main() {
 	httpx.SetErrorHandler(func(err error) (int, any) {
 		switch e := err.(type) {
 		case *errors.CodeMsg:
-			return http.StatusOK, xhttp.BaseResponse[types.Nil]{
+			return http.StatusOK, xhttp.BaseResponse[struct{}]{
 				Code: e.Code,
 				Msg:  e.Msg,
 			}
@@ -98,5 +97,5 @@ $ curl --location '127.0.0.1:8080/hello' \
 ```
 
 :::tip 温馨提示
-这里仅演示 `httpx.SetErrorHandler` 的用法，如需指定 HTTP 统一响应格式请参考 <a href="/guides/http/server/response-ext" target="_blank">《统一响应格式》</a>
+这里仅演示 `httpx.SetErrorHandler` 的用法，如需指定 HTTP 统一响应格式请参考 [《统一响应格式》](/guides/http/server/response-ext)
 :::

@@ -1,0 +1,75 @@
+name: Sync go-zero documentation updates
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'go-zero release tag to sync, for example v1.10.1. Leave empty for latest.'
+        required: false
+        default: ''
+      force:
+        description: 'Regenerate docs even if release pages already exist.'
+        required: false
+        default: 'false'
+  schedule:
+    - cron: '30 2 * * 1'
+  repository_dispatch:
+    types: [go-zero-release]
+
+permissions:
+  contents: write
+  pull-requests: write
+  models: read
+
+jobs:
+  sync-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate release docs and documentation memory packet
+        id: sync
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_TAG: ${{ github.event.inputs.tag || github.event.client_payload.tag || '' }}
+          FORCE_SYNC: ${{ github.event.inputs.force || 'false' }}
+          AI_MODEL: ${{ vars.GO_ZERO_DOCS_AI_MODEL || 'gpt-4o-mini' }}
+        run: node scripts/sync-go-zero-release.mjs
+
+      - name: Build site
+        if: steps.sync.outputs.has_changes == 'true'
+        run: |
+          npm run validate
+          npm run build
+
+      - name: Open pull request
+        if: steps.sync.outputs.has_changes == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: sync/go-zero-docs-${{ steps.sync.outputs.tag }}
+          commit-message: "docs: sync go-zero ${{ steps.sync.outputs.tag }} documentation"
+          title: "docs: sync go-zero ${{ steps.sync.outputs.tag }} documentation"
+          body: |
+            Automated documentation update for go-zero `${{ steps.sync.outputs.tag }}`.
+
+            Source release: ${{ steps.sync.outputs.release_url }}
+
+            This PR updates:
+            - localized release pages
+            - the release index pages
+            - `docs-memory/sources/`
+            - `docs-memory/index.md`
+            - `docs-memory/log.md`
+
+            Please review the generated docs and use the source packet impact report to decide whether related guides, component docs, reference pages, or FAQs also need manual updates.
+          labels: automated, documentation

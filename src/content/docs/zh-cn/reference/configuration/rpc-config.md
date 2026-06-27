@@ -2,7 +2,7 @@
 title: RPC 服务配置
 description: go-zero gRPC（zrpc）服务的完整配置参考。
 sidebar:
-  order: 3
+  order: 4
 
 ---
 

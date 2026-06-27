@@ -9,6 +9,10 @@ sidebar:
 
 go-zero 基于 OpenTelemetry 实现分布式追踪。每个 HTTP 请求、zrpc 调用和 SQL 查询都会自动创建 span——常规链路无需任何手动埋点。
 
+:::tip
+想要动手实操？请参阅 [分布式链路追踪指南](../../guides/microservice/distributed-tracing/)，其中有 Jaeger 的配套教程。
+:::
+
 ## 配置
 
 ```yaml title="etc/app.yaml"

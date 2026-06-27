@@ -52,7 +52,7 @@ type (
 
 | <img width={100} />Name | Note                       | DataType   | Required? | Sample                             |
 | ---------------------------------------- | -------------------------- | ---------- | --------- | ---------------------------------- |
-| RestConf                                 | rest Service Configuration | RestConf   | YES       | See [Basic Service Configuration](../../reference/configuration-guide/service) |
+| RestConf                                 | rest Service Configuration | RestConf   | YES       | See [Basic Service Configuration](../../reference/configuration/service-config) |
 | Upstreams                                | gRPC Service Configuration | []Upstream | YES       |                                    |
 | Timeout                                  | Timeout time               | duration   | NO        | `5s`                               |
 
@@ -311,8 +311,52 @@ $ curl http://localhost:8888/ping
 {"msg":"pong"}%
 ```
 
+## Custom gRPC Client with `WithDialer` (since v1.10.0)
+
+By default, the gateway creates gRPC clients using standard options. Use `WithDialer` to override this — for example, to increase the max message size:
+
+```go
+package main
+
+import (
+    "flag"
+
+    "github.com/zeromicro/go-zero/core/conf"
+    "github.com/zeromicro/go-zero/gateway"
+    "github.com/zeromicro/go-zero/zrpc"
+    "google.golang.org/grpc"
+)
+
+var configFile = flag.String("f", "etc/gateway.yaml", "config file")
+
+func main() {
+    flag.Parse()
+
+    var c gateway.GatewayConf
+    conf.MustLoad(*configFile, &c)
+
+    gw := gateway.MustNewServer(c,
+        gateway.WithDialer(func(conf zrpc.RpcClientConf) zrpc.Client {
+            return zrpc.MustNewClient(conf,
+                zrpc.WithDialOption(grpc.MaxCallRecvMsgSize(50*1024*1024)),
+                zrpc.WithDialOption(grpc.MaxCallSendMsgSize(50*1024*1024)),
+            )
+        }),
+    )
+    defer gw.Stop()
+    gw.Start()
+}
+```
+
+| Use case | Dial option |
+|----------|------------|
+| Increase receive message size | `grpc.MaxCallRecvMsgSize(n)` |
+| Increase send message size | `grpc.MaxCallSendMsgSize(n)` |
+| Custom TLS | `grpc.WithTransportCredentials(creds)` |
+| Keep-alive | `grpc.WithKeepaliveParams(params)` |
+
 ## References
 
 - [go-zero • gateway](https://github.com/zeromicro/go-zero/tree/master/gateway)
-- [Basic Service Configuration](../../reference/configuration-guide/service)
+- [Basic Service Configuration](../../reference/configuration/service-config)
 - [gRPC Server Configuration](../grpc/server/configuration)

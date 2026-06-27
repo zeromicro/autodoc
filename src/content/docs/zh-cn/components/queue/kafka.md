@@ -50,6 +50,10 @@ defer q.Stop()
 q.Start()
 ```
 
+:::tip
+完整的分步教程（在 go-zero 项目中设置生产者/消费者）请参阅 [Kafka 队列指南](../../guides/queue/kafka/)。
+:::
+
 ## 错误处理
 
 从 handler 返回错误会导致消息被**重试**。如需死信处理，可将失败消息写入单独的 topic：

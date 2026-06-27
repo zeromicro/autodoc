@@ -68,13 +68,13 @@ package main
 
 import (
     "fmt"
-    "limit"
 
+    "github.com/zeromicro/go-zero/core/limit"
     "github.com/zeromicro/go-zero/core/stores/redis"
 )
 
 func main() {
-    store := redis.New("localhost:6379")
+    store := redis.MustNewRedis(redis.RedisConf{Host: "localhost:6379"})
     limiter := limit.NewPeriodLimit(60, 10, store, "exampleKey")
 
     result, err := limiter.Take("user1")
@@ -150,13 +150,13 @@ package main
 
 import (
     "fmt"
-    "limit"
 
+    "github.com/zeromicro/go-zero/core/limit"
     "github.com/zeromicro/go-zero/core/stores/redis"
 )
 
 func main() {
-    store := redis.New("localhost:6379")
+    store := redis.MustNewRedis(redis.RedisConf{Host: "localhost:6379"})
     limiter := limit.NewPeriodLimit(86400, 5, store, "sms_limit", limit.Align())
 
     result, err := limiter.Take("user1")

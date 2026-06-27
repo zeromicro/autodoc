@@ -12,3 +12,5 @@ go-zero 集成了主流消息中间件，用于服务之间的异步通信。根
 
 - [Kafka](kafka/) — 基于内置 `kq` 消费者的高吞吐事件流
 - [RabbitMQ](rabbitmq/) — 支持可靠投递的 AMQP 消息队列
+
+分步集成教程请参阅 [消息队列指南](../../guides/queue/)（另含 [Beanstalkd 延迟队列](../../guides/queue/beanstalkd/)）。

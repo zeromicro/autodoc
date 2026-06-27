@@ -12,3 +12,5 @@ go-zero integrates with popular message brokers for asynchronous communication b
 
 - [Kafka](kafka/) — High-throughput event streaming with the built-in `kq` consumer
 - [RabbitMQ](rabbitmq/) — AMQP message queue with reliable delivery
+
+For step-by-step integration tutorials, see [Queue Guide](../../guides/queue/) (also covers [Beanstalkd delay queues](../../guides/queue/beanstalkd/)).

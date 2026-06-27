@@ -24,7 +24,7 @@ go-zero 提供了 gRPC server 能力，其提供了：
 在 go-zero 中，我们可以使用 goctl 来快速生成一个 gRPC 服务，也可以通过 goctl 0 代码生成一个 gRPC 服务示例。
 
 :::tip 温馨提示
-通过 goctl 快速生成并启动一个 gRPC 服务示例可以参考 <a href="/reference/cli-guide/quickstart" target="_blank">《快速开始•微服务篇》</a>
+通过 goctl 快速生成并启动一个 gRPC 服务示例可以参考 [《快速开始•微服务篇》](/reference/cli-guide/quickstart)
 :::
 
 我们这里以一个 proto 来创建一个完整的 gRPC 服务。
@@ -50,9 +50,9 @@ $ goctl rpc protoc greet.proto --go_out=.  --go-grpc_out=.  --zrpc_out=.
 
 :::tip 温馨提示
 
-1. goctl 安装请参考 <a href="/getting-started/installation/goctl" target="_blank">《goctl 安装》</a>
-1. rpc 代码生成指令教程请参考 <a href="/reference/cli-guide/rpc" target="_blank">《goctl rpc》</a>
-1. proto 使用相关问题请参考 <a href="/reference/proto-dsl/faq" target="_blank">《proto 代码生成常见问题》</a>
+1. goctl 安装请参考 [《goctl 安装》](/getting-started/installation/goctl)
+1. rpc 代码生成指令教程请参考 [《goctl rpc》](/reference/cli-guide/rpc)
+1. proto 使用相关问题请参考 [《proto 代码生成常见问题》](/reference/proto-dsl/faq)
 :::
 
 ### 4. 参考目录结构
@@ -84,7 +84,7 @@ demo
 ```
 
 :::tip 温馨提示
-服务目录结构介绍请参考 <a href="/concepts/project-structure" target="_blank">《项目结构》</a>
+服务目录结构介绍请参考 [《项目结构》](/concepts/project-structure)
 :::
 
 ### 5. 服务发现/直连模式
@@ -92,15 +92,14 @@ demo
 在 go-zero 中，支持 etcd 服务注册和直连模式，我们仅对 etc 目录下的静态配置文件稍作调整即可。
 
 :::tip 温馨提示
-gRPC 服务配置可参考 <a href="/guides/grpc/server/configuration" target="_blank">《gRPC 服务配置》 </a>
+gRPC 服务配置可参考 [《gRPC 服务配置》](/guides/grpc/server/configuration)
 
 除了 go-zero rpc 内置的 ectd 作为服务注册组件外，社区还提供了对 nacos,consul
-等的服注册支持，详情可参考 <a href="https://github.com/zeromicro/zero-contrib/tree/main/zrpc/registry" target="_blank">
-更多服务注册组件</a>
+等的服注册支持，详情可参考 [更多服务注册组件](https://github.com/zeromicro/zero-contrib/tree/main/zrpc/registry)
 :::
 
 **etcd 服务注册**
-使用 <a href="https://etcd.io/" target="_blank">etcd </a>作为注册中心，只需要在静态配置文件中添加 etcd 配置即可，最简参考配置如下(灰色底纹部分)：
+使用 [etcd](https://etcd.io/) 作为注册中心，只需要在静态配置文件中添加 etcd 配置即可，最简参考配置如下(灰色底纹部分)：
 
 ```yaml title=demo/etc/greet.yaml {3-6}
 Name: greet.rpc
@@ -206,7 +205,7 @@ func (l *PingLogic) Ping(in *greet.Request) (*greet.Response, error) {
 
 ### 8. 开启 gRPC 调试开关
 
-gRPC 提供了调试功能，以便于我们可以通过 <a href="https://github.com/fullstorydev/grpcurl" target="_blank">grpcurl</a> 等工具进行调试，
+gRPC 提供了调试功能，以便于我们可以通过 [grpcurl](https://github.com/fullstorydev/grpcurl) 等工具进行调试，
 在 go-zero，建议在开发环境和测试环境开启，预生产环境和正式环境建议关闭，因此我们在静态配置文件中将环境模式配置为 `dev` 或者 `test` 时才会开启（默认为 dev 环境），相关代码如下：
 
 **demo/greet.go**
@@ -248,7 +247,7 @@ Etcd:
 
 #### 内置中间件
 
-go-zero rpc 内置了非常丰富的中间件，详情可查看<a href="https://github.com/zeromicro/go-zero/tree/master/zrpc/internal/serverinterceptors" target="_blank">serverinterceptors</a>
+go-zero rpc 内置了非常丰富的中间件，详情可查看 [serverinterceptors](https://github.com/zeromicro/go-zero/tree/master/zrpc/internal/serverinterceptors)
 
 - 鉴权中间件：StreamAuthorizeInterceptor|UnaryAuthorizeInterceptor
 - 熔断中间件：StreamBreakerInterceptor|UnaryBreakerInterceptor
@@ -260,7 +259,7 @@ go-zero rpc 内置了非常丰富的中间件，详情可查看<a href="https://
 - 链路追踪中间件：StreamTraceInterceptor|UnaryTraceInterceptor
 
 在以上内置中间件中，链路追踪中间件、指标统计中间件、时长统计中间件、异常捕获中间件、熔断中间件可以通过配置来开启或关闭，其他中间件默认开启。
-具体配置可参考<a href="/guides/grpc/server/configuration" target="_blank">服务配置</a>
+具体配置可参考 [服务配置](/guides/grpc/server/configuration)
 
 #### 自定义中间件
 
@@ -304,4 +303,4 @@ func exampleStreamInterceptor(srv interface{}, ss grpc.ServerStream, info *grpc.
 
 ### 10. metadata 传值
 
-参考 <a href="https://github.com/grpc/grpc-go/blob/master/Documentation/grpc-metadata.md" target="_blank">《Metadata》</a>
+参考 [《Metadata》](https://github.com/grpc/grpc-go/blob/master/Documentation/grpc-metadata.md)

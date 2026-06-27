@@ -8,7 +8,7 @@ sidebar:
 
 ## 概述
 
-goctl 采用了 <a href="https://github.com/spf13/cobra" target="_blank"> Cobra </a> 框架开发，因此其继承了 Cobra 的自动补全功能，在 goctl 中，我们提供了 `bash`、`fish`、`zsh`、`powershell` 的自动补全功能。
+goctl 采用了 [Cobra](https://github.com/spf13/cobra) 框架开发，因此其继承了 Cobra 的自动补全功能，在 goctl 中，我们提供了 `bash`、`fish`、`zsh`、`powershell` 的自动补全功能。
 
 ## goctl completion 指令
 

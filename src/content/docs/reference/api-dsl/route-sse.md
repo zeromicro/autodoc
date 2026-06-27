@@ -15,7 +15,7 @@ go-zero now supports Server-Sent Events (SSE) through the `sse: true` annotation
 
 ### SSE Support
 
-```api
+```text
 syntax = "v1"
 
 type EventMessage {

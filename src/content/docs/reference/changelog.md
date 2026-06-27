@@ -5,6 +5,10 @@ sidebar:
   order: 6
 
 ---
+## v1.10.1 – 2026-04-06
+
+null
+
 
 Detailed release notes for every go-zero version are available in the [Release Notes](../releases/) section.
 
@@ -14,6 +18,7 @@ For the full history see the [GitHub releases page](https://github.com/zeromicro
 
 | Version | Date | Highlights |
 |---------|------|------------|
+| [v1.10.1](../releases/v1.10.1) | 2026-03-28 | JSON5 config, Redis `Do`/`DoCtx`, Go 1.24, security fixes |
 | [v1.10.0](../releases/v1.10.0) | 2026-02-15 | MCP support, gateway enhancements, SSE improvements |
 | [v1.9.4](../releases/v1.9.4) | 2025-12-24 | K8s EndpointSlice, Redis GETEX, etcd retry cooldown |
 | [v1.9.3](../releases/v1.9.3) | 2025-11-16 | Consistent hash balancer, gateway trace header fix |
@@ -26,4 +31,4 @@ For the full history see the [GitHub releases page](https://github.com/zeromicro
 | [v1.6.0](../releases/v1.6.0) | 2023-10-28 | Endpoints config, Prometheus rename, breaker refactor |
 | [v1.5.0](../releases/v1.5.0) | 2023-03-04 | OpenTelemetry replaces OpenTracing/Jaeger |
 
-See [all 45 releases →](../releases/)
+See [all 46 releases →](../releases/)
