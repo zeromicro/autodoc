@@ -2,6 +2,12 @@
 
 Append entries in reverse chronological order.
 
+## [2026-06-29] ingest | go-zero v1.10.2 release
+
+- Captured upstream release notes and changed files for v1.10.2.
+- Generated English, Simplified Chinese, and Korean release pages.
+- Added a source packet for future cross-page documentation maintenance.
+
 ## [2026-06-27] setup | upstream drift reporting
 
 - Added deterministic mapping from upstream `zeromicro/go-zero` source paths to documentation areas.
