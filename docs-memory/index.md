@@ -18,6 +18,8 @@ This is the compact navigation map for agent-assisted documentation work. Keep i
 
 No source packets have been ingested yet.
 
+- [Latest upstream drift report](reports/v1.10.2...master.md) - mapped go-zero source changes to documentation areas.
+
 ## Known Maintenance Themes
 
 - Keep README and AI writing instructions aligned with the actual three-locale site: English, Simplified Chinese, and Korean.

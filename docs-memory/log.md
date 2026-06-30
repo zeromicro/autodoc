@@ -2,6 +2,12 @@
 
 Append entries in reverse chronological order.
 
+## [2026-06-30] lint | go-zero upstream drift v1.10.2...master
+
+- Generated `docs-memory/reports/v1.10.2...master.md`.
+- Matched 6 documentation ownership area(s).
+- Review the report before editing public docs.
+
 ## [2026-06-27] setup | upstream drift reporting
 
 - Added deterministic mapping from upstream `zeromicro/go-zero` source paths to documentation areas.
