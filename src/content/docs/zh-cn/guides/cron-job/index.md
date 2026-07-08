@@ -2,8 +2,7 @@
 title: 定时任务
 description: 在 Kubernetes 上使用 go-zero 运行定时任务。
 sidebar:
-  order: 20
-
+  order: 0
 ---
 
 ## 概览

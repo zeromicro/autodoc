@@ -2,8 +2,7 @@
 title: 큐 가이드
 description: go-zero의 큐 가이드에 대해 설명합니다.
 sidebar:
-  order: 16
-
+  order: 0
 ---
 
 ## 개요

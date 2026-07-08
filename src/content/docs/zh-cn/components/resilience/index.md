@@ -2,8 +2,7 @@
 title: 服务韧性组件
 description: go-zero 容错组件：熔断器、限流器、超时控制、负载削减。
 sidebar:
-  order: 9
-
+  order: 0
 ---
 
 ## 内容

@@ -2,8 +2,7 @@
 title: Concurrency
 description: Concurrency primitives and parallel processing utilities in go-zero.
 sidebar:
-  order: 5
-
+  order: 0
 ---
 
 ## Contents

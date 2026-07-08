@@ -2,8 +2,7 @@
 title: gRPC 가이드
 description: go-zero의 gRPC 가이드에 대해 설명합니다.
 sidebar:
-  order: 3
-
+  order: 0
 ---
 
 ## 개요

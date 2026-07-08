@@ -2,8 +2,7 @@
 title: Observability Components
 description: Logging, metrics, and tracing components for go-zero.
 sidebar:
-  order: 7
-
+  order: 0
 ---
 
 ## Contents

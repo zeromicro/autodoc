@@ -2,8 +2,7 @@
 title: Queue Guide
 description: Use message queues and delay queues in go-zero services.
 sidebar:
-  order: 16
-
+  order: 0
 ---
 
 ## Overview

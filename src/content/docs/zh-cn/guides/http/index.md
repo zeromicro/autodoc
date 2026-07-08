@@ -2,8 +2,7 @@
 title: HTTP 指南
 description: 使用 go-zero 构建、配置和扩展 HTTP 服务。
 sidebar:
-  order: 2
-
+  order: 0
 ---
 
 ## 概览

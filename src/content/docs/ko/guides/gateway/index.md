@@ -2,8 +2,7 @@
 title: API Gateway 가이드
 description: go-zero 내장 API Gateway로 HTTP와 gRPC 트래픽을 프록시하는 방법입니다.
 sidebar:
-  order: 8
-
+  order: 0
 ---
 
 ## 개요

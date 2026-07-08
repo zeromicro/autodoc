@@ -2,8 +2,7 @@
 title: MCP 指南
 description: 使用 go-zero 构建 MCP (Model Context Protocol) 服务端。
 sidebar:
-  order: 21
-
+  order: 0
 ---
 
 ## 概览

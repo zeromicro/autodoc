@@ -2,8 +2,7 @@
 title: Deployment 가이드
 description: go-zero의 Deployment 가이드에 대해 설명합니다.
 sidebar:
-  order: 19
-
+  order: 0
 ---
 
 ## 개요

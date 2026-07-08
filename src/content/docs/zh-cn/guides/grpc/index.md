@@ -2,8 +2,7 @@
 title: gRPC 指南
 description: 使用 go-zero 构建、配置和扩展 gRPC 服务。
 sidebar:
-  order: 3
-
+  order: 0
 ---
 
 ## 概览

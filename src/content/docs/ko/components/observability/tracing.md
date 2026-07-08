@@ -10,7 +10,7 @@ sidebar:
 go-zero는 분산 추적에 OpenTelemetry를 사용합니다. 들어오는 HTTP 요청, 나가는 zrpc 호출, SQL query마다 span이 자동으로 생성되므로 일반적인 경로에서는 별도의 instrumentation 코드가 필요하지 않습니다.
 
 :::tip
-실습형 튜토리얼이 필요하다면 [분산 추적 가이드](../../guides/microservice/distributed-tracing/)에서 Jaeger 기반 단계별 안내를 확인하세요.
+실습형 튜토리얼이 필요하다면 [분산 추적 가이드](/ko/guides/microservice/distributed-tracing/)에서 Jaeger 기반 단계별 안내를 확인하세요.
 :::
 
 ## 설정

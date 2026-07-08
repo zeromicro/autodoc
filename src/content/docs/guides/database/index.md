@@ -2,8 +2,7 @@
 title: Database Guide
 description: Connect go-zero services to MongoDB, MySQL, and Redis.
 sidebar:
-  order: 15
-
+  order: 0
 ---
 
 ## Overview

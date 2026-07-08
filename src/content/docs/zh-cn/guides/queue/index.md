@@ -2,8 +2,7 @@
 title: 消息队列指南
 description: 在 go-zero 服务中使用消息队列和延迟队列。
 sidebar:
-  order: 16
-
+  order: 0
 ---
 
 ## 概览

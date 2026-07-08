@@ -2,8 +2,7 @@
 title: 로그 컴포넌트
 description: go-zero의 구조화 로깅과 컨텍스트 기반 로깅 기능입니다.
 sidebar:
-  order: 6
-
+  order: 0
 ---
 
 

@@ -2,8 +2,7 @@
 title: 동시성
 description: go-zero의 동시성에 대해 설명합니다.
 sidebar:
-  order: 5
-
+  order: 0
 ---
 
 ## 목차

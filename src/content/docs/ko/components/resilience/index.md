@@ -2,8 +2,7 @@
 title: 탄력성 컴포넌트
 description: 장애 전파를 줄이고 과부하를 제어하는 go-zero 탄력성 컴포넌트입니다.
 sidebar:
-  order: 9
-
+  order: 0
 ---
 
 ## 목차

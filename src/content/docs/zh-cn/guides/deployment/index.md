@@ -2,8 +2,7 @@
 title: 部署指南
 description: 使用 Docker 或 Kubernetes 部署 go-zero 服务。
 sidebar:
-  order: 19
-
+  order: 0
 ---
 
 ## 概览

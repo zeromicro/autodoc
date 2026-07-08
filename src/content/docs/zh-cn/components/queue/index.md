@@ -2,8 +2,7 @@
 title: 队列组件
 description: go-zero 消息队列组件。
 sidebar:
-  order: 8
-
+  order: 0
 ---
 
 go-zero 集成了主流消息中间件，用于服务之间的异步通信。根据吞吐量、消息顺序和投递保证需求选择合适的队列。

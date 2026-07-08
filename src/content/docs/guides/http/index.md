@@ -2,8 +2,7 @@
 title: HTTP Guide
 description: Build, configure, and extend HTTP services with go-zero.
 sidebar:
-  order: 2
-
+  order: 0
 ---
 
 ## Overview

@@ -2,8 +2,7 @@
 title: Cron Jobs
 description: Run scheduled tasks with go-zero on Kubernetes.
 sidebar:
-  order: 20
-
+  order: 0
 ---
 
 ## Overview

@@ -2,8 +2,7 @@
 title: 데이터베이스 가이드
 description: go-zero의 데이터베이스 가이드에 대해 설명합니다.
 sidebar:
-  order: 15
-
+  order: 0
 ---
 
 ## 개요

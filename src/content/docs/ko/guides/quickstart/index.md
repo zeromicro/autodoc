@@ -2,7 +2,7 @@
 title: 빠른 시작
 description: 5분 안에 첫 go-zero 서비스를 만들어 봅니다.
 sidebar:
-  order: 1
+  order: 0
 ---
 
 ## 튜토리얼

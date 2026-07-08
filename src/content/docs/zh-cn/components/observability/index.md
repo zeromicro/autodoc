@@ -2,8 +2,7 @@
 title: 可观测性组件
 description: go-zero 可观测性组件：日志、指标、链路追踪。
 sidebar:
-  order: 7
-
+  order: 0
 ---
 
 ## 内容

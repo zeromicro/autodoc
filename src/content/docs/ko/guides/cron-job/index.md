@@ -2,8 +2,7 @@
 title: Cron 작업
 description: go-zero의 Cron 작업에 대해 설명합니다.
 sidebar:
-  order: 20
-
+  order: 0
 ---
 
 ## 개요

@@ -2,8 +2,7 @@
 title: Microservice Guide
 description: Implement microservice patterns with go-zero — service discovery, load balancing, and distributed tracing.
 sidebar:
-  order: 10
-
+  order: 0
 ---
 
 ## Overview

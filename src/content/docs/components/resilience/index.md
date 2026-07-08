@@ -2,8 +2,7 @@
 title: Resilience Components
 description: "Fault tolerance components for go-zero: circuit breaker, rate limiter, timeout, load shedding."
 sidebar:
-  order: 9
-
+  order: 0
 ---
 
 ## Contents

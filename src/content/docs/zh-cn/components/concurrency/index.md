@@ -2,8 +2,7 @@
 title: 并发工具
 description: go-zero 并发原语与并行处理工具。
 sidebar:
-  order: 5
-
+  order: 0
 ---
 
 ## 内容

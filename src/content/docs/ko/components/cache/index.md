@@ -2,8 +2,7 @@
 title: 캐시 컴포넌트
 description: go-zero의 메모리 캐시와 Redis 캐시 사용법입니다.
 sidebar:
-  order: 4
-
+  order: 0
 ---
 
 

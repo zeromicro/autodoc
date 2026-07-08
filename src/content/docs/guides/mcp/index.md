@@ -2,8 +2,7 @@
 title: MCP Guide
 description: Build Model Context Protocol (MCP) servers with go-zero.
 sidebar:
-  order: 21
-
+  order: 0
 ---
 
 ## Overview

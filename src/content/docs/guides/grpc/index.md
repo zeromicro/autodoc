@@ -2,8 +2,7 @@
 title: gRPC Guide
 description: Build, configure, and extend gRPC services with go-zero.
 sidebar:
-  order: 3
-
+  order: 0
 ---
 
 ## Overview

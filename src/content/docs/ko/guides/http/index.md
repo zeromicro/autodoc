@@ -2,8 +2,7 @@
 title: HTTP 가이드
 description: go-zero로 HTTP 서비스를 만들고, 설정하고, 확장하는 방법입니다.
 sidebar:
-  order: 2
-
+  order: 0
 ---
 
 ## 개요
