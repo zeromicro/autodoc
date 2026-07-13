@@ -16,7 +16,7 @@ This is the compact navigation map for agent-assisted documentation work. Keep i
 
 ## Source Packets
 
-No source packets have been ingested yet.
+- [go-zero v1.10.2 release](sources/go-zero-v1.10.2.md) - release source packet and documentation impact report.
 
 ## Known Maintenance Themes
 
