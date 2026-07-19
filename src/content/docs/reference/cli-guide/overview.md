@@ -14,4 +14,4 @@ goctl read as go control [Spectrum oxig universitaire unifier gigelle], whose ma
 
 ## goctl directive overview
 
-![goctl](/resour../reference/cli-guide/goctl.png)
+![goctl](/resource/tutorials/cli/goctl.png)

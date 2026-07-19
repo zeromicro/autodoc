@@ -42,7 +42,7 @@ info (
 )
 ```
 
-![swagger info](/resour../reference/cli-guide/info_basic.png)
+![swagger info](/resource/tutorials/cli/info_basic.png)
 
 ### Terms of Service and Contact Information
 
@@ -67,7 +67,7 @@ info (
 )
 ```
 
-![swagger info](/resour../reference/cli-guide/info_contact.png)
+![swagger info](/resource/tutorials/cli/info_contact.png)
 
 ### Protocol and Host Configuration
 
@@ -113,7 +113,7 @@ service Swagger {
 }
 ```
 
-![swagger info](/resour../reference/cli-guide/biz_code.png)
+![swagger info](/resource/tutorials/cli/biz_code.png)
 
 ### Code-Message Format Generation
 
@@ -136,7 +136,7 @@ Generated code-message format example:
 }
 ```
 
-![swagger info](/resour../reference/cli-guide/code_msg.png)
+![swagger info](/resource/tutorials/cli/code_msg.png)
 
 ### Custom Authentication Types
 
@@ -156,9 +156,9 @@ service Swagger {
 }
 ```
 
-![swagger info](/resour../reference/cli-guide/auth_type_definition.png)
+![swagger info](/resource/tutorials/cli/auth_type_definition.png)
 
-![swagger info](/resour../reference/cli-guide/auth_type_check.png)
+![swagger info](/resource/tutorials/cli/auth_type_check.png)
 
 ### Tags Grouping
 
@@ -184,7 +184,7 @@ service Swagger {
 
 The above routes /user/login and /user/info will be grouped under the User Operations tag in Swagger.
 
-![swagger info](/resour../reference/cli-guide/tags.png)
+![swagger info](/resource/tutorials/cli/tags.png)
 
 ### Response Body Example Display
 
@@ -197,7 +197,7 @@ type UserInfoResp {
 }
 ```
 
-![swagger info](/resour../reference/cli-guide/example.png)
+![swagger info](/resource/tutorials/cli/example.png)
 
 ### Parameter Control
 
@@ -217,7 +217,7 @@ type DemoReq {
 }
 ```
 
-![swagger info](/resour../reference/cli-guide/parameter.png)
+![swagger info](/resource/tutorials/cli/parameter.png)
 
 ### Rich Structure Types
 
@@ -242,7 +242,7 @@ type ComplexJsonReq {
 }
 ```
 
-![swagger info](/resour../reference/cli-guide/complex.png)
+![swagger info](/resource/tutorials/cli/complex.png)
 
 ### Path Parameters
 
@@ -267,4 +267,4 @@ service Swagger {
 }
 ```
 
-![swagger info](/resour../reference/cli-guide/path_parameter.png)
+![swagger info](/resource/tutorials/cli/path_parameter.png)

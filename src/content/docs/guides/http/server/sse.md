@@ -274,17 +274,11 @@ The similar routes are declared as follows, and the handler and logic difference
 
 **handler diff**
 
-<Image
-src={require('../../../resour../guides/http/sse_http_handler_diff.png').default}
-alt='goctl'
-/>
+![goctl handler diff](/resource/tutorials/http/sse_http_handler_diff.png)
 
 **logic diff**
 
-<Image
-src={require('../../../resour../guides/http/sse_http_logic_diff.png').default}
-alt='goctl'
-/>
+![goctl logic diff](/resource/tutorials/http/sse_http_logic_diff.png)
 
 
 ## Why go-zero?

@@ -30,7 +30,7 @@ ASSET_EXTS = {
     ".zip",
 }
 
-LINK_RE = re.compile(r"(?<!!)\[[^\]]+\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
+LINK_RE = re.compile(r"!?\[[^\]]+\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
 REF_RE = re.compile(r"^\s*\[[^\]]+\]:\s*(\S+)", re.MULTILINE)
 HTML_LINK_RE = re.compile(r"""(?:href|src)=["']([^"']+)["']""")
 FENCE_RE = re.compile(r"(^|\n)[ \t]*(`{3,}|~{3,})[^\n]*\n.*?(?:\n[ \t]*\2)(?=\n|$)", re.DOTALL)

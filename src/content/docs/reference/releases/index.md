@@ -12,6 +12,7 @@ For the full history see the [GitHub releases page](https://github.com/zeromicro
 
 ## v1.10.x
 
+- [v1.10.2](v1.10.2/) — 2026-05-31
 - [v1.10.1](v1.10.1/) — 2026-03-28
 - [v1.10.0](v1.10.0/) — 2026-02-15
 

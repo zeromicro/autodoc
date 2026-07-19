@@ -18,8 +18,8 @@ goctl api 提供了 plugin 命令来支持对 api 进行功能扩展，当 goctl
 - [goctl-go-compact](https://github.com/zeromicro/goctl-go-compact)
   goctl 默认的一个路由一个文件合并成一个文件
 
-- [goctl-swagger](https://github.com/zeromicro/goctl-swagger)
-  通过 api 文件生成 swagger 文档
+- [goctl api swagger](./cli-guide/swagger.md)
+  根据 API 文件生成 Swagger/OpenAPI 文档
 
 - [goctl-php](https://github.com/zeromicro/goctl-php)
   goctl-php 是一款基于 goctl 的插件，用于生成 php 调用端（服务端） http server 请求代码

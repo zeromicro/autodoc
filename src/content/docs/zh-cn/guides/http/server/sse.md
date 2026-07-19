@@ -300,11 +300,11 @@ sse 的 handler 和 logic 模板与普通的 http 接口服务的 handler 模板
 
 **handler diff**
 
-![goctl](/resour../guides/http/sse_http_handler_diff.png)
+![goctl handler diff](/resource/tutorials/http/sse_http_handler_diff.png)
 
 **logic diff**
 
-![goctl](/resour../guides/http/sse_http_logic_diff.png)
+![goctl logic diff](/resource/tutorials/http/sse_http_logic_diff.png)
 
 ## 总结
 

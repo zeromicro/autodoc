@@ -2,6 +2,18 @@
 
 Append entries in reverse chronological order.
 
+## [2026-07-19] remediation | go-zero issue #5672
+
+- Ingested the issue report and mapped every screenshot to the affected documentation.
+- Corrected malformed asset paths, added legacy CLI route redirects, moved guide indexes before their child pages, and replaced the deprecated Swagger plugin listing.
+- Added the v1.10.2 release notes and synchronized release indexes and changelogs in all locales.
+
+## [2026-07-13] ingest | go-zero v1.10.2 release
+
+- Captured upstream release notes and changed files for v1.10.2.
+- Generated English, Simplified Chinese, and Korean release pages.
+- Added a source packet for future cross-page documentation maintenance.
+
 ## [2026-06-27] setup | upstream drift reporting
 
 - Added deterministic mapping from upstream `zeromicro/go-zero` source paths to documentation areas.

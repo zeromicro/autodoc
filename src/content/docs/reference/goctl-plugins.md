@@ -14,5 +14,5 @@ goctl api provides plugins to support the api functionality extension, if goctl 
 ## Plugin Resources
 
 - [goctl-go-contract](https://github.com/zeromicro/goctl-go-compact) goctl defaults one router file merged into one file
-- [goctl-swagger](https://github.com/zeromicro/goctl-swagger) Generates swagger documents via api file
+- [goctl api swagger](./cli-guide/swagger.md) Generates Swagger/OpenAPI documents from API files
 - [goctl-php](https://github.com/zeromicro/goctl-php) goctl-php is a goctl-php plugin that generates php call end/server request code

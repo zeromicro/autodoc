@@ -2,7 +2,7 @@
 title: Deployment Guide
 description: Deploy go-zero services with Docker or Kubernetes.
 sidebar:
-  order: 19
+  order: 0
 
 ---
 

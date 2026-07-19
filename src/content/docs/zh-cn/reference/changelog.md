@@ -6,6 +6,11 @@ sidebar:
 
 ---
 
+## v1.10.2 – 2026-05-31
+
+- 为 MCP 工具处理程序增加 HTTP 请求元数据提取能力。
+- 修复 Go 1.26 的 etcd 服务发现目标 URL 以及重复 watch 事件导致的内存增长问题。
+
 每个 go-zero 版本的详细发布说明请查看[版本记录](../releases/)。
 
 完整历史请查看 [GitHub Releases 页面](https://github.com/zeromicro/go-zero/releases)。
@@ -14,6 +19,7 @@ sidebar:
 
 | 版本 | 日期 | 亠点 |
 |------|------|------|
+| [v1.10.2](../releases/v1.10.2) | 2026-05-31 | MCP 请求元数据、Go 1.26 etcd 服务发现修复 |
 | [v1.10.1](../releases/v1.10.1) | 2026-03-28 | JSON5 配置、Redis `Do`/`DoCtx`、Go 1.24、安全修复 |
 | [v1.10.0](../releases/v1.10.0) | 2026-02-15 | MCP 支持、网关增强、SSE 改进 |
 | [v1.9.4](../releases/v1.9.4) | 2025-12-24 | K8s EndpointSlice、Redis GETEX、etcd 重试冷却 |

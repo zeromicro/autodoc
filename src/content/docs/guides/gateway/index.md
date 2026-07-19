@@ -2,7 +2,7 @@
 title: API Gateway Guide
 description: Use go-zero's built-in API gateway to proxy HTTP and gRPC traffic.
 sidebar:
-  order: 8
+  order: 0
 
 ---
 

@@ -5,6 +5,11 @@ sidebar:
   order: 6
 
 ---
+## v1.10.2 – 2026-05-31
+
+- Added MCP HTTP request metadata extraction for tool handlers.
+- Fixed etcd discovery target URLs for Go 1.26 and duplicate watch-event memory growth.
+
 ## v1.10.1 – 2026-04-06
 
 null
@@ -18,6 +23,7 @@ For the full history see the [GitHub releases page](https://github.com/zeromicro
 
 | Version | Date | Highlights |
 |---------|------|------------|
+| [v1.10.2](../releases/v1.10.2) | 2026-05-31 | MCP request metadata, Go 1.26 etcd discovery fixes |
 | [v1.10.1](../releases/v1.10.1) | 2026-03-28 | JSON5 config, Redis `Do`/`DoCtx`, Go 1.24, security fixes |
 | [v1.10.0](../releases/v1.10.0) | 2026-02-15 | MCP support, gateway enhancements, SSE improvements |
 | [v1.9.4](../releases/v1.9.4) | 2025-12-24 | K8s EndpointSlice, Redis GETEX, etcd retry cooldown |

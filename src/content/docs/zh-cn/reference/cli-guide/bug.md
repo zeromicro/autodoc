@@ -58,7 +58,7 @@ A link on play.golang.org is best.
 
 ```
 
-![github issue template](/resour../reference/cli-guide/github-issue.png)
+![github issue template](/resource/tutorials/cli/github-issue.png)
 
 ----
 

@@ -43,7 +43,7 @@ info (
 )
 ```
 
-![swagger info](/resour../reference/cli-guide/info_basic.png)
+![swagger info](/resource/tutorials/cli/info_basic.png)
 
 ### 服务条款与联系人
 
@@ -69,7 +69,7 @@ info (
 )
 ```
 
-![swagger info](/resour../reference/cli-guide/info_contact.png)
+![swagger info](/resource/tutorials/cli/info_contact.png)
 
 ### 协议与主机配置
 
@@ -110,7 +110,7 @@ service Swagger {
 }
 ```
 
-![swagger info](/resour../reference/cli-guide/biz_code.png)
+![swagger info](/resource/tutorials/cli/biz_code.png)
 
 ### code-msg 格式生成
 
@@ -133,7 +133,7 @@ info (
 }
 ```
 
-![swagger info](/resour../reference/cli-guide/code_msg.png)
+![swagger info](/resource/tutorials/cli/code_msg.png)
 
 ### 自定义鉴权类型
 
@@ -154,9 +154,9 @@ service Swagger {
 }
 ```
 
-![swagger info](/resour../reference/cli-guide/auth_type_definition.png)
+![swagger info](/resource/tutorials/cli/auth_type_definition.png)
 
-![swagger info](/resour../reference/cli-guide/auth_type_check.png)
+![swagger info](/resource/tutorials/cli/auth_type_check.png)
 
 ### tags 分组
 
@@ -182,7 +182,7 @@ service Swagger {
 
 以上路由 `/user/login` 和 `/user/info`  都会被放在 swagger 的 `用户操作` 分组下。
 
-![swagger info](/resour../reference/cli-guide/tags.png)
+![swagger info](/resource/tutorials/cli/tags.png)
 
 ### 响应体示例展示
 
@@ -195,7 +195,7 @@ type UserInfoResp {
 }
 ```
 
-![swagger info](/resour../reference/cli-guide/example.png)
+![swagger info](/resource/tutorials/cli/example.png)
 
 ### 参数控制
 
@@ -215,7 +215,7 @@ type  DemoReq {
 }
 ```
 
-![swagger info](/resour../reference/cli-guide/parameter.png)
+![swagger info](/resource/tutorials/cli/parameter.png)
 
 ### 丰富的结构体类型
 
@@ -240,7 +240,7 @@ type ComplexJsonReq {
 }
 ```
 
-![swagger info](/resour../reference/cli-guide/complex.png)
+![swagger info](/resource/tutorials/cli/complex.png)
 
 ### path 参数
 
@@ -265,7 +265,7 @@ service Swagger {
 }
 ```
 
-![swagger info](/resour../reference/cli-guide/path_parameter.png)
+![swagger info](/resource/tutorials/cli/path_parameter.png)
 
 ### 生成 definitions 格式
 
@@ -283,4 +283,4 @@ info(
 ...
 ```
 
-![swagger info](/resour../reference/cli-guide/definitions.png)
+![swagger info](/resource/tutorials/cli/definitions.png)
