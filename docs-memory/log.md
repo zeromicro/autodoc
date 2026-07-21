@@ -2,6 +2,12 @@
 
 Append entries in reverse chronological order.
 
+## [2026-07-21] lint | go-zero upstream drift v1.10.2...master
+
+- Generated `docs-memory/reports/v1.10.2...master.md`.
+- Matched 6 documentation ownership area(s).
+- Review the report before editing public docs.
+
 ## [2026-07-19] remediation | go-zero issue #5672
 
 - Ingested the issue report and mapped every screenshot to the affected documentation.
