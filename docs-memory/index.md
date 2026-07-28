@@ -19,6 +19,8 @@ This is the compact navigation map for agent-assisted documentation work. Keep i
 - [go-zero v1.10.2 release](sources/go-zero-v1.10.2.md) - release source packet and documentation impact report.
 - [go-zero issue #5672](sources/go-zero-issue-5672.md) - report covering broken images, legacy URLs, stale links, sidebar order, and release freshness.
 
+- [Latest upstream drift report](reports/v1.10.2...master.md) - mapped go-zero source changes to documentation areas.
+
 ## Known Maintenance Themes
 
 - Keep README and AI writing instructions aligned with the actual three-locale site: English, Simplified Chinese, and Korean.
