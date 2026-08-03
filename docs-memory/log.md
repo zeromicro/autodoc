@@ -2,6 +2,12 @@
 
 Append entries in reverse chronological order.
 
+## [2026-08-03] ingest | go-zero v1.10.3 release
+
+- Captured upstream release notes and changed files for v1.10.3.
+- Generated English, Simplified Chinese, and Korean release pages.
+- Added a source packet for future cross-page documentation maintenance.
+
 ## [2026-07-19] remediation | go-zero issue #5672
 
 - Ingested the issue report and mapped every screenshot to the affected documentation.
