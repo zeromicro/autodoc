@@ -5,6 +5,10 @@ sidebar:
   order: 6
 
 ---
+## v1.10.3 – 2026-08-03
+
+null
+
 ## v1.10.2 – 2026-05-31
 
 - Added MCP HTTP request metadata extraction for tool handlers.
