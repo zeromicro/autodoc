@@ -5,6 +5,11 @@ sidebar:
   order: 6
 
 ---
+## v1.10.3 – 2026-08-01
+
+- `stringx.FirstN`/`Substr` edge case, `mapping`의 pointer-to-slice unmarshal 문제, 높은 동시성에서의 Redis circuit breaker 오동작을 수정했습니다.
+- `collection.Queue` growth 전략을 최적화하고 Redis `XGroupSetID`/`XGroupSetIDCtx`를 추가했습니다.
+
 ## v1.10.2 – 2026-05-31
 
 - MCP tool handler에서 HTTP 요청 메타데이터를 추출할 수 있습니다.

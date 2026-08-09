@@ -2,6 +2,13 @@
 
 Append entries in reverse chronological order.
 
+## [2026-08-09] ingest | go-zero v1.10.3 release
+
+- Detected that v1.10.3 (published 2026-08-01) was missing from the public release notes; latest documented release was v1.10.2.
+- Captured upstream release notes and PR details for v1.10.3 (stringx fixes, mapping pointer-to-slice fix, Redis circuit breaker fix, Queue growth optimization, Redis XGroupSetID).
+- Added English, Simplified Chinese, and Korean release pages, updated all three release indexes and changelogs.
+- Added a source packet for future cross-page documentation maintenance.
+
 ## [2026-07-19] remediation | go-zero issue #5672
 
 - Ingested the issue report and mapped every screenshot to the affected documentation.

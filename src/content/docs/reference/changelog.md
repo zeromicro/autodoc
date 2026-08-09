@@ -5,6 +5,11 @@ sidebar:
   order: 6
 
 ---
+## v1.10.3 – 2026-08-01
+
+- Fixed `stringx.FirstN`/`Substr` edge cases, `mapping` pointer-to-slice unmarshaling, and Redis circuit breaker trips under high concurrency.
+- Optimized `collection.Queue` growth strategy and added Redis `XGroupSetID`/`XGroupSetIDCtx`.
+
 ## v1.10.2 – 2026-05-31
 
 - Added MCP HTTP request metadata extraction for tool handlers.
@@ -23,6 +28,7 @@ For the full history see the [GitHub releases page](https://github.com/zeromicro
 
 | Version | Date | Highlights |
 |---------|------|------------|
+| [v1.10.3](../releases/v1.10.3) | 2026-08-01 | stringx/mapping fixes, Redis circuit breaker fix, Queue growth optimization |
 | [v1.10.2](../releases/v1.10.2) | 2026-05-31 | MCP request metadata, Go 1.26 etcd discovery fixes |
 | [v1.10.1](../releases/v1.10.1) | 2026-03-28 | JSON5 config, Redis `Do`/`DoCtx`, Go 1.24, security fixes |
 | [v1.10.0](../releases/v1.10.0) | 2026-02-15 | MCP support, gateway enhancements, SSE improvements |
@@ -37,4 +43,4 @@ For the full history see the [GitHub releases page](https://github.com/zeromicro
 | [v1.6.0](../releases/v1.6.0) | 2023-10-28 | Endpoints config, Prometheus rename, breaker refactor |
 | [v1.5.0](../releases/v1.5.0) | 2023-03-04 | OpenTelemetry replaces OpenTracing/Jaeger |
 
-See [all 46 releases →](../releases/)
+See [all 47 releases →](../releases/)

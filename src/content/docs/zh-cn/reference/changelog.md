@@ -6,6 +6,11 @@ sidebar:
 
 ---
 
+## v1.10.3 – 2026-08-01
+
+- 修复 `stringx.FirstN`/`Substr` 边界情况、`mapping` 指针切片反序列化问题以及高并发下 Redis 熔断器误触发问题。
+- 优化 `collection.Queue` 扩容策略，新增 Redis `XGroupSetID`/`XGroupSetIDCtx`。
+
 ## v1.10.2 – 2026-05-31
 
 - 为 MCP 工具处理程序增加 HTTP 请求元数据提取能力。
