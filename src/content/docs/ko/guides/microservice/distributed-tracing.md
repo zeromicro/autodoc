@@ -184,5 +184,5 @@ Telemetry:
 
 ## Further 읽기
 
-- [부하 분산](../../components/observability/tracing/#backends) — how 요청 are distributed 전반에 instances
-- [아키텍처 개요](../../components/observability/tracing/#migrating-from-jaeger-batcher) — 관측 가능성 파이프라인 개요
+- [부하 분산](../../components/observability/tracing/#백엔드) — how 요청 are distributed 전반에 instances
+- [아키텍처 개요](../../components/observability/tracing/#jaeger-batcher에서-마이그레이션) — 관측 가능성 파이프라인 개요

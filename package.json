@@ -11,6 +11,7 @@
     "astro": "astro",
     "sync:go-zero-release": "node scripts/sync-go-zero-release.mjs",
     "check:go-zero-drift": "node scripts/check-go-zero-drift.mjs",
+    "test": "python3 -m unittest discover -s scripts/tests -p 'test_*.py' && node --test scripts/tests/*.test.mjs",
     "check:docs": "python3 scripts/check_docs.py",
     "check:links": "python3 scripts/check_links.py",
     "validate": "npm run check:docs && npm run check:links"

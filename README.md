@@ -78,15 +78,17 @@ npm run preview
 autodoc/
 ├── .github/
 │   ├── workflows/
+│   │   ├── ci.yml                # Validate every pull request
 │   │   ├── deploy.yml            # Auto-deploy to GitHub Pages on push to main
-│   │   └── sync-release.yml      # Auto-sync go-zero release notes (weekly)
+│   │   └── sync-go-zero-docs.yml # Sync localized release documentation
 │   ├── copilot-instructions.md   # AI documentation writing conventions
 │   └── SITE_IMPLEMENTATION_GUIDE.md
 ├── public/
 │   ├── CNAME                     # Custom domain: go-zero.dev
 │   └── favicon.svg
 ├── scripts/
-│   └── check_links.py            # Internal link checker utility
+│   ├── check_docs.py             # Documentation structure validator
+│   └── check_links.py            # Internal link and anchor checker
 ├── src/
 │   ├── assets/                   # Images and SVG diagrams
 │   └── content/
@@ -131,6 +133,8 @@ Contributions to improve the documentation are welcome! You can:
 - Improve Chinese and Korean translations
 - Report issues via [GitHub Issues](https://github.com/zeromicro/autodoc/issues)
 
+See [CONTRIBUTING.md](CONTRIBUTING.md) for documentation conventions and the required verification commands.
+
 ### Making Changes
 
 1. Fork this repository
@@ -147,13 +151,9 @@ Contributions to improve the documentation are welcome! You can:
 
 Every push to `main` automatically builds and deploys the site to GitHub Pages. The deploy typically takes 1–2 minutes.
 
-### Release Notes Sync (`sync-release.yml`)
-
-Every Monday, a workflow checks for new go-zero releases and opens a pull request with an AI-generated changelog entry. Can also be triggered manually with a specific version tag. Existing changelog entries are skipped to avoid repeat PRs.
-
 ### Documentation Update Sync (`sync-go-zero-docs.yml`)
 
-Every Monday, a workflow checks the latest `zeromicro/go-zero` release. When a release does not yet have docs, it generates localized release pages, updates release indexes, writes a `docs-memory/sources/` packet with changed files and documentation impact notes, builds the site, and opens a review PR.
+Every Monday, a workflow checks the latest `zeromicro/go-zero` release. When a release does not yet have docs, it generates localized release pages and changelogs, updates release indexes, writes a `docs-memory/sources/` packet with changed files and documentation impact notes, builds the site, and opens one review PR.
 
 ### Upstream Drift Check (`check-go-zero-drift.yml`)
 
@@ -163,4 +163,4 @@ Every Tuesday, a workflow compares the latest go-zero release with the upstream 
 
 ## License
 
-Documentation content is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+Documentation content is licensed under [CC BY 4.0](LICENSE).

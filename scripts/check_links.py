@@ -34,10 +34,36 @@ LINK_RE = re.compile(r"!?\[[^\]]+\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
 REF_RE = re.compile(r"^\s*\[[^\]]+\]:\s*(\S+)", re.MULTILINE)
 HTML_LINK_RE = re.compile(r"""(?:href|src)=["']([^"']+)["']""")
 FENCE_RE = re.compile(r"(^|\n)[ \t]*(`{3,}|~{3,})[^\n]*\n.*?(?:\n[ \t]*\2)(?=\n|$)", re.DOTALL)
+HEADING_RE = re.compile(r"^#{1,6}\s+(.+?)\s*#*\s*$", re.MULTILINE)
+EXPLICIT_ID_RE = re.compile(r"\bid=[\"']([^\"']+)[\"']")
+FRONTMATTER_RE = re.compile(r"\A---\n.*?\n---\n", re.DOTALL)
 
 
 def strip_fenced_code(markdown: str) -> str:
     return FENCE_RE.sub("\n", markdown)
+
+
+def slugify_heading(heading: str) -> str:
+    value = re.sub(r"!\[([^\]]*)\]\([^)]+\)", r"\1", heading)
+    value = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", value)
+    value = re.sub(r"<[^>]+>", "", value)
+    value = value.replace("`", "").lower().strip()
+    value = re.sub(r"[^\w\- ]", "", value, flags=re.UNICODE)
+    return re.sub(r"[ \t]+", "-", value)
+
+
+def heading_ids(markdown: str) -> set[str]:
+    body = FRONTMATTER_RE.sub("", strip_fenced_code(markdown), count=1)
+    ids = set(EXPLICIT_ID_RE.findall(body))
+    seen: dict[str, int] = {}
+    for heading in HEADING_RE.findall(body):
+        base = slugify_heading(heading)
+        if not base:
+            continue
+        occurrence = seen.get(base, 0)
+        seen[base] = occurrence + 1
+        ids.add(base if occurrence == 0 else f"{base}-{occurrence}")
+    return ids
 
 
 def iter_doc_files() -> list[Path]:
@@ -129,6 +155,32 @@ def exists(source: Path, link: str) -> bool:
     return False
 
 
+def existing_doc(source: Path, link: str) -> Path | None:
+    parsed = urlparse(link)
+    if is_external(link):
+        return None
+    if not parsed.path:
+        return source
+
+    for resolved in resolve_links(source, link) or []:
+        if resolved.exists() and resolved.is_file() and resolved.suffix in DOC_EXTS:
+            return resolved
+        for candidate in candidate_docs(resolved):
+            if candidate.exists() and candidate.is_file() and candidate.suffix in DOC_EXTS:
+                return candidate
+    return None
+
+
+def anchor_exists(source: Path, link: str) -> bool:
+    fragment = unquote(urlparse(link).fragment)
+    if not fragment or is_external(link):
+        return True
+    target = existing_doc(source, link)
+    if target is None:
+        return True  # The broken path is reported separately.
+    return fragment in heading_ids(target.read_text(encoding="utf-8"))
+
+
 def collect_links(markdown: str) -> list[str]:
     body = strip_fenced_code(markdown)
     links = [match.group(1) for match in LINK_RE.finditer(body)]
@@ -138,17 +190,19 @@ def collect_links(markdown: str) -> list[str]:
 
 
 def main() -> int:
-    errors: list[tuple[str, str]] = []
+    errors: list[tuple[str, str, str]] = []
 
     for path in iter_doc_files():
         markdown = path.read_text(encoding="utf-8")
         for link in collect_links(markdown):
             clean = link.strip("<>")
             if not exists(path, clean):
-                errors.append((str(path.relative_to(DOCS_ROOT)), clean))
+                errors.append((str(path.relative_to(DOCS_ROOT)), clean, "broken target"))
+            elif not anchor_exists(path, clean):
+                errors.append((str(path.relative_to(DOCS_ROOT)), clean, "missing anchor"))
 
-    for rel_file, link in sorted(set(errors)):
-        print(f"  {rel_file} -> {link}")
+    for rel_file, link, reason in sorted(set(errors)):
+        print(f"  {rel_file} -> {link} ({reason})")
 
     print(f"\nTotal: {len(set(errors))} broken links")
     return 1 if errors else 0

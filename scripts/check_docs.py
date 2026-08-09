@@ -47,6 +47,8 @@ SUPPORTED_FENCES = {
 
 FRONTMATTER_RE = re.compile(r"\A---\n(.*?)\n---", re.DOTALL)
 FENCE_RE = re.compile(r"^[ \t]*(`{3,}|~{3,})([^\s`]*)", re.MULTILINE)
+VERSION_HEADING_RE = re.compile(r"^## (v\d+\.\d+\.\d+)\b", re.MULTILINE)
+STANDALONE_NULL_RE = re.compile(r"^\s*null\s*$", re.MULTILINE | re.IGNORECASE)
 
 
 def doc_files(root: Path) -> list[Path]:
@@ -73,6 +75,29 @@ def has_frontmatter_field(frontmatter: str, field: str) -> bool:
     return re.search(rf"^{re.escape(field)}\s*:", frontmatter, re.MULTILINE) is not None
 
 
+def frontmatter_value(frontmatter: str, field: str) -> str | None:
+    match = re.search(rf"^{re.escape(field)}\s*:\s*(.*?)\s*$", frontmatter, re.MULTILINE)
+    return match.group(1).strip(' "\'') if match else None
+
+
+def unclosed_fence_line(content: str) -> int | None:
+    opening: tuple[str, int] | None = None
+    for line_number, line in enumerate(content.splitlines(), 1):
+        match = re.match(r"^[ \t]*(`{3,}|~{3,})", line)
+        if not match:
+            continue
+        marker = match.group(1)
+        if opening is None:
+            opening = (marker, line_number)
+        elif marker[0] == opening[0][0] and len(marker) >= len(opening[0]):
+            opening = None
+    return opening[1] if opening else None
+
+
+def release_versions(content: str) -> set[str]:
+    return set(VERSION_HEADING_RE.findall(content))
+
+
 def check_frontmatter(errors: list[str]) -> None:
     for path in doc_files(DOCS_ROOT):
         content = path.read_text(encoding="utf-8")
@@ -86,11 +111,13 @@ def check_frontmatter(errors: list[str]) -> None:
         for field in ("title", "description"):
             if not has_frontmatter_field(frontmatter, field):
                 errors.append(f"{rel}: missing frontmatter field '{field}'")
+            elif frontmatter_value(frontmatter, field) in {"", "null", "~"}:
+                errors.append(f"{rel}: frontmatter field '{field}' must not be empty or null")
 
         if path.name == "index.mdx" and path.parent in {DOCS_ROOT, DOCS_ROOT / "zh-cn", DOCS_ROOT / "ko"}:
             continue
 
-        if not re.search(r"^\s*order\s*:", frontmatter, re.MULTILINE):
+        if not re.search(r"^sidebar\s*:\s*\n(?:[ \t]+.*\n)*?[ \t]+order\s*:", frontmatter, re.MULTILINE):
             errors.append(f"{rel}: missing frontmatter field 'sidebar.order'")
 
 
@@ -114,6 +141,38 @@ def check_fences(errors: list[str]) -> None:
                 line = content.count("\n", 0, match.start()) + 1
                 rel = path.relative_to(DOCS_ROOT)
                 errors.append(f"{rel}:{line}: unsupported code fence language '{match.group(2)}'")
+        unclosed = unclosed_fence_line(content)
+        if unclosed:
+            rel = path.relative_to(DOCS_ROOT)
+            errors.append(f"{rel}:{unclosed}: unclosed code fence")
+
+
+def check_generated_placeholders(errors: list[str]) -> None:
+    for path in doc_files(DOCS_ROOT):
+        content = path.read_text(encoding="utf-8")
+        match = FRONTMATTER_RE.match(content)
+        body = content[match.end():] if match else content
+        placeholder = STANDALONE_NULL_RE.search(body)
+        if placeholder:
+            line = content.count("\n", 0, (match.end() if match else 0) + placeholder.start()) + 1
+            errors.append(f"{path.relative_to(DOCS_ROOT)}:{line}: generated placeholder 'null' in document body")
+
+
+def check_changelog_version_parity(errors: list[str]) -> None:
+    changelogs = {
+        "en": DOCS_ROOT / "reference/changelog.md",
+        "zh-cn": DOCS_ROOT / "zh-cn/reference/changelog.md",
+        "ko": DOCS_ROOT / "ko/reference/changelog.md",
+    }
+    versions = {locale: release_versions(path.read_text(encoding="utf-8")) for locale, path in changelogs.items()}
+    expected = versions["en"]
+    for locale in LOCALES:
+        missing = sorted(expected - versions[locale])
+        extra = sorted(versions[locale] - expected)
+        if missing:
+            errors.append(f"{locale}: changelog missing version section(s): {', '.join(missing)}")
+        if extra:
+            errors.append(f"{locale}: changelog has extra version section(s): {', '.join(extra)}")
 
 
 def main() -> int:
@@ -121,6 +180,8 @@ def main() -> int:
     check_frontmatter(errors)
     check_locale_parity(errors)
     check_fences(errors)
+    check_generated_placeholders(errors)
+    check_changelog_version_parity(errors)
 
     if errors:
         for error in errors:

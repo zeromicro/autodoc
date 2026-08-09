@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import fs from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const repoRoot = process.cwd();
 const upstream = 'zeromicro/go-zero';
@@ -92,6 +93,17 @@ function escapeYaml(value) {
 
 function trimMarkdown(value) {
   return String(value || '').trim().replace(/\n{3,}/g, '\n\n');
+}
+
+export function validateRelease(release) {
+  const tag = String(release?.tag_name || '').trim();
+  if (!/^v\d+\.\d+\.\d+(?:[-+][0-9A-Za-z.-]+)?$/.test(tag)) {
+    throw new Error(`GitHub returned an invalid release tag: ${JSON.stringify(release?.tag_name)}`);
+  }
+  if (!release?.html_url || !(release.published_at || release.created_at)) {
+    throw new Error(`GitHub release ${tag} is missing its URL or publication date`);
+  }
+  return release;
 }
 
 function fallbackDoc(release, previousTag, compare) {
@@ -219,6 +231,54 @@ function updateReleaseIndex(locale, tag, date) {
   return writeFileIfChanged(file, content);
 }
 
+function updateChangelog(locale, tag, date) {
+  const base = locale === 'root' ? 'src/content/docs' : `src/content/docs/${locale}`;
+  const file = path.join(repoRoot, base, 'reference/changelog.md');
+  let content = readFile(file);
+  if (!content) return false;
+
+  const localized = {
+    root: {
+      section: `## ${tag} – ${date}\n\nFor complete details, see the [${tag} release notes](../releases/${tag}/).\n\n`,
+      latest: 'Latest Releases',
+      highlight: 'See release notes',
+    },
+    'zh-cn': {
+      section: `## ${tag} – ${date}\n\n完整变更请查看 [${tag} 发布说明](../releases/${tag}/)。\n\n`,
+      latest: '最新版本',
+      highlight: '查看发布说明',
+    },
+    ko: {
+      section: `## ${tag} – ${date}\n\n전체 변경 사항은 [${tag} 릴리스 노트](../releases/${tag}/)에서 확인하세요.\n\n`,
+      latest: '최신 릴리스',
+      highlight: '릴리스 노트 보기',
+    },
+  }[locale];
+
+  if (!new RegExp(`^## ${tag.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}[ –-]`, 'm').test(content)) {
+    const match = content.match(/^---\n[\s\S]*?\n---\n/);
+    if (!match) throw new Error(`${file} has invalid frontmatter`);
+    content = content.replace(match[0], `${match[0]}\n${localized.section}`);
+  }
+
+  const escapedTag = tag.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  if (!new RegExp(`^\\| \\[${escapedTag}\\]\\(\\.\\./releases/${escapedTag}\\)`, 'm').test(content)) {
+    const tableStart = new RegExp(`(## ${localized.latest}\\n\\n\\|[^\\n]+\\n\\|[^\\n]+\\n)`);
+    if (!tableStart.test(content)) throw new Error(`${file} is missing its latest-release table`);
+    const row = `| [${tag}](../releases/${tag}) | ${date} | ${localized.highlight} |\n`;
+    content = content.replace(tableStart, `$1${row}`);
+  }
+
+  const releaseCount = fs.readdirSync(path.join(repoRoot, base, 'reference/releases'))
+    .filter((name) => /^v.*\.md$/.test(name)).length;
+  content = content
+    .replace(/\[all \d+ releases →\]/, `[all ${releaseCount} releases →]`)
+    .replace(/\[全部 \d+ 个版本 →\]/, `[全部 ${releaseCount} 个版本 →]`)
+    .replace(/\[모든 \d+(?:개)? 릴리스(?: 보기)? →\]/, `[모든 ${releaseCount}개 릴리스 보기 →]`);
+
+  return writeFileIfChanged(file, content);
+}
+
 function sourcePacket(release, previousTag, compare, impact) {
   const date = ymd(new Date().toISOString());
   const releaseDate = ymd(release.published_at || release.created_at);
@@ -254,7 +314,7 @@ function updateMemoryLog(tag) {
 }
 
 async function main() {
-  const release = await getRelease();
+  const release = validateRelease(await getRelease());
   const tag = release.tag_name;
   const date = ymd(release.published_at || release.created_at);
   const releaseFiles = [
@@ -263,7 +323,18 @@ async function main() {
     path.join(repoRoot, 'src/content/docs/ko/reference/releases', `${tag}.md`),
   ];
 
-  if (process.env.FORCE_SYNC !== 'true' && releaseFiles.every((file) => fs.existsSync(file))) {
+  const localizedBases = ['src/content/docs', 'src/content/docs/zh-cn', 'src/content/docs/ko'];
+  const allOutputsExist = releaseFiles.every((file) => fs.existsSync(file))
+    && localizedBases.every((base) => readFile(path.join(repoRoot, base, 'reference/releases/index.md')).includes(`[${tag}](${tag}/)`))
+    && localizedBases.every((base) => {
+      const changelog = readFile(path.join(repoRoot, base, 'reference/changelog.md'));
+      const escapedTag = tag.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      return changelog.includes(`## ${tag}`)
+        && new RegExp(`^\\| \\[${escapedTag}\\]\\(\\.\\./releases/${escapedTag}\\)`, 'm').test(changelog);
+    })
+    && fs.existsSync(path.join(repoRoot, 'docs-memory/sources', `go-zero-${slugTag(tag)}.md`));
+
+  if (process.env.FORCE_SYNC !== 'true' && allOutputsExist) {
     setOutput('has_changes', 'false');
     setOutput('tag', tag);
     setOutput('release_url', release.html_url);
@@ -287,6 +358,7 @@ async function main() {
     const file = path.join(repoRoot, base, 'reference/releases', `${tag}.md`);
     changed = writeFileIfChanged(file, `${frontmatter(tag, locale, date)}${trimMarkdown(body)}\n`) || changed;
     changed = updateReleaseIndex(locale, tag, date) || changed;
+    changed = updateChangelog(locale, tag, date) || changed;
   }
 
   const packetFile = path.join(repoRoot, 'docs-memory/sources', `go-zero-${slugTag(tag)}.md`);
@@ -301,7 +373,9 @@ async function main() {
   console.log(JSON.stringify({ tag, previousTag, changed, output }, null, 2));
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exit(1);
-});
+if (path.resolve(process.argv[1] || '') === fileURLToPath(import.meta.url)) {
+  main().catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
+}

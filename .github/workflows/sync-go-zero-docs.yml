@@ -21,6 +21,10 @@ permissions:
   pull-requests: write
   models: read
 
+concurrency:
+  group: sync-go-zero-docs
+  cancel-in-progress: false
+
 jobs:
   sync-docs:
     runs-on: ubuntu-latest
@@ -45,9 +49,10 @@ jobs:
           AI_MODEL: ${{ vars.GO_ZERO_DOCS_AI_MODEL || 'gpt-4o-mini' }}
         run: node scripts/sync-go-zero-release.mjs
 
-      - name: Build site
+      - name: Test and build site
         if: steps.sync.outputs.has_changes == 'true'
         run: |
+          npm test
           npm run validate
           npm run build
 
@@ -66,6 +71,7 @@ jobs:
 
             This PR updates:
             - localized release pages
+            - localized changelogs
             - the release index pages
             - `docs-memory/sources/`
             - `docs-memory/index.md`

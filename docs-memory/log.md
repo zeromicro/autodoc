@@ -2,6 +2,13 @@
 
 Append entries in reverse chronological order.
 
+## [2026-08-09] lint | CI, release automation, and validation hardening
+
+- Consolidated overlapping release workflows into one localized, idempotent documentation sync.
+- Added pull-request CI and validator tests for release metadata, frontmatter, code fences, changelog parity, and internal anchors.
+- Repaired generated `null` changelog content, localized version drift, and nine invalid heading anchors.
+- Added contribution, licensing, dependency update, and pull-request metadata.
+
 ## [2026-08-09] ingest | go-zero v1.10.3 release
 
 - Detected that v1.10.3 (published 2026-08-01) was missing from the public release notes; latest documented release was v1.10.2.

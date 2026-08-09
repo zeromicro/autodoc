@@ -20,7 +20,7 @@ In api description, routing needs to meet the following rules
 1. Route must start with `/`
 1. Route node must be separated by `/`
 1. A route node may contain `:`, but `:` must be the first character of the node. The corresponding request body field must carry a `path` tag to receive the path parameter — see [parameter rules](./parameter.md) for details.
-1. Route nodes may contain letters, numbers (requires `goctl 1.5.1+`, see [new API feature guide](./faq.md#1-how-to-use-the-new-api-features)), underscores, and dashes.
+1. Route nodes may contain letters, numbers (requires `goctl 1.5.1+`, see [new API feature guide](./faq.md#1-how-do-i-experience-new-api-features)), underscores, and dashes.
 
 Route Example：
 

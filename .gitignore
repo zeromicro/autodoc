@@ -8,6 +8,10 @@ node_modules/
 # logs
 npm-debug.log*
 
+# Python validation caches
+__pycache__/
+*.py[cod]
+
 # env
 .env
 .env.*

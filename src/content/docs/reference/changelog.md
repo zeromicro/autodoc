@@ -15,10 +15,10 @@ sidebar:
 - Added MCP HTTP request metadata extraction for tool handlers.
 - Fixed etcd discovery target URLs for Go 1.26 and duplicate watch-event memory growth.
 
-## v1.10.1 – 2026-04-06
+## v1.10.1 – 2026-03-28
 
-null
-
+- Added JSON5 configuration support and generic Redis `Do`/`DoCtx` commands.
+- Upgraded the project to Go 1.24 and included important `core/codec` security fixes.
 
 Detailed release notes for every go-zero version are available in the [Release Notes](../releases/) section.
 
@@ -43,4 +43,4 @@ For the full history see the [GitHub releases page](https://github.com/zeromicro
 | [v1.6.0](../releases/v1.6.0) | 2023-10-28 | Endpoints config, Prometheus rename, breaker refactor |
 | [v1.5.0](../releases/v1.5.0) | 2023-03-04 | OpenTelemetry replaces OpenTracing/Jaeger |
 
-See [all 47 releases →](../releases/)
+See [all 48 releases →](../releases/)

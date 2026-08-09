@@ -9,7 +9,7 @@ sidebar:
 
 ## 개요
 
-`goctl api plugin` 명령으로 API 기능을 확장할 수 있습니다. 내장 기능으로 부족하거나 코드를 생성하는 과정을 맞춤화해야 할 때 커뮤니티 플러그인을 사용할 수 있습니다. 자세한 내용은 [goctl api plugin](./cli-guide/api.md#plugin)을 참고하세요.
+`goctl api plugin` 명령으로 API 기능을 확장할 수 있습니다. 내장 기능으로 부족하거나 코드를 생성하는 과정을 맞춤화해야 할 때 커뮤니티 플러그인을 사용할 수 있습니다. 자세한 내용은 [goctl api plugin](./cli-guide/api.md#플러그인)을 참고하세요.
 
 ## 플러그인 리소스
 

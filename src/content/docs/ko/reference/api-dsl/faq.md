@@ -25,7 +25,7 @@ $ goctl env -w GOCTL_EXPERIMENTAL=on
 
 1. 문법 헤더 is 필수
 
-위한 데이터 타입 usage 예제, see [타입 선언s • 예제](./type.md#examples).
+위한 데이터 타입 usage 예제, see [타입 선언s • 예제](./type.md#샘플).
 
 
 ```go {1,6}

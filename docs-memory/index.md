@@ -23,14 +23,14 @@ This is the compact navigation map for agent-assisted documentation work. Keep i
 ## Known Maintenance Themes
 
 - Keep README and AI writing instructions aligned with the actual three-locale site: English, Simplified Chinese, and Korean.
-- Release-note automation currently updates the changelog only; source-driven release work should also update affected guide, component, reference, and FAQ pages.
+- Release automation creates one localized documentation PR per version and records wider documentation impact for guide, component, reference, and FAQ review.
 - `npm run validate` checks documentation structure and internal links; run it before publishing large doc changes.
 - The Go crawler in `tools/linkcheck/` checks the deployed site; use it separately for production URL health.
 - `check-go-zero-drift.yml` generates upstream drift reports under `docs-memory/reports/`; use them as review queues for source-code changes that may stale public docs.
 
 ## Open Gaps To Investigate
 
-- Whether every locale has the same page set and sidebar coverage.
+- Page-set parity is enforced; sidebar coverage and translated section depth still need periodic review.
 - Whether examples compile against the latest go-zero release.
 - Whether configuration and CLI reference pages are generated from or checked against current go-zero source.
 - Whether generated Korean release pages need a translation-quality pass before publication.
