@@ -2,7 +2,7 @@
 title: 缓存组件
 description: go-zero 进程内和分布式缓存组件。
 sidebar:
-  order: 4
+  order: 0
 
 ---
 

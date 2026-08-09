@@ -2,7 +2,7 @@
 title: Log Components
 description: Structured logging components for go-zero.
 sidebar:
-  order: 6
+  order: 0
 
 ---
 

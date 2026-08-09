@@ -2,7 +2,7 @@
 title: Queue Components
 description: Message queue components for go-zero.
 sidebar:
-  order: 8
+  order: 0
 
 ---
 

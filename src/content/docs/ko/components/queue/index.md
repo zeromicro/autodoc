@@ -2,7 +2,7 @@
 title: 큐 컴포넌트
 description: go-zero에서 Kafka와 RabbitMQ 같은 메시지 큐를 사용하는 방법입니다.
 sidebar:
-  order: 8
+  order: 0
 
 ---
 
