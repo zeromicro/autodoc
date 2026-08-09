@@ -2,7 +2,7 @@
 title: Quick Start
 description: Build your first go-zero services in under 5 minutes.
 sidebar:
-  order: 1
+  order: 0
 ---
 
 ## Tutorials

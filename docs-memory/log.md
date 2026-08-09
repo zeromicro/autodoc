@@ -2,6 +2,12 @@
 
 Append entries in reverse chronological order.
 
+## [2026-08-09] remediation | sidebar overview ordering
+
+- Revisited the sidebar-order finding from go-zero issue #5672 and conflicted autodoc PR #25.
+- Moved all guide and component overview pages before their child pages across English, Simplified Chinese, and Korean.
+- Split a malformed Simplified Chinese microservice list item while retaining locale-correct relative tracing links.
+
 ## [2026-08-09] lint | CI, release automation, and validation hardening
 
 - Consolidated overlapping release workflows into one localized, idempotent documentation sync.

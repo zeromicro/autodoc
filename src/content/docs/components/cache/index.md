@@ -2,7 +2,7 @@
 title: Cache Components
 description: In-process and distributed caching components for go-zero.
 sidebar:
-  order: 4
+  order: 0
 
 ---
 

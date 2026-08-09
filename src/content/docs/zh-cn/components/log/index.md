@@ -2,7 +2,7 @@
 title: 日志组件
 description: go-zero 结构化日志组件。
 sidebar:
-  order: 6
+  order: 0
 
 ---
 

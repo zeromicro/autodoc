@@ -2,7 +2,7 @@
 title: 快速入门
 description: 5 分钟内构建你的第一个 go-zero 服务。
 sidebar:
-  order: 1
+  order: 0
 ---
 
 ## 教程
