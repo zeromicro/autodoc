@@ -20,8 +20,8 @@
     "validate": "npm run check:docs && npm run check:links"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.41.7",
-    "astro": "^7.1.6",
+    "@astrojs/starlight": "^0.41.9",
+    "astro": "^7.2.8",
     "sharp": "^0.35.3"
   },
   "devDependencies": {
