@@ -2,6 +2,12 @@
 
 Append entries in reverse chronological order.
 
+## [2026-09-08] lint | go-zero upstream drift v1.10.3...master
+
+- Generated `docs-memory/reports/v1.10.3...master.md`.
+- Matched 7 documentation ownership area(s).
+- Review the report before editing public docs.
+
 ## [2026-08-09] remediation | sidebar overview ordering
 
 - Revisited the sidebar-order finding from go-zero issue #5672 and conflicted autodoc PR #25.
