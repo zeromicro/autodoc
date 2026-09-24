@@ -16,6 +16,7 @@ sidebar:
 | [JWT를 사용하는 REST API](./rest-api-jwt/) | 중급 | 인증이 적용된 HTTP 엔드포인트 |
 | [Bookstore](./bookstore/) | 중급 | API + RPC 서비스 전체 구성 |
 | [마이크로서비스 시스템](./microservice-system/) | 고급 | 서비스 디스커버리를 포함한 다중 서비스 |
+| [go-zero-box 프로젝트 템플릿](./go-zero-box/) | 고급 | API, 비동기 큐, 예약 작업, CLI를 통합한 프로젝트 템플릿 |
 
 ## 예제 실행
 
