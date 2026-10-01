@@ -2,6 +2,12 @@
 
 Append entries in reverse chronological order.
 
+## [2026-10-01] remediation | go-zero issue #5599
+
+- Ingested go-zero issue #5599 and verified the documented `options` syntax against the go-zero `master` branch.
+- Corrected the HTTP request parameter enum separator description.
+- Documented both `options=18|19` and `options=[18,19]` across English, Simplified Chinese, and Korean.
+
 ## [2026-08-09] remediation | sidebar overview ordering
 
 - Revisited the sidebar-order finding from go-zero issue #5672 and conflicted autodoc PR #25.

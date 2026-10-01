@@ -123,7 +123,7 @@ err := httpx.Parse(r, &req) // 解析参数
 
 ### 参数枚举值
 
-go-zero 提供了参数枚举值的定义，可以通过 `options` 关键字来定义参数的枚举值，其写法是在结构体的 tag 中加上 `options` 关键字，其写法格式为 `options=$option_expression`。枚举值以英文逗号分割，例如 `options=18|19`，其含义表示为仅接受 18 和 19 两个值，除此外都是非法值。
+go-zero 提供了参数枚举值的定义，可以通过 `options` 关键字来定义参数的枚举值，其写法是在结构体的 tag 中加上 `options` 关键字，格式为 `options=$option_expression`。不带方括号时，枚举值以竖线（`|`）分隔，例如 `options=18|19`；也可以使用带方括号的逗号分隔形式 `options=[18,19]`。这两种写法均表示仅接受 18 和 19 两个值，除此之外都是非法值。
 
 ```go
 type Request struct {
