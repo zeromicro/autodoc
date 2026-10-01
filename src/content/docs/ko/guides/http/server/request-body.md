@@ -116,7 +116,7 @@ err := httpx.Parse(r, &req)
 
 ### 매개변수 enum 값
 
-go-zero는 매개변수 enum 값 정의를 제공합니다. 구조체 tag에 `options` keyword를 추가해 정의하며, 형식은 `options=$option_expression`입니다. 여러 enum 값은 `options=18|19`처럼 구분해 작성하며, 정의되지 않은 값은 허용되지 않습니다.
+go-zero는 매개변수 enum 값 정의를 제공합니다. 구조체 tag에 `options` keyword를 추가해 정의하며, 형식은 `options=$option_expression`입니다. 여러 enum 값은 대괄호가 없는 형식에서 `options=18|19`처럼 세로 막대(`|`)로 구분하며, 대괄호로 묶은 쉼표 구분 형식 `options=[18,19]`도 사용할 수 있습니다. 두 형식 모두 정의되지 않은 값은 허용하지 않습니다.
 
 ```go
 type Request struct {
