@@ -117,7 +117,7 @@ See api syntax for more details on parameter intervals [parameter rules](../../.
 
 ### Parameter enumeration value
 
-go-Zero provides a definition of parameter enumeration values, which can be defined by `options` keywords by adding `options to a structure's tag` keyword in the format `options=$option_expression`.The enumeration is divided by comma in English, e.g. `options=18,19`meaning that only 18 and 19 values are accepted, but also illegal.
+go-Zero provides a definition of parameter enumeration values, which can be defined by `options` keywords by adding `options to a structure's tag` keyword in the format `options=$option_expression`. Enumeration values are separated by a vertical bar (`|`). For example, `options=18|19` means that only 18 and 19 are accepted; all other values are invalid.
 
 ```go
 type Request struct {
